@@ -94,3 +94,41 @@ Date: 2026-11-23
 
 ### Next milestone
 Module 3 — Dynamic Sensing Controller
+
+
+## Module 3 — Dynamic Sensing Controller
+Date: 2026-11-23
+
+### Implemented
+- Conventional adaptive exposure controller
+- Joint exposure and gain controller
+- Brightness-target regulation
+- ADC clipping feedback
+- ROI-prioritized sampling
+- Configurable sparse background readout
+
+### Experimental results
+- Target brightness: 0.35
+- Joint controller converged to approximately 0.35
+- Final clean-scene gain: approximately 2.68x
+- Final clean-scene exposure: 30 ms
+- Clean-scene ADC clipping: 0%
+- Sudden illumination transition peak clipping: 30.18%
+- Recovery after bright transition: 6 frame intervals
+- ROI sample retention: 18.42%
+- ROI sample-count reduction: 81.58%
+
+### Validation
+- 16 Module 3 tests passed
+- 35 total project tests passed
+
+### Limitations
+- Conventional reactive control, not adversarial defense
+- Global exposure and gain only
+- ROI allocation is simulated
+- Sample-count reduction is not measured bandwidth saving
+- No physical sensor hardware integration
+- No automatic object-aware ROI selection
+
+### Next milestone
+Module 4 — Physical-Layer Anomaly Detection

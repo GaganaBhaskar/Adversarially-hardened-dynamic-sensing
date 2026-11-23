@@ -101,3 +101,26 @@ Validation: 10 Module 2 tests passed.
 Total project tests: 19 passed.
 
 The model is a simplified, uncalibrated RGB sensor simulation.
+
+
+## Module 3 — Dynamic Sensing Controller
+
+Implemented components:
+
+- `exposure_controller.py`
+- `joint_controller.py`
+- `roi_allocator.py`
+
+Capabilities:
+- Adaptive exposure regulation
+- Joint exposure and gain adjustment
+- ADC clipping feedback
+- ROI-prioritized sampling
+- Sparse background readout
+
+Validation:
+- 16 Module 3 tests passed
+- 35 total project tests passed
+
+The current implementation is a conventional dynamic-sensing
+baseline without adversarial anomaly detection or defense.
