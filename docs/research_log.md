@@ -132,3 +132,51 @@ Date: 2026-11-23
 
 ### Next milestone
 Module 4 — Physical-Layer Anomaly Detection
+
+
+## Module 4 — Physical-Layer Anomaly Detection
+
+### Implemented components
+- Spatial saturation anomaly detection
+- Temporal change detection
+- Least-squares illumination compensation
+- Robust median-ratio illumination compensation
+- Spatial-temporal fusion
+- Concentration-gated attack-candidate detection
+- Physical disturbance severity assessment
+- Temporal disturbance state tracking
+
+### Experimental findings
+1. Initial fusion detected localized attacks but falsely flagged benign glare.
+2. Global illumination compensation reduced the benign flag
+   rate from 40% to 0% on five controlled benign scenarios.
+3. Robust median compensation estimated an illumination
+   scale of 1.010 during a localized attack, compared with
+   2.272 using least squares.
+4. Concentration-gated fusion achieved 100% diagnostic
+   accuracy on eight development scenarios.
+5. A separate eight-scenario validation experiment achieved
+   75% accuracy, with one false positive and one false negative.
+6. Physical disturbance assessment flagged all eight
+   simulated validation disturbances, including weak laser_A.
+7. Temporal state tracking maintained ACTIVE during sustained
+   saturation and transitioned to RECOVERY when saturation cleared.
+
+### Limitations
+- Simulated optical profiles are not calibrated physical measurements.
+- Concentration cannot establish adversarial intent.
+- Strong legitimate illumination can cause sensor impairment.
+- Small or diffuse attacks may evade candidate classification.
+- Temporal compensation assumes a sufficiently stable scene.
+- The severity score is a heuristic, not calibrated perception loss.
+- Recovery state indicates saturation clearance, not necessarily
+  restoration of downstream perception.
+- Full pulse-sequence, noise, and independent robustness evaluation
+  remain future work.
+
+### Automated tests
+45 total tests passed across Modules 1–4.
+Module 4 contributed 10 regression and validation tests.
+
+### Next stage
+Module 5 — Defensive Reconfiguration Controller.
