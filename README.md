@@ -69,3 +69,17 @@ for Module 2.
 
 Research prototype under active development.
 Experimental claims will be reported only after validation.
+
+
+## Module 1.2 — Optical Scenario Extension
+
+Implemented capabilities:
+
+- Daylight, dusk, night and low-light conditions
+- Legitimate localized bright-light simulation
+- Multiple simultaneous optical attacks
+- Temporal optical pulse sequences
+- Automated validation: 9 passing tests
+
+The current optical model is synthetic and uncalibrated.
+Sensor-level effects will be implemented in Module 2.

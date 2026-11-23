@@ -36,3 +36,27 @@ Result:
 Extend Module 1 with illumination conditions, temporal
 attack sequences, reproducible experiments and hard-negative
 environmental lighting conditions.
+
+## Module 1.2 — Optical Scenario Extension
+Date: 2026-11-23
+
+### Implemented
+- Daylight, dusk, night and low-light illumination presets
+- Legitimate localized bright-light generation
+- Multiple simultaneous optical interference sources
+- Temporal optical pulse sequences
+- Additional automated tests
+
+### Validation
+- 9 tests passed in 1.75 seconds
+- Temporal pulse periodicity verified
+- Multiple optical attack locations visualized
+
+### Limitations
+- Synthetic, uncalibrated optical environment
+- Gaussian approximation of localized illumination
+- No camera sensor saturation or noise simulation yet
+- No validation against real optical attack measurements
+
+### Next milestone
+Module 2: Physics-Informed Sensor Simulator
