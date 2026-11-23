@@ -1,0 +1,28 @@
+{
+  "experiment": "module5_initial_closed_loop_comparison",
+  "validation_scope": "numerical_and_timing_consistency",
+  "checks": {
+    "total_measurements": true,
+    "four_strategies": true,
+    "thirty_frames_each": true,
+    "attack_interval": true,
+    "finite_measurements": true,
+    "valid_exposure": true,
+    "valid_saturation": true,
+    "one_frame_command_delay": true,
+    "fixed_exposure_constant": true,
+    "summary_consistency": true
+  },
+  "passed": 10,
+  "total": 10,
+  "all_passed": true,
+  "limitations": [
+    "Single deterministic laser scenario",
+    "No sensor noise",
+    "No hardware validation",
+    "Gain and ROI remain fixed",
+    "Background brightness may include optical attack tails",
+    "No downstream perception measurements",
+    "No calibrated physical laser power"
+  ]
+}

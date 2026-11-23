@@ -1,0 +1,50 @@
+{
+  "experiment": "module5_initial_closed_loop_comparison",
+  "random_seed": 42,
+  "image_size": [
+    256,
+    256
+  ],
+  "total_frames": 30,
+  "attack_start_frame": 5,
+  "attack_end_frame_exclusive": 20,
+  "attack_config": {
+    "attack_type": "laser",
+    "center_x": 0.5,
+    "center_y": 0.5,
+    "radius": 0.12,
+    "intensity": 15.0,
+    "pulse_frequency": 2.0,
+    "pulse_phase": 0.0
+  },
+  "sensor_config": {
+    "exposure_ms": 10.0,
+    "gain": 1.0,
+    "electrons_per_unit_ms": 100.0,
+    "full_well_electrons": 10000.0,
+    "read_noise_electrons": 3.0,
+    "adc_bits": 12
+  },
+  "noise_enabled": false,
+  "strategies": [
+    "fixed",
+    "original",
+    "state_aware",
+    "probed"
+  ],
+  "background_exclusion_radius_normalized": 0.24,
+  "background_pixel_count": 53764,
+  "background_fraction": 0.82037353515625,
+  "reference_background_brightness": 0.04480960965156555,
+  "exposure_command_delay_frames": 1,
+  "notes": [
+    "Fixed gain across all strategies.",
+    "Noise-free initial comparison.",
+    "Background mask excludes nominal laser center.",
+    "Background region may contain weak laser tails.",
+    "Brightness retention is relative to clean 10 ms capture.",
+    "Controller decisions affect the following frame.",
+    "No hardware bandwidth or energy measurements.",
+    "Module 3 adaptive gain and ROI are not integrated yet."
+  ]
+}
