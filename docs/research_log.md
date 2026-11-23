@@ -60,3 +60,37 @@ Date: 2026-11-23
 
 ### Next milestone
 Module 2: Physics-Informed Sensor Simulator
+
+
+## Module 2 — Physics-Informed Sensor Simulator
+Date: 2026-11-23
+
+### Implemented
+- Exposure-dependent photoelectron generation
+- Poisson photon shot noise
+- Gaussian electronic read noise
+- Full-well saturation
+- Simplified analog gain
+- ADC quantization (configurable bit depth)
+- Reproducible noise generation using random seeds
+
+### Experimental observations
+- Clean scene: 0% saturation at 10 ms exposure
+- Attacked scene: approximately 2.75% saturation at 10 ms
+- Attacked scene: approximately 10.17% saturation at 30 ms
+- Simulated noise closely matched theoretical noise
+- Same random seed reproduced identical measurements
+
+### Validation
+- 19 total automated tests passed
+- 10 new Module 2 tests passed
+
+### Limitations
+- Optical inputs are not physically calibrated
+- Simplified linear RGB sensor model
+- No Bayer color filter array or spectral response
+- No rolling shutter or optical point-spread model
+- No real hardware measurements yet
+
+### Next milestone
+Module 3 — Dynamic Sensing Controller

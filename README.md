@@ -83,3 +83,21 @@ Implemented capabilities:
 
 The current optical model is synthetic and uncalibrated.
 Sensor-level effects will be implemented in Module 2.
+
+
+## Module 2 — Physics-Informed Sensor Simulator
+
+Implemented in:
+`src/ahds/module2_sensor/sensor_simulator.py`
+
+Capabilities:
+- Exposure-dependent photoelectron generation
+- Poisson shot noise and Gaussian read noise
+- Full-well saturation and ADC clipping
+- Configurable analog gain and ADC bit depth
+- Deterministic experiments using random seeds
+
+Validation: 10 Module 2 tests passed.
+Total project tests: 19 passed.
+
+The model is a simplified, uncalibrated RGB sensor simulation.
