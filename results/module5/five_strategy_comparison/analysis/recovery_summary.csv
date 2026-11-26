@@ -1,0 +1,6 @@
+strategy,status,restoration_frame,confirmation_frame,recovery_delay_frames,confirmation_delay_frames,sustained_restoration,internal_restored_action_frame,qualified_recovery_frames,final_applied_exposure_ms,final_reference_mae,final_censored_ratio,final_frame_qualified
+S0,restored,30,32,0,2,True,,30,10.0,0.0,0.0,True
+S1,not_restored_within_observation_window,,,,,,,1,30.0,0.08704755485761347,0.0,False
+S2,not_restored_within_observation_window,,,,,,,0,8.97928163011065,0.004425327051059473,0.0,False
+S3,restored,35,37,5,7,True,35,25,10.0,0.0,0.0,True
+S4,restored,35,37,5,7,True,36,25,10.0,0.0,0.0,True

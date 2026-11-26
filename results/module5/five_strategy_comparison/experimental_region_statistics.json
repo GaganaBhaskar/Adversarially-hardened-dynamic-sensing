@@ -1,0 +1,83 @@
+{
+  "task": "M5-VAL-01B-01C",
+  "parent_git_checkpoint": "453c68727e96ee373c1afa8b28d6413f74c8c52f",
+  "fairness_contract_sha256": "fea57bb9bad661b7e849be32f277241bca17329b9b390c91b8116e329ca98636",
+  "scene_shape": [
+    3,
+    256,
+    256
+  ],
+  "clean_scene_sha256": "c6fcd0e9eaf8994646eadb7a731926ab3566490d980c742a4cf4fce8f42910eb",
+  "disturbed_scene_sha256": "3b1bb0331255aa8dc633f6f56a115fee1ae8d42e579b785dbe60b6f09041fc41",
+  "canonical_attack_map_sha256": "3ddd7a4f82ba2f1c28aa2c9ab3e448600d1d47fc5563a5924011f7f435ecf298",
+  "canonical_attack_map_peak": 14.99599552154541,
+  "core_absolute_threshold": 1.499599552154541,
+  "transition_absolute_threshold": 0.1499599552154541,
+  "total_pixels": 65536,
+  "total_rgb_samples": 196608,
+  "regions": {
+    "full": {
+      "pixel_count": 65536,
+      "rgb_sample_count": 196608,
+      "image_fraction": 1.0,
+      "mask_sha256": "916b144867c340614f515c7b0e5415c74832d899c05264ded2a277a6e81d81ff",
+      "minimum_disturbance": 4.3276955352666846e-07,
+      "maximum_disturbance": 14.99599552154541,
+      "mean_disturbance": 1.3465089797973633
+    },
+    "core": {
+      "pixel_count": 13552,
+      "rgb_sample_count": 40656,
+      "image_fraction": 0.206787109375,
+      "mask_sha256": "b5ca1915c65abf735e0a866b702eac453b3b8cfe5630c423d8854dc1eedbc3bb",
+      "minimum_disturbance": 1.501279354095459,
+      "maximum_disturbance": 14.99599552154541,
+      "mean_disturbance": 5.861308574676514
+    },
+    "transition": {
+      "pixel_count": 13568,
+      "rgb_sample_count": 40704,
+      "image_fraction": 0.20703125,
+      "mask_sha256": "63b6a44f32e25594b2b4bd0e8c2202c7a33b50069f6c51cefee8bbf45f429a43",
+      "minimum_disturbance": 0.15013574063777924,
+      "maximum_disturbance": 1.4980778694152832,
+      "mean_disturbance": 0.585116446018219
+    },
+    "background": {
+      "pixel_count": 38416,
+      "rgb_sample_count": 115248,
+      "image_fraction": 0.586181640625,
+      "mask_sha256": "e6350b3d799a83ec07dff36fa480f4eb6ee5fc9f42832114d00e59008f7d10c9",
+      "minimum_disturbance": 4.3276955352666846e-07,
+      "maximum_disturbance": 0.14965549111366272,
+      "mean_disturbance": 0.022737519815564156
+    }
+  },
+  "disjoint_subregions": true,
+  "complete_spatial_partition": true,
+  "fixed_region_masks": true,
+  "background_is_guaranteed_unaffected": false,
+  "matched_valid_input_statistics": {
+    "full": {
+      "region_sample_count": 196608,
+      "common_valid_sample_count": 188808,
+      "common_valid_coverage": 0.9603271484375
+    },
+    "core": {
+      "region_sample_count": 40656,
+      "common_valid_sample_count": 32856,
+      "common_valid_coverage": 0.80814639905549
+    },
+    "transition": {
+      "region_sample_count": 40704,
+      "common_valid_sample_count": 40704,
+      "common_valid_coverage": 1.0
+    },
+    "background": {
+      "region_sample_count": 115248,
+      "common_valid_sample_count": 115248,
+      "common_valid_coverage": 1.0
+    }
+  },
+  "comparative_experiment_executed": false
+}

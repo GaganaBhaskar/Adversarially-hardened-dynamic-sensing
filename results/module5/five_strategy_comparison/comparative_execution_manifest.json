@@ -1,0 +1,44 @@
+{
+  "task": "M5-VAL-01B-03",
+  "parent_git_checkpoint": "453c68727e96ee373c1afa8b28d6413f74c8c52f",
+  "harness_source_sha256": "8daec33e06dd202fed4d8b0345a87780c8305f91ed8f987bfb70b6b496ef429f",
+  "previous_protected_files": 98,
+  "manifested_files": 6,
+  "new_artifacts_including_manifest": 7,
+  "manifest_excludes_itself": true,
+  "files": {
+    "results/module5/five_strategy_comparison/full_comparative_records.json": {
+      "category": "raw_records",
+      "size_bytes": 3810679,
+      "sha256": "cfc0db1bbcc3ced14a2730c4cf10c36d1ce60e1f564d9901c0f10f8399dfc68e"
+    },
+    "results/module5/five_strategy_comparison/strategy_frame_records.csv": {
+      "category": "frames",
+      "size_bytes": 38906,
+      "sha256": "a7f5e62db2e849a469be767f6b309b1e9a3d7771769d948d69de6122855a452d"
+    },
+    "results/module5/five_strategy_comparison/regional_information_metrics.csv": {
+      "category": "regional_metrics",
+      "size_bytes": 595368,
+      "sha256": "47b89e2c7fb43332aa3b3c598b9523baca9a8f19036551dd83710c5a793059e1"
+    },
+    "results/module5/five_strategy_comparison/pairwise_matched_valid_metrics.csv": {
+      "category": "pairwise_matched",
+      "size_bytes": 285636,
+      "sha256": "a70ff5cd778bb619885f80babbe4aaf7b8a25676d0d7d5bb9f2c688ebaa78c8c"
+    },
+    "results/module5/five_strategy_comparison/all_strategy_matched_valid_metrics.csv": {
+      "category": "all_strategy_matched",
+      "size_bytes": 44790,
+      "sha256": "2625a47e1bba2bb5c9adec71a6d50dcfa4e4361a8e2f679edb45113ae2f541cd"
+    },
+    "results/module5/five_strategy_comparison/comparative_execution_report.json": {
+      "category": "execution_report",
+      "size_bytes": 2336683,
+      "sha256": "da2edc718e6868e83b4995d0bc7ec6d2415b83cf4f4003d9d4a4eabc65e86e12"
+    }
+  },
+  "full_comparative_execution_complete": true,
+  "scientific_analysis_complete": false,
+  "github_archival_complete": false
+}

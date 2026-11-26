@@ -1,0 +1,86 @@
+{
+  "task_id": "M5-VAL-01B-04C",
+  "scope": "single_controlled_synthetic_scenario",
+  "preliminary_assessment_preserved": true,
+  "supported_count": 4,
+  "partially_supported_count": 1,
+  "hypotheses": {
+    "H01": {
+      "status": "supported_in_controlled_scenario",
+      "interpretation": "Adaptive defensive exposure reduces physical censoring relative to fixed exposure.",
+      "evidence": [
+        "S4 reduces mean censoring relative to S0.",
+        "S4 clears censoring after one frame.",
+        "No subsequent S4 threshold violations."
+      ],
+      "figures": [
+        "F02",
+        "F03",
+        "F05"
+      ]
+    },
+    "H02": {
+      "status": "supported_in_controlled_scenario",
+      "interpretation": "DADRC maintains disturbance awareness after observable saturation and ADC clipping disappear.",
+      "evidence": [
+        "20 of 20 active frames recognized.",
+        "19 of 19 uncensored active frames recognized.",
+        "No unknown evidence states."
+      ],
+      "figures": [
+        "F10"
+      ]
+    },
+    "H03": {
+      "status": "partially_supported_in_controlled_scenario",
+      "interpretation": "Protection improves valid coverage, reference distortion and structural distortion relative to fixed exposure, but introduces competing radiometric and quantization costs.",
+      "evidence": [
+        "Higher valid observation coverage.",
+        "Lower reference and gradient MAE than S0.",
+        "Coarser radiance quantization than S0.",
+        "Higher conditional radiance MAE than S0.",
+        "Nearly identical matched-valid errors.",
+        "S2 and S4 tie on primary disturbance metrics.",
+        "S1 has slightly lower gradient MAE than S4."
+      ],
+      "figures": [
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F11"
+      ]
+    },
+    "H04": {
+      "status": "supported_in_controlled_scenario",
+      "interpretation": "DADRC restores nominal sensing after disturbance removal under the frozen observed recovery criteria.",
+      "evidence": [
+        "Restoration at frame 35.",
+        "Confirmation at frame 37.",
+        "Five-frame recovery delay.",
+        "Restoration sustained through frame 59."
+      ],
+      "figures": [
+        "F01",
+        "F09"
+      ]
+    },
+    "H05": {
+      "status": "supported_in_controlled_scenario",
+      "interpretation": "Lower saturation does not guarantee improvement across all information metrics.",
+      "evidence": [
+        "Censoring decreases while quantization coarsens.",
+        "Conditional radiance errors increase.",
+        "Common-valid sample comparison removes differences in valid sample populations.",
+        "No universal information superiority inferred."
+      ],
+      "figures": [
+        "F06",
+        "F07",
+        "F11"
+      ]
+    }
+  }
+}

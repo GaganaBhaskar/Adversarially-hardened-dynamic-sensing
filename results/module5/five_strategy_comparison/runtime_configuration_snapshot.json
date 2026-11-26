@@ -1,0 +1,183 @@
+{
+  "task": "M5-VAL-01B-01C",
+  "timestamp_utc": "2026-11-26T13:23:40.216393+00:00",
+  "parent_git_checkpoint": "453c68727e96ee373c1afa8b28d6413f74c8c52f",
+  "fairness_contract_sha256": "fea57bb9bad661b7e849be32f277241bca17329b9b390c91b8116e329ca98636",
+  "python_version": "3.13.18 (main, Oct 26 2026, 15:28:15) [GCC 13.3.0]",
+  "torch_version": "2.14.1+cpu",
+  "numpy_version": "2.4.6",
+  "device": "cpu",
+  "cuda_available": false,
+  "runtime_source_inventory": {
+    "environment": {
+      "module": "src.ahds.module1_environment.optical_environment",
+      "path": "src/ahds/module1_environment/optical_environment.py",
+      "sha256": "7d6eb60892cddf1ee571ff600b966587478b9ec64186dabebc49e9224cc6054c"
+    },
+    "sensor": {
+      "module": "src.ahds.module2_sensor.sensor_simulator",
+      "path": "src/ahds/module2_sensor/sensor_simulator.py",
+      "sha256": "a01ad9fed04e4526ec234a96ea20360b782d3d394fb14fe3f2ce99004e0700be"
+    },
+    "assessor": {
+      "module": "src.ahds.module4_anomaly_detection.disturbance_assessor",
+      "path": "src/ahds/module4_anomaly_detection/disturbance_assessor.py",
+      "sha256": "a7e519481195136cfef32c35d82afaab1aa115024f62dd029bcc4e7431c37b29"
+    },
+    "tracker": {
+      "module": "src.ahds.module4_anomaly_detection.disturbance_state_tracker",
+      "path": "src/ahds/module4_anomaly_detection/disturbance_state_tracker.py",
+      "sha256": "5de9d2e4b1c07fc97de97510d1da34abcf126c8829cc4743162390205f0a163e"
+    },
+    "S1": {
+      "module": "src.ahds.module5_defense.exposure_protection",
+      "path": "src/ahds/module5_defense/exposure_protection.py",
+      "sha256": "a45f7e1aa97d8e5eaf2598dbbc781a4b87221eb44196a60148d36548201d4a24"
+    },
+    "S2": {
+      "module": "src.ahds.module5_defense.probed_exposure",
+      "path": "src/ahds/module5_defense/probed_exposure.py",
+      "sha256": "8d87f15b2a28ee7d467eed60b34b748cd555e7f0d09ea28067b07149f9430a80"
+    },
+    "S3": {
+      "module": "src.ahds.module5_defense.state_aware_exposure",
+      "path": "src/ahds/module5_defense/state_aware_exposure.py",
+      "sha256": "3c144e7e1087b1bbd63539da3a228f380449b2f5ce0d41d1d5df93ac5b30dbab"
+    },
+    "S4": {
+      "module": "src.ahds.module5_defense.disturbance_aware_defense",
+      "path": "src/ahds/module5_defense/disturbance_aware_defense.py",
+      "sha256": "c5f8d2203502dc8cc2175396c5335d4ced3dcaca04d7c08b8d8d99dcd0e2fd2b"
+    },
+    "metrics": {
+      "module": "src.ahds.module7_evaluation.information_preservation",
+      "path": "src/ahds/module7_evaluation/information_preservation.py",
+      "sha256": "c89ec27ac109a7552fd42675677c7ecf49e6c8809f14bd429568003ba87f5bfb"
+    }
+  },
+  "runtime_configuration_defaults": {
+    "environment": {
+      "attack_type": "laser",
+      "center_x": 0.5,
+      "center_y": 0.5,
+      "radius": 0.12,
+      "intensity": 2.0,
+      "pulse_frequency": 2.0,
+      "pulse_phase": 0.0
+    },
+    "sensor": {
+      "exposure_ms": 10.0,
+      "gain": 1.0,
+      "electrons_per_unit_ms": 100.0,
+      "full_well_electrons": 10000.0,
+      "read_noise_electrons": 3.0,
+      "adc_bits": 12
+    },
+    "assessor": {
+      "residual_threshold": 0.15,
+      "minimum_changed_fraction": 0.001,
+      "minimum_saturation_fraction": 0.001
+    },
+    "tracker": {
+      "active_saturation_threshold": 0.001,
+      "recovery_frames": 2
+    },
+    "S1": {
+      "min_exposure_ms": 0.1,
+      "max_exposure_ms": 30.0,
+      "saturation_trigger": 0.005,
+      "reduction_factor": 0.5,
+      "recovery_factor": 1.1,
+      "recovery_delay_frames": 3
+    },
+    "S2": {
+      "min_exposure_ms": 0.1,
+      "max_exposure_ms": 30.0,
+      "saturation_trigger": 0.005,
+      "reduction_factor": 0.5,
+      "probe_factor": 1.05,
+      "probe_interval_frames": 4,
+      "failed_probe_cooldown": 8
+    },
+    "S3": {
+      "min_exposure_ms": 0.1,
+      "max_exposure_ms": 30.0,
+      "saturation_trigger": 0.005,
+      "reduction_factor": 0.5,
+      "recovery_factor": 1.1
+    },
+    "S4": {
+      "min_exposure_ms": 0.1,
+      "max_exposure_ms": 30.0,
+      "saturation_trigger": 0.005,
+      "reduction_factor": 0.5,
+      "persistent_probe_factor": 1.05,
+      "clear_probe_factor": 1.1,
+      "recovery_factor": 1.2,
+      "persistent_probe_interval": 4,
+      "clear_confirmation_frames": 3,
+      "failed_probe_cooldown": 8
+    },
+    "metrics": {
+      "epsilon": 1e-12
+    }
+  },
+  "initial_sensor_configuration": {
+    "exposure_ms": 10.0,
+    "gain": 1.0,
+    "electrons_per_unit_ms": 100.0,
+    "full_well_electrons": 10000.0,
+    "read_noise_electrons": 3.0,
+    "adc_bits": 12
+  },
+  "canonical_disturbance_configuration": {
+    "attack_type": "laser",
+    "center_x": 0.5,
+    "center_y": 0.5,
+    "radius": 0.12,
+    "intensity": 15.0,
+    "pulse_frequency": 2.0,
+    "pulse_phase": 0.0
+  },
+  "dadrc_internal_configurations": {
+    "observation_estimator": {
+      "component_class": "ExposureAwareObservationEstimator",
+      "configuration_class": "ExposureAwareObservationConfig",
+      "configuration": {
+        "min_adc_counts": 4
+      }
+    },
+    "disturbance_memory": {
+      "component_class": "ExposureAwareDisturbanceMemory",
+      "configuration_class": "DisturbanceMemoryConfig",
+      "configuration": {
+        "absolute_threshold": 0.05,
+        "relative_threshold": 0.2,
+        "minimum_changed_fraction": 0.005,
+        "minimum_common_fraction": 0.5,
+        "minimum_reference_intensity": 0.02,
+        "minimum_global_scale": 0.1,
+        "maximum_global_scale": 10.0,
+        "maximum_censored_fraction": 0.005
+      }
+    }
+  },
+  "dadrc_internal_sources": {
+    "observation_estimator": {
+      "path": "src/ahds/module5_defense/exposure_aware_observation.py",
+      "sha256": "76a6f871b48191a2ad8a3b299a2ba58768eed350e4ec4db34a1a69f8442f3438"
+    },
+    "disturbance_memory": {
+      "path": "src/ahds/module5_defense/disturbance_memory.py",
+      "sha256": "f186d3386600f919ed2aafb158f91fce9633dcde21020de5e3765629b78953fa"
+    }
+  },
+  "controller_information_fields": [
+    "adc_clipped",
+    "normalized_output",
+    "saturated"
+  ],
+  "sensor_noise_enabled": false,
+  "scene_randomized": false,
+  "comparative_experiment_executed": false
+}

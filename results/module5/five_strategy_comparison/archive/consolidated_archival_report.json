@@ -1,0 +1,1565 @@
+{
+  "archival_accounting_before_documentation": {
+    "already_tracked": 88,
+    "paths": {
+      "ignored": [
+        "results/module5/five_strategy_comparison/all_strategy_matched_valid_metrics.csv",
+        "results/module5/five_strategy_comparison/analysis/all_strategy_matched_phase_summary.csv",
+        "results/module5/five_strategy_comparison/analysis/disturbance_evidence_summary.json",
+        "results/module5/five_strategy_comparison/analysis/pairwise_matched_phase_summary.csv",
+        "results/module5/five_strategy_comparison/analysis/phase_region_metric_summary.csv",
+        "results/module5/five_strategy_comparison/analysis/preliminary_hypothesis_assessment.json",
+        "results/module5/five_strategy_comparison/analysis/protection_summary.csv",
+        "results/module5/five_strategy_comparison/analysis/quantitative_analysis_manifest.json",
+        "results/module5/five_strategy_comparison/analysis/quantitative_analysis_report.json",
+        "results/module5/five_strategy_comparison/analysis/recovery_qualification_timeline.csv",
+        "results/module5/five_strategy_comparison/analysis/recovery_summary.csv",
+        "results/module5/five_strategy_comparison/analysis/weighted_radiance_summary.csv",
+        "results/module5/five_strategy_comparison/comparative_execution_manifest.json",
+        "results/module5/five_strategy_comparison/comparative_execution_report.json",
+        "results/module5/five_strategy_comparison/experimental_region_statistics.json",
+        "results/module5/five_strategy_comparison/figures/F01_exposure_trajectories.pdf",
+        "results/module5/five_strategy_comparison/figures/F01_exposure_trajectories.png",
+        "results/module5/five_strategy_comparison/figures/F02_physical_saturation_and_adc_clipping.pdf",
+        "results/module5/five_strategy_comparison/figures/F02_physical_saturation_and_adc_clipping.png",
+        "results/module5/five_strategy_comparison/figures/F03_censoring_and_valid_coverage.pdf",
+        "results/module5/five_strategy_comparison/figures/F03_censoring_and_valid_coverage.png",
+        "results/module5/five_strategy_comparison/figures/F04_distortion_decomposition.pdf",
+        "results/module5/five_strategy_comparison/figures/F04_distortion_decomposition.png",
+        "results/module5/five_strategy_comparison/figures/F05_spatial_information_preservation.pdf",
+        "results/module5/five_strategy_comparison/figures/F05_spatial_information_preservation.png",
+        "results/module5/five_strategy_comparison/figures/F06_radiance_quantization_and_reconstruction.pdf",
+        "results/module5/five_strategy_comparison/figures/F06_radiance_quantization_and_reconstruction.png",
+        "results/module5/five_strategy_comparison/figures/F07_matched_valid_radiance_comparison.pdf",
+        "results/module5/five_strategy_comparison/figures/F07_matched_valid_radiance_comparison.png",
+        "results/module5/five_strategy_comparison/figures/F08_gradient_distortion.pdf",
+        "results/module5/five_strategy_comparison/figures/F08_gradient_distortion.png",
+        "results/module5/five_strategy_comparison/figures/F09_observed_recovery_qualification.pdf",
+        "results/module5/five_strategy_comparison/figures/F09_observed_recovery_qualification.png",
+        "results/module5/five_strategy_comparison/figures/F10_persistent_disturbance_evidence.pdf",
+        "results/module5/five_strategy_comparison/figures/F10_persistent_disturbance_evidence.png",
+        "results/module5/five_strategy_comparison/figures/F11_protection_information_tradeoff.pdf",
+        "results/module5/five_strategy_comparison/figures/F11_protection_information_tradeoff.png",
+        "results/module5/five_strategy_comparison/figures/scientific_visualization_manifest.json",
+        "results/module5/five_strategy_comparison/figures/scientific_visualization_report.json",
+        "results/module5/five_strategy_comparison/full_comparative_records.json",
+        "results/module5/five_strategy_comparison/harness_implementation_report.json",
+        "results/module5/five_strategy_comparison/harness_runtime_validation_report.json",
+        "results/module5/five_strategy_comparison/harness_smoke_records.json",
+        "results/module5/five_strategy_comparison/interpretation/final_hypothesis_assessment.json",
+        "results/module5/five_strategy_comparison/interpretation/scientific_interpretation.json",
+        "results/module5/five_strategy_comparison/interpretation/scientific_interpretation.md",
+        "results/module5/five_strategy_comparison/interpretation/scientific_interpretation_manifest.json",
+        "results/module5/five_strategy_comparison/pairwise_matched_valid_metrics.csv",
+        "results/module5/five_strategy_comparison/protocol_validation_report.json",
+        "results/module5/five_strategy_comparison/regional_information_metrics.csv",
+        "results/module5/five_strategy_comparison/runtime_configuration_snapshot.json",
+        "results/module5/five_strategy_comparison/runtime_validation_report.json",
+        "results/module5/five_strategy_comparison/strategy_frame_records.csv"
+      ],
+      "tracked": [
+        "docs/module5/dadrc_archive_manifest.json",
+        "docs/module5/dadrc_design.md",
+        "docs/module5/dadrc_reproducibility.md",
+        "docs/module5/dadrc_validation_report.md",
+        "docs/module5/information_preservation_archive_manifest.json",
+        "docs/module5/information_preservation_design.md",
+        "docs/module5/information_preservation_documentation_report.json",
+        "docs/module5/information_preservation_reproducibility.md",
+        "docs/module5/information_preservation_validation_report.md",
+        "experiments/module5/conversion_diffs/validate_dadrc_closed_loop.diff",
+        "experiments/module5/conversion_diffs/validate_disturbance_memory.diff",
+        "experiments/module5/conversion_diffs/validate_exposure_aware_observation.diff",
+        "experiments/module5/original_notebook_cells/dadrc_closed_loop_smoke_test.py",
+        "experiments/module5/original_notebook_cells/disturbance_memory_validation.py",
+        "experiments/module5/original_notebook_cells/exposure_aware_observation_archival.py",
+        "experiments/module5/original_notebook_cells/exposure_aware_observation_validation.py",
+        "experiments/module5/original_notebook_cells/source_extraction_report.json",
+        "experiments/module5/standalone_conversion_report.json",
+        "experiments/module5/validate_dadrc_closed_loop.py",
+        "experiments/module5/validate_disturbance_memory.py",
+        "experiments/module5/validate_exposure_aware_observation.py",
+        "experiments/module5/validate_information_preservation.py",
+        "results/module5/dadrc_reproduction/dadrc_smoke_test/closed_loop_timeline.csv",
+        "results/module5/dadrc_reproduction/dadrc_smoke_test/figures/dadrc_closed_loop_timeline.png",
+        "results/module5/dadrc_reproduction/dadrc_smoke_test/summary.json",
+        "results/module5/dadrc_reproduction/dadrc_smoke_test/validation_report.json",
+        "results/module5/dadrc_reproduction/disturbance_memory/disturbance_memory_validation.csv",
+        "results/module5/dadrc_reproduction/disturbance_memory/validation_report.json",
+        "results/module5/dadrc_reproduction/execution_logs/dadrc_smoke_test.txt",
+        "results/module5/dadrc_reproduction/execution_logs/disturbance_memory.txt",
+        "results/module5/dadrc_reproduction/execution_logs/exposure_aware_observation.txt",
+        "results/module5/dadrc_reproduction/exposure_aware_observation/artifact_manifest.json",
+        "results/module5/dadrc_reproduction/exposure_aware_observation/exposure_gain_invariance.csv",
+        "results/module5/dadrc_reproduction/exposure_aware_observation/physical_reconstruction.csv",
+        "results/module5/dadrc_reproduction/exposure_aware_observation/validation_report.json",
+        "results/module5/dadrc_reproduction/final_verification/dadrc_reproduction_certificate.json",
+        "results/module5/dadrc_reproduction/final_verification/experimental_artifact_equivalence.csv",
+        "results/module5/dadrc_reproduction/final_verification/manifest_entry_verification.csv",
+        "results/module5/dadrc_reproduction/final_verification/manifest_semantic_verification.json",
+        "results/module5/dadrc_reproduction/final_verification/reproduction_evidence_manifest.json",
+        "results/module5/dadrc_reproduction/independent_execution_report.json",
+        "results/module5/dadrc_reproduction/numerical_verification/artifact_comparison.csv",
+        "results/module5/dadrc_reproduction/numerical_verification/csv_field_comparison.csv",
+        "results/module5/dadrc_reproduction/numerical_verification/figure_verification.json",
+        "results/module5/dadrc_reproduction/numerical_verification/manifest_inspection.json",
+        "results/module5/dadrc_reproduction/numerical_verification/metadata_differences.json",
+        "results/module5/dadrc_reproduction/numerical_verification/numerical_equivalence_report.json",
+        "results/module5/dadrc_reproduction/numerical_verification/scientific_mismatches.csv",
+        "results/module5/dadrc_reproduction/reproduction_environment.json",
+        "results/module5/dadrc_smoke_test/closed_loop_timeline.csv",
+        "results/module5/dadrc_smoke_test/figures/dadrc_closed_loop_timeline.png",
+        "results/module5/dadrc_smoke_test/summary.json",
+        "results/module5/dadrc_smoke_test/validation_report.json",
+        "results/module5/dadrc_validation/complete_regression_log.txt",
+        "results/module5/dadrc_validation/complete_regression_report.json",
+        "results/module5/dadrc_validation/targeted_test_log.txt",
+        "results/module5/dadrc_validation/targeted_test_report.json",
+        "results/module5/dadrc_validation/test_collection_log.txt",
+        "results/module5/dadrc_validation/test_collection_report.json",
+        "results/module5/disturbance_memory/disturbance_memory_validation.csv",
+        "results/module5/disturbance_memory/validation_report.json",
+        "results/module5/exposure_aware_observation/artifact_manifest.json",
+        "results/module5/exposure_aware_observation/exposure_gain_invariance.csv",
+        "results/module5/exposure_aware_observation/physical_reconstruction.csv",
+        "results/module5/exposure_aware_observation/validation_report.json",
+        "results/module5/information_preservation_regression/complete_collection_log.txt",
+        "results/module5/information_preservation_regression/complete_collection_report.json",
+        "results/module5/information_preservation_regression/complete_regression_log.txt",
+        "results/module5/information_preservation_regression/complete_regression_report.json",
+        "results/module5/information_preservation_regression/complete_regression_results.xml",
+        "results/module5/information_preservation_regression/reproducibility_environment.json",
+        "results/module5/information_preservation_regression/targeted_test_log.txt",
+        "results/module5/information_preservation_regression/targeted_test_report.json",
+        "results/module5/information_preservation_regression/targeted_test_results.xml",
+        "results/module5/information_preservation_regression/test_collection_log.txt",
+        "results/module5/information_preservation_regression/test_collection_report.json",
+        "results/module5/information_preservation_validation/artifact_manifest.json",
+        "results/module5/information_preservation_validation/controlled_metric_results.csv",
+        "results/module5/information_preservation_validation/controlled_validation_log.txt",
+        "results/module5/information_preservation_validation/quantization_bound_verification.csv",
+        "results/module5/information_preservation_validation/validation_checks.csv",
+        "results/module5/information_preservation_validation/validation_report.json",
+        "src/ahds/module5_defense/disturbance_aware_defense.py",
+        "src/ahds/module5_defense/disturbance_memory.py",
+        "src/ahds/module5_defense/exposure_aware_observation.py",
+        "src/ahds/module7_evaluation/information_preservation.py",
+        "tests/test_module5_dadrc.py",
+        "tests/test_module7_information_preservation.py"
+      ],
+      "untracked": [
+        "docs/module5/five_strategy_comparative_protocol.md",
+        "docs/module5/five_strategy_fairness_contract.json",
+        "experiments/module5/five_strategy_closed_loop.py"
+      ]
+    },
+    "pending_archival": 56,
+    "untracked_ignored": 53,
+    "untracked_not_ignored": 3
+  },
+  "archival_size_preflight": {
+    "blocking_files": [],
+    "file_sizes": [
+      {
+        "bytes": 14223,
+        "path": "docs/module5/five_strategy_comparative_protocol.md"
+      },
+      {
+        "bytes": 17501,
+        "path": "docs/module5/five_strategy_fairness_contract.json"
+      },
+      {
+        "bytes": 21648,
+        "path": "experiments/module5/five_strategy_closed_loop.py"
+      },
+      {
+        "bytes": 44790,
+        "path": "results/module5/five_strategy_comparison/all_strategy_matched_valid_metrics.csv"
+      },
+      {
+        "bytes": 2295,
+        "path": "results/module5/five_strategy_comparison/analysis/all_strategy_matched_phase_summary.csv"
+      },
+      {
+        "bytes": 12357,
+        "path": "results/module5/five_strategy_comparison/analysis/disturbance_evidence_summary.json"
+      },
+      {
+        "bytes": 12133,
+        "path": "results/module5/five_strategy_comparison/analysis/pairwise_matched_phase_summary.csv"
+      },
+      {
+        "bytes": 213714,
+        "path": "results/module5/five_strategy_comparison/analysis/phase_region_metric_summary.csv"
+      },
+      {
+        "bytes": 1217,
+        "path": "results/module5/five_strategy_comparison/analysis/preliminary_hypothesis_assessment.json"
+      },
+      {
+        "bytes": 1708,
+        "path": "results/module5/five_strategy_comparison/analysis/protection_summary.csv"
+      },
+      {
+        "bytes": 2666,
+        "path": "results/module5/five_strategy_comparison/analysis/quantitative_analysis_manifest.json"
+      },
+      {
+        "bytes": 255357,
+        "path": "results/module5/five_strategy_comparison/analysis/quantitative_analysis_report.json"
+      },
+      {
+        "bytes": 10034,
+        "path": "results/module5/five_strategy_comparison/analysis/recovery_qualification_timeline.csv"
+      },
+      {
+        "bytes": 609,
+        "path": "results/module5/five_strategy_comparison/analysis/recovery_summary.csv"
+      },
+      {
+        "bytes": 4144,
+        "path": "results/module5/five_strategy_comparison/analysis/weighted_radiance_summary.csv"
+      },
+      {
+        "bytes": 1897,
+        "path": "results/module5/five_strategy_comparison/comparative_execution_manifest.json"
+      },
+      {
+        "bytes": 2336683,
+        "path": "results/module5/five_strategy_comparison/comparative_execution_report.json"
+      },
+      {
+        "bytes": 2997,
+        "path": "results/module5/five_strategy_comparison/experimental_region_statistics.json"
+      },
+      {
+        "bytes": 28785,
+        "path": "results/module5/five_strategy_comparison/figures/F01_exposure_trajectories.pdf"
+      },
+      {
+        "bytes": 441714,
+        "path": "results/module5/five_strategy_comparison/figures/F01_exposure_trajectories.png"
+      },
+      {
+        "bytes": 27711,
+        "path": "results/module5/five_strategy_comparison/figures/F02_physical_saturation_and_adc_clipping.pdf"
+      },
+      {
+        "bytes": 347071,
+        "path": "results/module5/five_strategy_comparison/figures/F02_physical_saturation_and_adc_clipping.png"
+      },
+      {
+        "bytes": 30594,
+        "path": "results/module5/five_strategy_comparison/figures/F03_censoring_and_valid_coverage.pdf"
+      },
+      {
+        "bytes": 419353,
+        "path": "results/module5/five_strategy_comparison/figures/F03_censoring_and_valid_coverage.png"
+      },
+      {
+        "bytes": 30526,
+        "path": "results/module5/five_strategy_comparison/figures/F04_distortion_decomposition.pdf"
+      },
+      {
+        "bytes": 617688,
+        "path": "results/module5/five_strategy_comparison/figures/F04_distortion_decomposition.png"
+      },
+      {
+        "bytes": 25402,
+        "path": "results/module5/five_strategy_comparison/figures/F05_spatial_information_preservation.pdf"
+      },
+      {
+        "bytes": 287893,
+        "path": "results/module5/five_strategy_comparison/figures/F05_spatial_information_preservation.png"
+      },
+      {
+        "bytes": 32787,
+        "path": "results/module5/five_strategy_comparison/figures/F06_radiance_quantization_and_reconstruction.pdf"
+      },
+      {
+        "bytes": 710467,
+        "path": "results/module5/five_strategy_comparison/figures/F06_radiance_quantization_and_reconstruction.png"
+      },
+      {
+        "bytes": 26828,
+        "path": "results/module5/five_strategy_comparison/figures/F07_matched_valid_radiance_comparison.pdf"
+      },
+      {
+        "bytes": 446816,
+        "path": "results/module5/five_strategy_comparison/figures/F07_matched_valid_radiance_comparison.png"
+      },
+      {
+        "bytes": 33433,
+        "path": "results/module5/five_strategy_comparison/figures/F08_gradient_distortion.pdf"
+      },
+      {
+        "bytes": 693311,
+        "path": "results/module5/five_strategy_comparison/figures/F08_gradient_distortion.png"
+      },
+      {
+        "bytes": 34720,
+        "path": "results/module5/five_strategy_comparison/figures/F09_observed_recovery_qualification.pdf"
+      },
+      {
+        "bytes": 497930,
+        "path": "results/module5/five_strategy_comparison/figures/F09_observed_recovery_qualification.png"
+      },
+      {
+        "bytes": 27272,
+        "path": "results/module5/five_strategy_comparison/figures/F10_persistent_disturbance_evidence.pdf"
+      },
+      {
+        "bytes": 356684,
+        "path": "results/module5/five_strategy_comparison/figures/F10_persistent_disturbance_evidence.png"
+      },
+      {
+        "bytes": 25214,
+        "path": "results/module5/five_strategy_comparison/figures/F11_protection_information_tradeoff.pdf"
+      },
+      {
+        "bytes": 391848,
+        "path": "results/module5/five_strategy_comparison/figures/F11_protection_information_tradeoff.png"
+      },
+      {
+        "bytes": 5345,
+        "path": "results/module5/five_strategy_comparison/figures/scientific_visualization_manifest.json"
+      },
+      {
+        "bytes": 17726,
+        "path": "results/module5/five_strategy_comparison/figures/scientific_visualization_report.json"
+      },
+      {
+        "bytes": 3810679,
+        "path": "results/module5/five_strategy_comparison/full_comparative_records.json"
+      },
+      {
+        "bytes": 14772,
+        "path": "results/module5/five_strategy_comparison/harness_implementation_report.json"
+      },
+      {
+        "bytes": 1055439,
+        "path": "results/module5/five_strategy_comparison/harness_runtime_validation_report.json"
+      },
+      {
+        "bytes": 745476,
+        "path": "results/module5/five_strategy_comparison/harness_smoke_records.json"
+      },
+      {
+        "bytes": 2831,
+        "path": "results/module5/five_strategy_comparison/interpretation/final_hypothesis_assessment.json"
+      },
+      {
+        "bytes": 22014,
+        "path": "results/module5/five_strategy_comparison/interpretation/scientific_interpretation.json"
+      },
+      {
+        "bytes": 4682,
+        "path": "results/module5/five_strategy_comparison/interpretation/scientific_interpretation.md"
+      },
+      {
+        "bytes": 877,
+        "path": "results/module5/five_strategy_comparison/interpretation/scientific_interpretation_manifest.json"
+      },
+      {
+        "bytes": 285636,
+        "path": "results/module5/five_strategy_comparison/pairwise_matched_valid_metrics.csv"
+      },
+      {
+        "bytes": 15806,
+        "path": "results/module5/five_strategy_comparison/protocol_validation_report.json"
+      },
+      {
+        "bytes": 595368,
+        "path": "results/module5/five_strategy_comparison/regional_information_metrics.csv"
+      },
+      {
+        "bytes": 6172,
+        "path": "results/module5/five_strategy_comparison/runtime_configuration_snapshot.json"
+      },
+      {
+        "bytes": 29225,
+        "path": "results/module5/five_strategy_comparison/runtime_validation_report.json"
+      },
+      {
+        "bytes": 38906,
+        "path": "results/module5/five_strategy_comparison/strategy_frame_records.csv"
+      }
+    ],
+    "largest_file": {
+      "bytes": 3810679,
+      "path": "results/module5/five_strategy_comparison/full_comparative_records.json"
+    },
+    "passed": true,
+    "pending_files": 56,
+    "total_bytes": 15140974,
+    "warning_files": []
+  },
+  "created_at_utc": "2026-11-26T14:00:17.429280+00:00",
+  "evidence_integrity": {
+    "expected": 144,
+    "historical_tracked_files_unchanged": true,
+    "missing_or_modified": 0,
+    "verified_after_regression": 144,
+    "verified_before_regression": 144
+  },
+  "excluded_unrelated_files": [
+    {
+      "include_in_commit": false,
+      "modified": false,
+      "path": "module5_baseline_original.txt",
+      "sha256": "a9fd455966635d50b42192360c27e568b65e0ae69cd2f7eee6f71265edb3f832"
+    }
+  ],
+  "expected_files_requiring_archival": 58,
+  "expected_final_protected_inventory": 146,
+  "new_archival_documents": [
+    "results/module5/five_strategy_comparison/archive/consolidated_archival_report.json",
+    "results/module5/five_strategy_comparison/archive/consolidated_archival_manifest.json"
+  ],
+  "next_task": "M5-VAL-01B-05C \u2014 Git Commit, Push and Remote Verification",
+  "prerequisite_task": {
+    "passed": true,
+    "protected_files": 144,
+    "task_id": "M5-VAL-01B-05A-02"
+  },
+  "preservation_policy": {
+    "comparative_experiments_rerun": false,
+    "controller_modifications": false,
+    "existing_artifacts_overwritten": false,
+    "git_commit_performed": false,
+    "git_staging_performed": false,
+    "github_push_performed": false,
+    "gitignore_modified": false
+  },
+  "regression_testing": {
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "tests",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "summary": {
+      "errors": 0,
+      "expected_tests": 179,
+      "failed": 0,
+      "passed": 179,
+      "pytest_return_code": 0,
+      "reported_tests": 179,
+      "skipped": 0,
+      "wall_time_seconds": 11.183092217001104
+    },
+    "test_records": [
+      {
+        "classname": "tests.test_module1",
+        "duration_seconds": 0.009,
+        "name": "test_clean_scene_shape",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module1",
+        "duration_seconds": 0.002,
+        "name": "test_attack_map_shape",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module1",
+        "duration_seconds": 0.006,
+        "name": "test_attack_increases_illumination",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module1",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_attack",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module1_2",
+        "duration_seconds": 0.004,
+        "name": "test_illumination_conditions",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module1_2",
+        "duration_seconds": 0.003,
+        "name": "test_invalid_illumination",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module1_2",
+        "duration_seconds": 0.003,
+        "name": "test_benign_light_generation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module1_2",
+        "duration_seconds": 0.003,
+        "name": "test_multiple_attacks",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module1_2",
+        "duration_seconds": 0.005,
+        "name": "test_temporal_sequence",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.002,
+        "name": "test_sensor_output_shape",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.001,
+        "name": "test_sensor_output_range",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.001,
+        "name": "test_full_well_saturation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.001,
+        "name": "test_no_saturation_for_dark_scene",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.002,
+        "name": "test_exposure_increases_signal",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.008,
+        "name": "test_noise_reproducibility",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_exposure",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_input_shape",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_negative_radiance",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module2",
+        "duration_seconds": 0.001,
+        "name": "test_adc_bit_depth",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.001,
+        "name": "test_exposure_controller_increases_exposure",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.001,
+        "name": "test_exposure_controller_reduces_exposure",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.002,
+        "name": "test_exposure_limits",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.001,
+        "name": "test_joint_controller_increases_gain_at_exposure_limit",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.002,
+        "name": "test_joint_controller_respects_gain_limit",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.001,
+        "name": "test_joint_controller_reduces_gain_on_clipping",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.001,
+        "name": "test_joint_controller_invalid_brightness",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.001,
+        "name": "test_joint_controller_invalid_config",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.001,
+        "name": "test_joint_controller_invalid_clipping_ratio",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3",
+        "duration_seconds": 0.006,
+        "name": "test_joint_controller_exposure_and_gain_bounds",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3_roi",
+        "duration_seconds": 0.001,
+        "name": "test_roi_output_shape",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3_roi",
+        "duration_seconds": 0.001,
+        "name": "test_dense_roi_sampling",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3_roi",
+        "duration_seconds": 0.001,
+        "name": "test_sparse_background_sampling",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3_roi",
+        "duration_seconds": 0.001,
+        "name": "test_sampling_ratio",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3_roi",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_roi",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module3_roi",
+        "duration_seconds": 0.001,
+        "name": "test_full_frame_roi",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 0.088,
+        "name": "test_clean_scene_not_flagged",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 0.096,
+        "name": "test_strong_benign_glare_not_attack_candidate",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 0.09,
+        "name": "test_localized_laser_candidate",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 0.154,
+        "name": "test_weak_laser_disturbance",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 0.045,
+        "name": "test_global_brightness_compensation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 1.216,
+        "name": "test_state_tracker_sustained_attack_and_recovery",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 0.158,
+        "name": "test_detector_reset",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_concentration_threshold",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_recovery_frames",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module4",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_temporal_input",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_original_normal_hold",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_original_immediate_protection",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_original_delayed_recovery",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_original_minimum_exposure",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.004,
+        "name": "test_original_maximum_exposure",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_original_reset",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_state_aware_normal_operation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_state_aware_protection_activation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_state_aware_disturbance_hold",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_state_aware_reference_restoration",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_state_aware_reset",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_probe_normal_operation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_probe_immediate_protection",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_probe_scheduling_interval",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_probe_successful_acceptance",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_probe_failed_rollback",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_probe_failed_cooldown",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_probe_persistent_saturation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_probe_reference_exposure_limit",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_probe_reset",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_saturation_rejected",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_exposure_rejected",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration_rejected",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_disturbance_state_rejected",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes2]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes3]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes4]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes5]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes6]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes7]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes8]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_configuration[changes9]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_invalid_configuration[changes10]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_normal_monitoring[CLEAR-HOLD]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_normal_monitoring[PRESENT-MONITOR_DISTURBANCE]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_normal_monitoring[UNKNOWN-MONITOR_UNKNOWN]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_each_unsafe_signal_triggers_protection[signals0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_each_unsafe_signal_triggers_protection[signals1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_each_unsafe_signal_triggers_protection[signals2]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_repeated_protection_preserves_reference",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_minimum_exposure_bound",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_persistent_disturbance_holds_exposure",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_persistent_probe_timing",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_successful_persistent_probe",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_unsafe_probe_failure",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.002,
+        "name": "test_unknown_probe_rolls_back",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.005,
+        "name": "test_failed_probe_cooldown",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.006,
+        "name": "test_unsafe_observation_overrides_cooldown",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.005,
+        "name": "test_unknown_evidence_holds_protection",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_active_tracker_blocks_clear_recovery",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_interrupted_clear_confirmation[PRESENT]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_interrupted_clear_confirmation[UNKNOWN]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_clear_confirmation_and_probe",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.002,
+        "name": "test_successful_clear_probe_enables_recovery",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_disturbance_returns_during_recovery",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.009,
+        "name": "test_restoration_requires_observed_reference",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_invalid_current_exposure[0.01]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_invalid_current_exposure[31.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_invalid_current_exposure[nan]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_current_exposure[inf]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_spatial_saturation[-0.1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_invalid_spatial_saturation[1.1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_spatial_saturation[nan]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.003,
+        "name": "test_invalid_tracker_state",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_command_mismatch_rejected",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.007,
+        "name": "test_real_sensor_reference_preservation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.005,
+        "name": "test_duplicate_reference_rejected",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.004,
+        "name": "test_unsafe_startup_reference_rejected",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module5_dadrc",
+        "duration_seconds": 0.005,
+        "name": "test_controller_reset",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.003,
+        "name": "test_invalid_epsilon[0.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_epsilon[-1.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_epsilon[nan]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_epsilon[inf]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.001,
+        "name": "test_invalid_epsilon[-inf]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.003,
+        "name": "test_valid_custom_epsilon",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.013,
+        "name": "test_identical_observations",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.012,
+        "name": "test_identity_ratios",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.01,
+        "name": "test_output_contract",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.014,
+        "name": "test_clean_exposure_reduction[5.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.014,
+        "name": "test_clean_exposure_reduction[1.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.008,
+        "name": "test_clean_exposure_reduction[0.1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.011,
+        "name": "test_gain_compensation_identity",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.011,
+        "name": "test_quantization_formula[10.0-1.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.012,
+        "name": "test_quantization_formula[5.0-1.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.012,
+        "name": "test_quantization_formula[1.0-1.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.014,
+        "name": "test_quantization_formula[0.1-1.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.011,
+        "name": "test_quantization_formula[5.0-2.0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.012,
+        "name": "test_full_saturation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.011,
+        "name": "test_adc_clipping_without_full_well_saturation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.011,
+        "name": "test_zero_signal_is_not_censored",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.012,
+        "name": "test_partial_censoring",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.009,
+        "name": "test_censoring_mask_union",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.009,
+        "name": "test_analytic_gradient",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.009,
+        "name": "test_analytic_radiance_error",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.011,
+        "name": "test_mae_triangle_inequality",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.011,
+        "name": "test_empty_region",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.009,
+        "name": "test_single_pixel_region",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.014,
+        "name": "test_disconnected_region_has_no_edges",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.009,
+        "name": "test_constant_reference",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.018,
+        "name": "test_region_shape_equivalence",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.016,
+        "name": "test_full_region_equivalence",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.034,
+        "name": "test_complementary_region_aggregation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_invalid_normalized_values[nan]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_invalid_normalized_values[inf]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_invalid_normalized_values[-0.1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.007,
+        "name": "test_invalid_normalized_values[1.1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_invalid_normalized_shape[shape0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.006,
+        "name": "test_invalid_normalized_shape[shape1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_invalid_normalized_shape[shape2]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_invalid_normalized_shape[shape3]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.003,
+        "name": "test_nonfloating_normalized_output",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.003,
+        "name": "test_nontensor_normalized_output",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.007,
+        "name": "test_nonboolean_sensor_mask[saturated]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_nonboolean_sensor_mask[adc_clipped]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.002,
+        "name": "test_invalid_sensor_mask_shape[saturated]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_invalid_sensor_mask_shape[adc_clipped]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_noninteger_adc",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.006,
+        "name": "test_adc_out_of_range[-1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_adc_out_of_range[4096]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.003,
+        "name": "test_adc_shape_mismatch",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_adc_normalized_inconsistency",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.005,
+        "name": "test_invalid_region_shape[shape0]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.007,
+        "name": "test_invalid_region_shape[shape1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.007,
+        "name": "test_invalid_region_shape[shape2]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.005,
+        "name": "test_nonboolean_region",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.005,
+        "name": "test_nontensor_region",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_invalid_optical_ground_truth[-0.1]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.006,
+        "name": "test_invalid_optical_ground_truth[nan]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.004,
+        "name": "test_invalid_optical_ground_truth[inf]",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.005,
+        "name": "test_ground_truth_shape_mismatch",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.019,
+        "name": "test_repeatable_metric_evaluation",
+        "status": "passed"
+      },
+      {
+        "classname": "tests.test_module7_information_preservation",
+        "duration_seconds": 0.011,
+        "name": "test_evaluation_does_not_modify_inputs",
+        "status": "passed"
+      }
+    ]
+  },
+  "research_checkpoint": {
+    "branch": "main",
+    "head": "453c68727e96ee373c1afa8b28d6413f74c8c52f",
+    "tree": "8838d787c2ae4c9a53b60f0aa638d5e9c3116003"
+  },
+  "scientific_scope": {
+    "experiment": "M5-VAL-01B five-strategy closed-loop comparative evaluation",
+    "hypothesis_assessment_reference": "results/module5/five_strategy_comparison/interpretation/final_hypothesis_assessment.json",
+    "limitations": [
+      "Single deterministic synthetic scenario",
+      "Sensor noise disabled",
+      "Fixed gain and ROI",
+      "Module 3 adaptation disabled",
+      "Trusted startup reference assumption",
+      "No calibrated physical camera experiment",
+      "No downstream perception validation",
+      "No embedded hardware latency validation",
+      "No independent population-level trials",
+      "Full independent numerical reproduction pending",
+      "Regression success does not establish universal scientific superiority"
+    ],
+    "scientific_interpretation_reference": "results/module5/five_strategy_comparison/interpretation/scientific_interpretation.md",
+    "scope": "Controlled deterministic synthetic physical-layer evaluation",
+    "strategies": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ]
+  },
+  "task_id": "M5-VAL-01B-05B",
+  "title": "Regression Testing and Archival Documentation"
+}

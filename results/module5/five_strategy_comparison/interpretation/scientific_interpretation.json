@@ -1,0 +1,573 @@
+{
+  "task_id": "M5-VAL-01B-04C",
+  "task_name": "Scientific Interpretation",
+  "status": "PASSED",
+  "research_checkpoint": "453c68727e96ee373c1afa8b28d6413f74c8c52f",
+  "scope": "single_controlled_synthetic_scenario",
+  "strategy_comparison": {
+    "S0": {
+      "mean_censored_ratio": 0.0396728515625,
+      "valid_observation_coverage": 0.9603271484375,
+      "reference_mae": 0.1249870899590137,
+      "gradient_mae": 0.0029776955297788,
+      "radiance_quantization_step": 0.0024420024420024,
+      "conditional_radiance_mae": 0.9015677946363704,
+      "matched_valid_radiance_mae": 0.8768503306784835,
+      "censoring_clearance_delay_frames": null,
+      "later_censoring_violations": null,
+      "restoration_frame": 30.0,
+      "confirmation_frame": 32.0,
+      "recovery_delay_frames": 0.0,
+      "sustained_restoration": true,
+      "final_applied_exposure_ms": 10.0
+    },
+    "S1": {
+      "mean_censored_ratio": 0.008660888671875,
+      "valid_observation_coverage": 0.991339111328125,
+      "reference_mae": 0.0848539646321018,
+      "gradient_mae": 0.0021411764581188,
+      "radiance_quantization_step": 0.0048176182616241,
+      "conditional_radiance_mae": 1.272391239946124,
+      "matched_valid_radiance_mae": 0.876954133843581,
+      "censoring_clearance_delay_frames": 2.0,
+      "later_censoring_violations": 2.0,
+      "restoration_frame": null,
+      "confirmation_frame": null,
+      "recovery_delay_frames": null,
+      "sustained_restoration": null,
+      "final_applied_exposure_ms": 30.0
+    },
+    "S2": {
+      "mean_censored_ratio": 0.001983642578125,
+      "valid_observation_coverage": 0.998016357421875,
+      "reference_mae": 0.0808199054747516,
+      "gradient_mae": 0.0021719604152202,
+      "radiance_quantization_step": 0.0043616848698064,
+      "conditional_radiance_mae": 1.3252247842863505,
+      "matched_valid_radiance_mae": 0.8769236052236984,
+      "censoring_clearance_delay_frames": 1.0,
+      "later_censoring_violations": 0.0,
+      "restoration_frame": null,
+      "confirmation_frame": null,
+      "recovery_delay_frames": null,
+      "sustained_restoration": null,
+      "final_applied_exposure_ms": 8.97928163011065
+    },
+    "S3": {
+      "mean_censored_ratio": 0.0033111572265625,
+      "valid_observation_coverage": 0.9966888427734376,
+      "reference_mae": 0.0904168758306941,
+      "gradient_mae": 0.0024304909641919,
+      "radiance_quantization_step": 0.0037863880839087,
+      "conditional_radiance_mae": 1.3073037846518043,
+      "matched_valid_radiance_mae": 0.876916673980144,
+      "censoring_clearance_delay_frames": 1.0,
+      "later_censoring_violations": 0.0,
+      "restoration_frame": 35.0,
+      "confirmation_frame": 37.0,
+      "recovery_delay_frames": 5.0,
+      "sustained_restoration": true,
+      "final_applied_exposure_ms": 10.0
+    },
+    "S4": {
+      "mean_censored_ratio": 0.001983642578125,
+      "valid_observation_coverage": 0.998016357421875,
+      "reference_mae": 0.0808199054747516,
+      "gradient_mae": 0.0021719604152202,
+      "radiance_quantization_step": 0.0043616848698064,
+      "conditional_radiance_mae": 1.3252247842863505,
+      "matched_valid_radiance_mae": 0.8769236052236984,
+      "censoring_clearance_delay_frames": 1.0,
+      "later_censoring_violations": 0.0,
+      "restoration_frame": 35.0,
+      "confirmation_frame": 37.0,
+      "recovery_delay_frames": 5.0,
+      "sustained_restoration": true,
+      "final_applied_exposure_ms": 10.0
+    }
+  },
+  "relative_results": {
+    "censoring_reduction_vs_S0_percent": 95.0,
+    "censoring_reduction_vs_S3_percent": 40.09216589861751,
+    "reference_mae_reduction_vs_S0_percent": 35.33739724538398,
+    "gradient_mae_reduction_vs_S0_percent": 27.059016158661954,
+    "valid_coverage_gain_vs_S0_percentage_points": 3.7689208984375,
+    "quantization_step_increase_vs_S0_percent": 78.61099541857516,
+    "conditional_radiance_mae_increase_vs_S0_percent": 46.99114056318458,
+    "matched_radiance_mae_increase_vs_S0_percent": 0.00835656242020088
+  },
+  "matched_valid_coverage": 0.9563232421875,
+  "matched_valid_error_spread": 0.00010380316509750465,
+  "hypothesis_assessment": {
+    "H01": {
+      "status": "supported_in_controlled_scenario",
+      "interpretation": "Adaptive defensive exposure reduces physical censoring relative to fixed exposure.",
+      "evidence": [
+        "S4 reduces mean censoring relative to S0.",
+        "S4 clears censoring after one frame.",
+        "No subsequent S4 threshold violations."
+      ],
+      "figures": [
+        "F02",
+        "F03",
+        "F05"
+      ]
+    },
+    "H02": {
+      "status": "supported_in_controlled_scenario",
+      "interpretation": "DADRC maintains disturbance awareness after observable saturation and ADC clipping disappear.",
+      "evidence": [
+        "20 of 20 active frames recognized.",
+        "19 of 19 uncensored active frames recognized.",
+        "No unknown evidence states."
+      ],
+      "figures": [
+        "F10"
+      ]
+    },
+    "H03": {
+      "status": "partially_supported_in_controlled_scenario",
+      "interpretation": "Protection improves valid coverage, reference distortion and structural distortion relative to fixed exposure, but introduces competing radiometric and quantization costs.",
+      "evidence": [
+        "Higher valid observation coverage.",
+        "Lower reference and gradient MAE than S0.",
+        "Coarser radiance quantization than S0.",
+        "Higher conditional radiance MAE than S0.",
+        "Nearly identical matched-valid errors.",
+        "S2 and S4 tie on primary disturbance metrics.",
+        "S1 has slightly lower gradient MAE than S4."
+      ],
+      "figures": [
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F11"
+      ]
+    },
+    "H04": {
+      "status": "supported_in_controlled_scenario",
+      "interpretation": "DADRC restores nominal sensing after disturbance removal under the frozen observed recovery criteria.",
+      "evidence": [
+        "Restoration at frame 35.",
+        "Confirmation at frame 37.",
+        "Five-frame recovery delay.",
+        "Restoration sustained through frame 59."
+      ],
+      "figures": [
+        "F01",
+        "F09"
+      ]
+    },
+    "H05": {
+      "status": "supported_in_controlled_scenario",
+      "interpretation": "Lower saturation does not guarantee improvement across all information metrics.",
+      "evidence": [
+        "Censoring decreases while quantization coarsens.",
+        "Conditional radiance errors increase.",
+        "Common-valid sample comparison removes differences in valid sample populations.",
+        "No universal information superiority inferred."
+      ],
+      "figures": [
+        "F06",
+        "F07",
+        "F11"
+      ]
+    }
+  },
+  "supported_claims": [
+    "Persistent disturbance awareness was demonstrated after physical censoring disappeared.",
+    "DADRC combines the observed disturbance protection of S2 with the observed recovery performance of S3.",
+    "DADRC increases valid observation coverage relative to fixed exposure in this scenario.",
+    "Matched-valid radiance errors are numerically close across strategies on identical valid samples.",
+    "Physical protection and information preservation are distinct, competing sensing objectives."
+  ],
+  "unsupported_claims": [
+    "Universal DADRC superiority.",
+    "Generalized perfect disturbance detection.",
+    "Robustness across unseen optical scenarios.",
+    "Robustness under realistic sensor noise.",
+    "Improved downstream semantic perception.",
+    "Verified embedded latency, energy or bandwidth gains.",
+    "Novelty relative to all published sensing methods.",
+    "Statistically significant population-level effects."
+  ],
+  "limitations": [
+    "Single deterministic synthetic static scene.",
+    "Single controlled optical disturbance configuration.",
+    "Sensor noise disabled.",
+    "Fixed gain and ROI.",
+    "Module 3 dynamic adaptation disabled.",
+    "Trusted startup reference available.",
+    "No calibrated optical power or real camera.",
+    "No downstream perception evaluation.",
+    "No embedded hardware profiling.",
+    "Temporally dependent frames are not independent trials.",
+    "S2 is a reconstructed behavioral comparator.",
+    "Independent full numerical reproduction pending."
+  ],
+  "visual_inspection": {
+    "review_basis": "User-supplied rendered figure screenshots and successful execution output reviewed in conversation.",
+    "reviewed_figures": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11"
+    ],
+    "status": "passed_for_research_progression",
+    "blocking_scientific_plotting_errors": [],
+    "cosmetic_findings": {
+      "F06": "Annotation overlaps trajectories.",
+      "F07": "Coverage annotation overlaps bar tops.",
+      "F09": "Threshold label placement could improve.",
+      "F10": "Repeated shading could be consolidated.",
+      "F11": "Some strategy labels are closely spaced."
+    },
+    "publication_refinement": "deferred",
+    "original_figures_preserved": true,
+    "independent_pdf_rendering_audit": false
+  },
+  "source_identities": {
+    "results/module5/five_strategy_comparison/analysis/quantitative_analysis_report.json": "f38a4632a01b81ed0f2f171b048ebd0c053bd4c2b954a2d9197209036d1f9f5e",
+    "results/module5/five_strategy_comparison/analysis/quantitative_analysis_manifest.json": "13fe496b3844b93edc840a074eadc5b66657892f5f1b37275900733af7f4716c",
+    "results/module5/five_strategy_comparison/figures/scientific_visualization_report.json": "2a199d6d88821b05bd749c15d4f2e6ad202c7317580cd70c690ee126bf62a98a",
+    "results/module5/five_strategy_comparison/figures/scientific_visualization_manifest.json": "95d472b57128a25a9201b06b8ee060959f86bdfa9ea76caf52b71062b9a90af0",
+    "results/module5/five_strategy_comparison/analysis/phase_region_metric_summary.csv": "9a67c81f15eb0ee51950982af174d38aac99c24c836b510e65991a40deea6527",
+    "results/module5/five_strategy_comparison/analysis/weighted_radiance_summary.csv": "0ae5c274113eccbe589da3871663e0a5398e4a5446d8317a2a90bfcba80b35cc",
+    "results/module5/five_strategy_comparison/analysis/all_strategy_matched_phase_summary.csv": "6459a3004a35ad25d48c554ee8ffd7ee0b9049bf99367e244a0e612b2cc31ad0",
+    "results/module5/five_strategy_comparison/analysis/protection_summary.csv": "262e0fb7fcd72355d58734a4765d204f4d0d843216ece1e3a481411d8ad684eb",
+    "results/module5/five_strategy_comparison/analysis/recovery_summary.csv": "f1439edcad5f98cd943fa466ed8d8d82971951a2e4104b93f0c901f7bf83e1c3",
+    "results/module5/five_strategy_comparison/analysis/disturbance_evidence_summary.json": "3769df242db358d9e703d1031bb792ae769a81cbcea979aefd5e79a8c7e103fb",
+    "results/module5/five_strategy_comparison/analysis/preliminary_hypothesis_assessment.json": "5d91607ec84caae0d412fa94052c1f44f8d8832293bde7a4c747cd6e9789c66b"
+  },
+  "validation_checks": [
+    {
+      "check": "S4 reduces censoring relative to S0",
+      "passed": true
+    },
+    {
+      "check": "S4 reduces censoring relative to S3",
+      "passed": true
+    },
+    {
+      "check": "S2 and S4 disturbance metric tie: mean_censored_ratio",
+      "passed": true
+    },
+    {
+      "check": "S2 and S4 disturbance metric tie: valid_observation_coverage",
+      "passed": true
+    },
+    {
+      "check": "S2 and S4 disturbance metric tie: reference_mae",
+      "passed": true
+    },
+    {
+      "check": "S2 and S4 disturbance metric tie: gradient_mae",
+      "passed": true
+    },
+    {
+      "check": "S2 and S4 disturbance metric tie: radiance_quantization_step",
+      "passed": true
+    },
+    {
+      "check": "S2 and S4 disturbance metric tie: conditional_radiance_mae",
+      "passed": true
+    },
+    {
+      "check": "S2 and S4 disturbance metric tie: matched_valid_radiance_mae",
+      "passed": true
+    },
+    {
+      "check": "S1 has lower gradient MAE than S4",
+      "passed": true
+    },
+    {
+      "check": "S4 reference distortion improves",
+      "passed": true
+    },
+    {
+      "check": "S4 structural distortion improves",
+      "passed": true
+    },
+    {
+      "check": "S4 quantization becomes coarser",
+      "passed": true
+    },
+    {
+      "check": "S4 conditional radiance error increases",
+      "passed": true
+    },
+    {
+      "check": "S4 matched radiance error is not lower than S0",
+      "passed": true
+    },
+    {
+      "check": "S4 clearance delay is one frame",
+      "passed": true
+    },
+    {
+      "check": "S4 has no later censoring violations",
+      "passed": true
+    },
+    {
+      "check": "S4 restoration frame is 35",
+      "passed": true
+    },
+    {
+      "check": "S4 confirmation frame is 37",
+      "passed": true
+    },
+    {
+      "check": "S4 restoration is sustained",
+      "passed": true
+    },
+    {
+      "check": "S2 does not formally restore",
+      "passed": true
+    },
+    {
+      "check": "S1 does not formally restore",
+      "passed": true
+    },
+    {
+      "check": "S3 and S4 recovery delays match",
+      "passed": true
+    },
+    {
+      "check": "All active disturbance frames recognized",
+      "passed": true
+    },
+    {
+      "check": "All inactive disturbance frames recognized",
+      "passed": true
+    },
+    {
+      "check": "Persistent uncensored recognition",
+      "passed": true
+    },
+    {
+      "check": "Five hypotheses assessed",
+      "passed": true
+    },
+    {
+      "check": "Four supported and one partially supported",
+      "passed": true
+    },
+    {
+      "check": "Research checkpoint unchanged",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/full_comparative_records.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/harness_smoke_records.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/all_strategy_matched_valid_metrics.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/runtime_configuration_snapshot.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/runtime_validation_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/strategy_frame_records.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/regional_information_metrics.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/protocol_validation_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/harness_runtime_validation_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/harness_implementation_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/comparative_execution_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/experimental_region_statistics.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/pairwise_matched_valid_metrics.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/comparative_execution_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/scientific_visualization_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F02_physical_saturation_and_adc_clipping.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F09_observed_recovery_qualification.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F05_spatial_information_preservation.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F01_exposure_trajectories.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F03_censoring_and_valid_coverage.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F06_radiance_quantization_and_reconstruction.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F04_distortion_decomposition.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F06_radiance_quantization_and_reconstruction.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F08_gradient_distortion.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/scientific_visualization_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F05_spatial_information_preservation.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F10_persistent_disturbance_evidence.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F07_matched_valid_radiance_comparison.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F01_exposure_trajectories.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F11_protection_information_tradeoff.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F08_gradient_distortion.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F04_distortion_decomposition.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F03_censoring_and_valid_coverage.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F10_persistent_disturbance_evidence.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F09_observed_recovery_qualification.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F02_physical_saturation_and_adc_clipping.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F11_protection_information_tradeoff.pdf",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/figures/F07_matched_valid_radiance_comparison.png",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/all_strategy_matched_phase_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/pairwise_matched_phase_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/recovery_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/recovery_qualification_timeline.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/disturbance_evidence_summary.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/quantitative_analysis_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/quantitative_analysis_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/phase_region_metric_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/protection_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/weighted_radiance_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact preserved: results/module5/five_strategy_comparison/analysis/preliminary_hypothesis_assessment.json",
+      "passed": true
+    }
+  ],
+  "validation_count": 78,
+  "failed_validation_count": 0,
+  "historical_files_modified": false,
+  "experiments_rerun": false,
+  "controller_modifications": false,
+  "composite_superiority_score_used": false,
+  "full_protected_inventory_verification": "pending"
+}

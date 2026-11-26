@@ -1,0 +1,510 @@
+{
+  "strategy": "S4",
+  "total_frames": 60,
+  "status_counts": {
+    "CLEAR": 40,
+    "PRESENT": 20
+  },
+  "true_positive": 20,
+  "false_positive": 0,
+  "true_negative": 40,
+  "false_negative": 0,
+  "unknown_active": 0,
+  "unknown_clean": 0,
+  "precision": 1.0,
+  "recall_including_unknown_as_missed": 1.0,
+  "specificity_including_unknown_as_not_correct": 1.0,
+  "overall_correct_fraction": 1.0,
+  "known_evidence_coverage": 1.0,
+  "uncensored_disturbance_frames": 19,
+  "uncensored_disturbance_frames_detected": 19,
+  "uncensored_disturbance_detection_fraction": 1.0,
+  "framewise_evidence": [
+    {
+      "frame": 0,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 1,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 2,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 3,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 4,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 5,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 6,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 7,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 8,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 9,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 10,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "ACTIVE",
+      "saturation_ratio": 0.0396728515625,
+      "adc_clipping_ratio": 0.0396728515625
+    },
+    {
+      "frame": 11,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "RECOVERY",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 12,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 13,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 14,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 15,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 16,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 17,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 18,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 19,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 20,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 21,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 22,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 23,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 24,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 25,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 26,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 27,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 28,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 29,
+      "attack_active": true,
+      "evidence_status": "PRESENT",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 30,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "TRANSIENT",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 31,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 32,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 33,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 34,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 35,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 36,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 37,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 38,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 39,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 40,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 41,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 42,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 43,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 44,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 45,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 46,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 47,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 48,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 49,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 50,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 51,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 52,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 53,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 54,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 55,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 56,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 57,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 58,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    },
+    {
+      "frame": 59,
+      "attack_active": false,
+      "evidence_status": "CLEAR",
+      "tracker_state": "NORMAL",
+      "saturation_ratio": 0.0,
+      "adc_clipping_ratio": 0.0
+    }
+  ],
+  "limitations": [
+    "Single deterministic scenario.",
+    "Trusted clean startup reference.",
+    "Frame observations are temporally dependent.",
+    "No population-level detection claim."
+  ]
+}

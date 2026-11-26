@@ -1,0 +1,60 @@
+{
+  "task": "M5-VAL-01B-04A",
+  "parent_git_checkpoint": "453c68727e96ee373c1afa8b28d6413f74c8c52f",
+  "previous_protected_files": 105,
+  "manifested_files": 10,
+  "new_artifacts_including_manifest": 11,
+  "manifest_excludes_itself": true,
+  "files": {
+    "results/module5/five_strategy_comparison/analysis/phase_region_metric_summary.csv": {
+      "category": "phase_metrics",
+      "size_bytes": 213714,
+      "sha256": "9a67c81f15eb0ee51950982af174d38aac99c24c836b510e65991a40deea6527"
+    },
+    "results/module5/five_strategy_comparison/analysis/weighted_radiance_summary.csv": {
+      "category": "weighted_radiance",
+      "size_bytes": 4144,
+      "sha256": "0ae5c274113eccbe589da3871663e0a5398e4a5446d8317a2a90bfcba80b35cc"
+    },
+    "results/module5/five_strategy_comparison/analysis/pairwise_matched_phase_summary.csv": {
+      "category": "pairwise",
+      "size_bytes": 12133,
+      "sha256": "cc8a3a83ebcb3db28fd7c0955dbb8e19b3d2fb0bc671ef6a7888377ef1672203"
+    },
+    "results/module5/five_strategy_comparison/analysis/all_strategy_matched_phase_summary.csv": {
+      "category": "all_strategy",
+      "size_bytes": 2295,
+      "sha256": "6459a3004a35ad25d48c554ee8ffd7ee0b9049bf99367e244a0e612b2cc31ad0"
+    },
+    "results/module5/five_strategy_comparison/analysis/protection_summary.csv": {
+      "category": "protection",
+      "size_bytes": 1708,
+      "sha256": "262e0fb7fcd72355d58734a4765d204f4d0d843216ece1e3a481411d8ad684eb"
+    },
+    "results/module5/five_strategy_comparison/analysis/recovery_summary.csv": {
+      "category": "recovery",
+      "size_bytes": 609,
+      "sha256": "f1439edcad5f98cd943fa466ed8d8d82971951a2e4104b93f0c901f7bf83e1c3"
+    },
+    "results/module5/five_strategy_comparison/analysis/recovery_qualification_timeline.csv": {
+      "category": "recovery_timeline",
+      "size_bytes": 10034,
+      "sha256": "437531446a3a387393a235dea267745b6a9193d53fbb2117709f2fd0f807ad67"
+    },
+    "results/module5/five_strategy_comparison/analysis/disturbance_evidence_summary.json": {
+      "category": "evidence",
+      "size_bytes": 12357,
+      "sha256": "3769df242db358d9e703d1031bb792ae769a81cbcea979aefd5e79a8c7e103fb"
+    },
+    "results/module5/five_strategy_comparison/analysis/preliminary_hypothesis_assessment.json": {
+      "category": "hypotheses",
+      "size_bytes": 1217,
+      "sha256": "5d91607ec84caae0d412fa94052c1f44f8d8832293bde7a4c747cd6e9789c66b"
+    },
+    "results/module5/five_strategy_comparison/analysis/quantitative_analysis_report.json": {
+      "category": "report",
+      "size_bytes": 255357,
+      "sha256": "f38a4632a01b81ed0f2f171b048ebd0c053bd4c2b954a2d9197209036d1f9f5e"
+    }
+  }
+}

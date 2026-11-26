@@ -1,0 +1,544 @@
+{
+  "task": "M5-VAL-01B-01B",
+  "protocol_version": "1.0",
+  "timestamp_utc": "2026-11-26T13:20:49.138940+00:00",
+  "parent_git_checkpoint": "453c68727e96ee373c1afa8b28d6413f74c8c52f",
+  "parent_git_tree": "8838d787c2ae4c9a53b60f0aa638d5e9c3116003",
+  "experiment_id": "M5-VAL-01B-controlled-five-strategy-comparison",
+  "protocol_frozen_before_comparative_execution": true,
+  "scenario_previously_explored": true,
+  "source_inventory": {
+    "environment": {
+      "path": "src/ahds/module1_environment/optical_environment.py",
+      "sha256": "7d6eb60892cddf1ee571ff600b966587478b9ec64186dabebc49e9224cc6054c"
+    },
+    "sensor": {
+      "path": "src/ahds/module2_sensor/sensor_simulator.py",
+      "sha256": "a01ad9fed04e4526ec234a96ea20360b782d3d394fb14fe3f2ce99004e0700be"
+    },
+    "assessor": {
+      "path": "src/ahds/module4_anomaly_detection/disturbance_assessor.py",
+      "sha256": "a7e519481195136cfef32c35d82afaab1aa115024f62dd029bcc4e7431c37b29"
+    },
+    "tracker": {
+      "path": "src/ahds/module4_anomaly_detection/disturbance_state_tracker.py",
+      "sha256": "5de9d2e4b1c07fc97de97510d1da34abcf126c8829cc4743162390205f0a163e"
+    },
+    "S1": {
+      "path": "src/ahds/module5_defense/exposure_protection.py",
+      "sha256": "a45f7e1aa97d8e5eaf2598dbbc781a4b87221eb44196a60148d36548201d4a24"
+    },
+    "S2": {
+      "path": "src/ahds/module5_defense/probed_exposure.py",
+      "sha256": "8d87f15b2a28ee7d467eed60b34b748cd555e7f0d09ea28067b07149f9430a80"
+    },
+    "S3": {
+      "path": "src/ahds/module5_defense/state_aware_exposure.py",
+      "sha256": "3c144e7e1087b1bbd63539da3a228f380449b2f5ce0d41d1d5df93ac5b30dbab"
+    },
+    "S4": {
+      "path": "src/ahds/module5_defense/disturbance_aware_defense.py",
+      "sha256": "c5f8d2203502dc8cc2175396c5335d4ced3dcaca04d7c08b8d8d99dcd0e2fd2b"
+    },
+    "metrics": {
+      "path": "src/ahds/module7_evaluation/information_preservation.py",
+      "sha256": "c89ec27ac109a7552fd42675677c7ecf49e6c8809f14bd429568003ba87f5bfb"
+    }
+  },
+  "source_configuration_defaults": {
+    "environment": {
+      "attack_type": "laser",
+      "center_x": 0.5,
+      "center_y": 0.5,
+      "radius": 0.12,
+      "intensity": 2.0,
+      "pulse_frequency": 2.0,
+      "pulse_phase": 0.0
+    },
+    "sensor": {
+      "exposure_ms": 10.0,
+      "gain": 1.0,
+      "electrons_per_unit_ms": 100.0,
+      "full_well_electrons": 10000.0,
+      "read_noise_electrons": 3.0,
+      "adc_bits": 12
+    },
+    "assessor": {
+      "residual_threshold": 0.15,
+      "minimum_changed_fraction": 0.001,
+      "minimum_saturation_fraction": 0.001
+    },
+    "tracker": {
+      "active_saturation_threshold": 0.001,
+      "recovery_frames": 2
+    },
+    "S1": {
+      "min_exposure_ms": 0.1,
+      "max_exposure_ms": 30.0,
+      "saturation_trigger": 0.005,
+      "reduction_factor": 0.5,
+      "recovery_factor": 1.1,
+      "recovery_delay_frames": 3
+    },
+    "S2": {
+      "min_exposure_ms": 0.1,
+      "max_exposure_ms": 30.0,
+      "saturation_trigger": 0.005,
+      "reduction_factor": 0.5,
+      "probe_factor": 1.05,
+      "probe_interval_frames": 4,
+      "failed_probe_cooldown": 8
+    },
+    "S3": {
+      "min_exposure_ms": 0.1,
+      "max_exposure_ms": 30.0,
+      "saturation_trigger": 0.005,
+      "reduction_factor": 0.5,
+      "recovery_factor": 1.1
+    },
+    "S4": {
+      "min_exposure_ms": 0.1,
+      "max_exposure_ms": 30.0,
+      "saturation_trigger": 0.005,
+      "reduction_factor": 0.5,
+      "persistent_probe_factor": 1.05,
+      "clear_probe_factor": 1.1,
+      "recovery_factor": 1.2,
+      "persistent_probe_interval": 4,
+      "clear_confirmation_frames": 3,
+      "failed_probe_cooldown": 8
+    },
+    "metrics": {
+      "epsilon": 1e-12
+    }
+  },
+  "strategies": {
+    "S0": {
+      "name": "Fixed exposure",
+      "controller": null,
+      "interface": null,
+      "fixed_exposure_ms": 10.0,
+      "trusted_startup_reference": false
+    },
+    "S1": {
+      "name": "Original exposure protection",
+      "controller": "ExposureProtectionController",
+      "interface": [
+        "current_exposure_ms",
+        "assessment"
+      ],
+      "config": {
+        "min_exposure_ms": 0.1,
+        "max_exposure_ms": 30.0,
+        "saturation_trigger": 0.005,
+        "reduction_factor": 0.5,
+        "recovery_factor": 1.1,
+        "recovery_delay_frames": 3
+      },
+      "trusted_startup_reference": false,
+      "allow_nominal_exposure_overshoot": true
+    },
+    "S2": {
+      "name": "Probed exposure",
+      "controller": "ProbedExposureController",
+      "interface": [
+        "current_exposure_ms",
+        "assessment"
+      ],
+      "config": {
+        "min_exposure_ms": 0.1,
+        "max_exposure_ms": 30.0,
+        "saturation_trigger": 0.005,
+        "reduction_factor": 0.5,
+        "probe_factor": 1.05,
+        "probe_interval_frames": 4,
+        "failed_probe_cooldown": 8
+      },
+      "trusted_startup_reference": false
+    },
+    "S3": {
+      "name": "State-aware exposure",
+      "controller": "StateAwareExposureController",
+      "interface": [
+        "current_exposure_ms",
+        "assessment",
+        "state"
+      ],
+      "config": {
+        "min_exposure_ms": 0.1,
+        "max_exposure_ms": 30.0,
+        "saturation_trigger": 0.005,
+        "reduction_factor": 0.5,
+        "recovery_factor": 1.1
+      },
+      "trusted_startup_reference": false
+    },
+    "S4": {
+      "name": "DADRC",
+      "controller": "DisturbanceAwareDefenseController",
+      "interface": [
+        "sensor_result",
+        "sensor_config",
+        "assessment",
+        "tracker_state"
+      ],
+      "config": {
+        "min_exposure_ms": 0.1,
+        "max_exposure_ms": 30.0,
+        "saturation_trigger": 0.005,
+        "reduction_factor": 0.5,
+        "persistent_probe_factor": 1.05,
+        "clear_probe_factor": 1.1,
+        "recovery_factor": 1.2,
+        "persistent_probe_interval": 4,
+        "clear_confirmation_frames": 3,
+        "failed_probe_cooldown": 8
+      },
+      "trusted_startup_reference": true,
+      "observation_config": "existing_source_defaults",
+      "memory_config": "existing_source_defaults"
+    }
+  },
+  "environment": {
+    "scene": "deterministic_synthetic_road",
+    "height": 256,
+    "width": 256,
+    "channels": 3,
+    "device": "cpu",
+    "seed": 42,
+    "scene_randomized": false,
+    "sensor_noise_enabled": false,
+    "total_frames": 60,
+    "initial_sensor_config": {
+      "exposure_ms": 10.0,
+      "gain": 1.0,
+      "electrons_per_unit_ms": 100.0,
+      "full_well_electrons": 10000.0,
+      "read_noise_electrons": 3.0,
+      "adc_bits": 12
+    },
+    "gain_adaptation_enabled": false,
+    "roi_adaptation_enabled": false,
+    "module3_adaptation_enabled": false,
+    "command_delay_frames": 1,
+    "attack_config": {
+      "attack_type": "laser",
+      "center_x": 0.5,
+      "center_y": 0.5,
+      "radius": 0.12,
+      "intensity": 15.0,
+      "pulse_frequency": 2.0,
+      "pulse_phase": 0.0
+    },
+    "canonical_attack_map_time_step": 0,
+    "attack_map_policy": "Generate one canonical active map and reuse it for every active frame.",
+    "phases": {
+      "clean": {
+        "start": 0,
+        "stop_exclusive": 10
+      },
+      "disturbance": {
+        "start": 10,
+        "stop_exclusive": 30
+      },
+      "recovery": {
+        "start": 30,
+        "stop_exclusive": 60
+      }
+    }
+  },
+  "spatial_evaluation": {
+    "regions": {
+      "full": {
+        "definition": "all_pixels"
+      },
+      "core": {
+        "minimum_relative_peak": 0.1,
+        "minimum_inclusive": true
+      },
+      "transition": {
+        "minimum_relative_peak": 0.01,
+        "minimum_inclusive": true,
+        "maximum_relative_peak": 0.1,
+        "maximum_inclusive": false
+      },
+      "background": {
+        "maximum_relative_peak": 0.01,
+        "maximum_inclusive": false
+      }
+    },
+    "mask_source": "canonical_active_attack_map",
+    "fixed_across_frames": true,
+    "fixed_across_strategies": true,
+    "require_positive_finite_peak": true,
+    "require_partition": true,
+    "require_disjoint_subregions": true,
+    "mask_shapes": [
+      "H,W",
+      "1,H,W"
+    ],
+    "sample_accounting": "RGB channel samples",
+    "empty_region_policy": "Preserve undefined metrics as null.",
+    "background_interpretation": "Low-disturbance region, not necessarily an unaffected region."
+  },
+  "controller_information_boundary": {
+    "permitted_sensor_fields": [
+      "normalized_output",
+      "saturated",
+      "adc_clipped"
+    ],
+    "permitted_operating_information": [
+      "applied_sensor_config",
+      "disturbance_assessment",
+      "tracker_state",
+      "controller_internal_state"
+    ],
+    "evaluation_only_information": [
+      "clean_optical_scene",
+      "actual_optical_scene",
+      "attack_map",
+      "attack_active",
+      "phase_label",
+      "reference_result_R",
+      "counterfactual_result_C",
+      "evaluation_region_masks",
+      "matched_valid_masks",
+      "information_preservation_metrics",
+      "expected_electrons",
+      "electrons"
+    ],
+    "S4_initialization": {
+      "separate_startup_capture": true,
+      "before_frame_zero": true,
+      "trusted_clean_startup": true,
+      "initial_exposure_ms": 10.0,
+      "initial_gain": 1.0,
+      "sensor_noise_enabled": false,
+      "count_as_comparative_frame": false,
+      "reuse_evaluation_reference_object": false
+    },
+    "ground_truth_feedback_allowed": false,
+    "controller_state_shared_between_strategies": false
+  },
+  "evaluation": {
+    "reference_R": "Clean scene at nominal reference settings.",
+    "counterfactual_C": "Clean scene at current applied settings.",
+    "observation_Y": "Actual optical scene at current applied settings.",
+    "reference_exposure_ms": 10.0,
+    "reference_gain": 1.0,
+    "metric_fields": [
+      "region_sample_count",
+      "region_fraction",
+      "saturation_ratio",
+      "adc_clipping_ratio",
+      "censored_ratio",
+      "valid_observation_coverage",
+      "clean_valid_coverage",
+      "reference_valid_coverage",
+      "common_valid_coverage",
+      "nonzero_valid_coverage",
+      "valid_observation_count",
+      "common_valid_count",
+      "configuration_mae",
+      "disturbance_mae",
+      "reference_mae",
+      "radiance_reconstruction_mae",
+      "clean_radiance_reconstruction_mae",
+      "reference_radiance_reconstruction_mae",
+      "common_valid_radiance_distortion_mae",
+      "exposure_utilization",
+      "gain_utilization",
+      "optical_scale_utilization",
+      "radiance_quantization_step",
+      "ideal_quantization_half_step",
+      "relative_quantization_step",
+      "reference_adc_levels",
+      "clean_adc_levels",
+      "observed_adc_levels",
+      "clean_adc_level_retention",
+      "clean_zero_adc_ratio",
+      "observed_zero_adc_ratio",
+      "gradient_mae",
+      "configuration_gradient_mae",
+      "disturbance_gradient_mae",
+      "reference_contrast",
+      "clean_contrast",
+      "observed_contrast",
+      "contrast_retention",
+      "clean_contrast_retention",
+      "reference_mean_output",
+      "clean_mean_output",
+      "observed_mean_output"
+    ],
+    "primary_metrics": [
+      "saturation_ratio",
+      "adc_clipping_ratio",
+      "censored_ratio",
+      "valid_observation_coverage",
+      "configuration_mae",
+      "disturbance_mae",
+      "reference_mae",
+      "radiance_reconstruction_mae",
+      "radiance_quantization_step",
+      "gradient_mae",
+      "exposure_utilization"
+    ],
+    "record_all_metric_fields": true,
+    "undefined_metric_policy": "null",
+    "composite_weighted_score": false,
+    "aggregate_by_phase": true,
+    "aggregate_by_region": true,
+    "aggregation_policy": {
+      "frame_metrics": "Arithmetic mean over defined frame values, with defined and undefined frame counts.",
+      "conditional_radiance_error": "Also report sample-weighted MAE using valid sample counts.",
+      "coverage": "Report coverage with every conditional error."
+    },
+    "matched_valid": {
+      "sample_validity": "not (saturated or adc_clipped)",
+      "pairwise_comparison": true,
+      "all_strategy_intersection": true,
+      "evaluate_every_frame": true,
+      "evaluate_every_region": true,
+      "report_sample_count": true,
+      "report_coverage": true,
+      "empty_intersection_error": null,
+      "include_zero_adc_valid_samples": true,
+      "reconstruction_target": "clean_optical_scene",
+      "radiance_reconstruction": "normalized_output reconstructed from exact ADC codes divided by optical scale; scale = exposure_ms * gain * electrons_per_unit_ms / full_well_electrons"
+    }
+  },
+  "recovery": {
+    "evaluation_start_frame": 30,
+    "nominal_exposure_ms": 10.0,
+    "exposure_relative_tolerance": 0.05,
+    "maximum_censored_ratio_exclusive": 0.005,
+    "maximum_reference_mae_inclusive": 0.002,
+    "required_consecutive_frames": 3,
+    "region": "full",
+    "restoration_frame": "First frame of first qualifying three-frame sequence.",
+    "confirmation_frame": "Third frame of qualifying sequence.",
+    "recovery_delay": "restoration_frame - 30",
+    "report_sustained_restoration": true,
+    "not_restored_delay": null,
+    "not_restored_status": "not_restored_within_observation_window",
+    "internal_restored_action_is_sufficient": false
+  },
+  "protection": {
+    "censoring_threshold": 0.005,
+    "first_reduction_command": "First active-disturbance frame with next_exposure_ms < applied_exposure_ms.",
+    "first_reduction_applied": "First subsequent frame applying that reduction command.",
+    "saturation_clearance": "First active-disturbance frame with saturation_ratio < 0.005.",
+    "censoring_clearance": "First active-disturbance frame with censored_ratio < 0.005.",
+    "report_already_below_threshold": true,
+    "report_subsequent_threshold_violations": true,
+    "report_exposure_at_attack_onset": true,
+    "report_exposure_overshoot": true,
+    "report_exposure_total_variation": true,
+    "report_probe_actions": true,
+    "report_failed_probe_actions": true
+  },
+  "fairness_requirements": {
+    "F01": "Identical clean optical scene.",
+    "F02": "Identical active disturbance map and schedule.",
+    "F03": "Identical initial sensor configuration.",
+    "F04": "Independent controller and detector state.",
+    "F05": "Identical sensor simulator and noise policy.",
+    "F06": "Identical one-frame command application delay.",
+    "F07": "Identical information-preservation evaluator.",
+    "F08": "Identical fixed evaluation regions.",
+    "F09": "No evaluation ground truth enters controllers.",
+    "F10": "No post-result controller tuning.",
+    "F11": "Explicit disclosure of S4 startup reference.",
+    "F12": "Undefined metrics remain null.",
+    "F13": "Identical experimental phase boundaries.",
+    "F14": "Matched-valid cross-strategy comparisons.",
+    "F15": "Preserve all historical research artifacts.",
+    "F16": "Preserve original S1 nominal exposure overshoot.",
+    "F17": "Use common observed recovery criteria.",
+    "F18": "Do not use internal controller labels as ground truth.",
+    "F19": "Record actual applied and next commanded exposure.",
+    "F20": "Retain unfavorable and negative results."
+  },
+  "hypotheses": {
+    "H01": "Adaptive defensive strategies reduce physical censoring relative to fixed exposure.",
+    "H02": "DADRC retains persistent disturbance evidence after saturation disappears.",
+    "H03": "DADRC improves the protection-preservation trade-off relative to defensive baselines.",
+    "H04": "DADRC restores nominal sensing conditions after disturbance removal.",
+    "H05": "Lower saturation does not necessarily imply better radiance reconstruction or structural fidelity."
+  },
+  "limitations": [
+    "Single deterministic synthetic scene.",
+    "Single previously explored optical disturbance scenario.",
+    "Noise-free controlled experiment.",
+    "No independent generalization or statistical inference.",
+    "No calibrated physical laser power.",
+    "Simplified linear RGB sensor model.",
+    "No dynamic gain or ROI adaptation.",
+    "Module 3 integration is deferred.",
+    "S4 requires an additional trusted startup observation.",
+    "S2 is the previously reconstructed behavioral baseline.",
+    "Spatial thresholds are evaluation conventions.",
+    "Recovery thresholds are proposed operational conventions.",
+    "Measurement fidelity is not semantic information preservation.",
+    "Conditional radiance errors depend on valid sample coverage.",
+    "All-strategy intersections may exclude difficult samples.",
+    "Independent metric experiment reproduction remains unverified.",
+    "Hardware and edge performance are not established."
+  ],
+  "strategy_pairs": [
+    [
+      "S0",
+      "S1"
+    ],
+    [
+      "S0",
+      "S2"
+    ],
+    [
+      "S0",
+      "S3"
+    ],
+    [
+      "S0",
+      "S4"
+    ],
+    [
+      "S1",
+      "S2"
+    ],
+    [
+      "S1",
+      "S3"
+    ],
+    [
+      "S1",
+      "S4"
+    ],
+    [
+      "S2",
+      "S3"
+    ],
+    [
+      "S2",
+      "S4"
+    ],
+    [
+      "S3",
+      "S4"
+    ]
+  ],
+  "expected_record_counts": {
+    "strategies": 5,
+    "frames_per_strategy": 60,
+    "strategy_frame_records": 300,
+    "regions_per_frame": 4,
+    "regional_metric_records": 1200,
+    "metric_fields_per_regional_record": 42,
+    "metric_field_entries": 50400,
+    "unique_strategy_pairs": 10,
+    "pairwise_matched_region_records": 2400,
+    "all_strategy_matched_region_records": 240
+  },
+  "comparative_experiment_executed": false,
+  "comparative_superiority_established": false
+}

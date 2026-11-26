@@ -1,0 +1,123 @@
+{
+  "task_id": "M5-VAL-01B-04B",
+  "research_checkpoint": "453c68727e96ee373c1afa8b28d6413f74c8c52f",
+  "artifact_count_excluding_manifest": 23,
+  "total_new_artifacts_including_manifest": 24,
+  "artifacts": [
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F01_exposure_trajectories.pdf",
+      "bytes": 28785,
+      "sha256": "c92b28ca82af2e15cb860c08d712d1e6a4ee1b3f968c4abda35cc9e0eaede764"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F01_exposure_trajectories.png",
+      "bytes": 441714,
+      "sha256": "e439409d5c509eb79de522017bf50c72336a727022986798890aca6ef8183755"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F02_physical_saturation_and_adc_clipping.pdf",
+      "bytes": 27711,
+      "sha256": "950472c4ce08b49f6514c7705fe719cdc86e741534e6c881df56125e966c44dd"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F02_physical_saturation_and_adc_clipping.png",
+      "bytes": 347071,
+      "sha256": "1705e2d06c6a2c810bf2cd9ec2c783a8b83a8d574406591c329616c4916f6c12"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F03_censoring_and_valid_coverage.pdf",
+      "bytes": 30594,
+      "sha256": "6a14209bda545b4399bf3f68608b1aeaa239b0374325ae2e2d019f8e426ee435"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F03_censoring_and_valid_coverage.png",
+      "bytes": 419353,
+      "sha256": "045aec0bd8a4a9b7fd07ba89700ad8413571c0f7382dcdde52298464786b052f"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F04_distortion_decomposition.pdf",
+      "bytes": 30526,
+      "sha256": "f3493271ad9106eb1231989e32d50c765a19be1dacda0b0572ee7b048987c3c6"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F04_distortion_decomposition.png",
+      "bytes": 617688,
+      "sha256": "399444ed7283e39d2d656f67469da1282138eae582fda55c699c5f9f2dd59e46"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F05_spatial_information_preservation.pdf",
+      "bytes": 25402,
+      "sha256": "0e1f5244b4275d265ee631cf21d6f82a25c878dfd751e49806a7f143cfdfe281"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F05_spatial_information_preservation.png",
+      "bytes": 287893,
+      "sha256": "546ac129cb9c1576cdd88a28188728a031a61e644cfb3773f403ebc9834950e2"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F06_radiance_quantization_and_reconstruction.pdf",
+      "bytes": 32787,
+      "sha256": "5c4e5a30908e8da91d37d2d7f7d3863bd2523d113561e9e3fa0c596dfaa48e25"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F06_radiance_quantization_and_reconstruction.png",
+      "bytes": 710467,
+      "sha256": "760de3280c315c3bbe3b9903efa2e19f5086b12a28a1d1a67b47fcbb93d88130"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F07_matched_valid_radiance_comparison.pdf",
+      "bytes": 26828,
+      "sha256": "6a1df8dc222e0c6baaa66c229d8e2253a6a3067d73ca5acefeee49b70cd7f6c9"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F07_matched_valid_radiance_comparison.png",
+      "bytes": 446816,
+      "sha256": "3c15eb98167317e2b016d83369dfecebc12a691b1767157c870df7791221f39e"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F08_gradient_distortion.pdf",
+      "bytes": 33433,
+      "sha256": "ecac59d87884a8605206ef2e3fc40f87f8f0fa83eb0eee33580be77357938453"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F08_gradient_distortion.png",
+      "bytes": 693311,
+      "sha256": "b743cb1cdb850b1985eb59b676512a3d832b3e13812846fe2df57c8ec81b0740"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F09_observed_recovery_qualification.pdf",
+      "bytes": 34720,
+      "sha256": "457f156ae53dbe3ff7d805eebefd7a4d3b5f58d779b138e0160f5f6e367f5389"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F09_observed_recovery_qualification.png",
+      "bytes": 497930,
+      "sha256": "f1561e07c6ec755f2feb28e4a65a7693c9fc27d0f420f5397533661ccf071873"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F10_persistent_disturbance_evidence.pdf",
+      "bytes": 27272,
+      "sha256": "cbd4ae84704a9d403966f0eb4dba1a0d96b1af8c763718972e42cd37a1c3df81"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F10_persistent_disturbance_evidence.png",
+      "bytes": 356684,
+      "sha256": "054b6236569c7440b4ef67ea0a353b38d56e76180279a42814ec03593790068a"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F11_protection_information_tradeoff.pdf",
+      "bytes": 25214,
+      "sha256": "ad5536e8379704f7a484ebd728216af116b0688a741aa75990209b98056157d1"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/F11_protection_information_tradeoff.png",
+      "bytes": 391848,
+      "sha256": "4b2fc04a08cdd58e31de01fa56b7553fdaf645a01c58bbde0a4b2184371e452f"
+    },
+    {
+      "path": "results/module5/five_strategy_comparison/figures/scientific_visualization_report.json",
+      "bytes": 17726,
+      "sha256": "2a199d6d88821b05bd749c15d4f2e6ad202c7317580cd70c690ee126bf62a98a"
+    }
+  ]
+}

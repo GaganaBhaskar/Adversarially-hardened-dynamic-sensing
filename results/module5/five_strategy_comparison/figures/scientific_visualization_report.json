@@ -1,0 +1,619 @@
+{
+  "task_id": "M5-VAL-01B-04B",
+  "task_name": "Scientific Comparative Visualization",
+  "status": "PASSED",
+  "research_checkpoint": "453c68727e96ee373c1afa8b28d6413f74c8c52f",
+  "figure_count": 11,
+  "png_count": 11,
+  "pdf_count": 11,
+  "raster_dpi": 300,
+  "input_identities": {
+    "frames": "a7f5e62db2e849a469be767f6b309b1e9a3d7771769d948d69de6122855a452d",
+    "regional": "47b89e2c7fb43332aa3b3c598b9523baca9a8f19036551dd83710c5a793059e1",
+    "pairwise": "a70ff5cd778bb619885f80babbe4aaf7b8a25676d0d7d5bb9f2c688ebaa78c8c",
+    "all_matched": "2625a47e1bba2bb5c9adec71a6d50dcfa4e4361a8e2f679edb45113ae2f541cd",
+    "phase_region": "9a67c81f15eb0ee51950982af174d38aac99c24c836b510e65991a40deea6527",
+    "weighted_radiance": "0ae5c274113eccbe589da3871663e0a5398e4a5446d8317a2a90bfcba80b35cc",
+    "pairwise_phase": "cc8a3a83ebcb3db28fd7c0955dbb8e19b3d2fb0bc671ef6a7888377ef1672203",
+    "all_matched_phase": "6459a3004a35ad25d48c554ee8ffd7ee0b9049bf99367e244a0e612b2cc31ad0",
+    "protection": "262e0fb7fcd72355d58734a4765d204f4d0d843216ece1e3a481411d8ad684eb",
+    "recovery": "f1439edcad5f98cd943fa466ed8d8d82971951a2e4104b93f0c901f7bf83e1c3",
+    "recovery_timeline": "437531446a3a387393a235dea267745b6a9193d53fbb2117709f2fd0f807ad67",
+    "disturbance_evidence": "3769df242db358d9e703d1031bb792ae769a81cbcea979aefd5e79a8c7e103fb"
+  },
+  "figures": [
+    {
+      "figure_id": "F01",
+      "description": "Applied and commanded exposure trajectories",
+      "source_datasets": [
+        "frames"
+      ],
+      "png": "F01_exposure_trajectories.png",
+      "pdf": "F01_exposure_trajectories.pdf",
+      "png_dimensions": [
+        3634,
+        2434
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "e439409d5c509eb79de522017bf50c72336a727022986798890aca6ef8183755",
+      "pdf_sha256": "c92b28ca82af2e15cb860c08d712d1e6a4ee1b3f968c4abda35cc9e0eaede764",
+      "png_bytes": 441714,
+      "pdf_bytes": 28785
+    },
+    {
+      "figure_id": "F02",
+      "description": "Physical saturation and ADC clipping",
+      "source_datasets": [
+        "frames"
+      ],
+      "png": "F02_physical_saturation_and_adc_clipping.png",
+      "pdf": "F02_physical_saturation_and_adc_clipping.pdf",
+      "png_dimensions": [
+        3634,
+        2434
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "1705e2d06c6a2c810bf2cd9ec2c783a8b83a8d574406591c329616c4916f6c12",
+      "pdf_sha256": "950472c4ce08b49f6514c7705fe719cdc86e741534e6c881df56125e966c44dd",
+      "png_bytes": 347071,
+      "pdf_bytes": 27711
+    },
+    {
+      "figure_id": "F03",
+      "description": "Censoring and valid observation coverage",
+      "source_datasets": [
+        "regional",
+        "phase_region"
+      ],
+      "png": "F03_censoring_and_valid_coverage.png",
+      "pdf": "F03_censoring_and_valid_coverage.pdf",
+      "png_dimensions": [
+        3934,
+        2734
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "045aec0bd8a4a9b7fd07ba89700ad8413571c0f7382dcdde52298464786b052f",
+      "pdf_sha256": "6a14209bda545b4399bf3f68608b1aeaa239b0374325ae2e2d019f8e426ee435",
+      "png_bytes": 419353,
+      "pdf_bytes": 30594
+    },
+    {
+      "figure_id": "F04",
+      "description": "Reference, configuration and disturbance distortion",
+      "source_datasets": [
+        "regional"
+      ],
+      "png": "F04_distortion_decomposition.png",
+      "pdf": "F04_distortion_decomposition.pdf",
+      "png_dimensions": [
+        3634,
+        3334
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "399444ed7283e39d2d656f67469da1282138eae582fda55c699c5f9f2dd59e46",
+      "pdf_sha256": "f3493271ad9106eb1231989e32d50c765a19be1dacda0b0572ee7b048987c3c6",
+      "png_bytes": 617688,
+      "pdf_bytes": 30526
+    },
+    {
+      "figure_id": "F05",
+      "description": "Spatial information preservation",
+      "source_datasets": [
+        "phase_region"
+      ],
+      "png": "F05_spatial_information_preservation.png",
+      "pdf": "F05_spatial_information_preservation.pdf",
+      "png_dimensions": [
+        4234,
+        3034
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "546ac129cb9c1576cdd88a28188728a031a61e644cfb3773f403ebc9834950e2",
+      "pdf_sha256": "0e1f5244b4275d265ee631cf21d6f82a25c878dfd751e49806a7f143cfdfe281",
+      "png_bytes": 287893,
+      "pdf_bytes": 25402
+    },
+    {
+      "figure_id": "F06",
+      "description": "Radiance quantization and reconstruction",
+      "source_datasets": [
+        "regional",
+        "weighted_radiance"
+      ],
+      "png": "F06_radiance_quantization_and_reconstruction.png",
+      "pdf": "F06_radiance_quantization_and_reconstruction.pdf",
+      "png_dimensions": [
+        4234,
+        3034
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "760de3280c315c3bbe3b9903efa2e19f5086b12a28a1d1a67b47fcbb93d88130",
+      "pdf_sha256": "5c4e5a30908e8da91d37d2d7f7d3863bd2523d113561e9e3fa0c596dfaa48e25",
+      "png_bytes": 710467,
+      "pdf_bytes": 32787
+    },
+    {
+      "figure_id": "F07",
+      "description": "Matched-valid radiance errors and common coverage",
+      "source_datasets": [
+        "all_matched",
+        "all_matched_phase",
+        "pairwise_phase"
+      ],
+      "png": "F07_matched_valid_radiance_comparison.png",
+      "pdf": "F07_matched_valid_radiance_comparison.pdf",
+      "png_dimensions": [
+        4534,
+        3934
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "3c15eb98167317e2b016d83369dfecebc12a691b1767157c870df7791221f39e",
+      "pdf_sha256": "6a1df8dc222e0c6baaa66c229d8e2253a6a3067d73ca5acefeee49b70cd7f6c9",
+      "png_bytes": 446816,
+      "pdf_bytes": 26828
+    },
+    {
+      "figure_id": "F08",
+      "description": "Gradient distortion and structural preservation",
+      "source_datasets": [
+        "regional",
+        "phase_region"
+      ],
+      "png": "F08_gradient_distortion.png",
+      "pdf": "F08_gradient_distortion.pdf",
+      "png_dimensions": [
+        4234,
+        3034
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "b743cb1cdb850b1985eb59b676512a3d832b3e13812846fe2df57c8ec81b0740",
+      "pdf_sha256": "ecac59d87884a8605206ef2e3fc40f87f8f0fa83eb0eee33580be77357938453",
+      "png_bytes": 693311,
+      "pdf_bytes": 33433
+    },
+    {
+      "figure_id": "F09",
+      "description": "Observed recovery qualification and confirmation",
+      "source_datasets": [
+        "recovery_timeline",
+        "recovery"
+      ],
+      "png": "F09_observed_recovery_qualification.png",
+      "pdf": "F09_observed_recovery_qualification.pdf",
+      "png_dimensions": [
+        4534,
+        3033
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "f1561e07c6ec755f2feb28e4a65a7693c9fc27d0f420f5397533661ccf071873",
+      "pdf_sha256": "457f156ae53dbe3ff7d805eebefd7a4d3b5f58d779b138e0160f5f6e367f5389",
+      "png_bytes": 497930,
+      "pdf_bytes": 34720
+    },
+    {
+      "figure_id": "F10",
+      "description": "Persistent disturbance evidence versus optical ground truth",
+      "source_datasets": [
+        "disturbance_evidence"
+      ],
+      "png": "F10_persistent_disturbance_evidence.png",
+      "pdf": "F10_persistent_disturbance_evidence.pdf",
+      "png_dimensions": [
+        3934,
+        3334
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "054b6236569c7440b4ef67ea0a353b38d56e76180279a42814ec03593790068a",
+      "pdf_sha256": "cbd4ae84704a9d403966f0eb4dba1a0d96b1af8c763718972e42cd37a1c3df81",
+      "png_bytes": 356684,
+      "pdf_bytes": 27272
+    },
+    {
+      "figure_id": "F11",
+      "description": "Multimetric protection-information preservation trade-offs",
+      "source_datasets": [
+        "phase_region",
+        "weighted_radiance",
+        "all_matched_phase"
+      ],
+      "png": "F11_protection_information_tradeoff.png",
+      "pdf": "F11_protection_information_tradeoff.pdf",
+      "png_dimensions": [
+        4234,
+        3034
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_sha256": "4b2fc04a08cdd58e31de01fa56b7553fdaf645a01c58bbde0a4b2184371e452f",
+      "pdf_sha256": "ad5536e8379704f7a484ebd728216af116b0688a741aa75990209b98056157d1",
+      "png_bytes": 391848,
+      "pdf_bytes": 25214
+    }
+  ],
+  "strategy_names": {
+    "S0": "Fixed exposure",
+    "S1": "Exposure protection",
+    "S2": "Probed exposure",
+    "S3": "State-aware exposure",
+    "S4": "Proposed DADRC"
+  },
+  "strategy_colors": {
+    "S0": "#64748B",
+    "S1": "#D97706",
+    "S2": "#2563EB",
+    "S3": "#9333EA",
+    "S4": "#008577"
+  },
+  "phases": {
+    "clean": [
+      0,
+      9
+    ],
+    "disturbance": [
+      10,
+      29
+    ],
+    "recovery": [
+      30,
+      59
+    ]
+  },
+  "validation_checks": [
+    {
+      "check": "All eleven figures generated",
+      "passed": true
+    },
+    {
+      "check": "Expected figure identifiers",
+      "passed": true
+    },
+    {
+      "check": "Exactly 22 staged figure files",
+      "passed": true
+    },
+    {
+      "check": "DADRC persistent evidence count",
+      "passed": true
+    },
+    {
+      "check": "Recovery timeline dimensions",
+      "passed": true
+    },
+    {
+      "check": "S0 restoration frame preserved",
+      "passed": true
+    },
+    {
+      "check": "S0 confirmation frame preserved",
+      "passed": true
+    },
+    {
+      "check": "S1 non-restoration preserved",
+      "passed": true
+    },
+    {
+      "check": "S2 non-restoration preserved",
+      "passed": true
+    },
+    {
+      "check": "S3 restoration frame preserved",
+      "passed": true
+    },
+    {
+      "check": "S3 confirmation frame preserved",
+      "passed": true
+    },
+    {
+      "check": "S4 restoration frame preserved",
+      "passed": true
+    },
+    {
+      "check": "S4 confirmation frame preserved",
+      "passed": true
+    },
+    {
+      "check": "F01 png identity",
+      "passed": true
+    },
+    {
+      "check": "F01 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F02 png identity",
+      "passed": true
+    },
+    {
+      "check": "F02 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F03 png identity",
+      "passed": true
+    },
+    {
+      "check": "F03 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F04 png identity",
+      "passed": true
+    },
+    {
+      "check": "F04 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F05 png identity",
+      "passed": true
+    },
+    {
+      "check": "F05 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F06 png identity",
+      "passed": true
+    },
+    {
+      "check": "F06 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F07 png identity",
+      "passed": true
+    },
+    {
+      "check": "F07 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F08 png identity",
+      "passed": true
+    },
+    {
+      "check": "F08 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F09 png identity",
+      "passed": true
+    },
+    {
+      "check": "F09 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F10 png identity",
+      "passed": true
+    },
+    {
+      "check": "F10 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "F11 png identity",
+      "passed": true
+    },
+    {
+      "check": "F11 pdf identity",
+      "passed": true
+    },
+    {
+      "check": "Input identity: frames",
+      "passed": true
+    },
+    {
+      "check": "Input identity: regional",
+      "passed": true
+    },
+    {
+      "check": "Input identity: pairwise",
+      "passed": true
+    },
+    {
+      "check": "Input identity: all_matched",
+      "passed": true
+    },
+    {
+      "check": "Input identity: phase_region",
+      "passed": true
+    },
+    {
+      "check": "Input identity: weighted_radiance",
+      "passed": true
+    },
+    {
+      "check": "Input identity: pairwise_phase",
+      "passed": true
+    },
+    {
+      "check": "Input identity: all_matched_phase",
+      "passed": true
+    },
+    {
+      "check": "Input identity: protection",
+      "passed": true
+    },
+    {
+      "check": "Input identity: recovery",
+      "passed": true
+    },
+    {
+      "check": "Input identity: recovery_timeline",
+      "passed": true
+    },
+    {
+      "check": "Input identity: disturbance_evidence",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/full_comparative_records.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/harness_smoke_records.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/all_strategy_matched_valid_metrics.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/runtime_configuration_snapshot.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/runtime_validation_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/strategy_frame_records.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/regional_information_metrics.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/protocol_validation_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/harness_runtime_validation_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/harness_implementation_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/comparative_execution_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/experimental_region_statistics.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/pairwise_matched_valid_metrics.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/comparative_execution_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/all_strategy_matched_phase_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/pairwise_matched_phase_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/recovery_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/recovery_qualification_timeline.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/disturbance_evidence_summary.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/quantitative_analysis_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/quantitative_analysis_report.json",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/phase_region_metric_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/protection_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/weighted_radiance_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "Historical artifact: results/module5/five_strategy_comparison/analysis/preliminary_hypothesis_assessment.json",
+      "passed": true
+    },
+    {
+      "check": "Research checkpoint unchanged",
+      "passed": true
+    },
+    {
+      "check": "Output overwrite protection",
+      "passed": true
+    }
+  ],
+  "validation_count": 74,
+  "failed_validation_count": 0,
+  "historical_comparative_files_verified": 25,
+  "historical_comparative_artifacts_unchanged": true,
+  "experiments_rerun": false,
+  "controller_parameters_changed": false,
+  "composite_superiority_score_used": false,
+  "scientific_conventions": [
+    "Actual saved framewise trajectories used.",
+    "Undefined numerical values preserved.",
+    "Non-restoration is not assigned a numeric delay.",
+    "Matched-valid errors interpreted with coverage.",
+    "Coincident strategy coordinates are not shifted.",
+    "No statistical confidence intervals inferred from dependent frames.",
+    "Background denotes a low-disturbance region.",
+    "Ground truth is evaluator-only information."
+  ],
+  "limitations": [
+    "One deterministic synthetic optical scenario.",
+    "Sensor noise disabled.",
+    "Fixed gain and ROI.",
+    "Module 3 adaptation disabled.",
+    "No downstream semantic perception.",
+    "No embedded hardware timing measurement.",
+    "Figure readability requires visual inspection.",
+    "PDF container checks do not constitute a complete PDF rendering audit.",
+    "Full 116-file protected inventory verification remains for consolidated archival."
+  ]
+}

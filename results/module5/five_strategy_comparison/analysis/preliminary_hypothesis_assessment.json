@@ -1,0 +1,42 @@
+{
+  "H01": {
+    "assessment": "supported_in_controlled_scenario",
+    "evidence": {
+      "S1": 0.7816923076923077,
+      "S2": 0.95,
+      "S3": 0.9165384615384615,
+      "S4": 0.95
+    }
+  },
+  "H02": {
+    "assessment": "supported_in_controlled_scenario",
+    "uncensored_disturbance_frames": 19,
+    "detected_frames": 19
+  },
+  "H03": {
+    "assessment": "pending_multimetric_tradeoff_interpretation",
+    "reason": "No composite score or universal superiority assumed."
+  },
+  "H04": {
+    "assessment": "supported_in_controlled_scenario",
+    "observed_recovery": {
+      "strategy": "S4",
+      "status": "restored",
+      "restoration_frame": 35,
+      "confirmation_frame": 37,
+      "recovery_delay_frames": 5,
+      "confirmation_delay_frames": 7,
+      "sustained_restoration": true,
+      "internal_restored_action_frame": 36,
+      "qualified_recovery_frames": 25,
+      "final_applied_exposure_ms": 10.0,
+      "final_reference_mae": 0.0,
+      "final_censored_ratio": 0.0,
+      "final_frame_qualified": true
+    }
+  },
+  "H05": {
+    "assessment": "pending_information_metric_interpretation",
+    "reason": "Saturation and information errors must be interpreted jointly with valid coverage."
+  }
+}
