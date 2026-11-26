@@ -1,0 +1,94 @@
+{
+  "status": "PRELIMINARY_QUANTITATIVE",
+  "disturbance_trials": 20,
+  "benign_trials": 6,
+  "protection_comparison": {
+    "S0": {
+      "lower_censoring": 17,
+      "equal_censoring": 3,
+      "higher_censoring": 0
+    },
+    "S1": {
+      "lower_censoring": 19,
+      "equal_censoring": 0,
+      "higher_censoring": 1
+    },
+    "S2": {
+      "lower_censoring": 0,
+      "equal_censoring": 19,
+      "higher_censoring": 1
+    },
+    "S3": {
+      "lower_censoring": 17,
+      "equal_censoring": 3,
+      "higher_censoring": 0
+    }
+  },
+  "canonical_criterion_recovery": {
+    "S0": {
+      "episodes": 21,
+      "restored_episodes": 18,
+      "not_restored_episodes": 3,
+      "restoration_rate": 0.8571428571428571,
+      "mean_delay_among_restored": 0.0,
+      "sustained_recovery_episodes": 18
+    },
+    "S1": {
+      "episodes": 21,
+      "restored_episodes": 0,
+      "not_restored_episodes": 21,
+      "restoration_rate": 0.0,
+      "mean_delay_among_restored": null,
+      "sustained_recovery_episodes": 0
+    },
+    "S2": {
+      "episodes": 21,
+      "restored_episodes": 3,
+      "not_restored_episodes": 18,
+      "restoration_rate": 0.14285714285714285,
+      "mean_delay_among_restored": 0.0,
+      "sustained_recovery_episodes": 3
+    },
+    "S3": {
+      "episodes": 21,
+      "restored_episodes": 18,
+      "not_restored_episodes": 3,
+      "restoration_rate": 0.8571428571428571,
+      "mean_delay_among_restored": 6.166666666666667,
+      "sustained_recovery_episodes": 18
+    },
+    "S4": {
+      "episodes": 21,
+      "restored_episodes": 18,
+      "not_restored_episodes": 3,
+      "restoration_rate": 0.8571428571428571,
+      "mean_delay_among_restored": 4.611111111111111,
+      "sustained_recovery_episodes": 18
+    }
+  },
+  "dadrc_evidence_totals": {
+    "true_positive": 386,
+    "false_positive": 0,
+    "true_negative": 1120,
+    "false_negative": 4,
+    "unknown_active": 20,
+    "unknown_nonactive": 0,
+    "uncensored_active_frames": 350,
+    "uncensored_present_frames": 327,
+    "benign_event_frames": 60,
+    "benign_positive_frames": 20,
+    "benign_unknown_frames": 0,
+    "active_recall_including_unknown": 0.9414634146341463,
+    "uncensored_detection_rate": 0.9342857142857143
+  },
+  "limitations": [
+    "Synthetic optical scenes and disturbances.",
+    "Fixed gain and disabled Module 3 adaptation.",
+    "Limited noise seeds.",
+    "Temporal dependence between frames.",
+    "No independent population-level inference.",
+    "Benign physical disturbances do not establish malicious intent.",
+    "Recovery delay averages exclude unrestored episodes and must be read with restoration rates.",
+    "No universal superiority or composite score is inferred."
+  ]
+}

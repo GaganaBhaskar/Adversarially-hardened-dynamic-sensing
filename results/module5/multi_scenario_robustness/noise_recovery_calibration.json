@@ -1,0 +1,30 @@
+{
+  "canonical": {
+    "calibration_seeds": [
+      91001,
+      91002,
+      91003
+    ],
+    "frames_per_seed": 20,
+    "sample_count": 60,
+    "mean_clean_mae": 0.002304286160506308,
+    "maximum_clean_mae": 0.0023107046727091074,
+    "noise_aware_mae_threshold": 0.0025417751399800185,
+    "threshold_rule": "max(0.002, 1.10 * maximum clean-only nominal MAE)",
+    "disturbance_results_used": false
+  },
+  "dusk": {
+    "calibration_seeds": [
+      91001,
+      91002,
+      91003
+    ],
+    "frames_per_seed": 20,
+    "sample_count": 60,
+    "mean_clean_mae": 0.001609462487976998,
+    "maximum_clean_mae": 0.001614289009012282,
+    "noise_aware_mae_threshold": 0.002,
+    "threshold_rule": "max(0.002, 1.10 * maximum clean-only nominal MAE)",
+    "disturbance_results_used": false
+  }
+}

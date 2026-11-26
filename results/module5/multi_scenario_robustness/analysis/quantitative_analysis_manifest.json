@@ -1,0 +1,50 @@
+{
+  "task_id": "M5-VAL-02E",
+  "status": "PASSED",
+  "files": {
+    "results/module5/multi_scenario_robustness/analysis/trial_strategy_summary.csv": {
+      "sha256": "9225678b26c7263d12e628d8e0decc7c0d4718ee03c26d15694a03d416575ccc",
+      "bytes": 30017
+    },
+    "results/module5/multi_scenario_robustness/analysis/phase_region_metric_summary.csv": {
+      "sha256": "8fd05301de602e28e051b3f09525cf79b0f7d385c13abc133f0878f0db45aa6e",
+      "bytes": 6443008
+    },
+    "results/module5/multi_scenario_robustness/analysis/matched_valid_phase_summary.csv": {
+      "sha256": "c746d95437034d3eea611352b6b841405d9a1a4717e0bbd157993b8211b98229",
+      "bytes": 797841
+    },
+    "results/module5/multi_scenario_robustness/analysis/episode_protection_recovery.csv": {
+      "sha256": "c098a5cbb8326b991319abb515e50ed5e07b6acb48083716d1aab61f4dc1f841",
+      "bytes": 20825
+    },
+    "results/module5/multi_scenario_robustness/analysis/recovery_qualification_timeline.csv": {
+      "sha256": "ec2ea90a3b998b6d04f3cf429050498eef40e7b554b8b8811a7d073d468df2fb",
+      "bytes": 460741
+    },
+    "results/module5/multi_scenario_robustness/analysis/disturbance_evidence_summary.csv": {
+      "sha256": "6252c5fd5dcfa1e6657257f40707c45a4011fe481b9a149abc62b5b00c884176",
+      "bytes": 16106
+    },
+    "results/module5/multi_scenario_robustness/analysis/benign_response_summary.csv": {
+      "sha256": "b5398a62c1cfbee1fbdefdd4390d33ddabb70cfa9ffcdf69ee19606101a463a0",
+      "bytes": 2822
+    },
+    "results/module5/multi_scenario_robustness/analysis/paired_strategy_comparison.csv": {
+      "sha256": "8acfa34ea75eb9134373fd8be44ed8cf396176364efeb3443d60c3f972ed3f7a",
+      "bytes": 52294
+    },
+    "results/module5/multi_scenario_robustness/analysis/scenario_seed_summary.csv": {
+      "sha256": "bb9fd8fbbfea7947acfbdbf56ef15e84a180a28f5fe0fa1afe6ce058cd624165",
+      "bytes": 40654
+    },
+    "results/module5/multi_scenario_robustness/analysis/preliminary_robustness_findings.json": {
+      "sha256": "e73be67a2ae10c2e195095eec77d94dc6d01fe361914419a0e25675d47f13235",
+      "bytes": 2710
+    },
+    "results/module5/multi_scenario_robustness/analysis/quantitative_analysis_report.json": {
+      "sha256": "db3dcaa93bf41bd15ddb9be97e6a8b2dd4c668ede44536be50ac8900c0dd2321",
+      "bytes": 9648
+    }
+  }
+}

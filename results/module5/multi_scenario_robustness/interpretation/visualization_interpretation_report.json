@@ -1,0 +1,16 @@
+{
+  "task_id": "M5-VAL-02F/G-01",
+  "status": "PASSED",
+  "research_checkpoint": "3a6fd6d28c77b0c1a32f8d04584464bb11efd107",
+  "protected_files": 73,
+  "figure_count": 12,
+  "png_count": 12,
+  "pdf_count": 12,
+  "interpretation_artifacts": 4,
+  "source_trials": 26,
+  "source_records": 91470,
+  "experiment_reruns": false,
+  "controller_modifications": false,
+  "visual_review_completed": false,
+  "execution_seconds": 40.25118235899936
+}

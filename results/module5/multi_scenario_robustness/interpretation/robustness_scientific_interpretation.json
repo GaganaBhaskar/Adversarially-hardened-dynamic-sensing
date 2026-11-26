@@ -1,0 +1,432 @@
+{
+  "status": "QUANTITATIVE_INTERPRETATION",
+  "scenario_configurations": 20,
+  "scenario_trials": 26,
+  "disturbance_trials": 20,
+  "disturbance_episodes": 21,
+  "benign_trials": 6,
+  "protection_comparison": {
+    "S0": {
+      "lower_censoring": 17,
+      "equal_censoring": 3,
+      "higher_censoring": 0
+    },
+    "S1": {
+      "lower_censoring": 19,
+      "equal_censoring": 0,
+      "higher_censoring": 1
+    },
+    "S2": {
+      "lower_censoring": 0,
+      "equal_censoring": 19,
+      "higher_censoring": 1
+    },
+    "S3": {
+      "lower_censoring": 17,
+      "equal_censoring": 3,
+      "higher_censoring": 0
+    }
+  },
+  "canonical_recovery": {
+    "S0": {
+      "episodes": 21,
+      "restored_episodes": 18,
+      "not_restored_episodes": 3,
+      "restoration_rate": 0.8571428571428571,
+      "mean_delay_among_restored": 0.0,
+      "sustained_recovery_episodes": 18
+    },
+    "S1": {
+      "episodes": 21,
+      "restored_episodes": 0,
+      "not_restored_episodes": 21,
+      "restoration_rate": 0.0,
+      "mean_delay_among_restored": null,
+      "sustained_recovery_episodes": 0
+    },
+    "S2": {
+      "episodes": 21,
+      "restored_episodes": 3,
+      "not_restored_episodes": 18,
+      "restoration_rate": 0.14285714285714285,
+      "mean_delay_among_restored": 0.0,
+      "sustained_recovery_episodes": 3
+    },
+    "S3": {
+      "episodes": 21,
+      "restored_episodes": 18,
+      "not_restored_episodes": 3,
+      "restoration_rate": 0.8571428571428571,
+      "mean_delay_among_restored": 6.166666666666667,
+      "sustained_recovery_episodes": 18
+    },
+    "S4": {
+      "episodes": 21,
+      "restored_episodes": 18,
+      "not_restored_episodes": 3,
+      "restoration_rate": 0.8571428571428571,
+      "mean_delay_among_restored": 4.611111111111111,
+      "sustained_recovery_episodes": 18
+    }
+  },
+  "noise_aware_recovery": [
+    {
+      "strategy": "S0",
+      "episodes": 6,
+      "canonical_restored": 3,
+      "noise_aware_restored": 6,
+      "noise_aware_mean_delay": 0.0
+    },
+    {
+      "strategy": "S1",
+      "episodes": 6,
+      "canonical_restored": 0,
+      "noise_aware_restored": 0,
+      "noise_aware_mean_delay": null
+    },
+    {
+      "strategy": "S2",
+      "episodes": 6,
+      "canonical_restored": 0,
+      "noise_aware_restored": 0,
+      "noise_aware_mean_delay": null
+    },
+    {
+      "strategy": "S3",
+      "episodes": 6,
+      "canonical_restored": 3,
+      "noise_aware_restored": 6,
+      "noise_aware_mean_delay": 5.5
+    },
+    {
+      "strategy": "S4",
+      "episodes": 6,
+      "canonical_restored": 3,
+      "noise_aware_restored": 6,
+      "noise_aware_mean_delay": 5.5
+    }
+  ],
+  "dadrc_evidence": {
+    "true_positive": 386,
+    "false_positive": 0,
+    "true_negative": 1120,
+    "false_negative": 4,
+    "unknown_active": 20,
+    "unknown_nonactive": 0,
+    "uncensored_active_frames": 350,
+    "uncensored_present_frames": 327,
+    "benign_event_frames": 60,
+    "benign_positive_frames": 20,
+    "benign_unknown_frames": 0,
+    "active_recall_including_unknown": 0.9414634146341463,
+    "uncensored_detection_rate": 0.9342857142857143
+  },
+  "relative_mean_recovery_delay_reduction_vs_s3": 25.225225225225234,
+  "information_comparisons": [
+    {
+      "metric": "reference_mae",
+      "baseline": "S0",
+      "defined_trials": 20,
+      "s4_lower": 17,
+      "s4_equal": 3,
+      "s4_higher": 0,
+      "s4_mean": 0.08959665937039438,
+      "baseline_mean": 0.1446930489018044
+    },
+    {
+      "metric": "reference_mae",
+      "baseline": "S1",
+      "defined_trials": 20,
+      "s4_lower": 19,
+      "s4_equal": 0,
+      "s4_higher": 1,
+      "s4_mean": 0.08959665937039438,
+      "baseline_mean": 0.09940865479529974
+    },
+    {
+      "metric": "reference_mae",
+      "baseline": "S2",
+      "defined_trials": 20,
+      "s4_lower": 5,
+      "s4_equal": 14,
+      "s4_higher": 1,
+      "s4_mean": 0.08959665937039438,
+      "baseline_mean": 0.091034015543214
+    },
+    {
+      "metric": "reference_mae",
+      "baseline": "S3",
+      "defined_trials": 20,
+      "s4_lower": 11,
+      "s4_equal": 3,
+      "s4_higher": 6,
+      "s4_mean": 0.08959665937039438,
+      "baseline_mean": 0.09464095812435142
+    },
+    {
+      "metric": "gradient_mae",
+      "baseline": "S0",
+      "defined_trials": 20,
+      "s4_lower": 17,
+      "s4_equal": 3,
+      "s4_higher": 0,
+      "s4_mean": 0.00272710983543163,
+      "baseline_mean": 0.00352695464938107
+    },
+    {
+      "metric": "gradient_mae",
+      "baseline": "S1",
+      "defined_trials": 20,
+      "s4_lower": 13,
+      "s4_equal": 0,
+      "s4_higher": 7,
+      "s4_mean": 0.00272710983543163,
+      "baseline_mean": 0.002827140387479135
+    },
+    {
+      "metric": "gradient_mae",
+      "baseline": "S2",
+      "defined_trials": 20,
+      "s4_lower": 5,
+      "s4_equal": 14,
+      "s4_higher": 1,
+      "s4_mean": 0.00272710983543163,
+      "baseline_mean": 0.002732375652065145
+    },
+    {
+      "metric": "gradient_mae",
+      "baseline": "S3",
+      "defined_trials": 20,
+      "s4_lower": 11,
+      "s4_equal": 3,
+      "s4_higher": 6,
+      "s4_mean": 0.00272710983543163,
+      "baseline_mean": 0.0028289429224324604
+    },
+    {
+      "metric": "radiance_quantization_step",
+      "baseline": "S0",
+      "defined_trials": 20,
+      "s4_lower": 0,
+      "s4_equal": 3,
+      "s4_higher": 17,
+      "s4_mean": 0.004294705939082435,
+      "baseline_mean": 0.0024420024420023995
+    },
+    {
+      "metric": "radiance_quantization_step",
+      "baseline": "S1",
+      "defined_trials": 20,
+      "s4_lower": 15,
+      "s4_equal": 0,
+      "s4_higher": 5,
+      "s4_mean": 0.004294705939082435,
+      "baseline_mean": 0.004322936235917391
+    },
+    {
+      "metric": "radiance_quantization_step",
+      "baseline": "S2",
+      "defined_trials": 20,
+      "s4_lower": 1,
+      "s4_equal": 14,
+      "s4_higher": 5,
+      "s4_mean": 0.004294705939082435,
+      "baseline_mean": 0.004305799607141415
+    },
+    {
+      "metric": "radiance_quantization_step",
+      "baseline": "S3",
+      "defined_trials": 20,
+      "s4_lower": 6,
+      "s4_equal": 3,
+      "s4_higher": 11,
+      "s4_mean": 0.004294705939082435,
+      "baseline_mean": 0.004138554001302816
+    },
+    {
+      "metric": "radiance_reconstruction_mae",
+      "baseline": "S0",
+      "defined_trials": 20,
+      "s4_lower": 0,
+      "s4_equal": 3,
+      "s4_higher": 17,
+      "s4_mean": 1.5577854798559747,
+      "baseline_mean": 1.1075491638413337
+    },
+    {
+      "metric": "radiance_reconstruction_mae",
+      "baseline": "S1",
+      "defined_trials": 20,
+      "s4_lower": 1,
+      "s4_equal": 0,
+      "s4_higher": 19,
+      "s4_mean": 1.5577854798559747,
+      "baseline_mean": 1.4933329892176241
+    },
+    {
+      "metric": "radiance_reconstruction_mae",
+      "baseline": "S2",
+      "defined_trials": 20,
+      "s4_lower": 2,
+      "s4_equal": 14,
+      "s4_higher": 4,
+      "s4_mean": 1.5577854798559747,
+      "baseline_mean": 1.5582841207830007
+    },
+    {
+      "metric": "radiance_reconstruction_mae",
+      "baseline": "S3",
+      "defined_trials": 20,
+      "s4_lower": 0,
+      "s4_equal": 3,
+      "s4_higher": 17,
+      "s4_mean": 1.5577854798559747,
+      "baseline_mean": 1.5466207781886112
+    },
+    {
+      "metric": "valid_observation_coverage",
+      "baseline": "S0",
+      "defined_trials": 20,
+      "s4_lower": 0,
+      "s4_equal": 3,
+      "s4_higher": 17,
+      "s4_mean": 0.9973109308878578,
+      "baseline_mean": 0.954120559692383
+    },
+    {
+      "metric": "valid_observation_coverage",
+      "baseline": "S1",
+      "defined_trials": 20,
+      "s4_lower": 1,
+      "s4_equal": 0,
+      "s4_higher": 19,
+      "s4_mean": 0.9973109308878578,
+      "baseline_mean": 0.9891224458482532
+    },
+    {
+      "metric": "valid_observation_coverage",
+      "baseline": "S2",
+      "defined_trials": 20,
+      "s4_lower": 1,
+      "s4_equal": 19,
+      "s4_higher": 0,
+      "s4_mean": 0.9973109308878578,
+      "baseline_mean": 0.997358538309733
+    },
+    {
+      "metric": "valid_observation_coverage",
+      "baseline": "S3",
+      "defined_trials": 20,
+      "s4_lower": 0,
+      "s4_equal": 3,
+      "s4_higher": 17,
+      "s4_mean": 0.9973109308878578,
+      "baseline_mean": 0.9964712142944336
+    },
+    {
+      "metric": "clean_adc_level_retention",
+      "baseline": "S0",
+      "defined_trials": 20,
+      "s4_lower": 17,
+      "s4_equal": 3,
+      "s4_higher": 0,
+      "s4_mean": 0.7162255585872347,
+      "baseline_mean": 0.9999904151057848
+    },
+    {
+      "metric": "clean_adc_level_retention",
+      "baseline": "S1",
+      "defined_trials": 20,
+      "s4_lower": 18,
+      "s4_equal": 0,
+      "s4_higher": 2,
+      "s4_mean": 0.7162255585872347,
+      "baseline_mean": 0.8040566962344486
+    },
+    {
+      "metric": "clean_adc_level_retention",
+      "baseline": "S2",
+      "defined_trials": 20,
+      "s4_lower": 5,
+      "s4_equal": 14,
+      "s4_higher": 1,
+      "s4_mean": 0.7162255585872347,
+      "baseline_mean": 0.7166893195568013
+    },
+    {
+      "metric": "clean_adc_level_retention",
+      "baseline": "S3",
+      "defined_trials": 20,
+      "s4_lower": 11,
+      "s4_equal": 3,
+      "s4_higher": 6,
+      "s4_mean": 0.7162255585872347,
+      "baseline_mean": 0.7654956035033097
+    },
+    {
+      "metric": "contrast_retention",
+      "baseline": "S0",
+      "defined_trials": 20,
+      "s4_lower": 17,
+      "s4_equal": 3,
+      "s4_higher": 0,
+      "s4_mean": 8.886326833610239,
+      "baseline_mean": 13.49729119973163
+    },
+    {
+      "metric": "contrast_retention",
+      "baseline": "S1",
+      "defined_trials": 20,
+      "s4_lower": 12,
+      "s4_equal": 0,
+      "s4_higher": 8,
+      "s4_mean": 8.886326833610239,
+      "baseline_mean": 9.368710017176735
+    },
+    {
+      "metric": "contrast_retention",
+      "baseline": "S2",
+      "defined_trials": 20,
+      "s4_lower": 5,
+      "s4_equal": 14,
+      "s4_higher": 1,
+      "s4_mean": 8.886326833610239,
+      "baseline_mean": 8.89872046487602
+    },
+    {
+      "metric": "contrast_retention",
+      "baseline": "S3",
+      "defined_trials": 20,
+      "s4_lower": 11,
+      "s4_equal": 3,
+      "s4_higher": 6,
+      "s4_mean": 8.886326833610239,
+      "baseline_mean": 9.249397163552606
+    }
+  ],
+  "minimum_common_valid_coverage": 0.7235488891601562,
+  "hypothesis_assessment": {
+    "H01": "Supported within tested conditions",
+    "H02": "Supported with missed and unknown evidence",
+    "H03": "Conditional tradeoff; no universal superiority",
+    "H04": "Partially supported under canonical criterion",
+    "H05": "Canonical support established; cross-scenario metric directions recorded"
+  },
+  "limitations": [
+    "Synthetic optical scenes and disturbances.",
+    "Fixed gain and disabled Module 3 adaptation.",
+    "Limited noise seeds.",
+    "Temporal dependence between frames.",
+    "No independent population-level inference.",
+    "Benign physical disturbances do not establish malicious intent.",
+    "Recovery delay averages exclude unrestored episodes and must be read with restoration rates.",
+    "No universal superiority or composite score is inferred.",
+    "Benign-event positive evidence is nonzero.",
+    "Only three seeds per noisy configuration.",
+    "Noise-aware thresholds are empirical.",
+    "Conditional radiance errors depend on coverage.",
+    "Phase-window and physically active-frame averages have distinct denominators.",
+    "Recovery comparisons among successful episodes are conditional descriptive comparisons.",
+    "No hardware or downstream perception validation."
+  ]
+}

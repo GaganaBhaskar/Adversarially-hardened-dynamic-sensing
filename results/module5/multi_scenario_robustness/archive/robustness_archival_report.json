@@ -1,0 +1,690 @@
+{
+  "task_id": "M5-VAL-02G-02A",
+  "status": "PASSED",
+  "research_checkpoint": "3a6fd6d28c77b0c1a32f8d04584464bb11efd107",
+  "branch": "main",
+  "remote": "https://github.com/GaganaBhaskar/Adversarially-hardened-dynamic-sensing.git",
+  "historical_evidence_count": 146,
+  "robustness_evidence_count": 103,
+  "shared_evidence_count": 1,
+  "protected_files_before_archival": 248,
+  "protected_files_after_archival": 250,
+  "regression_testing": {
+    "summary": {
+      "passed": 179,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "returncode": 0,
+      "wall_seconds": 22.008971726998425
+    },
+    "console_output": "........................................................................ [ 40%]\n........................................................................ [ 80%]\n...................................                                      [100%]\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED tests/test_module1.py::test_clean_scene_shape\nPASSED tests/test_module1.py::test_attack_map_shape\nPASSED tests/test_module1.py::test_attack_increases_illumination\nPASSED tests/test_module1.py::test_invalid_attack\nPASSED tests/test_module1_2.py::test_illumination_conditions\nPASSED tests/test_module1_2.py::test_invalid_illumination\nPASSED tests/test_module1_2.py::test_benign_light_generation\nPASSED tests/test_module1_2.py::test_multiple_attacks\nPASSED tests/test_module1_2.py::test_temporal_sequence\nPASSED tests/test_module2.py::test_sensor_output_shape\nPASSED tests/test_module2.py::test_sensor_output_range\nPASSED tests/test_module2.py::test_full_well_saturation\nPASSED tests/test_module2.py::test_no_saturation_for_dark_scene\nPASSED tests/test_module2.py::test_exposure_increases_signal\nPASSED tests/test_module2.py::test_noise_reproducibility\nPASSED tests/test_module2.py::test_invalid_exposure\nPASSED tests/test_module2.py::test_invalid_input_shape\nPASSED tests/test_module2.py::test_invalid_negative_radiance\nPASSED tests/test_module2.py::test_adc_bit_depth\nPASSED tests/test_module3.py::test_exposure_controller_increases_exposure\nPASSED tests/test_module3.py::test_exposure_controller_reduces_exposure\nPASSED tests/test_module3.py::test_exposure_limits\nPASSED tests/test_module3.py::test_joint_controller_increases_gain_at_exposure_limit\nPASSED tests/test_module3.py::test_joint_controller_respects_gain_limit\nPASSED tests/test_module3.py::test_joint_controller_reduces_gain_on_clipping\nPASSED tests/test_module3.py::test_joint_controller_invalid_brightness\nPASSED tests/test_module3.py::test_joint_controller_invalid_config\nPASSED tests/test_module3.py::test_joint_controller_invalid_clipping_ratio\nPASSED tests/test_module3.py::test_joint_controller_exposure_and_gain_bounds\nPASSED tests/test_module3_roi.py::test_roi_output_shape\nPASSED tests/test_module3_roi.py::test_dense_roi_sampling\nPASSED tests/test_module3_roi.py::test_sparse_background_sampling\nPASSED tests/test_module3_roi.py::test_sampling_ratio\nPASSED tests/test_module3_roi.py::test_invalid_roi\nPASSED tests/test_module3_roi.py::test_full_frame_roi\nPASSED tests/test_module4.py::test_clean_scene_not_flagged\nPASSED tests/test_module4.py::test_strong_benign_glare_not_attack_candidate\nPASSED tests/test_module4.py::test_localized_laser_candidate\nPASSED tests/test_module4.py::test_weak_laser_disturbance\nPASSED tests/test_module4.py::test_global_brightness_compensation\nPASSED tests/test_module4.py::test_state_tracker_sustained_attack_and_recovery\nPASSED tests/test_module4.py::test_detector_reset\nPASSED tests/test_module4.py::test_invalid_concentration_threshold\nPASSED tests/test_module4.py::test_invalid_recovery_frames\nPASSED tests/test_module4.py::test_invalid_temporal_input\nPASSED tests/test_module5.py::test_original_normal_hold\nPASSED tests/test_module5.py::test_original_immediate_protection\nPASSED tests/test_module5.py::test_original_delayed_recovery\nPASSED tests/test_module5.py::test_original_minimum_exposure\nPASSED tests/test_module5.py::test_original_maximum_exposure\nPASSED tests/test_module5.py::test_original_reset\nPASSED tests/test_module5.py::test_state_aware_normal_operation\nPASSED tests/test_module5.py::test_state_aware_protection_activation\nPASSED tests/test_module5.py::test_state_aware_disturbance_hold\nPASSED tests/test_module5.py::test_state_aware_reference_restoration\nPASSED tests/test_module5.py::test_state_aware_reset\nPASSED tests/test_module5.py::test_probe_normal_operation\nPASSED tests/test_module5.py::test_probe_immediate_protection\nPASSED tests/test_module5.py::test_probe_scheduling_interval\nPASSED tests/test_module5.py::test_probe_successful_acceptance\nPASSED tests/test_module5.py::test_probe_failed_rollback\nPASSED tests/test_module5.py::test_probe_failed_cooldown\nPASSED tests/test_module5.py::test_probe_persistent_saturation\nPASSED tests/test_module5.py::test_probe_reference_exposure_limit\nPASSED tests/test_module5.py::test_probe_reset\nPASSED tests/test_module5.py::test_invalid_saturation_rejected\nPASSED tests/test_module5.py::test_invalid_exposure_rejected\nPASSED tests/test_module5.py::test_invalid_configuration_rejected\nPASSED tests/test_module5.py::test_invalid_disturbance_state_rejected\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes0]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes1]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes2]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes3]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes4]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes5]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes6]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes7]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes8]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes9]\nPASSED tests/test_module5_dadrc.py::test_invalid_configuration[changes10]\nPASSED tests/test_module5_dadrc.py::test_normal_monitoring[CLEAR-HOLD]\nPASSED tests/test_module5_dadrc.py::test_normal_monitoring[PRESENT-MONITOR_DISTURBANCE]\nPASSED tests/test_module5_dadrc.py::test_normal_monitoring[UNKNOWN-MONITOR_UNKNOWN]\nPASSED tests/test_module5_dadrc.py::test_each_unsafe_signal_triggers_protection[signals0]\nPASSED tests/test_module5_dadrc.py::test_each_unsafe_signal_triggers_protection[signals1]\nPASSED tests/test_module5_dadrc.py::test_each_unsafe_signal_triggers_protection[signals2]\nPASSED tests/test_module5_dadrc.py::test_repeated_protection_preserves_reference\nPASSED tests/test_module5_dadrc.py::test_minimum_exposure_bound\nPASSED tests/test_module5_dadrc.py::test_persistent_disturbance_holds_exposure\nPASSED tests/test_module5_dadrc.py::test_persistent_probe_timing\nPASSED tests/test_module5_dadrc.py::test_successful_persistent_probe\nPASSED tests/test_module5_dadrc.py::test_unsafe_probe_failure\nPASSED tests/test_module5_dadrc.py::test_unknown_probe_rolls_back\nPASSED tests/test_module5_dadrc.py::test_failed_probe_cooldown\nPASSED tests/test_module5_dadrc.py::test_unsafe_observation_overrides_cooldown\nPASSED tests/test_module5_dadrc.py::test_unknown_evidence_holds_protection\nPASSED tests/test_module5_dadrc.py::test_active_tracker_blocks_clear_recovery\nPASSED tests/test_module5_dadrc.py::test_interrupted_clear_confirmation[PRESENT]\nPASSED tests/test_module5_dadrc.py::test_interrupted_clear_confirmation[UNKNOWN]\nPASSED tests/test_module5_dadrc.py::test_clear_confirmation_and_probe\nPASSED tests/test_module5_dadrc.py::test_successful_clear_probe_enables_recovery\nPASSED tests/test_module5_dadrc.py::test_disturbance_returns_during_recovery\nPASSED tests/test_module5_dadrc.py::test_restoration_requires_observed_reference\nPASSED tests/test_module5_dadrc.py::test_invalid_current_exposure[0.01]\nPASSED tests/test_module5_dadrc.py::test_invalid_current_exposure[31.0]\nPASSED tests/test_module5_dadrc.py::test_invalid_current_exposure[nan]\nPASSED tests/test_module5_dadrc.py::test_invalid_current_exposure[inf]\nPASSED tests/test_module5_dadrc.py::test_invalid_spatial_saturation[-0.1]\nPASSED tests/test_module5_dadrc.py::test_invalid_spatial_saturation[1.1]\nPASSED tests/test_module5_dadrc.py::test_invalid_spatial_saturation[nan]\nPASSED tests/test_module5_dadrc.py::test_invalid_tracker_state\nPASSED tests/test_module5_dadrc.py::test_command_mismatch_rejected\nPASSED tests/test_module5_dadrc.py::test_real_sensor_reference_preservation\nPASSED tests/test_module5_dadrc.py::test_duplicate_reference_rejected\nPASSED tests/test_module5_dadrc.py::test_unsafe_startup_reference_rejected\nPASSED tests/test_module5_dadrc.py::test_controller_reset\nPASSED tests/test_module7_information_preservation.py::test_invalid_epsilon[0.0]\nPASSED tests/test_module7_information_preservation.py::test_invalid_epsilon[-1.0]\nPASSED tests/test_module7_information_preservation.py::test_invalid_epsilon[nan]\nPASSED tests/test_module7_information_preservation.py::test_invalid_epsilon[inf]\nPASSED tests/test_module7_information_preservation.py::test_invalid_epsilon[-inf]\nPASSED tests/test_module7_information_preservation.py::test_valid_custom_epsilon\nPASSED tests/test_module7_information_preservation.py::test_identical_observations\nPASSED tests/test_module7_information_preservation.py::test_identity_ratios\nPASSED tests/test_module7_information_preservation.py::test_output_contract\nPASSED tests/test_module7_information_preservation.py::test_clean_exposure_reduction[5.0]\nPASSED tests/test_module7_information_preservation.py::test_clean_exposure_reduction[1.0]\nPASSED tests/test_module7_information_preservation.py::test_clean_exposure_reduction[0.1]\nPASSED tests/test_module7_information_preservation.py::test_gain_compensation_identity\nPASSED tests/test_module7_information_preservation.py::test_quantization_formula[10.0-1.0]\nPASSED tests/test_module7_information_preservation.py::test_quantization_formula[5.0-1.0]\nPASSED tests/test_module7_information_preservation.py::test_quantization_formula[1.0-1.0]\nPASSED tests/test_module7_information_preservation.py::test_quantization_formula[0.1-1.0]\nPASSED tests/test_module7_information_preservation.py::test_quantization_formula[5.0-2.0]\nPASSED tests/test_module7_information_preservation.py::test_full_saturation\nPASSED tests/test_module7_information_preservation.py::test_adc_clipping_without_full_well_saturation\nPASSED tests/test_module7_information_preservation.py::test_zero_signal_is_not_censored\nPASSED tests/test_module7_information_preservation.py::test_partial_censoring\nPASSED tests/test_module7_information_preservation.py::test_censoring_mask_union\nPASSED tests/test_module7_information_preservation.py::test_analytic_gradient\nPASSED tests/test_module7_information_preservation.py::test_analytic_radiance_error\nPASSED tests/test_module7_information_preservation.py::test_mae_triangle_inequality\nPASSED tests/test_module7_information_preservation.py::test_empty_region\nPASSED tests/test_module7_information_preservation.py::test_single_pixel_region\nPASSED tests/test_module7_information_preservation.py::test_disconnected_region_has_no_edges\nPASSED tests/test_module7_information_preservation.py::test_constant_reference\nPASSED tests/test_module7_information_preservation.py::test_region_shape_equivalence\nPASSED tests/test_module7_information_preservation.py::test_full_region_equivalence\nPASSED tests/test_module7_information_preservation.py::test_complementary_region_aggregation\nPASSED tests/test_module7_information_preservation.py::test_invalid_normalized_values[nan]\nPASSED tests/test_module7_information_preservation.py::test_invalid_normalized_values[inf]\nPASSED tests/test_module7_information_preservation.py::test_invalid_normalized_values[-0.1]\nPASSED tests/test_module7_information_preservation.py::test_invalid_normalized_values[1.1]\nPASSED tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape0]\nPASSED tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape1]\nPASSED tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape2]\nPASSED tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape3]\nPASSED tests/test_module7_information_preservation.py::test_nonfloating_normalized_output\nPASSED tests/test_module7_information_preservation.py::test_nontensor_normalized_output\nPASSED tests/test_module7_information_preservation.py::test_nonboolean_sensor_mask[saturated]\nPASSED tests/test_module7_information_preservation.py::test_nonboolean_sensor_mask[adc_clipped]\nPASSED tests/test_module7_information_preservation.py::test_invalid_sensor_mask_shape[saturated]\nPASSED tests/test_module7_information_preservation.py::test_invalid_sensor_mask_shape[adc_clipped]\nPASSED tests/test_module7_information_preservation.py::test_noninteger_adc\nPASSED tests/test_module7_information_preservation.py::test_adc_out_of_range[-1]\nPASSED tests/test_module7_information_preservation.py::test_adc_out_of_range[4096]\nPASSED tests/test_module7_information_preservation.py::test_adc_shape_mismatch\nPASSED tests/test_module7_information_preservation.py::test_adc_normalized_inconsistency\nPASSED tests/test_module7_information_preservation.py::test_invalid_region_shape[shape0]\nPASSED tests/test_module7_information_preservation.py::test_invalid_region_shape[shape1]\nPASSED tests/test_module7_information_preservation.py::test_invalid_region_shape[shape2]\nPASSED tests/test_module7_information_preservation.py::test_nonboolean_region\nPASSED tests/test_module7_information_preservation.py::test_nontensor_region\nPASSED tests/test_module7_information_preservation.py::test_invalid_optical_ground_truth[-0.1]\nPASSED tests/test_module7_information_preservation.py::test_invalid_optical_ground_truth[nan]\nPASSED tests/test_module7_information_preservation.py::test_invalid_optical_ground_truth[inf]\nPASSED tests/test_module7_information_preservation.py::test_ground_truth_shape_mismatch\nPASSED tests/test_module7_information_preservation.py::test_repeatable_metric_evaluation\nPASSED tests/test_module7_information_preservation.py::test_evaluation_does_not_modify_inputs\n179 passed in 16.42s\n\n",
+    "exact_previous_test_identity_verified": false
+  },
+  "scientific_summary": {
+    "scenario_configurations": 20,
+    "scenario_trials": 26,
+    "strategy_frame_evaluations": 7950,
+    "scientific_records": 91470,
+    "canonical_numerical_comparisons": 66600,
+    "canonical_numerical_mismatches": 0,
+    "protection_comparison": {
+      "S0": {
+        "lower_censoring": 17,
+        "equal_censoring": 3,
+        "higher_censoring": 0
+      },
+      "S1": {
+        "lower_censoring": 19,
+        "equal_censoring": 0,
+        "higher_censoring": 1
+      },
+      "S2": {
+        "lower_censoring": 0,
+        "equal_censoring": 19,
+        "higher_censoring": 1
+      },
+      "S3": {
+        "lower_censoring": 17,
+        "equal_censoring": 3,
+        "higher_censoring": 0
+      }
+    },
+    "canonical_recovery": {
+      "S0": {
+        "episodes": 21,
+        "restored_episodes": 18,
+        "not_restored_episodes": 3,
+        "restoration_rate": 0.8571428571428571,
+        "mean_delay_among_restored": 0.0,
+        "sustained_recovery_episodes": 18
+      },
+      "S1": {
+        "episodes": 21,
+        "restored_episodes": 0,
+        "not_restored_episodes": 21,
+        "restoration_rate": 0.0,
+        "mean_delay_among_restored": null,
+        "sustained_recovery_episodes": 0
+      },
+      "S2": {
+        "episodes": 21,
+        "restored_episodes": 3,
+        "not_restored_episodes": 18,
+        "restoration_rate": 0.14285714285714285,
+        "mean_delay_among_restored": 0.0,
+        "sustained_recovery_episodes": 3
+      },
+      "S3": {
+        "episodes": 21,
+        "restored_episodes": 18,
+        "not_restored_episodes": 3,
+        "restoration_rate": 0.8571428571428571,
+        "mean_delay_among_restored": 6.166666666666667,
+        "sustained_recovery_episodes": 18
+      },
+      "S4": {
+        "episodes": 21,
+        "restored_episodes": 18,
+        "not_restored_episodes": 3,
+        "restoration_rate": 0.8571428571428571,
+        "mean_delay_among_restored": 4.611111111111111,
+        "sustained_recovery_episodes": 18
+      }
+    },
+    "noise_aware_recovery": [
+      {
+        "strategy": "S0",
+        "episodes": 6,
+        "canonical_restored": 3,
+        "noise_aware_restored": 6,
+        "noise_aware_mean_delay": 0.0
+      },
+      {
+        "strategy": "S1",
+        "episodes": 6,
+        "canonical_restored": 0,
+        "noise_aware_restored": 0,
+        "noise_aware_mean_delay": null
+      },
+      {
+        "strategy": "S2",
+        "episodes": 6,
+        "canonical_restored": 0,
+        "noise_aware_restored": 0,
+        "noise_aware_mean_delay": null
+      },
+      {
+        "strategy": "S3",
+        "episodes": 6,
+        "canonical_restored": 3,
+        "noise_aware_restored": 6,
+        "noise_aware_mean_delay": 5.5
+      },
+      {
+        "strategy": "S4",
+        "episodes": 6,
+        "canonical_restored": 3,
+        "noise_aware_restored": 6,
+        "noise_aware_mean_delay": 5.5
+      }
+    ],
+    "s4_condition_appropriate_recovery": {
+      "restored_episodes": 21,
+      "total_episodes": 21,
+      "restoration_rate": 1.0,
+      "criterion_policy": "Canonical for deterministic trials; pre-frozen noise-aware criterion for noisy trials."
+    },
+    "dadrc_evidence": {
+      "true_positive": 386,
+      "false_positive": 0,
+      "true_negative": 1120,
+      "false_negative": 4,
+      "unknown_active": 20,
+      "unknown_nonactive": 0,
+      "uncensored_active_frames": 350,
+      "uncensored_present_frames": 327,
+      "benign_event_frames": 60,
+      "benign_positive_frames": 20,
+      "benign_unknown_frames": 0,
+      "active_recall_including_unknown": 0.9414634146341463,
+      "uncensored_detection_rate": 0.9342857142857143
+    },
+    "relative_mean_recovery_delay_reduction_vs_s3": 25.225225225225234,
+    "protection_losses": [
+      {
+        "trial_id": "R05_seed_42",
+        "baseline": "S1",
+        "proposed_value": 0.0042724609375,
+        "baseline_value": 0.0021209716796875,
+        "difference": 0.0021514892578125
+      },
+      {
+        "trial_id": "R11_seed_42",
+        "baseline": "S2",
+        "proposed_value": 0.0026448567708333,
+        "baseline_value": 0.0016927083333333,
+        "difference": 0.0009521484375
+      }
+    ],
+    "recognition_failures": [
+      {
+        "trial_id": "R09_seed_42",
+        "scenario_id": "R09",
+        "seed": 42,
+        "noise_enabled": false,
+        "event_type": "disturbance",
+        "strategy": "S4",
+        "detector": "dadrc_evidence",
+        "true_positive": 19,
+        "false_positive": 0,
+        "true_negative": 40,
+        "false_negative": 1,
+        "unknown_active": 0,
+        "unknown_nonactive": 0,
+        "active_recall_including_unknown": 0.95,
+        "nonactive_positive_rate": 0.0,
+        "uncensored_active_frames": 19,
+        "uncensored_present_frames": 18,
+        "uncensored_detection_rate": 0.9473684210526316,
+        "benign_event_frames": 0,
+        "benign_positive_frames": 0,
+        "benign_unknown_frames": 0,
+        "benign_positive_rate": null
+      },
+      {
+        "trial_id": "R10_seed_42",
+        "scenario_id": "R10",
+        "seed": 42,
+        "noise_enabled": false,
+        "event_type": "disturbance",
+        "strategy": "S4",
+        "detector": "dadrc_evidence",
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 40,
+        "false_negative": 0,
+        "unknown_active": 20,
+        "unknown_nonactive": 0,
+        "active_recall_including_unknown": 0.0,
+        "nonactive_positive_rate": 0.0,
+        "uncensored_active_frames": 19,
+        "uncensored_present_frames": 0,
+        "uncensored_detection_rate": 0.0,
+        "benign_event_frames": 0,
+        "benign_positive_frames": 0,
+        "benign_unknown_frames": 0,
+        "benign_positive_rate": null
+      },
+      {
+        "trial_id": "R20_seed_42",
+        "scenario_id": "R20",
+        "seed": 42,
+        "noise_enabled": true,
+        "event_type": "disturbance",
+        "strategy": "S4",
+        "detector": "dadrc_evidence",
+        "true_positive": 19,
+        "false_positive": 0,
+        "true_negative": 40,
+        "false_negative": 1,
+        "unknown_active": 0,
+        "unknown_nonactive": 0,
+        "active_recall_including_unknown": 0.95,
+        "nonactive_positive_rate": 0.0,
+        "uncensored_active_frames": 19,
+        "uncensored_present_frames": 18,
+        "uncensored_detection_rate": 0.9473684210526316,
+        "benign_event_frames": 0,
+        "benign_positive_frames": 0,
+        "benign_unknown_frames": 0,
+        "benign_positive_rate": null
+      },
+      {
+        "trial_id": "R20_seed_123",
+        "scenario_id": "R20",
+        "seed": 123,
+        "noise_enabled": true,
+        "event_type": "disturbance",
+        "strategy": "S4",
+        "detector": "dadrc_evidence",
+        "true_positive": 19,
+        "false_positive": 0,
+        "true_negative": 40,
+        "false_negative": 1,
+        "unknown_active": 0,
+        "unknown_nonactive": 0,
+        "active_recall_including_unknown": 0.95,
+        "nonactive_positive_rate": 0.0,
+        "uncensored_active_frames": 19,
+        "uncensored_present_frames": 18,
+        "uncensored_detection_rate": 0.9473684210526316,
+        "benign_event_frames": 0,
+        "benign_positive_frames": 0,
+        "benign_unknown_frames": 0,
+        "benign_positive_rate": null
+      },
+      {
+        "trial_id": "R20_seed_2026",
+        "scenario_id": "R20",
+        "seed": 2026,
+        "noise_enabled": true,
+        "event_type": "disturbance",
+        "strategy": "S4",
+        "detector": "dadrc_evidence",
+        "true_positive": 19,
+        "false_positive": 0,
+        "true_negative": 40,
+        "false_negative": 1,
+        "unknown_active": 0,
+        "unknown_nonactive": 0,
+        "active_recall_including_unknown": 0.95,
+        "nonactive_positive_rate": 0.0,
+        "uncensored_active_frames": 19,
+        "uncensored_present_frames": 18,
+        "uncensored_detection_rate": 0.9473684210526316,
+        "benign_event_frames": 0,
+        "benign_positive_frames": 0,
+        "benign_unknown_frames": 0,
+        "benign_positive_rate": null
+      }
+    ],
+    "recovery_failure_diagnostics": [
+      {
+        "trial_id": "R17_seed_42",
+        "episode": 1,
+        "recovery_frames": 30,
+        "exposure_failed_frames": 5,
+        "censoring_failed_frames": 0,
+        "mae_failed_frames": 30,
+        "jointly_qualifying_frames": 0,
+        "minimum_reference_mae": 0.0022942586113972
+      },
+      {
+        "trial_id": "R17_seed_123",
+        "episode": 1,
+        "recovery_frames": 30,
+        "exposure_failed_frames": 5,
+        "censoring_failed_frames": 0,
+        "mae_failed_frames": 30,
+        "jointly_qualifying_frames": 0,
+        "minimum_reference_mae": 0.0022977500608115
+      },
+      {
+        "trial_id": "R17_seed_2026",
+        "episode": 1,
+        "recovery_frames": 30,
+        "exposure_failed_frames": 5,
+        "censoring_failed_frames": 0,
+        "mae_failed_frames": 30,
+        "jointly_qualifying_frames": 0,
+        "minimum_reference_mae": 0.0022969191182081
+      }
+    ],
+    "benign_positive_evidence": [
+      {
+        "trial_id": "R14_seed_42",
+        "scenario_id": "R14",
+        "seed": 42,
+        "noise_enabled": false,
+        "event_type": "benign_local",
+        "strategy": "S4",
+        "detector": "dadrc_evidence",
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 40,
+        "false_negative": 0,
+        "unknown_active": 0,
+        "unknown_nonactive": 0,
+        "active_recall_including_unknown": null,
+        "nonactive_positive_rate": 0.0,
+        "uncensored_active_frames": 0,
+        "uncensored_present_frames": 0,
+        "uncensored_detection_rate": null,
+        "benign_event_frames": 20,
+        "benign_positive_frames": 20,
+        "benign_unknown_frames": 0,
+        "benign_positive_rate": 1.0
+      }
+    ],
+    "information_comparisons": [
+      {
+        "metric": "reference_mae",
+        "baseline": "S0",
+        "defined_trials": 20,
+        "s4_lower": 17,
+        "s4_equal": 3,
+        "s4_higher": 0,
+        "s4_mean": 0.08959665937039438,
+        "baseline_mean": 0.1446930489018044
+      },
+      {
+        "metric": "reference_mae",
+        "baseline": "S1",
+        "defined_trials": 20,
+        "s4_lower": 19,
+        "s4_equal": 0,
+        "s4_higher": 1,
+        "s4_mean": 0.08959665937039438,
+        "baseline_mean": 0.09940865479529974
+      },
+      {
+        "metric": "reference_mae",
+        "baseline": "S2",
+        "defined_trials": 20,
+        "s4_lower": 5,
+        "s4_equal": 14,
+        "s4_higher": 1,
+        "s4_mean": 0.08959665937039438,
+        "baseline_mean": 0.091034015543214
+      },
+      {
+        "metric": "reference_mae",
+        "baseline": "S3",
+        "defined_trials": 20,
+        "s4_lower": 11,
+        "s4_equal": 3,
+        "s4_higher": 6,
+        "s4_mean": 0.08959665937039438,
+        "baseline_mean": 0.09464095812435142
+      },
+      {
+        "metric": "gradient_mae",
+        "baseline": "S0",
+        "defined_trials": 20,
+        "s4_lower": 17,
+        "s4_equal": 3,
+        "s4_higher": 0,
+        "s4_mean": 0.00272710983543163,
+        "baseline_mean": 0.00352695464938107
+      },
+      {
+        "metric": "gradient_mae",
+        "baseline": "S1",
+        "defined_trials": 20,
+        "s4_lower": 13,
+        "s4_equal": 0,
+        "s4_higher": 7,
+        "s4_mean": 0.00272710983543163,
+        "baseline_mean": 0.002827140387479135
+      },
+      {
+        "metric": "gradient_mae",
+        "baseline": "S2",
+        "defined_trials": 20,
+        "s4_lower": 5,
+        "s4_equal": 14,
+        "s4_higher": 1,
+        "s4_mean": 0.00272710983543163,
+        "baseline_mean": 0.002732375652065145
+      },
+      {
+        "metric": "gradient_mae",
+        "baseline": "S3",
+        "defined_trials": 20,
+        "s4_lower": 11,
+        "s4_equal": 3,
+        "s4_higher": 6,
+        "s4_mean": 0.00272710983543163,
+        "baseline_mean": 0.0028289429224324604
+      },
+      {
+        "metric": "radiance_quantization_step",
+        "baseline": "S0",
+        "defined_trials": 20,
+        "s4_lower": 0,
+        "s4_equal": 3,
+        "s4_higher": 17,
+        "s4_mean": 0.004294705939082435,
+        "baseline_mean": 0.0024420024420023995
+      },
+      {
+        "metric": "radiance_quantization_step",
+        "baseline": "S1",
+        "defined_trials": 20,
+        "s4_lower": 15,
+        "s4_equal": 0,
+        "s4_higher": 5,
+        "s4_mean": 0.004294705939082435,
+        "baseline_mean": 0.004322936235917391
+      },
+      {
+        "metric": "radiance_quantization_step",
+        "baseline": "S2",
+        "defined_trials": 20,
+        "s4_lower": 1,
+        "s4_equal": 14,
+        "s4_higher": 5,
+        "s4_mean": 0.004294705939082435,
+        "baseline_mean": 0.004305799607141415
+      },
+      {
+        "metric": "radiance_quantization_step",
+        "baseline": "S3",
+        "defined_trials": 20,
+        "s4_lower": 6,
+        "s4_equal": 3,
+        "s4_higher": 11,
+        "s4_mean": 0.004294705939082435,
+        "baseline_mean": 0.004138554001302816
+      },
+      {
+        "metric": "radiance_reconstruction_mae",
+        "baseline": "S0",
+        "defined_trials": 20,
+        "s4_lower": 0,
+        "s4_equal": 3,
+        "s4_higher": 17,
+        "s4_mean": 1.5577854798559747,
+        "baseline_mean": 1.1075491638413337
+      },
+      {
+        "metric": "radiance_reconstruction_mae",
+        "baseline": "S1",
+        "defined_trials": 20,
+        "s4_lower": 1,
+        "s4_equal": 0,
+        "s4_higher": 19,
+        "s4_mean": 1.5577854798559747,
+        "baseline_mean": 1.4933329892176241
+      },
+      {
+        "metric": "radiance_reconstruction_mae",
+        "baseline": "S2",
+        "defined_trials": 20,
+        "s4_lower": 2,
+        "s4_equal": 14,
+        "s4_higher": 4,
+        "s4_mean": 1.5577854798559747,
+        "baseline_mean": 1.5582841207830007
+      },
+      {
+        "metric": "radiance_reconstruction_mae",
+        "baseline": "S3",
+        "defined_trials": 20,
+        "s4_lower": 0,
+        "s4_equal": 3,
+        "s4_higher": 17,
+        "s4_mean": 1.5577854798559747,
+        "baseline_mean": 1.5466207781886112
+      },
+      {
+        "metric": "valid_observation_coverage",
+        "baseline": "S0",
+        "defined_trials": 20,
+        "s4_lower": 0,
+        "s4_equal": 3,
+        "s4_higher": 17,
+        "s4_mean": 0.9973109308878578,
+        "baseline_mean": 0.954120559692383
+      },
+      {
+        "metric": "valid_observation_coverage",
+        "baseline": "S1",
+        "defined_trials": 20,
+        "s4_lower": 1,
+        "s4_equal": 0,
+        "s4_higher": 19,
+        "s4_mean": 0.9973109308878578,
+        "baseline_mean": 0.9891224458482532
+      },
+      {
+        "metric": "valid_observation_coverage",
+        "baseline": "S2",
+        "defined_trials": 20,
+        "s4_lower": 1,
+        "s4_equal": 19,
+        "s4_higher": 0,
+        "s4_mean": 0.9973109308878578,
+        "baseline_mean": 0.997358538309733
+      },
+      {
+        "metric": "valid_observation_coverage",
+        "baseline": "S3",
+        "defined_trials": 20,
+        "s4_lower": 0,
+        "s4_equal": 3,
+        "s4_higher": 17,
+        "s4_mean": 0.9973109308878578,
+        "baseline_mean": 0.9964712142944336
+      },
+      {
+        "metric": "clean_adc_level_retention",
+        "baseline": "S0",
+        "defined_trials": 20,
+        "s4_lower": 17,
+        "s4_equal": 3,
+        "s4_higher": 0,
+        "s4_mean": 0.7162255585872347,
+        "baseline_mean": 0.9999904151057848
+      },
+      {
+        "metric": "clean_adc_level_retention",
+        "baseline": "S1",
+        "defined_trials": 20,
+        "s4_lower": 18,
+        "s4_equal": 0,
+        "s4_higher": 2,
+        "s4_mean": 0.7162255585872347,
+        "baseline_mean": 0.8040566962344486
+      },
+      {
+        "metric": "clean_adc_level_retention",
+        "baseline": "S2",
+        "defined_trials": 20,
+        "s4_lower": 5,
+        "s4_equal": 14,
+        "s4_higher": 1,
+        "s4_mean": 0.7162255585872347,
+        "baseline_mean": 0.7166893195568013
+      },
+      {
+        "metric": "clean_adc_level_retention",
+        "baseline": "S3",
+        "defined_trials": 20,
+        "s4_lower": 11,
+        "s4_equal": 3,
+        "s4_higher": 6,
+        "s4_mean": 0.7162255585872347,
+        "baseline_mean": 0.7654956035033097
+      },
+      {
+        "metric": "contrast_retention",
+        "baseline": "S0",
+        "defined_trials": 20,
+        "s4_lower": 17,
+        "s4_equal": 3,
+        "s4_higher": 0,
+        "s4_mean": 8.886326833610239,
+        "baseline_mean": 13.49729119973163
+      },
+      {
+        "metric": "contrast_retention",
+        "baseline": "S1",
+        "defined_trials": 20,
+        "s4_lower": 12,
+        "s4_equal": 0,
+        "s4_higher": 8,
+        "s4_mean": 8.886326833610239,
+        "baseline_mean": 9.368710017176735
+      },
+      {
+        "metric": "contrast_retention",
+        "baseline": "S2",
+        "defined_trials": 20,
+        "s4_lower": 5,
+        "s4_equal": 14,
+        "s4_higher": 1,
+        "s4_mean": 8.886326833610239,
+        "baseline_mean": 8.89872046487602
+      },
+      {
+        "metric": "contrast_retention",
+        "baseline": "S3",
+        "defined_trials": 20,
+        "s4_lower": 11,
+        "s4_equal": 3,
+        "s4_higher": 6,
+        "s4_mean": 8.886326833610239,
+        "baseline_mean": 9.249397163552606
+      }
+    ],
+    "hypothesis_assessment": {
+      "H01": "Supported within tested conditions",
+      "H02": "Supported with recognition limitations",
+      "H03": "Partially supported",
+      "H04": "Supported under condition-appropriate criteria; canonical result remains 18/21",
+      "H05": "Supported by coverage, distortion and quantization tradeoffs"
+    },
+    "limitations": [
+      "Synthetic optical scenes and disturbances.",
+      "Fixed gain and disabled Module 3 adaptation.",
+      "Limited noise seeds.",
+      "Temporal dependence between frames.",
+      "No independent population-level inference.",
+      "Benign physical disturbances do not establish malicious intent.",
+      "Recovery delay averages exclude unrestored episodes and must be read with restoration rates.",
+      "No universal superiority or composite score is inferred.",
+      "Benign-event positive evidence is nonzero.",
+      "Only three seeds per noisy configuration.",
+      "Noise-aware thresholds are empirical.",
+      "Conditional radiance errors depend on coverage.",
+      "Phase-window and physically active-frame averages have distinct denominators.",
+      "Recovery comparisons among successful episodes are conditional descriptive comparisons.",
+      "No hardware or downstream perception validation."
+    ]
+  },
+  "visual_review": {
+    "review_basis": "User-provided Colab screenshots reviewed in the project conversation.",
+    "figures_reviewed": 12,
+    "blocking_visual_defects_observed": false,
+    "png_signature_checks": 12,
+    "pdf_signature_checks": 12,
+    "independent_pdf_rendering_review": false,
+    "cosmetic_refinements_deferred": [
+      "Overlapping curves in RF06 and RF09.",
+      "Overlapping seed markers in RF11.",
+      "RF12 legend placement.",
+      "Optional low-censoring inset in RF08."
+    ],
+    "original_figures_preserved": true
+  },
+  "archival_accounting": {
+    "pending_files_before_archival": 102,
+    "pending_files_after_archival": 104,
+    "pending_bytes_before_archival": 82369554,
+    "large_warning_files": {},
+    "large_blocking_files": {},
+    "excluded_unrelated_files": {
+      "module5_baseline_original.txt": "a9fd455966635d50b42192360c27e568b65e0ae69cd2f7eee6f71265edb3f832"
+    }
+  },
+  "experiments_rerun": false,
+  "controller_modifications": false,
+  "historical_tracked_modifications": false,
+  "git_staging_performed": false,
+  "github_push_performed": false,
+  "execution_seconds": 23.897842836002383
+}

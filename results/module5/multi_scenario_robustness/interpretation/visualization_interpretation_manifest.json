@@ -1,0 +1,122 @@
+{
+  "task_id": "M5-VAL-02F/G-01",
+  "status": "PASSED",
+  "files": {
+    "results/module5/multi_scenario_robustness/figures/RF01_cross_scenario_censoring.png": {
+      "sha256": "2421a239b6ad84b6bdaf9f58c1828248d9af129eac736a5fdb294eff3aa6bac5",
+      "bytes": 392163
+    },
+    "results/module5/multi_scenario_robustness/figures/RF01_cross_scenario_censoring.pdf": {
+      "sha256": "a2e985d2995a6106fc1c24d4c093ae0724d53ab39e775adfefc06ad807281fad",
+      "bytes": 56022
+    },
+    "results/module5/multi_scenario_robustness/figures/RF02_paired_protection_comparison.png": {
+      "sha256": "bd3bf633f259c651a4be495cf23f4a07ff1927850c5e7fbe25a7c02fc4d8d886",
+      "bytes": 93931
+    },
+    "results/module5/multi_scenario_robustness/figures/RF02_paired_protection_comparison.pdf": {
+      "sha256": "b949cf71ac0e6a53534389846033bf9fcc143be4d4e44121dbf30804de8242e2",
+      "bytes": 12531
+    },
+    "results/module5/multi_scenario_robustness/figures/RF03_recovery_success.png": {
+      "sha256": "8a25a480731cf2f074048f5a72f5f6bc3271a1f2953233eb64668e338d12942e",
+      "bytes": 73715
+    },
+    "results/module5/multi_scenario_robustness/figures/RF03_recovery_success.pdf": {
+      "sha256": "45f4e9bdeb0b0f05725a88224fbc4fde5730050390664bcfe2df7bbcce2971a7",
+      "bytes": 11619
+    },
+    "results/module5/multi_scenario_robustness/figures/RF04_episode_recovery_delays.png": {
+      "sha256": "c02766dc41777d4c4dfad7f31c8fdbf767ddc0953b947cb1987bf45e8a1d443b",
+      "bytes": 340117
+    },
+    "results/module5/multi_scenario_robustness/figures/RF04_episode_recovery_delays.pdf": {
+      "sha256": "ab006073cc7777cfd46f206a09514ed82a82201d1d80a6e81e4dcdf41cc07b0f",
+      "bytes": 39352
+    },
+    "results/module5/multi_scenario_robustness/figures/RF05_persistent_disturbance_evidence.png": {
+      "sha256": "e0956ec514a5a4c76b01183ef1ad61631de0ac77b3c0fd1e31fe9b2f813208cc",
+      "bytes": 237907
+    },
+    "results/module5/multi_scenario_robustness/figures/RF05_persistent_disturbance_evidence.pdf": {
+      "sha256": "a1438de5791cddcf7572c78517917ca4a51d450ea5d2fec8f75b62b6da25c774",
+      "bytes": 15058
+    },
+    "results/module5/multi_scenario_robustness/figures/RF06_benign_illumination_response.png": {
+      "sha256": "47db1c943313d4d8a99c65ca696d3923dfa69aa0e20931fa40711e049e88d6f0",
+      "bytes": 209463
+    },
+    "results/module5/multi_scenario_robustness/figures/RF06_benign_illumination_response.pdf": {
+      "sha256": "70e608e8c7cd557fd7642063eed8dcdfe96c1ddd275a86389d569cd6b9550947",
+      "bytes": 14484
+    },
+    "results/module5/multi_scenario_robustness/figures/RF07_noise_aware_recovery.png": {
+      "sha256": "c4f19bce852471e622e83d511c63fc39c107c72f44059fc89154580a2eebbf77",
+      "bytes": 88100
+    },
+    "results/module5/multi_scenario_robustness/figures/RF07_noise_aware_recovery.pdf": {
+      "sha256": "764f6c331a6577c68b4cab1b35bc52dfffe60c1a72d3ed56d263a0020d19e572",
+      "bytes": 13129
+    },
+    "results/module5/multi_scenario_robustness/figures/RF08_protection_information_tradeoff.png": {
+      "sha256": "0a1428df79c8cc2c0bdd0e1d4e5a28803c0a413de30cb6aa6f2eff8367c64b29",
+      "bytes": 157596
+    },
+    "results/module5/multi_scenario_robustness/figures/RF08_protection_information_tradeoff.pdf": {
+      "sha256": "2fddcd3344f6a03cae93d65a7c533fdc9798f5062e1aa73be5996a72a868d53b",
+      "bytes": 17187
+    },
+    "results/module5/multi_scenario_robustness/figures/RF09_matched_valid_radiance.png": {
+      "sha256": "fb987c19587cb61acb7b3f5594a58de5a53a80eef370769302ab49daeea82c76",
+      "bytes": 293369
+    },
+    "results/module5/multi_scenario_robustness/figures/RF09_matched_valid_radiance.pdf": {
+      "sha256": "1a6c67eccbd0488c3aeb1d084ed15a13c1c46e1ea06abf65976382298d53c936",
+      "bytes": 18380
+    },
+    "results/module5/multi_scenario_robustness/figures/RF10_repeated_disturbance_resilience.png": {
+      "sha256": "40dc1189dc30a2aafa903c624b4eef108023bca557fda605dcd2424c556b6e5d",
+      "bytes": 246704
+    },
+    "results/module5/multi_scenario_robustness/figures/RF10_repeated_disturbance_resilience.pdf": {
+      "sha256": "20909ea9e3ae7bd6cafb78cb16778716a12042638803962cec67cb9651e7bced",
+      "bytes": 15388
+    },
+    "results/module5/multi_scenario_robustness/figures/RF11_noise_seed_sensitivity.png": {
+      "sha256": "41e6b7ff4852397d23215bf7a17612f987869242fe96bc843b8c254e8d829040",
+      "bytes": 135839
+    },
+    "results/module5/multi_scenario_robustness/figures/RF11_noise_seed_sensitivity.pdf": {
+      "sha256": "5371b1071dac9757353241a956c686ce9ec177efa179c771824bdb53e1b51911",
+      "bytes": 17127
+    },
+    "results/module5/multi_scenario_robustness/figures/RF12_difficult_condition_trajectories.png": {
+      "sha256": "60b41cd256a39d9bbf97df92a46c74abe25b10754da484b7a887db6550d026ec",
+      "bytes": 355363
+    },
+    "results/module5/multi_scenario_robustness/figures/RF12_difficult_condition_trajectories.pdf": {
+      "sha256": "018ef1c9638c1068da1a35bd5b5b05102f41e3b1d7998a9f771ec339c0c7df71",
+      "bytes": 17523
+    },
+    "results/module5/multi_scenario_robustness/interpretation/robustness_failure_diagnostics.json": {
+      "sha256": "d5cec7ac72f9922ed1f2126cc6c97dbf8db5bd81dc19b111822d5317b7642c80",
+      "bytes": 9210
+    },
+    "results/module5/multi_scenario_robustness/interpretation/robustness_information_comparisons.csv": {
+      "sha256": "59344f3bf942c5a4bfd9f9639d045a3ad1e47ab458645d05cfc398f234586b86",
+      "bytes": 2148
+    },
+    "results/module5/multi_scenario_robustness/interpretation/robustness_scientific_interpretation.json": {
+      "sha256": "b3eba157559624dc1acd601df8cb1104f2dc59ef261c4807a0e212fe2d7cb11f",
+      "bytes": 11573
+    },
+    "results/module5/multi_scenario_robustness/interpretation/robustness_scientific_interpretation.md": {
+      "sha256": "acafbe3add0b1c137e0b90f6caeb5b8162fc950647388a5769e75648bb4be4c5",
+      "bytes": 3077
+    },
+    "results/module5/multi_scenario_robustness/interpretation/visualization_interpretation_report.json": {
+      "sha256": "13fff6918cede21a0937089bfbcbd0d36e49a2c479dcbd3a9d9d39f359b9b722",
+      "bytes": 439
+    }
+  }
+}

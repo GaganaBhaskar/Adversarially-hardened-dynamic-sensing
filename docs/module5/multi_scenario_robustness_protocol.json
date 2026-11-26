@@ -1,0 +1,963 @@
+{
+  "task_id": "M5-VAL-02A-02",
+  "research_checkpoint": "3a6fd6d28c77b0c1a32f8d04584464bb11efd107",
+  "title": "Multi-scenario Robustness and Recovery Evaluation",
+  "scope": "Targeted synthetic optical sensitivity and robustness evaluation",
+  "strategies": [
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "controller_parameters": "Reuse archived five-strategy fairness contract without modification",
+  "sensor_configuration": {
+    "exposure_ms": 10.0,
+    "gain": 1.0,
+    "adc_bits": 12,
+    "module3_enabled": false,
+    "roi_adaptation_enabled": false,
+    "gain_adaptation_enabled": false,
+    "command_delay_frames": 1
+  },
+  "fairness": {
+    "independent_controller_state": true,
+    "same_optical_inputs_across_strategies": true,
+    "same_trial_seed_across_strategies": true,
+    "noise_seed_policy": "Deterministic per-frame seeds, shared across strategies for each capture role",
+    "reference_policy": "Frame-dependent benign optical scene captured at nominal sensor configuration",
+    "counterfactual_policy": "Frame-dependent benign optical scene captured at applied sensor configuration",
+    "startup_reference_policy": "Separate trusted startup capture; never use evaluator reference object",
+    "ground_truth_controller_access": false,
+    "parameter_tuning_during_evaluation": false
+  },
+  "regions": {
+    "full": "All RGB samples",
+    "core": "At least 10 percent of scenario peak disturbance-map value",
+    "transition": "At least 1 percent and below 10 percent of scenario peak disturbance-map value",
+    "background": "Below 1 percent of scenario peak disturbance-map value",
+    "mask_policy": "Fixed scenario-level masks constructed from peak spatial disturbance envelope",
+    "no_disturbance_policy": "Evaluate full scene only; do not fabricate attack regions"
+  },
+  "recovery": {
+    "relative_exposure_tolerance": 0.05,
+    "maximum_censoring_ratio": 0.005,
+    "deterministic_reference_mae_limit": 0.002,
+    "consecutive_qualifying_frames": 3,
+    "noise_policy": "Report canonical recovery criterion and separate noise-aware recovery assessment. Noise-aware threshold must be frozen using clean-only calibration before disturbance results are inspected.",
+    "repeated_event_policy": "Evaluate each recovery interval separately; do not extend recovery beyond the next event",
+    "not_restored_delay": null
+  },
+  "primary_metrics": [
+    "mean_event_censoring_ratio",
+    "valid_sample_coverage",
+    "physical_saturation_ratio",
+    "adc_clipping_ratio",
+    "reference_mae",
+    "radiance_reconstruction_mae",
+    "gradient_distortion",
+    "matched_valid_radiance_error",
+    "persistent_disturbance_evidence",
+    "benign_event_defensive_activation",
+    "recovery_delay_frames",
+    "sustained_nominal_restoration",
+    "exposure_total_variation"
+  ],
+  "scientific_constraints": [
+    "No universal superiority claim",
+    "No malicious-intent attribution from physically indistinguishable optical inputs",
+    "No independent-frame significance testing",
+    "No weighted composite superiority score",
+    "No threshold tuning against disturbance results",
+    "Synthetic optical intensity is not calibrated physical laser power",
+    "Simulation FPS is not measured hardware throughput",
+    "Three noise seeds constitute limited stochastic robustness evidence"
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "R01",
+      "name": "Canonical benchmark",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02",
+      "name": "Weak disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 5.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R03",
+      "name": "Moderate disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 10.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04",
+      "name": "Strong disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 30.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R05",
+      "name": "Narrow disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.04,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R06",
+      "name": "Wide disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.2,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R07",
+      "name": "Pedestrian-region disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.36,
+          "center_y": 0.68,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R08",
+      "name": "Vehicle-region disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.7,
+          "center_y": 0.68,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R09",
+      "name": "Pulsed disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "pulse",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R10",
+      "name": "Broad glare",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "glare",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R11",
+      "name": "Repeated disturbances",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 90,
+      "event_windows": [
+        [
+          10,
+          25
+        ],
+        [
+          45,
+          60
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R12",
+      "name": "Benign global brightening",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "benign_global",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.5,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R13",
+      "name": "Benign global dimming",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "benign_global",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 0.45,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R14",
+      "name": "Benign localized illumination",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "benign_local",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 2.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R15",
+      "name": "Dusk disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "dusk",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R16",
+      "name": "Night disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "night",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R17",
+      "name": "Noise-enabled disturbance",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": true,
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R18",
+      "name": "Noise-enabled benign scene",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [],
+      "event_type": "none",
+      "illumination": "canonical",
+      "noise_enabled": true,
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R19",
+      "name": "Multiple optical disturbances",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "canonical",
+      "noise_enabled": false,
+      "seeds": [
+        42
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "laser",
+          "center_x": 0.35,
+          "center_y": 0.65,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        },
+        {
+          "attack_type": "laser",
+          "center_x": 0.72,
+          "center_y": 0.35,
+          "radius": 0.08,
+          "intensity": 10.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    },
+    {
+      "scenario_id": "R20",
+      "name": "Combined difficult condition",
+      "height": 256,
+      "width": 256,
+      "fps": 30.0,
+      "total_frames": 60,
+      "event_windows": [
+        [
+          10,
+          30
+        ]
+      ],
+      "event_type": "disturbance",
+      "illumination": "dusk",
+      "noise_enabled": true,
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "benign_scale": 1.0,
+      "sources": [
+        {
+          "attack_type": "pulse",
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "radius": 0.12,
+          "intensity": 15.0,
+          "pulse_frequency": 2.0,
+          "pulse_phase": 0.0
+        }
+      ]
+    }
+  ],
+  "workload": {
+    "scenario_configurations": 20,
+    "scenario_trials": 26,
+    "scenario_frames": 1590,
+    "strategy_count": 5,
+    "strategy_frame_evaluations": 7950
+  },
+  "scenario_validation": [
+    {
+      "scenario_id": "R01",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R02",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R03",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R04",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R05",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R06",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R07",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R08",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R09",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R10",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [
+        "background"
+      ],
+      "passed": true
+    },
+    {
+      "scenario_id": "R11",
+      "frames": 90,
+      "event_frames": 30,
+      "disturbance_frames": 30,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R12",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 0,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 1,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R13",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 0,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 1,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R14",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 0,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 1,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R15",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R16",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R17",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": true,
+      "seed_count": 3,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R18",
+      "frames": 60,
+      "event_frames": 0,
+      "disturbance_frames": 0,
+      "noise_enabled": true,
+      "seed_count": 3,
+      "region_count": 1,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R19",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": false,
+      "seed_count": 1,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "R20",
+      "frames": 60,
+      "event_frames": 20,
+      "disturbance_frames": 20,
+      "noise_enabled": true,
+      "seed_count": 3,
+      "region_count": 4,
+      "empty_regions": [],
+      "passed": true
+    }
+  ]
+}
