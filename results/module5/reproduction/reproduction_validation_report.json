@@ -1,0 +1,16 @@
+{
+  "task": "M5-REC-03C",
+  "original_measurements": 120,
+  "reproduced_measurements": 120,
+  "absolute_tolerance": 1e-08,
+  "relative_tolerance": 1e-06,
+  "field_checks": 48,
+  "passed_field_checks": 48,
+  "mismatched_values": 0,
+  "all_fields_passed": true,
+  "controller_provenance": {
+    "original": "recovered_original_source",
+    "state_aware": "recovered_original_source",
+    "probed": "reconstructed_source"
+  }
+}

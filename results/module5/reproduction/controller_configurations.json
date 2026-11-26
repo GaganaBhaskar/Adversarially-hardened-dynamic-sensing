@@ -1,0 +1,26 @@
+{
+  "original": {
+    "min_exposure_ms": 0.1,
+    "max_exposure_ms": 30.0,
+    "saturation_trigger": 0.005,
+    "reduction_factor": 0.5,
+    "recovery_factor": 1.1,
+    "recovery_delay_frames": 3
+  },
+  "state_aware": {
+    "min_exposure_ms": 0.1,
+    "max_exposure_ms": 30.0,
+    "saturation_trigger": 0.005,
+    "reduction_factor": 0.5,
+    "recovery_factor": 1.1
+  },
+  "probed": {
+    "min_exposure_ms": 0.1,
+    "max_exposure_ms": 30.0,
+    "saturation_trigger": 0.005,
+    "reduction_factor": 0.5,
+    "probe_factor": 1.05,
+    "probe_interval_frames": 4,
+    "failed_probe_cooldown": 8
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "task": "M5-REC-03A-R01",
+  "uploaded_filename": "module5_baseline_original.txt",
+  "uploaded_sha256": "a9fd455966635d50b42192360c27e568b65e0ae69cd2f7eee6f71265edb3f832",
+  "uploaded_lines": 1186,
+  "experiment_start_line": 604,
+  "experiment_end_line": 1186,
+  "extracted_lines": 583,
+  "original_script_sha256": "0f22ba7eabf8af31dbb2c273e633022380460a0347fdd7bf6ce15b98377850d1",
+  "reproduction_script_sha256": "59a75b79c7b5d05ccf44d0edb47bb32327142e63417b5e62c4165c78c6fdb63f",
+  "experiment_logic_modified": false,
+  "output_directory_redirected": true
+}

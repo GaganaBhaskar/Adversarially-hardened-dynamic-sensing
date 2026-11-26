@@ -1,0 +1,94 @@
+{
+  "src/ahds/module5_defense/exposure_protection.py": {
+    "size_bytes": 3203,
+    "sha256": "a45f7e1aa97d8e5eaf2598dbbc781a4b87221eb44196a60148d36548201d4a24"
+  },
+  "src/ahds/module5_defense/state_aware_exposure.py": {
+    "size_bytes": 3446,
+    "sha256": "3c144e7e1087b1bbd63539da3a228f380449b2f5ce0d41d1d5df93ac5b30dbab"
+  },
+  "src/ahds/module5_defense/probed_exposure.py": {
+    "size_bytes": 7718,
+    "sha256": "8d87f15b2a28ee7d467eed60b34b748cd555e7f0d09ea28067b07149f9430a80"
+  },
+  "tests/test_module5.py": {
+    "size_bytes": 12317,
+    "sha256": "eec9bf84d208028101ec20630dd3a8cd820ebe330e789770a901dcfe020ab3d1"
+  },
+  "experiments/module5/closed_loop_baseline_original.py": {
+    "size_bytes": 14197,
+    "sha256": "0f22ba7eabf8af31dbb2c273e633022380460a0347fdd7bf6ce15b98377850d1"
+  },
+  "experiments/module5/reproduce_closed_loop_baseline.py": {
+    "size_bytes": 14210,
+    "sha256": "59a75b79c7b5d05ccf44d0edb47bb32327142e63417b5e62c4165c78c6fdb63f"
+  },
+  "docs/module5/recovery_report.md": {
+    "size_bytes": 2502,
+    "sha256": "636fcf2ae4bfc6f28eae0a33828085cba23ad854f11d07c4bcbe28edfad3d109"
+  },
+  "results/module5/closed_loop_comparison.csv": {
+    "size_bytes": 13915,
+    "sha256": "3fa2a4dc0bb894b44033c3e2a06ee5a5edcdb2115de6f3a50dd55cb02be83206"
+  },
+  "results/module5/closed_loop_summary.csv": {
+    "size_bytes": 702,
+    "sha256": "9908f9d17aa806112d94a64e6c3d90e54181c6f40fcd1ad6ba15f7fb47ffcf97"
+  },
+  "results/module5/closed_loop_experiment_config.json": {
+    "size_bytes": 1362,
+    "sha256": "ded8e59e766cff00c0517cca99454f0ddfca9e0025c9ad5ff4c1d78ed071b8bb"
+  },
+  "results/module5/closed_loop_validation_report.json": {
+    "size_bytes": 810,
+    "sha256": "0eccc5f3f4c6305af72ed2f090f765220a6f2062a86e24936ebaa71fba271915"
+  },
+  "results/module5/figures/closed_loop_comparison.png": {
+    "size_bytes": 278471,
+    "sha256": "91524c7d8fc0d94c180a5b38b48a1f8281bbabce50e8cc452e926bd6e91540fc"
+  },
+  "results/module5/reproduction/baseline_integrity_manifest.json": {
+    "size_bytes": 523,
+    "sha256": "712c43870bada9cb8003e1ac824b86f647f52814d78936b20e613c92e14f1f09"
+  },
+  "results/module5/reproduction/source_extraction_report.json": {
+    "size_bytes": 563,
+    "sha256": "4b0b96ea620546c52767bc6cb6b3548f231d5affb57115c05c170870cf2f7884"
+  },
+  "results/module5/reproduction/closed_loop_comparison.csv": {
+    "size_bytes": 13915,
+    "sha256": "3fa2a4dc0bb894b44033c3e2a06ee5a5edcdb2115de6f3a50dd55cb02be83206"
+  },
+  "results/module5/reproduction/closed_loop_summary.csv": {
+    "size_bytes": 702,
+    "sha256": "9908f9d17aa806112d94a64e6c3d90e54181c6f40fcd1ad6ba15f7fb47ffcf97"
+  },
+  "results/module5/reproduction/closed_loop_experiment_config.json": {
+    "size_bytes": 1362,
+    "sha256": "ded8e59e766cff00c0517cca99454f0ddfca9e0025c9ad5ff4c1d78ed071b8bb"
+  },
+  "results/module5/reproduction/field_comparison.csv": {
+    "size_bytes": 1974,
+    "sha256": "87ca813bdcce2aaa652c1068bf5a9846c12567640a1ae58268ed7513e75d04c6"
+  },
+  "results/module5/reproduction/frame_mismatches.csv": {
+    "size_bytes": 41,
+    "sha256": "49dc0ae7d26938a4fffe422b5f33cd923588402f4f7104df03eeda7f47b31f4e"
+  },
+  "results/module5/reproduction/reproduction_validation_report.json": {
+    "size_bytes": 424,
+    "sha256": "5a071059be17266974d5febc9e1bb8623e105baecd28e7dc16aad025e3f6d00f"
+  },
+  "results/module5/reproduction/reproduction_environment.json": {
+    "size_bytes": 338,
+    "sha256": "661052a4bb2c46b90f38b696ac4106a74e4db8be18932cbbaa92c519efd2be82"
+  },
+  "results/module5/reproduction/controller_configurations.json": {
+    "size_bytes": 598,
+    "sha256": "288c69cfaab839668252a105dcb90df068214ced3fc2cec2b71ba07fa5d0fc02"
+  },
+  "results/module5/reproduction/regression_test_log.txt": {
+    "size_bytes": 5992,
+    "sha256": "134a6aadf9af389a52df6bb07007255d2bd5a55c6a1fcd2bb12007791efada3e"
+  }
+}

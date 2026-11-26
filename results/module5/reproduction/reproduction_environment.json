@@ -1,0 +1,13 @@
+{
+  "python": "3.13.18",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "pytorch": "2.14.1+cpu",
+  "numpy": "2.4.6",
+  "pandas": "2.2.3",
+  "pytest": "8.4.2",
+  "execution_device": "cpu",
+  "cuda_available": false,
+  "torch_threads": 1,
+  "parent_git_commit": "ed1c4d8c4e5060ebe80d63aa7b5ece2a83c1bb88"
+}

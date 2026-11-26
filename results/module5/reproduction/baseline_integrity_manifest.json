@@ -1,0 +1,7 @@
+{
+  "closed_loop_comparison.csv": "3fa2a4dc0bb894b44033c3e2a06ee5a5edcdb2115de6f3a50dd55cb02be83206",
+  "closed_loop_summary.csv": "9908f9d17aa806112d94a64e6c3d90e54181c6f40fcd1ad6ba15f7fb47ffcf97",
+  "closed_loop_experiment_config.json": "ded8e59e766cff00c0517cca99454f0ddfca9e0025c9ad5ff4c1d78ed071b8bb",
+  "closed_loop_validation_report.json": "0eccc5f3f4c6305af72ed2f090f765220a6f2062a86e24936ebaa71fba271915",
+  "figures/closed_loop_comparison.png": "91524c7d8fc0d94c180a5b38b48a1f8281bbabce50e8cc452e926bd6e91540fc"
+}
