@@ -1,0 +1,17 @@
+{
+  "task_id": "M5-INT-01C-01",
+  "files": {
+    "src/ahds/integration/roi_closed_loop.py": {
+      "sha256": "b505979d4d358ddff3d64d31834f104a0b13e9fb41e90e359a657f68771a6c6c",
+      "bytes": 4857
+    },
+    "results/integration/roi_validation/roi_validation_report.json": {
+      "sha256": "927a928776c9876ab93ecf290eacada7d026a29f9012d6325617d381069416ac",
+      "bytes": 18365
+    },
+    "results/integration/roi_validation/roi_validation_records.json": {
+      "sha256": "30dd9a3eb94d835c497cc3f8934bcaefc2c71dd0ecf46934d6c2d7bb54b95a16",
+      "bytes": 502040
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "task_id": "M5-INT-01B-02",
+  "files": {
+    "results/integration/exposure_validation/behavioral_frame_records.json": {
+      "bytes": 913971,
+      "sha256": "8c138b2779d6f30f7ac833034398f5d52c1c54add1c5f80c4c0d776d161c27ee"
+    },
+    "results/integration/exposure_validation/behavioral_frame_records.csv": {
+      "bytes": 172115,
+      "sha256": "3fe28f116e1f977ea5ec611ae8c0199cca776b506782935f28a03597a1a6b766"
+    },
+    "results/integration/exposure_validation/scenario_system_summary.csv": {
+      "bytes": 1847,
+      "sha256": "f4123082e81a19bc60709b151096f29dcb002b8acc17d20dc3c56cbeff79cbf2"
+    },
+    "results/integration/exposure_validation/authority_transition_summary.csv": {
+      "bytes": 1308,
+      "sha256": "aab8d7053cc0a19a62fe43bae04e8b41f84d6b86b7b0d0c334ba982163058d0f"
+    },
+    "results/integration/exposure_validation/behavioral_validation_report.json": {
+      "bytes": 13646,
+      "sha256": "a725926aea688670a6430d8b544be41d4c8eb9f0792e2a1855bab73958dcfbd3"
+    },
+    "results/integration/exposure_validation/IF01_clean_adaptation.png": {
+      "bytes": 105867,
+      "sha256": "70525ae941d6a0bc026d3c450e7d74fe81a3cdc49f5fa0e4a242b8c3308fe914"
+    },
+    "results/integration/exposure_validation/IF01_clean_adaptation.pdf": {
+      "bytes": 14942,
+      "sha256": "cfdc71be46ef735a1c8f5fb9b880ee3c25ca032109ecc2126df74f010d6bf831"
+    },
+    "results/integration/exposure_validation/IF02_continuous_disturbance.png": {
+      "bytes": 152881,
+      "sha256": "467d39094af1e40d9e772eef28a404404db8e53b1e9ab4974befcbaaa9351869"
+    },
+    "results/integration/exposure_validation/IF02_continuous_disturbance.pdf": {
+      "bytes": 16603,
+      "sha256": "bcbc0c4135e959d9a1b651d3327ad3603b1b2385307f8d6ab9b26d04517b51fe"
+    },
+    "results/integration/exposure_validation/IF03_repeated_disturbances.png": {
+      "bytes": 183623,
+      "sha256": "4e0da6b9f45d1a74f88bb77367491e4836e05e3b2b873a17a6c71f5a9be1b5bc"
+    },
+    "results/integration/exposure_validation/IF03_repeated_disturbances.pdf": {
+      "bytes": 17741,
+      "sha256": "262a5f3ceafa1bda47deb7f626fde85e6459f4ac700fa0b0beb242d67c7d0b73"
+    },
+    "results/integration/exposure_validation/IF04_benign_illumination.png": {
+      "bytes": 127369,
+      "sha256": "134cadfe91e919e3cc194c0d5fbe394a226b58b0624bc6e767645b3d0267b801"
+    },
+    "results/integration/exposure_validation/IF04_benign_illumination.pdf": {
+      "bytes": 15307,
+      "sha256": "7fa2bebba4b9de5df9fc757b9da5febcc701da9e7c291a5df7028c9b74df9fb3"
+    }
+  }
+}

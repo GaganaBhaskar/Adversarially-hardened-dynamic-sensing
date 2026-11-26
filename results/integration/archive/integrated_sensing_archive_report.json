@@ -1,0 +1,182 @@
+{
+  "task_id": "M5-INT-01D-01",
+  "research_checkpoint": "619e5a9ee1777cf55e6b8364e08e30e552969105",
+  "regression_passed": true,
+  "regression_returncode": 0,
+  "regression_seconds": 10.455895161998342,
+  "saved_roi_smoke_test_passed": true,
+  "archive_preparation_passed": true,
+  "integrated_sensing_validation_complete": true,
+  "source_manifest_summaries": [
+    {
+      "manifest": "results/integration/exposure_validation/behavioral_validation_manifest.json",
+      "sha256": "540544ce94c84113ddd252624606649443d257335974810b9e096d0d1c037140",
+      "artifact_count": 13,
+      "verified": true
+    },
+    {
+      "manifest": "results/integration/joint_validation/joint_validation_manifest.json",
+      "sha256": "034452a4e9aaaea370c187890c092d0c2c40a240cb71b913045f81311c3c12ba",
+      "artifact_count": 17,
+      "verified": true
+    },
+    {
+      "manifest": "results/integration/targeted_hold_validation/targeted_hold_manifest.json",
+      "sha256": "6c270428beacc56b2f5fb1fcab69aaa46ecd84d7a390330622c1c0bbc65bb8ce",
+      "artifact_count": 2,
+      "verified": true
+    },
+    {
+      "manifest": "results/integration/roi_validation/roi_validation_manifest.json",
+      "sha256": "416b02828969d088a58bbbbd6b506500080c6f20f372d8b2c83e1c6cb5b10f25",
+      "artifact_count": 3,
+      "verified": true
+    },
+    {
+      "manifest": "results/integration/roi_validation/evaluation/roi_evaluation_manifest.json",
+      "sha256": "c0588ab60453c695e70c0538fb7acd4ca9c7471e32e971a02baec574b1e70877",
+      "artifact_count": 16,
+      "verified": true
+    }
+  ],
+  "verified_inventory_files": 80,
+  "joint_behavioral_coverage": "8/8",
+  "roi_behavioral_coverage": "10/10",
+  "targeted_hold_frame_evaluations": 120,
+  "roi_frame_evaluations": 360,
+  "roi_priority_sample_reduction": 0.600006103515625,
+  "scenario_payload_reductions": {
+    "ROI01": {
+      "A": 0.0,
+      "B": 0.5800059000651041,
+      "C": 0.5800059000651041
+    },
+    "ROI02": {
+      "A": 0.0,
+      "B": 0.5900060017903646,
+      "C": 0.2100021362304687
+    },
+    "ROI03": {
+      "A": 0.0,
+      "B": 0.5800059000651041,
+      "C": 0.36000366210937496
+    }
+  },
+  "defensive_roi_transitions": [
+    {
+      "scenario_id": "ROI02",
+      "event_start": 10,
+      "event_end_exclusive": 30,
+      "fallback_command_frame": 10,
+      "full_frame_fallback_frame": 11,
+      "fallback_delay_from_event_frames": 1,
+      "command_to_application_frames": 1,
+      "roi_resumption_frame": 49,
+      "roi_resumption_delay_frames": 19,
+      "event_full_frame_fraction": 0.95,
+      "fallback_authority": "M5"
+    },
+    {
+      "scenario_id": "ROI03",
+      "event_start": 10,
+      "event_end_exclusive": 20,
+      "fallback_command_frame": 10,
+      "full_frame_fallback_frame": 11,
+      "fallback_delay_from_event_frames": 1,
+      "command_to_application_frames": 1,
+      "roi_resumption_frame": 22,
+      "roi_resumption_delay_frames": 2,
+      "event_full_frame_fraction": 0.9,
+      "fallback_authority": "ARBITRATION_HOLD"
+    }
+  ],
+  "full_frame_defensive_monitoring": true,
+  "historical_modifications": false,
+  "controller_parameters_changed": false,
+  "temporal_simulations_rerun": false,
+  "github_push_performed": false,
+  "new_integration_files": [
+    "results/integration/exposure_validation/IF01_clean_adaptation.pdf",
+    "results/integration/exposure_validation/IF01_clean_adaptation.png",
+    "results/integration/exposure_validation/IF02_continuous_disturbance.pdf",
+    "results/integration/exposure_validation/IF02_continuous_disturbance.png",
+    "results/integration/exposure_validation/IF03_repeated_disturbances.pdf",
+    "results/integration/exposure_validation/IF03_repeated_disturbances.png",
+    "results/integration/exposure_validation/IF04_benign_illumination.pdf",
+    "results/integration/exposure_validation/IF04_benign_illumination.png",
+    "results/integration/exposure_validation/authority_transition_summary.csv",
+    "results/integration/exposure_validation/behavioral_frame_records.csv",
+    "results/integration/exposure_validation/behavioral_frame_records.json",
+    "results/integration/exposure_validation/behavioral_validation_manifest.json",
+    "results/integration/exposure_validation/behavioral_validation_report.json",
+    "results/integration/exposure_validation/scenario_system_summary.csv",
+    "results/integration/joint_validation/JF01_joint_behavior.pdf",
+    "results/integration/joint_validation/JF01_joint_behavior.png",
+    "results/integration/joint_validation/JF02_joint_behavior.pdf",
+    "results/integration/joint_validation/JF02_joint_behavior.png",
+    "results/integration/joint_validation/JF03_joint_behavior.pdf",
+    "results/integration/joint_validation/JF03_joint_behavior.png",
+    "results/integration/joint_validation/JF04_joint_behavior.pdf",
+    "results/integration/joint_validation/JF04_joint_behavior.png",
+    "results/integration/joint_validation/JF05_joint_behavior.pdf",
+    "results/integration/joint_validation/JF05_joint_behavior.png",
+    "results/integration/joint_validation/JF06_joint_behavior.pdf",
+    "results/integration/joint_validation/JF06_joint_behavior.png",
+    "results/integration/joint_validation/joint_frame_records.csv",
+    "results/integration/joint_validation/joint_frame_records.json",
+    "results/integration/joint_validation/joint_scenario_summary.csv",
+    "results/integration/joint_validation/joint_validation_manifest.json",
+    "results/integration/joint_validation/joint_validation_report.json",
+    "results/integration/roi_validation/evaluation/figures/ROI_F01_payload_comparison.pdf",
+    "results/integration/roi_validation/evaluation/figures/ROI_F01_payload_comparison.png",
+    "results/integration/roi_validation/evaluation/figures/ROI_F02_ROI02_sampling.pdf",
+    "results/integration/roi_validation/evaluation/figures/ROI_F02_ROI02_sampling.png",
+    "results/integration/roi_validation/evaluation/figures/ROI_F03_ROI03_sampling.pdf",
+    "results/integration/roi_validation/evaluation/figures/ROI_F03_ROI03_sampling.png",
+    "results/integration/roi_validation/evaluation/figures/ROI_F04_joint_sensing.pdf",
+    "results/integration/roi_validation/evaluation/figures/ROI_F04_joint_sensing.png",
+    "results/integration/roi_validation/evaluation/figures/ROI_F05_phase_efficiency.pdf",
+    "results/integration/roi_validation/evaluation/figures/ROI_F05_phase_efficiency.png",
+    "results/integration/roi_validation/evaluation/figures/ROI_F06_regional_censoring.pdf",
+    "results/integration/roi_validation/evaluation/figures/ROI_F06_regional_censoring.png",
+    "results/integration/roi_validation/evaluation/roi_evaluation_manifest.json",
+    "results/integration/roi_validation/evaluation/roi_evaluation_report.json",
+    "results/integration/roi_validation/evaluation/roi_phase_summary.csv",
+    "results/integration/roi_validation/evaluation/roi_scenario_summary.csv",
+    "results/integration/roi_validation/evaluation/roi_transition_summary.csv",
+    "results/integration/roi_validation/roi_validation_manifest.json",
+    "results/integration/roi_validation/roi_validation_records.json",
+    "results/integration/roi_validation/roi_validation_report.json",
+    "results/integration/targeted_hold_validation/targeted_hold_manifest.json",
+    "results/integration/targeted_hold_validation/targeted_hold_records.json",
+    "results/integration/targeted_hold_validation/targeted_hold_report.json",
+    "src/ahds/integration/__init__.py",
+    "src/ahds/integration/closed_loop_controller.py",
+    "src/ahds/integration/joint_closed_loop_controller.py",
+    "src/ahds/integration/roi_closed_loop.py"
+  ],
+  "module_status": {
+    "M1": "Validated",
+    "M2": "Validated",
+    "M3": "Integrated exposure, gain and readout mode",
+    "M4": "Integrated physical disturbance detection",
+    "M5": "Integrated defensive reconfiguration validated",
+    "M6": "Pending downstream perception",
+    "M7": "Information metrics implemented; end-to-end evaluation and edge profiling pending"
+  },
+  "limitations": [
+    "Synthetic optical environment.",
+    "No calibrated physical sensor experiments.",
+    "Joint gain remains frozen under defensive authority.",
+    "Benign brightening can trigger defensive clipping.",
+    "Fixed spatial ROI with adaptive readout mode.",
+    "Post-ADC sample selection only.",
+    "Full-frame sensor monitoring remains necessary.",
+    "Ideal payload reduction excludes transmission overhead.",
+    "No downstream perception performance established.",
+    "No measured embedded latency or energy savings.",
+    "Behavioral coverage does not establish universal robustness."
+  ],
+  "next_task": "M5-INT-01D-02 \u2014 Integrated Archive Commit and Push",
+  "execution_seconds": 14.813465592000284
+}

@@ -1,0 +1,19 @@
+scenario_id,scenario_name,system,frames,event_frames,mean_event_censoring,mean_non_event_censoring,maximum_censoring,minimum_exposure_ms,maximum_exposure_ms,final_exposure_ms,adaptive_frames,protection_frames,hold_frames,restoration_actions,first_protection_frame,first_restoration_frame
+INT01,Clean nominal adaptation,A,30,0,,0.0,0.0,10.0,10.0,10.0,0,0,0,0,,
+INT01,Clean nominal adaptation,B,30,0,,0.0,0.0,10.0,30.0,30.0,30,0,0,0,,
+INT01,Clean nominal adaptation,C,30,0,,0.0,0.0,10.0,30.0,30.0,30,0,0,0,,
+INT02,Continuous optical disturbance,A,60,20,0.0396728515625,0.0,0.0396728515625,10.0,10.0,10.0,0,0,0,0,,
+INT02,Continuous optical disturbance,B,60,20,0.146484375,0.0,0.146484375,10.0,30.0,30.0,60,0,0,0,,
+INT02,Continuous optical disturbance,C,60,20,0.011863199869791665,0.0,0.146484375,3.75,30.0,30.0,26,33,0,1,10.0,43.0
+INT03,Repeated optical disturbances,A,90,30,0.0396728515625,0.0,0.0396728515625,10.0,10.0,10.0,0,0,0,0,,
+INT03,Repeated optical disturbances,B,90,30,0.146484375,0.0,0.146484375,10.0,30.0,30.0,90,0,0,0,,
+INT03,Repeated optical disturbances,C,90,30,0.015817599826388886,0.0,0.146484375,3.75,30.0,30.0,30,58,0,2,10.0,39.0
+INT04,Benign global brightening,A,60,20,0.0,0.0,0.0,10.0,10.0,10.0,0,0,0,0,,
+INT04,Benign global brightening,B,60,20,0.0,0.0,0.0,10.0,30.0,30.0,60,0,0,0,,
+INT04,Benign global brightening,C,60,20,0.0,0.0,0.0,10.0,30.0,30.0,60,0,0,0,,
+INT05,Benign global dimming,A,60,20,0.0,0.0,0.0,10.0,10.0,10.0,0,0,0,0,,
+INT05,Benign global dimming,B,60,20,0.0,0.0,0.0,10.0,30.0,30.0,60,0,0,0,,
+INT05,Benign global dimming,C,60,20,0.0,0.0,0.0,10.0,30.0,30.0,60,0,0,0,,
+INT06,Benign localized illumination,A,60,20,0.0,0.0,0.0,10.0,10.0,10.0,0,0,0,0,,
+INT06,Benign localized illumination,B,60,20,0.0,0.0,0.0,10.0,30.0,30.0,60,0,0,0,,
+INT06,Benign localized illumination,C,60,20,0.0,0.0,0.0,10.0,30.0,30.0,39,0,21,0,,

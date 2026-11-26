@@ -1,0 +1,455 @@
+{
+  "task_id": "M5-INT-01B-02",
+  "research_checkpoint": "619e5a9ee1777cf55e6b8364e08e30e552969105",
+  "engineering_validation_passed": true,
+  "behavioral_validation_complete": true,
+  "scenario_count": 6,
+  "system_count": 3,
+  "frame_count": 1080,
+  "validation_checks": {
+    "Frame identity": 1080,
+    "Input configuration preserved": 1080,
+    "Controller command identity": 1080,
+    "Expected configuration identity": 1080,
+    "Fixed gain preserved": 1080,
+    "Finite bounded exposure": 1080,
+    "Static authority": 360,
+    "Valid censoring fraction": 1080,
+    "One-frame exposure causality": 1062,
+    "Complete temporal sequence": 18,
+    "Unprotected adaptive authority": 360,
+    "Safe adaptive handover": 245,
+    "Adaptive state synchronization": 245,
+    "Exclusive defensive authority": 91,
+    "Defensive command preserved": 91,
+    "Defensive recovery ceiling": 91,
+    "Defensive probe authority": 45,
+    "Restoration handover contract": 3,
+    "Conservative hold contract": 21,
+    "Complete experiment record count": 1,
+    "Unique scenario-system-frame identities": 1
+  },
+  "validation_count": 10194,
+  "failed_validation_count": 0,
+  "clean_equivalent_frames": 30,
+  "clean_total_frames": 30,
+  "clean_comparisons": [
+    {
+      "frame": 0,
+      "equivalent": true,
+      "B_exposure": 10.0,
+      "C_exposure": 10.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 1,
+      "equivalent": true,
+      "B_exposure": 23.028739902698362,
+      "C_exposure": 23.028739902698362,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 2,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 3,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 4,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 5,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 6,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 7,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 8,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 9,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 10,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 11,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 12,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 13,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 14,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 15,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 16,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 17,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 18,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 19,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 20,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 21,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 22,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 23,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 24,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 25,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 26,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 27,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 28,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    },
+    {
+      "frame": 29,
+      "equivalent": true,
+      "B_exposure": 30.0,
+      "C_exposure": 30.0,
+      "C_authority": "M3",
+      "C_evidence": "CLEAR"
+    }
+  ],
+  "behavioral_coverage": {
+    "clean_equivalence_all_frames": true,
+    "normal_adaptation_exercised": true,
+    "defensive_authority_exercised": true,
+    "defensive_probe_exercised": true,
+    "restoration_handover_exercised": true,
+    "conservative_hold_exercised": true,
+    "adaptive_resumption_exercised": true
+  },
+  "defensive_episodes": [
+    {
+      "scenario_id": "INT02",
+      "episode": 1,
+      "event_start": 10,
+      "event_end": 30,
+      "recovery_window_end": 60,
+      "onset_exposure_ms": 30.0,
+      "defensive_authority_observed": true,
+      "first_defensive_frame": 10,
+      "reference_exposure_ms": 30.0,
+      "minimum_event_exposure_ms": 3.75,
+      "mean_event_censoring": 0.011863199869791665,
+      "restoration_action_observed": true,
+      "restoration_frame": 43,
+      "adaptive_resumption_after_restoration": true,
+      "first_resumed_frame": 44
+    },
+    {
+      "scenario_id": "INT03",
+      "episode": 1,
+      "event_start": 10,
+      "event_end": 25,
+      "recovery_window_end": 45,
+      "onset_exposure_ms": 30.0,
+      "defensive_authority_observed": true,
+      "first_defensive_frame": 10,
+      "reference_exposure_ms": 30.0,
+      "minimum_event_exposure_ms": 3.75,
+      "mean_event_censoring": 0.015817599826388886,
+      "restoration_action_observed": true,
+      "restoration_frame": 39,
+      "adaptive_resumption_after_restoration": true,
+      "first_resumed_frame": 40
+    },
+    {
+      "scenario_id": "INT03",
+      "episode": 2,
+      "event_start": 45,
+      "event_end": 60,
+      "recovery_window_end": 90,
+      "onset_exposure_ms": 30.0,
+      "defensive_authority_observed": true,
+      "first_defensive_frame": 45,
+      "reference_exposure_ms": 30.0,
+      "minimum_event_exposure_ms": 3.75,
+      "mean_event_censoring": 0.015817599826388886,
+      "restoration_action_observed": true,
+      "restoration_frame": 74,
+      "adaptive_resumption_after_restoration": true,
+      "first_resumed_frame": 75
+    }
+  ],
+  "benign_response": [
+    {
+      "scenario_id": "INT04",
+      "system": "B",
+      "event_frames": 20,
+      "adaptive_frames": 20,
+      "hold_frames": 0,
+      "defensive_frames": 0,
+      "mean_brightness": 0.19577117264270782,
+      "mean_censoring": 0.0,
+      "evidence_counts": {}
+    },
+    {
+      "scenario_id": "INT04",
+      "system": "C",
+      "event_frames": 20,
+      "adaptive_frames": 20,
+      "hold_frames": 0,
+      "defensive_frames": 0,
+      "mean_brightness": 0.19577117264270782,
+      "mean_censoring": 0.0,
+      "evidence_counts": {
+        "CLEAR": 20
+      }
+    },
+    {
+      "scenario_id": "INT05",
+      "system": "B",
+      "event_frames": 20,
+      "adaptive_frames": 20,
+      "hold_frames": 0,
+      "defensive_frames": 0,
+      "mean_brightness": 0.05873478949069977,
+      "mean_censoring": 0.0,
+      "evidence_counts": {}
+    },
+    {
+      "scenario_id": "INT05",
+      "system": "C",
+      "event_frames": 20,
+      "adaptive_frames": 20,
+      "hold_frames": 0,
+      "defensive_frames": 0,
+      "mean_brightness": 0.05873478949069977,
+      "mean_censoring": 0.0,
+      "evidence_counts": {
+        "CLEAR": 20
+      }
+    },
+    {
+      "scenario_id": "INT06",
+      "system": "B",
+      "event_frames": 20,
+      "adaptive_frames": 20,
+      "hold_frames": 0,
+      "defensive_frames": 0,
+      "mean_brightness": 0.18438594043254852,
+      "mean_censoring": 0.0,
+      "evidence_counts": {}
+    },
+    {
+      "scenario_id": "INT06",
+      "system": "C",
+      "event_frames": 20,
+      "adaptive_frames": 0,
+      "hold_frames": 20,
+      "defensive_frames": 0,
+      "mean_brightness": 0.18438594043254852,
+      "mean_censoring": 0.0,
+      "evidence_counts": {
+        "PRESENT": 20
+      }
+    }
+  ],
+  "protected_sources": {
+    "src/ahds/module2_sensor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/ahds/module2_sensor/sensor_simulator.py": "a01ad9fed04e4526ec234a96ea20360b782d3d394fb14fe3f2ce99004e0700be",
+    "src/ahds/module3_dynamic_sensing/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/ahds/module3_dynamic_sensing/exposure_controller.py": "34d82c573bcfd17f9c57a851da5b0d2e326318bef2045433668ebd8972755c59",
+    "src/ahds/module3_dynamic_sensing/joint_controller.py": "160e2def52186c360a5a1e7944828274fddfacbf78254e7fc8873893f8c0f37d",
+    "src/ahds/module3_dynamic_sensing/roi_allocator.py": "59b4691949b0c2c9a5b5df7a31024b74c07b19cd65aa6d7fcac8cb70df9c3a1d",
+    "src/ahds/module4_anomaly_detection/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/ahds/module4_anomaly_detection/compensated_temporal_detector.py": "61d778fabcbf579e7c0ee79a4d549b332ec54e478a0b297845533ba73e8de88e",
+    "src/ahds/module4_anomaly_detection/concentration_fusion_detector.py": "a5eec9e6df27093e05eb50f9403bbaa8754e17f8d9d383b9ed011b7cbe218913",
+    "src/ahds/module4_anomaly_detection/disturbance_assessor.py": "a7e519481195136cfef32c35d82afaab1aa115024f62dd029bcc4e7431c37b29",
+    "src/ahds/module4_anomaly_detection/disturbance_state_tracker.py": "5de9d2e4b1c07fc97de97510d1da34abcf126c8829cc4743162390205f0a163e",
+    "src/ahds/module4_anomaly_detection/fusion_detector.py": "fb5d2aa5c6ba540d7a7581fd94349d77d07271e3ab13c4c3ddfe27a355cd14d7",
+    "src/ahds/module4_anomaly_detection/robust_temporal_detector.py": "122148e5ff50cf2fa132c9b505df79fcd69cb3f69cf2c327ade41e0a70b817a9",
+    "src/ahds/module4_anomaly_detection/saturation_detector.py": "0e777a06633cd47ae09f6cc2a10f74a7092a53f784362f24a092c78440e443f4",
+    "src/ahds/module4_anomaly_detection/temporal_detector.py": "6be2c9965c5a228a48768ffbcc16d0c2cc4d3ed545de9aedce9f46e5d4e1ee61",
+    "src/ahds/module5_defense/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/ahds/module5_defense/disturbance_aware_defense.py": "c5f8d2203502dc8cc2175396c5335d4ced3dcaca04d7c08b8d8d99dcd0e2fd2b",
+    "src/ahds/module5_defense/disturbance_memory.py": "f186d3386600f919ed2aafb158f91fce9633dcde21020de5e3765629b78953fa",
+    "src/ahds/module5_defense/exposure_aware_observation.py": "76a6f871b48191a2ad8a3b299a2ba58768eed350e4ec4db34a1a69f8442f3438",
+    "src/ahds/module5_defense/exposure_protection.py": "a45f7e1aa97d8e5eaf2598dbbc781a4b87221eb44196a60148d36548201d4a24",
+    "src/ahds/module5_defense/probed_exposure.py": "8d87f15b2a28ee7d467eed60b34b748cd555e7f0d09ea28067b07149f9430a80",
+    "src/ahds/module5_defense/state_aware_exposure.py": "3c144e7e1087b1bbd63539da3a228f380449b2f5ce0d41d1d5df93ac5b30dbab",
+    "src/ahds/integration/__init__.py": "33b65f0db8a8fcdee648ca3c853b8383b1f3a32ce5133fa2effe477251e13642",
+    "src/ahds/integration/closed_loop_controller.py": "4d1c5cbb8d4d49494cf14d0b18723cc1f6b9a8e3a4ea56da25d081a400a6f7fb"
+  },
+  "gain_adaptation_enabled": false,
+  "roi_allocation_enabled": false,
+  "noise_enabled": false,
+  "controller_modifications": false,
+  "historical_modifications": false,
+  "limitations": [
+    "Deterministic synthetic optical scenes.",
+    "Fixed gain and full-frame sampling.",
+    "Trusted startup reference assumed.",
+    "RESTORED is an internal controller action, not independent proof of information recovery.",
+    "No downstream perception evaluation.",
+    "No hardware latency or bandwidth measurement.",
+    "Observed behavioral failures are retained."
+  ],
+  "execution_seconds": 60.32322770199971
+}

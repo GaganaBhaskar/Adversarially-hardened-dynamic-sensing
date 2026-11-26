@@ -1,0 +1,13 @@
+{
+  "task_id": "M5-INT-01B-05",
+  "files": {
+    "results/integration/targeted_hold_validation/targeted_hold_report.json": {
+      "sha256": "137e6310e73b43dd67d280e7ad7c78943016a9ebc791759e2cbedf1aef67dc65",
+      "bytes": 11503
+    },
+    "results/integration/targeted_hold_validation/targeted_hold_records.json": {
+      "sha256": "4eb62a3843663fe02c53c43f9fb6b0fc38c9af6e37cac2c5cc89b92ed88bb048",
+      "bytes": 104082
+    }
+  }
+}

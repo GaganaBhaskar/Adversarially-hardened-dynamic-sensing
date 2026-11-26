@@ -1,0 +1,3 @@
+scenario_id,event_start,event_end_exclusive,fallback_command_frame,full_frame_fallback_frame,fallback_delay_from_event_frames,command_to_application_frames,roi_resumption_frame,roi_resumption_delay_frames,event_full_frame_fraction,fallback_authority
+ROI02,10,30,10,11,1,1,49,19,0.95,M5
+ROI03,10,20,10,11,1,1,22,2,0.9,ARBITRATION_HOLD

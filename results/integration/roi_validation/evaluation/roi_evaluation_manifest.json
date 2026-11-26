@@ -1,0 +1,69 @@
+{
+  "task_id": "M5-INT-01C-02",
+  "files": {
+    "results/integration/roi_validation/evaluation/roi_scenario_summary.csv": {
+      "sha256": "61bbcc6d7e3ee29142ccf2db975374e0ade0b49d5f9c0f079ab2644f200f578e",
+      "bytes": 1478
+    },
+    "results/integration/roi_validation/evaluation/roi_phase_summary.csv": {
+      "sha256": "3459f92537288ec540151e4634fe8ec3b05a61d4aaba49e2c20dc6b2f5483071",
+      "bytes": 1579
+    },
+    "results/integration/roi_validation/evaluation/roi_transition_summary.csv": {
+      "sha256": "e69dbce8029712c50559ac69964b9d82a71040d49741facb8b304ac1a7914573",
+      "bytes": 334
+    },
+    "results/integration/roi_validation/evaluation/roi_evaluation_report.json": {
+      "sha256": "9201f4a7841a20c90582102413933bfed08633f6b60cd7a8d248110b4f8518ee",
+      "bytes": 11334
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F01_payload_comparison.png": {
+      "sha256": "1ff64651b389091a35a2fbfea8195ec6e5f1d75bcf306e6dbc2972ae6d237e5d",
+      "bytes": 87084
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F01_payload_comparison.pdf": {
+      "sha256": "db76b54eb8a405a5b8214d2c937a746c3951fa852a992147d208a404d255de13",
+      "bytes": 15217
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F02_ROI02_sampling.png": {
+      "sha256": "cd5ddd2b2e2b9e0c5b53429232ec796b988f3d66a76e4e7f345148cd42e9bfec",
+      "bytes": 78335
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F02_ROI02_sampling.pdf": {
+      "sha256": "1bbdeaa51006dffb0a5cfb1e1d00c6cec2dd71a4fa37287ee84f7faf85d43b6a",
+      "bytes": 14316
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F03_ROI03_sampling.png": {
+      "sha256": "050dc2946ff121a7ae060d57c4b1c3246dae06d4da86604cdc7a968c5ebba649",
+      "bytes": 77856
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F03_ROI03_sampling.pdf": {
+      "sha256": "7fa41a864111f2ff0c223e69c24f176841c4ca35af3c73c95a4b9b034ccf28da",
+      "bytes": 14276
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F04_joint_sensing.png": {
+      "sha256": "cd6eab073e11a3c93482a3aee44c3be723325934d8f5bfb587711af0173d7f93",
+      "bytes": 222096
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F04_joint_sensing.pdf": {
+      "sha256": "4a06a7ae2cc33e954a0a24516311da093ef502ed455f3f23bef6635fd20734b0",
+      "bytes": 17544
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F05_phase_efficiency.png": {
+      "sha256": "3584bdabb6fdbadc89999720b5489782f1eca79b6b4909941b89bdda4976477e",
+      "bytes": 86426
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F05_phase_efficiency.pdf": {
+      "sha256": "54be1a9e46e275c9435558bf24c2536839fc3dda1b5de02627e3cec2a97b3da2",
+      "bytes": 14642
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F06_regional_censoring.png": {
+      "sha256": "288352f92e83053ca7bc002c5f8d72901493d69de911c8a74880bc9b896f6827",
+      "bytes": 169532
+    },
+    "results/integration/roi_validation/evaluation/figures/ROI_F06_regional_censoring.pdf": {
+      "sha256": "3439734a1434d6f5ae253b7037ff871c05239e34e18c40efb62143f005d50cf0",
+      "bytes": 16053
+    }
+  }
+}
