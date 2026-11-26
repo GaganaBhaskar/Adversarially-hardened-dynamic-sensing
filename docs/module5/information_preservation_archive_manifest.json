@@ -1,0 +1,177 @@
+{
+  "task": "M5-VAL-01A-05B",
+  "project": "Adversarially-Hardened Dynamic Sensing",
+  "development_phase": "M5-VAL-01A",
+  "module": "Module 5 validation using Module 7 evaluation",
+  "timestamp_utc": "2026-11-26T13:05:55.722895+00:00",
+  "parent_git_checkpoint": "837d98d0e42630c6736b472cea39833ff6a579a1",
+  "previous_archive_manifest": {
+    "path": "docs/module5/dadrc_archive_manifest.json",
+    "sha256": "13371da9430ec4b1f5e57a6a5101dfa2d03597f4e47727a8317c43c67096fed1",
+    "protected_files": 63
+  },
+  "categories": {
+    "metric_implementation": 1,
+    "controlled_experiment_source": 1,
+    "controlled_validation_evidence": 6,
+    "metric_regression_test_source": 1,
+    "targeted_collection_evidence": 2,
+    "targeted_execution_evidence": 3,
+    "complete_regression_evidence": 5,
+    "scientific_documentation": 3,
+    "reproducibility_documentation": 1,
+    "environment_snapshot": 1
+  },
+  "manifested_files": 24,
+  "planned_commit_files_including_manifest": 25,
+  "manifest_excludes_itself": true,
+  "files": {
+    "src/ahds/module7_evaluation/information_preservation.py": {
+      "category": "metric_implementation",
+      "size_bytes": 18450,
+      "sha256": "c89ec27ac109a7552fd42675677c7ecf49e6c8809f14bd429568003ba87f5bfb"
+    },
+    "experiments/module5/validate_information_preservation.py": {
+      "category": "controlled_experiment_source",
+      "size_bytes": 23330,
+      "sha256": "9b651c68acf745b1be0a09f9bd1e10ae6dbdb4a64e09383d33c227260800dc7b"
+    },
+    "results/module5/information_preservation_validation/controlled_metric_results.csv": {
+      "category": "controlled_validation_evidence",
+      "size_bytes": 8164,
+      "sha256": "1bb1d8c185663c44f344235cd2d5e77c8de266391d5bbfeeeca22b0c54699dea"
+    },
+    "results/module5/information_preservation_validation/controlled_validation_log.txt": {
+      "category": "controlled_validation_evidence",
+      "size_bytes": 13125,
+      "sha256": "c462abe6f05ea10eeb7792121ca3fe7b2e327e7cd3b85b84bd5048c359d65e9e"
+    },
+    "results/module5/information_preservation_validation/quantization_bound_verification.csv": {
+      "category": "controlled_validation_evidence",
+      "size_bytes": 827,
+      "sha256": "2548cf92fba2cd5096be87e0ce56a65e18e8c360aed6899b4fd713cb5715b578"
+    },
+    "results/module5/information_preservation_validation/validation_checks.csv": {
+      "category": "controlled_validation_evidence",
+      "size_bytes": 6335,
+      "sha256": "5220101a314d37004e0af1c36bc4b1567bda53d7a6125a65ddbb91f3da6f656a"
+    },
+    "results/module5/information_preservation_validation/validation_report.json": {
+      "category": "controlled_validation_evidence",
+      "size_bytes": 1377,
+      "sha256": "775f0011b7c5caa9faf157a35891d72ff846c56906867db99a5f40641a83c397"
+    },
+    "results/module5/information_preservation_validation/artifact_manifest.json": {
+      "category": "controlled_validation_evidence",
+      "size_bytes": 1599,
+      "sha256": "dcefe30ac4fea29c2e29c501042c8c3a714783970ea83ac6ec13ce8a4d6b21eb"
+    },
+    "tests/test_module7_information_preservation.py": {
+      "category": "metric_regression_test_source",
+      "size_bytes": 22155,
+      "sha256": "5ef1fb924d799e4d153e465ef27a910f033fa330118957906e600b83f86a6a3f"
+    },
+    "results/module5/information_preservation_regression/test_collection_log.txt": {
+      "category": "targeted_collection_evidence",
+      "size_bytes": 5088,
+      "sha256": "5b38fc0736ad95d05a8d11398253496be1a338e7eea3bc12df1d7b46b73cebcf"
+    },
+    "results/module5/information_preservation_regression/test_collection_report.json": {
+      "category": "targeted_collection_evidence",
+      "size_bytes": 16786,
+      "sha256": "29d07bb6b95668206ccec779b97ec8302f4331e385da7f7cc83c672a357a82ba"
+    },
+    "results/module5/information_preservation_regression/targeted_test_log.txt": {
+      "category": "targeted_execution_evidence",
+      "size_bytes": 6564,
+      "sha256": "67105f8b1d23259a93c90556b4332f4bb458d6bd29a632045533a9ac58f5f615"
+    },
+    "results/module5/information_preservation_regression/targeted_test_results.xml": {
+      "category": "targeted_execution_evidence",
+      "size_bytes": 7801,
+      "sha256": "24215dbb3372ac36f08d93ebbceb3e9a7b66015109b93c709263a0242514746d"
+    },
+    "results/module5/information_preservation_regression/targeted_test_report.json": {
+      "category": "targeted_execution_evidence",
+      "size_bytes": 13884,
+      "sha256": "84d02e9908ce19e56643b55f476409227c6415c40f3bf325a3f916f1605efef2"
+    },
+    "results/module5/information_preservation_regression/complete_collection_log.txt": {
+      "category": "complete_regression_evidence",
+      "size_bytes": 12029,
+      "sha256": "b8026d8e4a394617f487cf63195e0fed2439eaa15e8f31351981e2d51f0e659f"
+    },
+    "results/module5/information_preservation_regression/complete_collection_report.json": {
+      "category": "complete_regression_evidence",
+      "size_bytes": 14117,
+      "sha256": "f057847082ff0c4d4989e0fc527d3647efde7afb4eb94fbce9a0abc47d89666f"
+    },
+    "results/module5/information_preservation_regression/complete_regression_log.txt": {
+      "category": "complete_regression_evidence",
+      "size_bytes": 16030,
+      "sha256": "480378cc29225da742436750d8cce3ddc4496d8b1e8931d405f1a436ba9a342a"
+    },
+    "results/module5/information_preservation_regression/complete_regression_results.xml": {
+      "category": "complete_regression_evidence",
+      "size_bytes": 19348,
+      "sha256": "9926d2d7c10bd1b3f6aa24fe6018902ffef1c3b75c31970d230f32150532a92a"
+    },
+    "results/module5/information_preservation_regression/complete_regression_report.json": {
+      "category": "complete_regression_evidence",
+      "size_bytes": 53623,
+      "sha256": "645b4849fee6fc5e3cc0d76b8c4f527e03052a40a7c4e976681aa8854a4da153"
+    },
+    "docs/module5/information_preservation_design.md": {
+      "category": "scientific_documentation",
+      "size_bytes": 11195,
+      "sha256": "94119196b90dc467f73f95d80e06c656ad06187699ecf1b5ffa3e8576e199a91"
+    },
+    "docs/module5/information_preservation_validation_report.md": {
+      "category": "scientific_documentation",
+      "size_bytes": 4821,
+      "sha256": "88b928f8007d5ac7f3da2abf9b91c6ac557824c22f5c14a02b0669b931586e62"
+    },
+    "docs/module5/information_preservation_documentation_report.json": {
+      "category": "scientific_documentation",
+      "size_bytes": 14642,
+      "sha256": "e822ae8969ca03ba9a353294cc21b86d2964370bd3d2ae30b4feacd8b410178e"
+    },
+    "docs/module5/information_preservation_reproducibility.md": {
+      "category": "reproducibility_documentation",
+      "size_bytes": 6748,
+      "sha256": "226b8d210dbaa111e5a9194447114b7603624b23cf85e488551d26b2027b7ea9"
+    },
+    "results/module5/information_preservation_regression/reproducibility_environment.json": {
+      "category": "environment_snapshot",
+      "size_bytes": 1101,
+      "sha256": "c9751fd63d07423363dee638fee72752501359031d2e2b3511e1555f8f141a99"
+    }
+  },
+  "documented_metric_fields": 42,
+  "controlled_scenario_evaluations": 16,
+  "controlled_checks_passed": 180,
+  "controlled_checks_failed": 0,
+  "quantization_bound_checks_passed": 8,
+  "targeted_regression_passed": 63,
+  "previous_regression_passed": 116,
+  "complete_regression_passed": 179,
+  "complete_regression_failed": 0,
+  "recovered_regression_evidence_accepted": true,
+  "source_provenance_verified": true,
+  "scientific_documentation_complete": true,
+  "reproducibility_documentation_complete": true,
+  "current_environment_snapshot_saved": true,
+  "independent_metric_experiment_reproduction_complete": false,
+  "historical_environment_equivalence_verified": false,
+  "git_staging_complete": false,
+  "git_archival_complete": false,
+  "github_archival_complete": false,
+  "limitations": [
+    "Controlled validation is deterministic and noise-free.",
+    "Metric correctness does not establish controller superiority.",
+    "Physical and structural metrics are not semantic information measurements.",
+    "Independent numerical reproduction of the controlled metric experiment has not been established by this archival task.",
+    "The current environment snapshot is not a dependency lockfile.",
+    "Hardware calibration, downstream perception and edge profiling remain pending."
+  ]
+}

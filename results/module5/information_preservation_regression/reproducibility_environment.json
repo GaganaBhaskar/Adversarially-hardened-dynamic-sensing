@@ -1,0 +1,31 @@
+{
+  "task": "M5-VAL-01A-05B",
+  "timestamp_utc": "2026-11-26T13:05:55.644026+00:00",
+  "snapshot_type": "current_archival_environment",
+  "parent_git_checkpoint": "837d98d0e42630c6736b472cea39833ff6a579a1",
+  "python_version": "3.13.18",
+  "python_implementation": "CPython",
+  "python_executable": "/usr/bin/python3",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.0",
+    "pytest": "8.4.2"
+  },
+  "torch_runtime_version": "2.14.1+cpu",
+  "numpy_runtime_version": "2.4.6",
+  "cuda_available": false,
+  "torch_num_threads": 1,
+  "torch_num_interop_threads": 1,
+  "controlled_validation_noise_enabled": false,
+  "historical_environment_equivalence_verified": false,
+  "notes": [
+    "This is a current archival environment snapshot.",
+    "It is not a complete dependency lockfile.",
+    "It does not independently establish the exact environment of every historical experiment.",
+    "No package installation or environment modification was performed."
+  ]
+}

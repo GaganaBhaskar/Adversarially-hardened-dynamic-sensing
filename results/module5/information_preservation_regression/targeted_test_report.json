@@ -1,0 +1,422 @@
+{
+  "task": "M5-VAL-01A-04B",
+  "timestamp_utc": "2026-11-26T12:58:31.282789+00:00",
+  "parent_git_checkpoint": "837d98d0e42630c6736b472cea39833ff6a579a1",
+  "test_file": "tests/test_module7_information_preservation.py",
+  "test_source_sha256": "5ef1fb924d799e4d153e465ef27a910f033fa330118957906e600b83f86a6a3f",
+  "metric_source_sha256": "c89ec27ac109a7552fd42675677c7ecf49e6c8809f14bd429568003ba87f5bfb",
+  "controlled_experiment_sha256": "9b651c68acf745b1be0a09f9bd1e10ae6dbdb4a64e09383d33c227260800dc7b",
+  "collection_report_sha256": "29d07bb6b95668206ccec779b97ec8302f4331e385da7f7cc83c672a357a82ba",
+  "expected_tests": 63,
+  "executed_tests": 63,
+  "passed": 63,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "xfailed": 0,
+  "xpassed": 0,
+  "deselected": 0,
+  "return_code": 0,
+  "execution_time_seconds": 9.204371227000593,
+  "terminal_summary": "============================== 63 passed in 4.70s ==============================",
+  "terminal_summary_passed": true,
+  "node_identity_passed": true,
+  "missing_tests": [],
+  "unexpected_tests": [],
+  "duplicate_tests": [],
+  "test_case_results": [
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_epsilon[0.0]",
+      "status": "passed",
+      "duration_seconds": 0.001,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_epsilon[-1.0]",
+      "status": "passed",
+      "duration_seconds": 0.001,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_epsilon[nan]",
+      "status": "passed",
+      "duration_seconds": 0.001,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_epsilon[inf]",
+      "status": "passed",
+      "duration_seconds": 0.001,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_epsilon[-inf]",
+      "status": "passed",
+      "duration_seconds": 0.001,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_valid_custom_epsilon",
+      "status": "passed",
+      "duration_seconds": 0.001,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_identical_observations",
+      "status": "passed",
+      "duration_seconds": 0.009,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_identity_ratios",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_output_contract",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_clean_exposure_reduction[5.0]",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_clean_exposure_reduction[1.0]",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_clean_exposure_reduction[0.1]",
+      "status": "passed",
+      "duration_seconds": 0.006,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_gain_compensation_identity",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_quantization_formula[10.0-1.0]",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_quantization_formula[5.0-1.0]",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_quantization_formula[1.0-1.0]",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_quantization_formula[0.1-1.0]",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_quantization_formula[5.0-2.0]",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_full_saturation",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_adc_clipping_without_full_well_saturation",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_zero_signal_is_not_censored",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_partial_censoring",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_censoring_mask_union",
+      "status": "passed",
+      "duration_seconds": 0.004,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_analytic_gradient",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_analytic_radiance_error",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_mae_triangle_inequality",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_empty_region",
+      "status": "passed",
+      "duration_seconds": 0.004,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_single_pixel_region",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_disconnected_region_has_no_edges",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_constant_reference",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_region_shape_equivalence",
+      "status": "passed",
+      "duration_seconds": 0.009,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_full_region_equivalence",
+      "status": "passed",
+      "duration_seconds": 0.009,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_complementary_region_aggregation",
+      "status": "passed",
+      "duration_seconds": 0.013,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_normalized_values[nan]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_normalized_values[inf]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_normalized_values[-0.1]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_normalized_values[1.1]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape0]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape1]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape2]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape3]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_nonfloating_normalized_output",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_nontensor_normalized_output",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_nonboolean_sensor_mask[saturated]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_nonboolean_sensor_mask[adc_clipped]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_sensor_mask_shape[saturated]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_sensor_mask_shape[adc_clipped]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_noninteger_adc",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_adc_out_of_range[-1]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_adc_out_of_range[4096]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_adc_shape_mismatch",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_adc_normalized_inconsistency",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_region_shape[shape0]",
+      "status": "passed",
+      "duration_seconds": 0.003,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_region_shape[shape1]",
+      "status": "passed",
+      "duration_seconds": 0.003,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_region_shape[shape2]",
+      "status": "passed",
+      "duration_seconds": 0.003,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_nonboolean_region",
+      "status": "passed",
+      "duration_seconds": 0.003,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_nontensor_region",
+      "status": "passed",
+      "duration_seconds": 0.003,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_optical_ground_truth[-0.1]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_optical_ground_truth[nan]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_invalid_optical_ground_truth[inf]",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_ground_truth_shape_mismatch",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_repeatable_metric_evaluation",
+      "status": "passed",
+      "duration_seconds": 0.009,
+      "detail": null
+    },
+    {
+      "node_id": "tests/test_module7_information_preservation.py::test_evaluation_does_not_modify_inputs",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "detail": null
+    }
+  ],
+  "protected_files_expected": 74,
+  "protected_files_verified": 74,
+  "protected_integrity_passed": true,
+  "integrity_failures": [],
+  "research_checkpoint_unchanged": true,
+  "branch_unchanged": true,
+  "tracked_working_tree_clean": true,
+  "staging_area_empty": true,
+  "execution_log_sha256": "67105f8b1d23259a93c90556b4332f4bb458d6bd29a632045533a9ac58f5f615",
+  "junit_xml_sha256": "24215dbb3372ac36f08d93ebbceb3e9a7b66015109b93c709263a0242514746d",
+  "previous_regression_tests": 116,
+  "expected_complete_regression": 179,
+  "all_tests_passed": true,
+  "complete_regression_executed": false,
+  "task_passed": true
+}

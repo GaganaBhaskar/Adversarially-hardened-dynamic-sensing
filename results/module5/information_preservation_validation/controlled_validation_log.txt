@@ -1,0 +1,258 @@
+
+[V01 — CLEAN REFERENCE]
+[PASS] V01_zero_configuration_distortion
+[PASS] V01_zero_disturbance_distortion
+[PASS] V01_zero_reference_distortion
+[PASS] V01_zero_gradient_distortion
+[PASS] V01_full_valid_coverage
+[PASS] V01_reference_contrast_identity
+[PASS] V01_per_sample_quantization_bound
+
+[V02–V04 — EXPOSURE REDUCTION]
+[PASS] V02_zero_disturbance_error
+[PASS] V02_configuration_error_positive
+[PASS] V02_exposure_utilization
+[PASS] V02_quantization_step_scaling
+[PASS] V02_no_saturation_or_clipping
+[PASS] V02_per_sample_quantization_bound
+[PASS] V03_zero_disturbance_error
+[PASS] V03_configuration_error_positive
+[PASS] V03_exposure_utilization
+[PASS] V03_quantization_step_scaling
+[PASS] V03_no_saturation_or_clipping
+[PASS] V03_per_sample_quantization_bound
+[PASS] V04_zero_disturbance_error
+[PASS] V04_configuration_error_positive
+[PASS] V04_exposure_utilization
+[PASS] V04_quantization_step_scaling
+[PASS] V04_no_saturation_or_clipping
+[PASS] V04_per_sample_quantization_bound
+[PASS] exposure_reduction_increases_configuration_error
+[PASS] clean_ADC_level_count_decreases
+[PASS] minimum_exposure_has_zero_ADC_samples
+[PASS] minimum_exposure_nonzero_coverage_degrades
+
+[V05 — CLEAN GAIN COMPENSATION]
+[PASS] V05_exact_ADC_identity
+[PASS] V05_zero_configuration_error
+[PASS] V05_optical_scale_identity
+[PASS] V05_quantization_step_identity
+[PASS] V05_exposure_and_gain_distinguished
+[PASS] V05_per_sample_quantization_bound
+
+[V06–V08 — OPTICAL DISTURBANCE]
+[PASS] V06_positive_disturbance_error
+[PASS] V06_sensor_saturation_agreement
+[PASS] V06_sensor_ADC_clipping_agreement
+[PASS] V06_per_sample_quantization_bound
+[PASS] V07_positive_disturbance_error
+[PASS] V07_sensor_saturation_agreement
+[PASS] V07_sensor_ADC_clipping_agreement
+[PASS] V07_per_sample_quantization_bound
+[PASS] V08_positive_disturbance_error
+[PASS] V08_sensor_saturation_agreement
+[PASS] V08_sensor_ADC_clipping_agreement
+[PASS] V08_per_sample_quantization_bound
+[PASS] V06_physical_saturation_detected
+[PASS] V06_ADC_clipping_detected
+[PASS] V07_saturation_suppressed
+[PASS] V07_ADC_clipping_suppressed
+[PASS] V07_full_uncensored_coverage
+[PASS] V08_no_full_well_saturation
+[PASS] V08_ADC_clipping_reintroduced
+[PASS] V08_clipping_matches_reference
+
+[V09 — FULL SATURATION]
+[PASS] V09_full_well_saturation_complete
+[PASS] V09_zero_valid_coverage
+[PASS] V09_zero_valid_sample_count
+[PASS] V09_reconstruction_error_undefined
+[PASS] V09_common_valid_error_undefined
+[PASS] V09_raw_distortion_remains_defined
+
+[V10 — EMPTY REGION]
+[PASS] V10_zero_region_samples
+[PASS] V10_zero_region_fraction
+[PASS] V10_regional_averages_undefined
+[PASS] V10_ADC_levels_zero
+[PASS] V10_global_configuration_remains_defined
+
+[V11 — CONSTANT REFERENCE]
+[PASS] V11_zero_reference_contrast
+[PASS] V11_contrast_retention_undefined
+[PASS] V11_zero_gradient_error
+[PASS] V11_single_ADC_level
+
+[V12 — KNOWN SPATIAL GRADIENT]
+[PASS] V12_analytic_gradient_MAE
+[PASS] V12_analytic_disturbance_MAE
+[PASS] V12_zero_configuration_gradient
+
+[V13 — KNOWN OPTICAL PERTURBATION]
+[PASS] V13_known_radiance_reconstruction_error
+[PASS] V13_known_common_valid_radiance_error
+[PASS] V13_uniform_perturbation_preserves_gradients
+[PASS] V13_full_valid_coverage
+
+[V14 — SINGLE-PIXEL REGION]
+[PASS] V14_three_RGB_samples
+[PASS] V14_gradient_undefined_without_edges
+[PASS] V14_reference_MAE_defined
+
+[V15 — COMPLEMENTARY REGIONS]
+[PASS] V15_complementary_sample_accounting
+[PASS] V15_weighted_aggregation_saturation_ratio
+[PASS] V15_weighted_aggregation_adc_clipping_ratio
+[PASS] V15_weighted_aggregation_censored_ratio
+[PASS] V15_weighted_aggregation_valid_observation_coverage
+[PASS] V15_weighted_aggregation_configuration_mae
+[PASS] V15_weighted_aggregation_disturbance_mae
+[PASS] V15_weighted_aggregation_reference_mae
+[PASS] V15_weighted_aggregation_observed_mean_output
+[PASS] V15_valid_sample_weighted_radiance_error
+
+[CROSS-SCENARIO INVARIANTS]
+[PASS] V01_MAE_triangle_inequality
+[PASS] V01_coverage_complement
+[PASS] V01_coverage_ordering
+[PASS] V01_common_valid_ordering
+[PASS] V01_censoring_union_bounds
+[PASS] V01_valid_sample_accounting
+[PASS] V02_MAE_triangle_inequality
+[PASS] V02_coverage_complement
+[PASS] V02_coverage_ordering
+[PASS] V02_common_valid_ordering
+[PASS] V02_censoring_union_bounds
+[PASS] V02_valid_sample_accounting
+[PASS] V03_MAE_triangle_inequality
+[PASS] V03_coverage_complement
+[PASS] V03_coverage_ordering
+[PASS] V03_common_valid_ordering
+[PASS] V03_censoring_union_bounds
+[PASS] V03_valid_sample_accounting
+[PASS] V04_MAE_triangle_inequality
+[PASS] V04_coverage_complement
+[PASS] V04_coverage_ordering
+[PASS] V04_common_valid_ordering
+[PASS] V04_censoring_union_bounds
+[PASS] V04_valid_sample_accounting
+[PASS] V05_MAE_triangle_inequality
+[PASS] V05_coverage_complement
+[PASS] V05_coverage_ordering
+[PASS] V05_common_valid_ordering
+[PASS] V05_censoring_union_bounds
+[PASS] V05_valid_sample_accounting
+[PASS] V06_MAE_triangle_inequality
+[PASS] V06_coverage_complement
+[PASS] V06_coverage_ordering
+[PASS] V06_common_valid_ordering
+[PASS] V06_censoring_union_bounds
+[PASS] V06_valid_sample_accounting
+[PASS] V07_MAE_triangle_inequality
+[PASS] V07_coverage_complement
+[PASS] V07_coverage_ordering
+[PASS] V07_common_valid_ordering
+[PASS] V07_censoring_union_bounds
+[PASS] V07_valid_sample_accounting
+[PASS] V08_MAE_triangle_inequality
+[PASS] V08_coverage_complement
+[PASS] V08_coverage_ordering
+[PASS] V08_common_valid_ordering
+[PASS] V08_censoring_union_bounds
+[PASS] V08_valid_sample_accounting
+[PASS] V09_MAE_triangle_inequality
+[PASS] V09_coverage_complement
+[PASS] V09_coverage_ordering
+[PASS] V09_common_valid_ordering
+[PASS] V09_censoring_union_bounds
+[PASS] V09_valid_sample_accounting
+[PASS] V11_MAE_triangle_inequality
+[PASS] V11_coverage_complement
+[PASS] V11_coverage_ordering
+[PASS] V11_common_valid_ordering
+[PASS] V11_censoring_union_bounds
+[PASS] V11_valid_sample_accounting
+[PASS] V12_MAE_triangle_inequality
+[PASS] V12_coverage_complement
+[PASS] V12_coverage_ordering
+[PASS] V12_common_valid_ordering
+[PASS] V12_censoring_union_bounds
+[PASS] V12_valid_sample_accounting
+[PASS] V13_MAE_triangle_inequality
+[PASS] V13_coverage_complement
+[PASS] V13_coverage_ordering
+[PASS] V13_common_valid_ordering
+[PASS] V13_censoring_union_bounds
+[PASS] V13_valid_sample_accounting
+[PASS] V14_MAE_triangle_inequality
+[PASS] V14_coverage_complement
+[PASS] V14_coverage_ordering
+[PASS] V14_common_valid_ordering
+[PASS] V14_censoring_union_bounds
+[PASS] V14_valid_sample_accounting
+[PASS] V15A_MAE_triangle_inequality
+[PASS] V15A_coverage_complement
+[PASS] V15A_coverage_ordering
+[PASS] V15A_common_valid_ordering
+[PASS] V15A_censoring_union_bounds
+[PASS] V15A_valid_sample_accounting
+[PASS] V15B_MAE_triangle_inequality
+[PASS] V15B_coverage_complement
+[PASS] V15B_coverage_ordering
+[PASS] V15B_common_valid_ordering
+[PASS] V15B_censoring_union_bounds
+[PASS] V15B_valid_sample_accounting
+
+[CONTROLLED SCENARIO RESULTS]
+scenario_id  exposure_ms       gain  saturation_ratio  adc_clipping_ratio  valid_observation_coverage  configuration_mae  disturbance_mae  reference_mae  radiance_reconstruction_mae  clean_adc_levels  gradient_mae  contrast_retention
+        V01  10.00000000 1.00000000        0.00000000          0.00000000                  1.00000000         0.00000000       0.00000000     0.00000000                   0.00054307                38    0.00000000          1.00000000
+        V02   5.00000000 1.00000000        0.00000000          0.00000000                  1.00000000         0.02174315       0.00000000     0.02174315                   0.00089578                24    0.00025161          0.49995223
+        V03   1.00000000 1.00000000        0.00000000          0.00000000                  1.00000000         0.03913197       0.00000000     0.03913197                   0.00685240                13    0.00043385          0.10109540
+        V04   0.10000000 1.00000000        0.00000000          0.00000000                  1.00000000         0.04306688       0.00000000     0.04306688                   0.05002583                 5    0.00047520          0.00981227
+        V05   5.00000000 2.00000000        0.00000000          0.00000000                  1.00000000         0.00000000       0.00000000     0.00000000                   0.00054307                38    0.00000000          1.00000000
+        V06  10.00000000 1.00000000        0.03967285          0.03967285                  0.96032715         0.00000000       0.12498709     0.12498709                   0.90156779                38    0.00297770         10.89191844
+        V07   5.00000000 1.00000000        0.00000000          0.00000000                  1.00000000         0.02174315       0.06732933     0.07303454                   1.34662711                24    0.00197995          6.23321321
+        V08   5.00000000 2.00000000        0.00000000          0.03967285                  0.96032715         0.00000000       0.12498709     0.12498709                   0.90156779                38    0.00297770         10.89191844
+        V09  10.00000000 1.00000000        1.00000000          1.00000000                  0.00000000         0.00000000       0.95650968     0.95650968                          NaN                38    0.00047970          0.00000000
+        V10  10.00000000 1.00000000               NaN                 NaN                         NaN                NaN              NaN            NaN                          NaN                 0           NaN                 NaN
+        V11  10.00000000 1.00000000        0.00000000          0.00000000                  1.00000000         0.00000000       0.00000000     0.00000000                   0.00061050                 1    0.00000000                 NaN
+        V12 100.00000000 1.00000000        0.00000000          0.00000000                  1.00000000         0.00000000       0.10000000     0.10000000                   0.10000000                 1    0.10000000                 NaN
+        V13 100.00000000 1.00000000        0.00000000          0.00000000                  1.00000000         0.00000000       0.20000000     0.20000000                   0.20000000                 1    0.00000000                 NaN
+        V14  10.00000000 1.00000000        0.00000000          0.00000000                  1.00000000         0.00000000       0.00000000     0.00000000                   0.00042735                 3           NaN          1.00000000
+       V15A  10.00000000 1.00000000        0.03967285          0.03967285                  0.96032715         0.00000000       0.12498673     0.12498673                   0.90156752                35    0.00298355         10.91226817
+       V15B  10.00000000 1.00000000        0.03967285          0.03967285                  0.96032715         0.00000000       0.12498745     0.12498745                   0.90156807                37    0.00298355         10.87308887
+
+[PER-SAMPLE QUANTIZATION VERIFICATION]
+scenario  valid_samples  maximum_absolute_error  mean_absolute_error  ideal_half_step  roundoff_tolerance  bound_violations  passed
+     V01         196608            0.0012183963         0.0005430663     0.0012210012        0.0000100000                 0    True
+     V02         196608            0.0024388584         0.0008957847     0.0024420024        0.0000100000                 0    True
+     V03         196608            0.0120856304         0.0068523976     0.0122100122        0.0000100000                 0    True
+     V04         196608            0.1199999973         0.0500258288     0.1221001221        0.0000100000                 0    True
+     V05         196608            0.0012183963         0.0005430663     0.0012210012        0.0000100000                 0    True
+     V06         188808            0.0012212545         0.0006125027     0.0012210012        0.0000100000                 0    True
+     V07         196608            0.0024418708         0.0011966613     0.0024420024        0.0000100000                 0    True
+     V08         188808            0.0012212545         0.0006125027     0.0012210012        0.0000100000                 0    True
+
+[ARCHIVED EVIDENCE]
+[SAVED] /content/adversarially-hardened-dynamic-sensing/results/module5/information_preservation_validation/controlled_metric_results.csv
+[SAVED] /content/adversarially-hardened-dynamic-sensing/results/module5/information_preservation_validation/validation_checks.csv
+[SAVED] /content/adversarially-hardened-dynamic-sensing/results/module5/information_preservation_validation/quantization_bound_verification.csv
+[SAVED] /content/adversarially-hardened-dynamic-sensing/results/module5/information_preservation_validation/validation_report.json
+
+======================================================================
+CONTROLLED METRIC VALIDATION SUMMARY
+======================================================================
+Scenario groups: 15
+Scenario evaluations: 16
+Scalar metric fields: 42
+Validation checks: 180
+Checks passed: 180
+Checks failed: 0
+Quantization-bound scenarios: 8 / 8
+Controller experiments executed: NONE
+
+CONTROLLED METRIC VALIDATION: PASSED
+
+[STDERR]
+
+[RETURN CODE] 0

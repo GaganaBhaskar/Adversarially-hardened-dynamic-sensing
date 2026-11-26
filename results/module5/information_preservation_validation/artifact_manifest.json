@@ -1,0 +1,37 @@
+{
+  "task": "M5-VAL-01A-03",
+  "parent_git_checkpoint": "837d98d0e42630c6736b472cea39833ff6a579a1",
+  "experiment_source": {
+    "path": "experiments/module5/validate_information_preservation.py",
+    "sha256": "9b651c68acf745b1be0a09f9bd1e10ae6dbdb4a64e09383d33c227260800dc7b",
+    "size_bytes": 23330
+  },
+  "metric_source": {
+    "path": "src/ahds/module7_evaluation/information_preservation.py",
+    "sha256": "c89ec27ac109a7552fd42675677c7ecf49e6c8809f14bd429568003ba87f5bfb"
+  },
+  "artifacts": {
+    "results/module5/information_preservation_validation/controlled_metric_results.csv": {
+      "sha256": "1bb1d8c185663c44f344235cd2d5e77c8de266391d5bbfeeeca22b0c54699dea",
+      "size_bytes": 8164
+    },
+    "results/module5/information_preservation_validation/controlled_validation_log.txt": {
+      "sha256": "c462abe6f05ea10eeb7792121ca3fe7b2e327e7cd3b85b84bd5048c359d65e9e",
+      "size_bytes": 13125
+    },
+    "results/module5/information_preservation_validation/quantization_bound_verification.csv": {
+      "sha256": "2548cf92fba2cd5096be87e0ce56a65e18e8c360aed6899b4fd713cb5715b578",
+      "size_bytes": 827
+    },
+    "results/module5/information_preservation_validation/validation_checks.csv": {
+      "sha256": "5220101a314d37004e0af1c36bc4b1567bda53d7a6125a65ddbb91f3da6f656a",
+      "size_bytes": 6335
+    },
+    "results/module5/information_preservation_validation/validation_report.json": {
+      "sha256": "775f0011b7c5caa9faf157a35891d72ff846c56906867db99a5f40641a83c397",
+      "size_bytes": 1377
+    }
+  },
+  "all_checks_passed": true,
+  "github_archival_complete": false
+}

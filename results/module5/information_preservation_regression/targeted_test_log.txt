@@ -1,0 +1,78 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-8.4.2, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /content/adversarially-hardened-dynamic-sensing
+plugins: platformdirs-4.14.3, anyio-4.16.0, typeguard-4.6.0, langsmith-0.14.17
+collecting ... collected 63 items
+
+tests/test_module7_information_preservation.py::test_invalid_epsilon[0.0] PASSED [  1%]
+tests/test_module7_information_preservation.py::test_invalid_epsilon[-1.0] PASSED [  3%]
+tests/test_module7_information_preservation.py::test_invalid_epsilon[nan] PASSED [  4%]
+tests/test_module7_information_preservation.py::test_invalid_epsilon[inf] PASSED [  6%]
+tests/test_module7_information_preservation.py::test_invalid_epsilon[-inf] PASSED [  7%]
+tests/test_module7_information_preservation.py::test_valid_custom_epsilon PASSED [  9%]
+tests/test_module7_information_preservation.py::test_identical_observations PASSED [ 11%]
+tests/test_module7_information_preservation.py::test_identity_ratios PASSED [ 12%]
+tests/test_module7_information_preservation.py::test_output_contract PASSED [ 14%]
+tests/test_module7_information_preservation.py::test_clean_exposure_reduction[5.0] PASSED [ 15%]
+tests/test_module7_information_preservation.py::test_clean_exposure_reduction[1.0] PASSED [ 17%]
+tests/test_module7_information_preservation.py::test_clean_exposure_reduction[0.1] PASSED [ 19%]
+tests/test_module7_information_preservation.py::test_gain_compensation_identity PASSED [ 20%]
+tests/test_module7_information_preservation.py::test_quantization_formula[10.0-1.0] PASSED [ 22%]
+tests/test_module7_information_preservation.py::test_quantization_formula[5.0-1.0] PASSED [ 23%]
+tests/test_module7_information_preservation.py::test_quantization_formula[1.0-1.0] PASSED [ 25%]
+tests/test_module7_information_preservation.py::test_quantization_formula[0.1-1.0] PASSED [ 26%]
+tests/test_module7_information_preservation.py::test_quantization_formula[5.0-2.0] PASSED [ 28%]
+tests/test_module7_information_preservation.py::test_full_saturation PASSED [ 30%]
+tests/test_module7_information_preservation.py::test_adc_clipping_without_full_well_saturation PASSED [ 31%]
+tests/test_module7_information_preservation.py::test_zero_signal_is_not_censored PASSED [ 33%]
+tests/test_module7_information_preservation.py::test_partial_censoring PASSED [ 34%]
+tests/test_module7_information_preservation.py::test_censoring_mask_union PASSED [ 36%]
+tests/test_module7_information_preservation.py::test_analytic_gradient PASSED [ 38%]
+tests/test_module7_information_preservation.py::test_analytic_radiance_error PASSED [ 39%]
+tests/test_module7_information_preservation.py::test_mae_triangle_inequality PASSED [ 41%]
+tests/test_module7_information_preservation.py::test_empty_region PASSED [ 42%]
+tests/test_module7_information_preservation.py::test_single_pixel_region PASSED [ 44%]
+tests/test_module7_information_preservation.py::test_disconnected_region_has_no_edges PASSED [ 46%]
+tests/test_module7_information_preservation.py::test_constant_reference PASSED [ 47%]
+tests/test_module7_information_preservation.py::test_region_shape_equivalence PASSED [ 49%]
+tests/test_module7_information_preservation.py::test_full_region_equivalence PASSED [ 50%]
+tests/test_module7_information_preservation.py::test_complementary_region_aggregation PASSED [ 52%]
+tests/test_module7_information_preservation.py::test_invalid_normalized_values[nan] PASSED [ 53%]
+tests/test_module7_information_preservation.py::test_invalid_normalized_values[inf] PASSED [ 55%]
+tests/test_module7_information_preservation.py::test_invalid_normalized_values[-0.1] PASSED [ 57%]
+tests/test_module7_information_preservation.py::test_invalid_normalized_values[1.1] PASSED [ 58%]
+tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape0] PASSED [ 60%]
+tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape1] PASSED [ 61%]
+tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape2] PASSED [ 63%]
+tests/test_module7_information_preservation.py::test_invalid_normalized_shape[shape3] PASSED [ 65%]
+tests/test_module7_information_preservation.py::test_nonfloating_normalized_output PASSED [ 66%]
+tests/test_module7_information_preservation.py::test_nontensor_normalized_output PASSED [ 68%]
+tests/test_module7_information_preservation.py::test_nonboolean_sensor_mask[saturated] PASSED [ 69%]
+tests/test_module7_information_preservation.py::test_nonboolean_sensor_mask[adc_clipped] PASSED [ 71%]
+tests/test_module7_information_preservation.py::test_invalid_sensor_mask_shape[saturated] PASSED [ 73%]
+tests/test_module7_information_preservation.py::test_invalid_sensor_mask_shape[adc_clipped] PASSED [ 74%]
+tests/test_module7_information_preservation.py::test_noninteger_adc PASSED [ 76%]
+tests/test_module7_information_preservation.py::test_adc_out_of_range[-1] PASSED [ 77%]
+tests/test_module7_information_preservation.py::test_adc_out_of_range[4096] PASSED [ 79%]
+tests/test_module7_information_preservation.py::test_adc_shape_mismatch PASSED [ 80%]
+tests/test_module7_information_preservation.py::test_adc_normalized_inconsistency PASSED [ 82%]
+tests/test_module7_information_preservation.py::test_invalid_region_shape[shape0] PASSED [ 84%]
+tests/test_module7_information_preservation.py::test_invalid_region_shape[shape1] PASSED [ 85%]
+tests/test_module7_information_preservation.py::test_invalid_region_shape[shape2] PASSED [ 87%]
+tests/test_module7_information_preservation.py::test_nonboolean_region PASSED [ 88%]
+tests/test_module7_information_preservation.py::test_nontensor_region PASSED [ 90%]
+tests/test_module7_information_preservation.py::test_invalid_optical_ground_truth[-0.1] PASSED [ 92%]
+tests/test_module7_information_preservation.py::test_invalid_optical_ground_truth[nan] PASSED [ 93%]
+tests/test_module7_information_preservation.py::test_invalid_optical_ground_truth[inf] PASSED [ 95%]
+tests/test_module7_information_preservation.py::test_ground_truth_shape_mismatch PASSED [ 96%]
+tests/test_module7_information_preservation.py::test_repeatable_metric_evaluation PASSED [ 98%]
+tests/test_module7_information_preservation.py::test_evaluation_does_not_modify_inputs PASSED [100%]
+
+- generated xml file: /content/adversarially-hardened-dynamic-sensing/results/module5/information_preservation_regression/targeted_test_results.xml -
+============================== 63 passed in 4.70s ==============================
+
+[STDERR]
+
+[RETURN CODE] 0
+[EXECUTION TIME] 9.204371 seconds

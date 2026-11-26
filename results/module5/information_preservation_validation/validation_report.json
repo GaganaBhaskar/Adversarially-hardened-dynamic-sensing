@@ -1,0 +1,49 @@
+{
+  "task": "M5-VAL-01A-03",
+  "scenario_groups": 15,
+  "scenario_evaluations": 16,
+  "scalar_metric_fields": 42,
+  "checks_executed": 180,
+  "checks_passed": 180,
+  "checks_failed": 0,
+  "quantization_bound_scenarios": 8,
+  "quantization_bound_checks_passed": 8,
+  "noise_enabled": false,
+  "scene_seed": 42,
+  "reference_config": {
+    "exposure_ms": 10.0,
+    "gain": 1.0,
+    "electrons_per_unit_ms": 100.0,
+    "full_well_electrons": 10000.0,
+    "read_noise_electrons": 3.0,
+    "adc_bits": 12
+  },
+  "attack_config": {
+    "attack_type": "laser",
+    "center_x": 0.5,
+    "center_y": 0.5,
+    "radius": 0.12,
+    "intensity": 15.0,
+    "pulse_frequency": 2.0,
+    "pulse_phase": 0.0
+  },
+  "analytic_config": {
+    "exposure_ms": 100.0,
+    "gain": 1.0,
+    "electrons_per_unit_ms": 100.0,
+    "full_well_electrons": 10000.0,
+    "read_noise_electrons": 3.0,
+    "adc_bits": 4
+  },
+  "metric_source_sha256": "c89ec27ac109a7552fd42675677c7ecf49e6c8809f14bd429568003ba87f5bfb",
+  "controller_executed": false,
+  "ground_truth_evaluation_only": true,
+  "all_checks_passed": true,
+  "limitations": [
+    "Deterministic noise-free validation.",
+    "One generated scene and one optical disturbance.",
+    "Analytic fixtures validate selected metric properties.",
+    "No comparative controller performance evaluated.",
+    "No downstream semantic perception evaluated."
+  ]
+}
