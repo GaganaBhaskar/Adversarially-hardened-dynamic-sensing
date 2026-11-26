@@ -1,0 +1,50 @@
+artifact,field,dtype,values_compared,values_matched,maximum_absolute_error,comparison_types,passed
+exposure_aware_observation/physical_reconstruction.csv,scenario,object,5,5,0.0,"{""categorical"": 5}",True
+exposure_aware_observation/physical_reconstruction.csv,exposure_ms,float64,5,5,0.0,"{""floating_point"": 5}",True
+exposure_aware_observation/physical_reconstruction.csv,gain,float64,5,5,0.0,"{""floating_point"": 5}",True
+exposure_aware_observation/physical_reconstruction.csv,valid_samples_pct,float64,5,5,0.0,"{""floating_point"": 5}",True
+exposure_aware_observation/physical_reconstruction.csv,clipped_samples_pct,float64,5,5,0.0,"{""floating_point"": 5}",True
+exposure_aware_observation/physical_reconstruction.csv,censored_samples_pct,float64,5,5,0.0,"{""floating_point"": 5}",True
+exposure_aware_observation/physical_reconstruction.csv,low_signal_pct,float64,5,5,0.0,"{""floating_point"": 5}",True
+exposure_aware_observation/physical_reconstruction.csv,mean_absolute_error,float64,5,5,0.0,"{""floating_point"": 5}",True
+exposure_aware_observation/physical_reconstruction.csv,maximum_absolute_error,float64,5,5,0.0,"{""floating_point"": 5}",True
+exposure_aware_observation/physical_reconstruction.csv,quantization_bound,float64,5,5,0.0,"{""floating_point"": 5}",True
+exposure_aware_observation/exposure_gain_invariance.csv,comparison,object,3,3,0.0,"{""categorical"": 3}",True
+exposure_aware_observation/exposure_gain_invariance.csv,common_valid_pct,float64,3,3,0.0,"{""floating_point"": 3}",True
+exposure_aware_observation/exposure_gain_invariance.csv,mean_difference,float64,3,3,0.0,"{""floating_point"": 3}",True
+exposure_aware_observation/exposure_gain_invariance.csv,maximum_difference,float64,3,3,0.0,"{""floating_point"": 3}",True
+exposure_aware_observation/exposure_gain_invariance.csv,combined_quantization_bound,float64,3,3,0.0,"{""floating_point"": 3}",True
+exposure_aware_observation/exposure_gain_invariance.csv,passed,bool,3,3,0.0,"{""boolean"": 3}",True
+disturbance_memory/disturbance_memory_validation.csv,scenario,object,12,12,0.0,"{""categorical"": 12}",True
+disturbance_memory/disturbance_memory_validation.csv,exposure_ms,float64,12,12,0.0,"{""floating_point"": 12}",True
+disturbance_memory/disturbance_memory_validation.csv,gain,float64,12,12,0.0,"{""floating_point"": 12}",True
+disturbance_memory/disturbance_memory_validation.csv,expected_status,object,12,12,0.0,"{""categorical"": 12}",True
+disturbance_memory/disturbance_memory_validation.csv,observed_status,object,12,12,0.0,"{""categorical"": 12}",True
+disturbance_memory/disturbance_memory_validation.csv,global_scale,float64,12,12,0.0,"{""missing"": 3, ""floating_point"": 9}",True
+disturbance_memory/disturbance_memory_validation.csv,common_valid_pct,float64,12,12,0.0,"{""floating_point"": 12}",True
+disturbance_memory/disturbance_memory_validation.csv,changed_samples_pct,float64,12,12,0.0,"{""missing"": 3, ""floating_point"": 9}",True
+disturbance_memory/disturbance_memory_validation.csv,mean_positive_residual,float64,12,12,0.0,"{""missing"": 3, ""floating_point"": 9}",True
+disturbance_memory/disturbance_memory_validation.csv,censored_samples_pct,float64,12,12,0.0,"{""floating_point"": 12}",True
+disturbance_memory/disturbance_memory_validation.csv,reason,object,12,12,0.0,"{""categorical"": 12}",True
+disturbance_memory/disturbance_memory_validation.csv,passed,bool,12,12,0.0,"{""boolean"": 12}",True
+dadrc_smoke_test/closed_loop_timeline.csv,frame,int64,60,60,0.0,"{""integer"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,attack_active,int64,60,60,0.0,"{""integer"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,exposure_ms,float64,60,60,0.0,"{""floating_point"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,next_exposure_ms,float64,60,60,0.0,"{""floating_point"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,action,object,60,60,0.0,"{""categorical"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,controller_state,object,60,60,0.0,"{""categorical"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,tracker_state,object,60,60,0.0,"{""categorical"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,evidence_status,object,60,60,0.0,"{""categorical"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,evidence_reason,object,60,60,0.0,"{""categorical"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,saturation_ratio,float64,60,60,0.0,"{""floating_point"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,adc_clip_ratio,float64,60,60,0.0,"{""floating_point"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,physical_clipping_fraction,float64,60,60,0.0,"{""floating_point"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,censored_fraction,float64,60,60,0.0,"{""floating_point"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,spatial_saturation_fraction,float64,60,60,0.0,"{""floating_point"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,optical_changed_fraction,float64,60,60,0.0,"{""floating_point"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,common_valid_fraction,float64,60,60,0.0,"{""floating_point"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,protection_active,bool,60,60,0.0,"{""boolean"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,reference_exposure,float64,60,60,0.0,"{""missing"": 34, ""floating_point"": 26}",True
+dadrc_smoke_test/closed_loop_timeline.csv,probe_pending,bool,60,60,0.0,"{""boolean"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,clear_frames,int64,60,60,0.0,"{""integer"": 60}",True
+dadrc_smoke_test/closed_loop_timeline.csv,cooldown_remaining,int64,60,60,0.0,"{""integer"": 60}",True

@@ -1,0 +1,11 @@
+{
+  "task": "M5-DEF-02C-02C-03",
+  "original_manifest_entries": 4,
+  "reproduced_manifest_entries": 4,
+  "manifest_entries_verified": 4,
+  "original_manifest_sha256": "63d1aab60569b4b13fe7ab73aeec77049ecd7b4f52ac7383179781aff79cd590",
+  "reproduced_manifest_sha256": "fb1b0e69a7fed0ee7259bffb26b143e35e4eeaa8c79c5621f9f691947a7eec18",
+  "normalized_manifest_equivalence": true,
+  "difference_explanation": "Intentional reproduction output path redirection",
+  "all_manifest_entries_valid": true
+}

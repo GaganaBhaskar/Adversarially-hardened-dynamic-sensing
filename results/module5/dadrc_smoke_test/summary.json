@@ -1,0 +1,16 @@
+{
+  "total_frames": 60,
+  "attack_frames": 20,
+  "mean_attack_saturation": 0.001983642578125,
+  "minimum_exposure_ms": 5.0,
+  "final_applied_exposure_ms": 10.0,
+  "final_commanded_exposure_ms": 10.0,
+  "persistent_unsaturated_frames": 19,
+  "persistent_unsaturated_present_frames": 19,
+  "protect_actions": 1,
+  "probe_actions": 5,
+  "failed_probe_actions": 0,
+  "recovery_actions": 3,
+  "restoration_frame": 36,
+  "restoration_delay_frames": 6
+}

@@ -1,0 +1,112 @@
+======================================================================
+AHDS — M5-DEF-02A-04B
+DADRC Initial Closed-Loop Smoke Test
+======================================================================
+
+Trusted optical reference: INITIALIZED
+
+[CLOSED-LOOP TIMELINE]
+    frame  attack_active  exposure_ms  next_exposure_ms           action controller_state tracker_state evidence_status  saturation_ratio  optical_changed_fraction
+0       0              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+1       1              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+2       2              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+3       3              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+4       4              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+5       5              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+6       6              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+7       7              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+8       8              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+9       9              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+10     10              1    10.000000          5.000000          PROTECT          PROTECT        ACTIVE         PRESENT          0.039673                  0.353129
+11     11              1     5.000000          5.000000  HOLD_PROTECTION  HOLD_PROTECTION      RECOVERY         PRESENT          0.000000                  0.385946
+12     12              1     5.000000          5.000000  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.385946
+13     13              1     5.000000          5.000000  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.385946
+14     14              1     5.000000          5.250000            PROBE            PROBE        NORMAL         PRESENT          0.000000                  0.385946
+15     15              1     5.250000          5.250000  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.385869
+16     16              1     5.250000          5.250000  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.385869
+17     17              1     5.250000          5.250000  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.385869
+18     18              1     5.250000          5.512500            PROBE            PROBE        NORMAL         PRESENT          0.000000                  0.385869
+19     19              1     5.512500          5.512500  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.386078
+20     20              1     5.512500          5.512500  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.386078
+21     21              1     5.512500          5.512500  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.386078
+22     22              1     5.512500          5.788125            PROBE            PROBE        NORMAL         PRESENT          0.000000                  0.386078
+23     23              1     5.788125          5.788125  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.385854
+24     24              1     5.788125          5.788125  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.385854
+25     25              1     5.788125          5.788125  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.385854
+26     26              1     5.788125          6.077531            PROBE            PROBE        NORMAL         PRESENT          0.000000                  0.385854
+27     27              1     6.077531          6.077531  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.386317
+28     28              1     6.077531          6.077531  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.386317
+29     29              1     6.077531          6.077531  HOLD_PROTECTION  HOLD_PROTECTION        NORMAL         PRESENT          0.000000                  0.386317
+30     30              0     6.077531          6.077531    CONFIRM_CLEAR  HOLD_PROTECTION     TRANSIENT           CLEAR          0.000000                  0.000000
+31     31              0     6.077531          6.077531    CONFIRM_CLEAR  HOLD_PROTECTION        NORMAL           CLEAR          0.000000                  0.000000
+32     32              0     6.077531          6.685284            PROBE            PROBE        NORMAL           CLEAR          0.000000                  0.000000
+33     33              0     6.685284          8.022341          RECOVER          RECOVER        NORMAL           CLEAR          0.000000                  0.000000
+34     34              0     8.022341          9.626810          RECOVER          RECOVER        NORMAL           CLEAR          0.000000                  0.000000
+35     35              0     9.626810         10.000000          RECOVER          RECOVER        NORMAL           CLEAR          0.000000                  0.000000
+36     36              0    10.000000         10.000000         RESTORED           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+37     37              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+38     38              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+39     39              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+40     40              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+41     41              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+42     42              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+43     43              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+44     44              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+45     45              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+46     46              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+47     47              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+48     48              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+49     49              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+50     50              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+51     51              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+52     52              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+53     53              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+54     54              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+55     55              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+56     56              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+57     57              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+58     58              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+59     59              0    10.000000         10.000000             HOLD           NORMAL        NORMAL           CLEAR          0.000000                  0.000000
+
+[PRELIMINARY CONTROLLER METRICS]
+total_frames: 60
+attack_frames: 20
+mean_attack_saturation: 0.001983642578125
+minimum_exposure_ms: 5.0
+final_applied_exposure_ms: 10.0
+final_commanded_exposure_ms: 10.0
+persistent_unsaturated_frames: 19
+persistent_unsaturated_present_frames: 19
+protect_actions: 1
+probe_actions: 5
+failed_probe_actions: 0
+recovery_actions: 3
+restoration_frame: 36
+restoration_delay_frames: 6
+
+[SMOKE TEST CHECKS]
+[PASS] all_sixty_frames_completed
+[PASS] exposure_commands_within_bounds
+[PASS] one_frame_command_delay
+[PASS] clean_startup_exposure_preserved
+[PASS] unsafe_observation_encountered
+[PASS] unsafe_observations_never_increase_exposure
+[PASS] protective_action_observed
+[PASS] persistent_unsaturated_evidence_observed
+[PASS] unknown_evidence_never_increases_exposure
+[PASS] recovery_does_not_exceed_reference
+[PASS] optical_reference_preserved
+[PASS] optical_reference_mask_preserved
+[PASS] restoration_observed
+[PASS] final_exposure_restored
+[PASS] final_protection_inactive
+
+======================================================================
+DADRC SMOKE TEST SUMMARY
+======================================================================
+Validation checks: 15/15
+Restoration frame: 36
+Results directory: /content/adversarially-hardened-dynamic-sensing/results/module5/dadrc_reproduction/dadrc_smoke_test
+
+M5-DEF-02A-04B: PASSED
+

@@ -1,0 +1,18 @@
+{
+  "original_dimensions": [
+    2321,
+    2123
+  ],
+  "reproduced_dimensions": [
+    2321,
+    2123
+  ],
+  "original_format": "PNG",
+  "reproduced_format": "PNG",
+  "original_mode": "RGBA",
+  "reproduced_mode": "RGBA",
+  "byte_identical": true,
+  "pixels_identical": true,
+  "different_pixel_count": 0,
+  "structure_passed": true
+}

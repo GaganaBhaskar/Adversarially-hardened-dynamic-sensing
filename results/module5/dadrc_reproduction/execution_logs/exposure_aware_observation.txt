@@ -1,0 +1,65 @@
+======================================================================
+AHDS — M5-DEF-02A-02B
+Exposure-Aware Physical Observation Validation
+======================================================================
+
+[PHYSICAL RECONSTRUCTION RESULTS]
+         scenario  exposure_ms  gain  valid_samples_pct  clipped_samples_pct  censored_samples_pct  low_signal_pct  mean_absolute_error  maximum_absolute_error  quantization_bound
+0      clean_10ms         10.0   1.0         100.000000             0.000000              0.000000             0.0             0.000543                0.001218            0.001221
+1       clean_5ms          5.0   1.0         100.000000             0.000000              0.000000             0.0             0.000896                0.002439            0.002442
+2     clean_gain2         10.0   2.0         100.000000             0.000000              0.000000             0.0             0.000338                0.000608            0.000611
+3  disturbed_10ms         10.0   1.0          96.032715             3.967285              3.967285             0.0             0.000612                0.001222            0.001221
+4   disturbed_5ms          5.0   1.0         100.000000             0.000000              0.000000             0.0             0.001197                0.002442            0.002442
+
+[EXPOSURE AND GAIN INVARIANCE]
+                        comparison  common_valid_pct  mean_difference  maximum_difference  combined_quantization_bound  passed
+0          clean_10ms vs clean_5ms        100.000000         0.000695            0.002442                     0.003663    True
+1        clean_10ms vs clean_gain2        100.000000         0.000550            0.001221                     0.001832    True
+2  disturbed_10ms vs disturbed_5ms         96.032715         0.001168            0.002442                     0.003663    True
+
+[RECOVERED OPTICAL OBSERVATIONS]
+Previously censored samples now observable: 7800
+Censored samples at 10 ms: 7800
+Censored samples at 5 ms: 0
+
+[VALIDATION CHECKS]
+[PASS] five_scenarios_completed
+[PASS] clean_exposure_invariance
+[PASS] clean_gain_invariance
+[PASS] disturbed_exposure_invariance
+[PASS] all_errors_within_quantization_bounds
+[PASS] clipped_samples_excluded
+[PASS] censored_samples_excluded
+[PASS] low_signal_samples_excluded
+[PASS] invalid_samples_zero_filled
+[PASS] lower_exposure_reduces_censoring
+[PASS] previously_censored_samples_recovered
+[PASS] shorter_exposure_increases_uncertainty
+[PASS] finite_reconstructions
+
+======================================================================
+PHYSICAL OBSERVATION VALIDATION SUMMARY
+======================================================================
+Validation checks: 13/13
+Exposure invariance: VERIFIED
+Gain invariance: VERIFIED
+Clipping exclusion: VERIFIED
+Quantization bounds: VERIFIED
+Previously clipped observations recovered: VERIFIED
+
+M5-DEF-02A-02B: PASSED
+======================================================================
+PHYSICAL OBSERVATION RESULTS ARCHIVAL
+======================================================================
+[SAVED] artifact_manifest.json
+[SAVED] exposure_gain_invariance.csv
+[SAVED] physical_reconstruction.csv
+[SAVED] validation_report.json
+
+Source implementation: VERIFIED
+Validation checks: 13/13
+Artifact manifest entries: 4
+Results directory: /content/adversarially-hardened-dynamic-sensing/results/module5/dadrc_reproduction/exposure_aware_observation
+
+M5-DEF-02A-03A: PASSED
+

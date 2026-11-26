@@ -1,0 +1,18 @@
+{
+  "src/ahds/module5_defense/exposure_aware_observation.py": {
+    "size_bytes": 8280,
+    "sha256": "76a6f871b48191a2ad8a3b299a2ba58768eed350e4ec4db34a1a69f8442f3438"
+  },
+  "results/module5/exposure_aware_observation/physical_reconstruction.csv": {
+    "size_bytes": 709,
+    "sha256": "fd0cc110dc77a4536c9676af607d1232123746d0904bb1af49123b887795fd5c"
+  },
+  "results/module5/exposure_aware_observation/exposure_gain_invariance.csv": {
+    "size_bytes": 418,
+    "sha256": "a67068891a3e3dab41602641723eff0e715c7af6a22241a13a115f0d7efb1f91"
+  },
+  "results/module5/exposure_aware_observation/validation_report.json": {
+    "size_bytes": 1487,
+    "sha256": "270f418cc367bd324fdf6c864b559a67a4386c1c6bf29603d15d9fc1683b15ac"
+  }
+}

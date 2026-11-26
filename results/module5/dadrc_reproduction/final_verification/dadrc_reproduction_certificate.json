@@ -1,0 +1,76 @@
+{
+  "project": "Adversarially-Hardened Dynamic Sensing",
+  "module": "Module 5 \u2014 Defensive Reconfiguration Controller",
+  "controller": "Disturbance-Aware Defensive Reconfiguration Controller",
+  "task": "M5-DEF-02C-02C-03",
+  "timestamp_utc": "2026-11-26T12:41:27.540677+00:00",
+  "parent_git_checkpoint": "59b4ffb28c7c392d20d31836314ac6dae0985941",
+  "source_preservation": {
+    "original_notebook_cells": 4,
+    "original_source_lines": 1769,
+    "standalone_scripts": 3,
+    "conversion_diffs": 3,
+    "original_sources_unchanged": true
+  },
+  "independent_execution": {
+    "experiments_passed": 3,
+    "experiments_expected": 3,
+    "generated_artifacts": 10,
+    "independent_python_processes": true
+  },
+  "numerical_equivalence": {
+    "absolute_tolerance": 1e-08,
+    "relative_tolerance": 1e-06,
+    "csv_values_compared": 1472,
+    "csv_values_matched": 1472,
+    "json_values_compared": 166,
+    "json_values_matched": 166,
+    "total_scientific_values_compared": 1638,
+    "total_scientific_values_matched": 1638,
+    "maximum_absolute_error": 0.0,
+    "scientific_mismatches": 0,
+    "csv_field_checks_passed": 49,
+    "all_scientific_values_matched": true
+  },
+  "artifact_equivalence": {
+    "equivalent_artifacts": 10,
+    "expected_artifacts": 10,
+    "byte_identical_artifacts": 9,
+    "manifest_entries_verified": 4,
+    "manifest_semantic_equivalence": true,
+    "figure_pixels_identical": true,
+    "figure_byte_identical": true
+  },
+  "integrity": {
+    "protected_files_verified": 30,
+    "historical_experimental_artifacts_unchanged": true,
+    "controller_and_test_sources_unchanged": true,
+    "previous_git_checkpoint_unchanged": true
+  },
+  "environment": {
+    "timestamp_utc": "2026-11-26T12:25:18.825415+00:00",
+    "python_version": "3.13.18 (main, Oct 26 2026, 15:28:15) [GCC 13.3.0]",
+    "python_executable": "/usr/bin/python3",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "packages": {
+      "torch": "2.14.1+cpu",
+      "numpy": "2.4.6",
+      "pandas": "2.2.3",
+      "matplotlib": "3.10.0",
+      "pytest": "8.4.2"
+    },
+    "git_checkpoint": "59b4ffb28c7c392d20d31836314ac6dae0985941",
+    "execution_mode": "Independent Python subprocess per experiment"
+  },
+  "limitations": [
+    "Reproduction performed in the current software environment.",
+    "Cross-platform reproducibility has not been established.",
+    "Experiments use controlled simulated optical scenarios.",
+    "Closed-loop smoke test uses a single deterministic disturbance.",
+    "Reproduction does not establish comparative superiority.",
+    "Hardware performance and downstream perception remain unverified."
+  ],
+  "reproduction_phase_complete": true,
+  "github_archival_complete": false
+}

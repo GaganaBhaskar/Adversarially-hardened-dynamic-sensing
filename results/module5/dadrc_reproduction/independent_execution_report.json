@@ -1,0 +1,157 @@
+{
+  "task": "M5-DEF-02C-02C-01",
+  "conversion_audit": {
+    "validate_exposure_aware_observation.py": {
+      "source_hash_verified": true,
+      "conversion_diff_verified": true,
+      "permitted_transformations_only": true,
+      "syntax_valid": true,
+      "output_redirection_verified": true
+    },
+    "validate_disturbance_memory.py": {
+      "source_hash_verified": true,
+      "conversion_diff_verified": true,
+      "permitted_transformations_only": true,
+      "syntax_valid": true,
+      "output_redirection_verified": true
+    },
+    "validate_dadrc_closed_loop.py": {
+      "source_hash_verified": true,
+      "conversion_diff_verified": true,
+      "permitted_transformations_only": true,
+      "syntax_valid": true,
+      "output_redirection_verified": true
+    }
+  },
+  "experiment_execution": {
+    "exposure_aware_observation": {
+      "script": "experiments/module5/validate_exposure_aware_observation.py",
+      "script_sha256": "b0a88096c5ee75ee424a68d9dcc3f04467547d94d3d4e82423b69523bf7b408a",
+      "return_code": 0,
+      "timed_out": false,
+      "execution_time_seconds": 4.63381817500067,
+      "success_markers": {
+        "M5-DEF-02A-02B: PASSED": true,
+        "M5-DEF-02A-03A: PASSED": true
+      },
+      "generated_artifacts": {
+        "artifact_manifest.json": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 789,
+          "sha256": "fb1b0e69a7fed0ee7259bffb26b143e35e4eeaa8c79c5621f9f691947a7eec18"
+        },
+        "exposure_gain_invariance.csv": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 418,
+          "sha256": "a67068891a3e3dab41602641723eff0e715c7af6a22241a13a115f0d7efb1f91"
+        },
+        "physical_reconstruction.csv": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 709,
+          "sha256": "fd0cc110dc77a4536c9676af607d1232123746d0904bb1af49123b887795fd5c"
+        },
+        "validation_report.json": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 1487,
+          "sha256": "270f418cc367bd324fdf6c864b559a67a4386c1c6bf29603d15d9fc1683b15ac"
+        }
+      },
+      "exact_artifact_set": true,
+      "unexpected_artifacts": [],
+      "missing_artifacts": [],
+      "historical_integrity": true,
+      "controller_integrity": true,
+      "execution_log": "results/module5/dadrc_reproduction/execution_logs/exposure_aware_observation.txt",
+      "execution_passed": true
+    },
+    "disturbance_memory": {
+      "script": "experiments/module5/validate_disturbance_memory.py",
+      "script_sha256": "c9dcb54810b26e71026db1bd93472dd95b8d6fbc9ca2cd82e16e8115c9b2e6db",
+      "return_code": 0,
+      "timed_out": false,
+      "execution_time_seconds": 5.283890509999765,
+      "success_markers": {
+        "M5-DEF-02A-03C: PASSED": true
+      },
+      "generated_artifacts": {
+        "disturbance_memory_validation.csv": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 1556,
+          "sha256": "73ebeb198597c02d9bc47d0ef357c37fc6937b51913d99d3f22c994b7e606e53"
+        },
+        "validation_report.json": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 1562,
+          "sha256": "9c51d8b7cba401b016c93ef478048dbe4466f7f57ad8297ff529b9a6aef27b3d"
+        }
+      },
+      "exact_artifact_set": true,
+      "unexpected_artifacts": [],
+      "missing_artifacts": [],
+      "historical_integrity": true,
+      "controller_integrity": true,
+      "execution_log": "results/module5/dadrc_reproduction/execution_logs/disturbance_memory.txt",
+      "execution_passed": true
+    },
+    "dadrc_smoke_test": {
+      "script": "experiments/module5/validate_dadrc_closed_loop.py",
+      "script_sha256": "aca26a1c130f1b833071defc39f82df69835925ab8fb0eab81c851e5b17659f6",
+      "return_code": 0,
+      "timed_out": false,
+      "execution_time_seconds": 12.004209937999804,
+      "success_markers": {
+        "M5-DEF-02A-04B: PASSED": true
+      },
+      "generated_artifacts": {
+        "closed_loop_timeline.csv": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 8121,
+          "sha256": "a77b513462910eb709e491f4a73af3166baca381ab744e56ae4e2b78516db23a"
+        },
+        "summary.json": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 446,
+          "sha256": "99fc2bf8ba58a6d7319cabe06c1b710922d83c32e146fd46be789bc66767f69a"
+        },
+        "validation_report.json": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 2417,
+          "sha256": "7c2a78c89c5a7dda5463dd234a3e7c671cf2624e1ac1061f10c851ce5c240c8e"
+        },
+        "figures/dadrc_closed_loop_timeline.png": {
+          "exists": true,
+          "nonempty": true,
+          "size_bytes": 178484,
+          "sha256": "3ab61b4fa0572fbed8d2bb8cd535b66ae717c998f0190c0721ce9cf468760e45"
+        }
+      },
+      "exact_artifact_set": true,
+      "unexpected_artifacts": [],
+      "missing_artifacts": [],
+      "historical_integrity": true,
+      "controller_integrity": true,
+      "execution_log": "results/module5/dadrc_reproduction/execution_logs/dadrc_smoke_test.txt",
+      "execution_passed": true
+    }
+  },
+  "expected_experiments": 3,
+  "executed_experiments": 3,
+  "passed_experiments": 3,
+  "expected_generated_artifacts": 10,
+  "generated_artifacts": 10,
+  "original_artifacts_unchanged": true,
+  "original_notebook_sources_unchanged": true,
+  "controller_sources_unchanged": true,
+  "previous_checkpoint_unchanged": true,
+  "numerical_equivalence_verified": false,
+  "all_experiments_passed": true
+}

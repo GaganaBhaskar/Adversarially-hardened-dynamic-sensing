@@ -1,0 +1,340 @@
+{
+  "task": "M5-DEF-02C-03",
+  "project": "Adversarially-Hardened Dynamic Sensing",
+  "module": "Module 5 \u2014 Defensive Reconfiguration Controller",
+  "parent_git_checkpoint": "59b4ffb28c7c392d20d31836314ac6dae0985941",
+  "timestamp_utc": "2026-11-26T12:43:02.929765+00:00",
+  "categories": {
+    "implementation_and_tests": 4,
+    "original_experimental_evidence": 16,
+    "original_notebook_sources": 4,
+    "source_extraction_report": 1,
+    "standalone_experiments": 3,
+    "conversion_diffs": 3,
+    "conversion_report": 1,
+    "reproduction_evidence": 27,
+    "research_documentation": 3
+  },
+  "manifested_files": 62,
+  "planned_commit_files_including_manifest": 63,
+  "manifest_excludes_itself": true,
+  "files": {
+    "src/ahds/module5_defense/disturbance_aware_defense.py": {
+      "category": "implementation_and_tests",
+      "size_bytes": 16163,
+      "sha256": "c5f8d2203502dc8cc2175396c5335d4ced3dcaca04d7c08b8d8d99dcd0e2fd2b"
+    },
+    "src/ahds/module5_defense/disturbance_memory.py": {
+      "category": "implementation_and_tests",
+      "size_bytes": 8778,
+      "sha256": "f186d3386600f919ed2aafb158f91fce9633dcde21020de5e3765629b78953fa"
+    },
+    "src/ahds/module5_defense/exposure_aware_observation.py": {
+      "category": "implementation_and_tests",
+      "size_bytes": 8280,
+      "sha256": "76a6f871b48191a2ad8a3b299a2ba58768eed350e4ec4db34a1a69f8442f3438"
+    },
+    "tests/test_module5_dadrc.py": {
+      "category": "implementation_and_tests",
+      "size_bytes": 16786,
+      "sha256": "b91943cba69d1197ae935cb9214746cdbf192362949ec0d27fe8b1d3283f42e8"
+    },
+    "results/module5/dadrc_smoke_test/closed_loop_timeline.csv": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 8121,
+      "sha256": "a77b513462910eb709e491f4a73af3166baca381ab744e56ae4e2b78516db23a"
+    },
+    "results/module5/dadrc_smoke_test/figures/dadrc_closed_loop_timeline.png": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 178484,
+      "sha256": "3ab61b4fa0572fbed8d2bb8cd535b66ae717c998f0190c0721ce9cf468760e45"
+    },
+    "results/module5/dadrc_smoke_test/summary.json": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 446,
+      "sha256": "99fc2bf8ba58a6d7319cabe06c1b710922d83c32e146fd46be789bc66767f69a"
+    },
+    "results/module5/dadrc_smoke_test/validation_report.json": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 2417,
+      "sha256": "7c2a78c89c5a7dda5463dd234a3e7c671cf2624e1ac1061f10c851ce5c240c8e"
+    },
+    "results/module5/dadrc_validation/complete_regression_log.txt": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 9900,
+      "sha256": "58d3ff7b68da6f0cec0afd2d4fcb134e2a81144eed418c809c5a7e1ac1b4089f"
+    },
+    "results/module5/dadrc_validation/complete_regression_report.json": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 1229,
+      "sha256": "499e916baa459f3f8593f7bc7d17545eeb45e169ea5d270e7e4d50d90cd5dd11"
+    },
+    "results/module5/dadrc_validation/targeted_test_log.txt": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 4347,
+      "sha256": "8164732addf022b3b10baa4555bde4c294fc8c3eeaaeea296ba2b37a4d81552e"
+    },
+    "results/module5/dadrc_validation/targeted_test_report.json": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 737,
+      "sha256": "b2412244514634bce6d22f3a57fa1574997b7d0392baecff0bc3fcb166520762"
+    },
+    "results/module5/dadrc_validation/test_collection_log.txt": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 3185,
+      "sha256": "eaf17c500d0ba7d0052df82fb9499d1b84478c5add4922cc371091e1e31c57f7"
+    },
+    "results/module5/dadrc_validation/test_collection_report.json": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 370,
+      "sha256": "ebed14b8f53311a6e75951eec0652f9110bfe5c5511bd7dc79381017dab18507"
+    },
+    "results/module5/disturbance_memory/disturbance_memory_validation.csv": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 1556,
+      "sha256": "73ebeb198597c02d9bc47d0ef357c37fc6937b51913d99d3f22c994b7e606e53"
+    },
+    "results/module5/disturbance_memory/validation_report.json": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 1562,
+      "sha256": "9c51d8b7cba401b016c93ef478048dbe4466f7f57ad8297ff529b9a6aef27b3d"
+    },
+    "results/module5/exposure_aware_observation/artifact_manifest.json": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 732,
+      "sha256": "63d1aab60569b4b13fe7ab73aeec77049ecd7b4f52ac7383179781aff79cd590"
+    },
+    "results/module5/exposure_aware_observation/exposure_gain_invariance.csv": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 418,
+      "sha256": "a67068891a3e3dab41602641723eff0e715c7af6a22241a13a115f0d7efb1f91"
+    },
+    "results/module5/exposure_aware_observation/physical_reconstruction.csv": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 709,
+      "sha256": "fd0cc110dc77a4536c9676af607d1232123746d0904bb1af49123b887795fd5c"
+    },
+    "results/module5/exposure_aware_observation/validation_report.json": {
+      "category": "original_experimental_evidence",
+      "size_bytes": 1487,
+      "sha256": "270f418cc367bd324fdf6c864b559a67a4386c1c6bf29603d15d9fc1683b15ac"
+    },
+    "experiments/module5/original_notebook_cells/dadrc_closed_loop_smoke_test.py": {
+      "category": "original_notebook_sources",
+      "size_bytes": 15772,
+      "sha256": "5ea6ed364c3140cc483b420dd3908834f5d56ec82c013b5532fb37fca6245005"
+    },
+    "experiments/module5/original_notebook_cells/disturbance_memory_validation.py": {
+      "category": "original_notebook_sources",
+      "size_bytes": 9017,
+      "sha256": "42091983f4de9aef8e9cd1aa2fce367112cae9636cb6ff487da9d9a75f716329"
+    },
+    "experiments/module5/original_notebook_cells/exposure_aware_observation_archival.py": {
+      "category": "original_notebook_sources",
+      "size_bytes": 2560,
+      "sha256": "2b9a184237c877f6262e52b6a6cb2ca9a46b8a74f06fd51a7e479832d98f008d"
+    },
+    "experiments/module5/original_notebook_cells/exposure_aware_observation_validation.py": {
+      "category": "original_notebook_sources",
+      "size_bytes": 9167,
+      "sha256": "f939451250d5462c646897a1c2c3e77701560944c9e64799c3059e7ae1d2b94b"
+    },
+    "experiments/module5/original_notebook_cells/source_extraction_report.json": {
+      "category": "source_extraction_report",
+      "size_bytes": 17734,
+      "sha256": "28b29b3fd8fd90e6563edad52d03bb1dc46386d7fc75c3db7e6784481dddd707"
+    },
+    "experiments/module5/validate_dadrc_closed_loop.py": {
+      "category": "standalone_experiments",
+      "size_bytes": 16332,
+      "sha256": "aca26a1c130f1b833071defc39f82df69835925ab8fb0eab81c851e5b17659f6"
+    },
+    "experiments/module5/validate_disturbance_memory.py": {
+      "category": "standalone_experiments",
+      "size_bytes": 9531,
+      "sha256": "c9dcb54810b26e71026db1bd93472dd95b8d6fbc9ca2cd82e16e8115c9b2e6db"
+    },
+    "experiments/module5/validate_exposure_aware_observation.py": {
+      "category": "standalone_experiments",
+      "size_bytes": 12233,
+      "sha256": "b0a88096c5ee75ee424a68d9dcc3f04467547d94d3d4e82423b69523bf7b408a"
+    },
+    "experiments/module5/conversion_diffs/validate_dadrc_closed_loop.diff": {
+      "category": "conversion_diffs",
+      "size_bytes": 1526,
+      "sha256": "ebcb864874a59ac1ebb41c628d1b8fa198c7b9b38c2cbadd9bbf14f3c60e7e27"
+    },
+    "experiments/module5/conversion_diffs/validate_disturbance_memory.diff": {
+      "category": "conversion_diffs",
+      "size_bytes": 1287,
+      "sha256": "381b5d3b4f1fc69f49d4e39a02bec1df706ea6d33a880bb5f427b6b9ce3b028b"
+    },
+    "experiments/module5/conversion_diffs/validate_exposure_aware_observation.diff": {
+      "category": "conversion_diffs",
+      "size_bytes": 1391,
+      "sha256": "91814de0b28b88aed3b2eed6e3fab146555c3214d4796c84a04c34881e193ee6"
+    },
+    "experiments/module5/standalone_conversion_report.json": {
+      "category": "conversion_report",
+      "size_bytes": 4136,
+      "sha256": "9a13a08c1ac0575e4d92391a688e4c1695939b99e3693ffa13f91fabb293fb1e"
+    },
+    "results/module5/dadrc_reproduction/dadrc_smoke_test/closed_loop_timeline.csv": {
+      "category": "reproduction_evidence",
+      "size_bytes": 8121,
+      "sha256": "a77b513462910eb709e491f4a73af3166baca381ab744e56ae4e2b78516db23a"
+    },
+    "results/module5/dadrc_reproduction/dadrc_smoke_test/figures/dadrc_closed_loop_timeline.png": {
+      "category": "reproduction_evidence",
+      "size_bytes": 178484,
+      "sha256": "3ab61b4fa0572fbed8d2bb8cd535b66ae717c998f0190c0721ce9cf468760e45"
+    },
+    "results/module5/dadrc_reproduction/dadrc_smoke_test/summary.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 446,
+      "sha256": "99fc2bf8ba58a6d7319cabe06c1b710922d83c32e146fd46be789bc66767f69a"
+    },
+    "results/module5/dadrc_reproduction/dadrc_smoke_test/validation_report.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 2417,
+      "sha256": "7c2a78c89c5a7dda5463dd234a3e7c671cf2624e1ac1061f10c851ce5c240c8e"
+    },
+    "results/module5/dadrc_reproduction/disturbance_memory/disturbance_memory_validation.csv": {
+      "category": "reproduction_evidence",
+      "size_bytes": 1556,
+      "sha256": "73ebeb198597c02d9bc47d0ef357c37fc6937b51913d99d3f22c994b7e606e53"
+    },
+    "results/module5/dadrc_reproduction/disturbance_memory/validation_report.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 1562,
+      "sha256": "9c51d8b7cba401b016c93ef478048dbe4466f7f57ad8297ff529b9a6aef27b3d"
+    },
+    "results/module5/dadrc_reproduction/execution_logs/dadrc_smoke_test.txt": {
+      "category": "reproduction_evidence",
+      "size_bytes": 11632,
+      "sha256": "71c377519c7d5913b6051ca3931c640de7a3719e48c5e8c24a84451a806454ac"
+    },
+    "results/module5/dadrc_reproduction/execution_logs/disturbance_memory.txt": {
+      "category": "reproduction_evidence",
+      "size_bytes": 3941,
+      "sha256": "252fafc3edf9cdb11808e0edde6b6adfebf701b3f7e9d2361dd37ed05f44515c"
+    },
+    "results/module5/dadrc_reproduction/execution_logs/exposure_aware_observation.txt": {
+      "category": "reproduction_evidence",
+      "size_bytes": 3459,
+      "sha256": "b046aaec8293711b07bf986cb88b7cbbfeb317db33cd1119bc0ad3fe6d839df5"
+    },
+    "results/module5/dadrc_reproduction/exposure_aware_observation/artifact_manifest.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 789,
+      "sha256": "fb1b0e69a7fed0ee7259bffb26b143e35e4eeaa8c79c5621f9f691947a7eec18"
+    },
+    "results/module5/dadrc_reproduction/exposure_aware_observation/exposure_gain_invariance.csv": {
+      "category": "reproduction_evidence",
+      "size_bytes": 418,
+      "sha256": "a67068891a3e3dab41602641723eff0e715c7af6a22241a13a115f0d7efb1f91"
+    },
+    "results/module5/dadrc_reproduction/exposure_aware_observation/physical_reconstruction.csv": {
+      "category": "reproduction_evidence",
+      "size_bytes": 709,
+      "sha256": "fd0cc110dc77a4536c9676af607d1232123746d0904bb1af49123b887795fd5c"
+    },
+    "results/module5/dadrc_reproduction/exposure_aware_observation/validation_report.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 1487,
+      "sha256": "270f418cc367bd324fdf6c864b559a67a4386c1c6bf29603d15d9fc1683b15ac"
+    },
+    "results/module5/dadrc_reproduction/final_verification/dadrc_reproduction_certificate.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 2751,
+      "sha256": "126f5d0cbd2b65760d5b0d035cc0f12c3ff66b3966bd43292030df7856fcf745"
+    },
+    "results/module5/dadrc_reproduction/final_verification/experimental_artifact_equivalence.csv": {
+      "category": "reproduction_evidence",
+      "size_bytes": 3691,
+      "sha256": "b306aa2dbe46de6cefbf6e44d8adddfb6224c0ecbdfe165123e0983ddd85ef69"
+    },
+    "results/module5/dadrc_reproduction/final_verification/manifest_entry_verification.csv": {
+      "category": "reproduction_evidence",
+      "size_bytes": 1559,
+      "sha256": "8a9b748b82cb96b77a4e6d9f2efba51c832d6bb1f474cabaae34f41fee1af74e"
+    },
+    "results/module5/dadrc_reproduction/final_verification/manifest_semantic_verification.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 496,
+      "sha256": "029dfe2a76243555a3007727dc2a82607849a403beb400a2e24f9d18e98ea087"
+    },
+    "results/module5/dadrc_reproduction/final_verification/reproduction_evidence_manifest.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 5166,
+      "sha256": "063e6a700828efb90400b17158d37bf1af21f2a5093e78247c7ce97b53040531"
+    },
+    "results/module5/dadrc_reproduction/independent_execution_report.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 5617,
+      "sha256": "0872fda2ec5c90229968a645434396c1e4c0420aa58fb3fa31c2723cfcadcf5e"
+    },
+    "results/module5/dadrc_reproduction/numerical_verification/artifact_comparison.csv": {
+      "category": "reproduction_evidence",
+      "size_bytes": 774,
+      "sha256": "0aa9469eee3a7c032a7f9e666e1b4a256fdd6d0bdb9b4dae850fed2d88d24d73"
+    },
+    "results/module5/dadrc_reproduction/numerical_verification/csv_field_comparison.csv": {
+      "category": "reproduction_evidence",
+      "size_bytes": 5627,
+      "sha256": "a8f25fefc3fab932432d0d106a135e47f976e6ddb3381abfbdecec0cc804bfdc"
+    },
+    "results/module5/dadrc_reproduction/numerical_verification/figure_verification.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 332,
+      "sha256": "269a131eafba58fa92179cd63475a43bdd9a5e5c8dbe338f711d83a70cdf299e"
+    },
+    "results/module5/dadrc_reproduction/numerical_verification/manifest_inspection.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 1984,
+      "sha256": "48098cd052446563c2fe488c7a57bacff53c3c4d1cbf584f1c33e31b0dca6386"
+    },
+    "results/module5/dadrc_reproduction/numerical_verification/metadata_differences.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "results/module5/dadrc_reproduction/numerical_verification/numerical_equivalence_report.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 3234,
+      "sha256": "28783797ac82948bb467669a0055b5cb1fa62a230efd5a5f1bbe13614b803967"
+    },
+    "results/module5/dadrc_reproduction/numerical_verification/scientific_mismatches.csv": {
+      "category": "reproduction_evidence",
+      "size_bytes": 45,
+      "sha256": "def5e789ec17443e32de3e180081f8910bda2f9f35fbbba65092df3856226a39"
+    },
+    "results/module5/dadrc_reproduction/reproduction_environment.json": {
+      "category": "reproduction_evidence",
+      "size_bytes": 526,
+      "sha256": "1edbf74972d5389089ae1376cabbb629db3a1659b44957a6a723edc6dc27cfc5"
+    },
+    "docs/module5/dadrc_design.md": {
+      "category": "research_documentation",
+      "size_bytes": 3907,
+      "sha256": "15043c8791c51db6032f44771826b6f7447740fa04439d8b6dfea29345c24303"
+    },
+    "docs/module5/dadrc_reproducibility.md": {
+      "category": "research_documentation",
+      "size_bytes": 3722,
+      "sha256": "0061f10b9774bda46184ee7dfff4df8f3ba5bdc307027d61df3b65ba6935c718"
+    },
+    "docs/module5/dadrc_validation_report.md": {
+      "category": "research_documentation",
+      "size_bytes": 3979,
+      "sha256": "db44139e5f9563114f6c5b8e5167b6f7f9eb951310955e2f8b4c34ad44eb1d25"
+    }
+  },
+  "targeted_tests_passed": 47,
+  "regression_tests_passed": 116,
+  "scientific_values_matched": 1638,
+  "scientific_mismatches": 0,
+  "reproduction_phase_complete": true,
+  "documentation_complete": true,
+  "git_archival_complete": false
+}

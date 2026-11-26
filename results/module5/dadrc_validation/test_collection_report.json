@@ -1,0 +1,12 @@
+{
+  "task": "M5-DEF-02B-02-R01B",
+  "test_file": "tests/test_module5_dadrc.py",
+  "source_lines": 858,
+  "test_functions": 27,
+  "collected_tests": 47,
+  "previous_regression_tests": 69,
+  "expected_complete_regression": 116,
+  "source_sha256": "b91943cba69d1197ae935cb9214746cdbf192362949ec0d27fe8b1d3283f42e8",
+  "syntax_valid": true,
+  "collection_successful": true
+}

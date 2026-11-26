@@ -1,0 +1,43 @@
+======================================================================
+AHDS — M5-DEF-02A-03C
+Persistent Disturbance Evidence Validation
+======================================================================
+
+[DISTURBANCE MEMORY RESULTS]
+                      scenario  exposure_ms  gain expected_status observed_status  global_scale  common_valid_pct  changed_samples_pct  mean_positive_residual  censored_samples_pct                        reason  passed
+0                uninitialized         10.0   1.0         UNKNOWN         UNKNOWN           NaN          0.000000                  NaN                     NaN              0.000000         reference_unavailable    True
+1              clean_reference         10.0   1.0           CLEAR           CLEAR      1.000000        100.000000             0.000000                0.000000              0.000000      residual_below_threshold    True
+2       clean_reduced_exposure          5.0   1.0           CLEAR           CLEAR      1.000000        100.000000             0.000000                0.000368              0.000000      residual_below_threshold    True
+3         clean_increased_gain         10.0   2.0           CLEAR           CLEAR      1.000000        100.000000             0.000000                0.000356              0.000000      residual_below_threshold    True
+4          uniform_brightening         10.0   1.0           CLEAR           CLEAR      1.300752        100.000000             0.000000                0.000427              0.000000      residual_below_threshold    True
+5              uniform_dimming         10.0   1.0           CLEAR           CLEAR      0.700935        100.000000             0.000000                0.000180              0.000000      residual_below_threshold    True
+6             disturbance_10ms         10.0   1.0         PRESENT         PRESENT      1.116541         96.032715            35.312906                0.873426              3.967285     positive_optical_residual    True
+7   persistent_disturbance_5ms          5.0   1.0         PRESENT         PRESENT      1.145299        100.000000            38.594565                1.312284              0.000000     positive_optical_residual    True
+8     repeated_disturbance_5ms          5.0   1.0         PRESENT         PRESENT      1.145299        100.000000            38.594565                1.312284              0.000000     positive_optical_residual    True
+9      disturbance_removed_5ms          5.0   1.0           CLEAR           CLEAR      1.000000        100.000000             0.000000                0.000368              0.000000      residual_below_threshold    True
+10        extremely_low_signal          0.1   1.0         UNKNOWN         UNKNOWN           NaN          0.451660                  NaN                     NaN              0.000000  insufficient_common_coverage    True
+11       after_reference_reset         10.0   1.0         UNKNOWN         UNKNOWN           NaN          0.000000                  NaN                     NaN              0.000000         reference_unavailable    True
+
+[VALIDATION CHECKS]
+[PASS] all_twelve_scenarios_completed
+[PASS] all_expected_statuses_matched
+[PASS] reference_preserved
+[PASS] reference_mask_preserved
+[PASS] duplicate_initialization_rejected
+[PASS] disturbance_detected_before_reconfiguration
+[PASS] disturbance_detected_after_reconfiguration
+[PASS] censoring_removed_after_reconfiguration
+[PASS] reference_reset_successful
+
+======================================================================
+DISTURBANCE MEMORY VALIDATION SUMMARY
+======================================================================
+Scenarios passed: 12/12
+Validation checks: 9/9
+Disturbance evidence at 10 ms: PRESENT
+Disturbance evidence at 5 ms: PRESENT
+Censored samples at 5 ms: 0.0
+Results saved: /content/adversarially-hardened-dynamic-sensing/results/module5/dadrc_reproduction/disturbance_memory
+
+M5-DEF-02A-03C: PASSED
+

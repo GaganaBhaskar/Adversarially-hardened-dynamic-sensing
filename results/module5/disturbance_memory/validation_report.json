@@ -1,0 +1,57 @@
+{
+  "task": "M5-DEF-02A-03C",
+  "scenarios": 12,
+  "passed_scenarios": 12,
+  "checks": {
+    "all_twelve_scenarios_completed": true,
+    "all_expected_statuses_matched": true,
+    "reference_preserved": true,
+    "reference_mask_preserved": true,
+    "duplicate_initialization_rejected": true,
+    "disturbance_detected_before_reconfiguration": true,
+    "disturbance_detected_after_reconfiguration": true,
+    "censoring_removed_after_reconfiguration": true,
+    "reference_reset_successful": true
+  },
+  "all_checks_passed": true,
+  "memory_config": {
+    "absolute_threshold": 0.05,
+    "relative_threshold": 0.2,
+    "minimum_changed_fraction": 0.005,
+    "minimum_common_fraction": 0.5,
+    "minimum_reference_intensity": 0.02,
+    "minimum_global_scale": 0.1,
+    "maximum_global_scale": 10.0,
+    "maximum_censored_fraction": 0.005
+  },
+  "estimator_config": {
+    "min_adc_counts": 4
+  },
+  "sensor_config": {
+    "exposure_ms": 10.0,
+    "gain": 1.0,
+    "electrons_per_unit_ms": 100.0,
+    "full_well_electrons": 10000.0,
+    "read_noise_electrons": 3.0,
+    "adc_bits": 12
+  },
+  "attack_config": {
+    "attack_type": "laser",
+    "center_x": 0.5,
+    "center_y": 0.5,
+    "radius": 0.12,
+    "intensity": 15.0,
+    "pulse_frequency": 2.0,
+    "pulse_phase": 0.0
+  },
+  "noise_enabled": false,
+  "random_seed": 42,
+  "reference_policy": "frozen_trusted_startup",
+  "limitations": [
+    "Static scene.",
+    "Trusted clean startup reference.",
+    "Noise-free observations.",
+    "Single localized laser disturbance.",
+    "Heuristic thresholds."
+  ]
+}

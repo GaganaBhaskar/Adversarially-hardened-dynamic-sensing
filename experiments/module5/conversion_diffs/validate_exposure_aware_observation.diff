@@ -1,0 +1,51 @@
+--- original_notebook_source
++++ validate_exposure_aware_observation.py
+@@ -1,3 +1,13 @@
++# AHDS standalone reproduction experiment
++# Generated during M5-DEF-02C-02B-03
++# Original tasks: M5-DEF-02A-02B, M5-DEF-02A-03A
++# Original source cells are preserved in original_notebook_cells/.
++# Historical output directories must not be used.
++# Portability adaptations are documented in standalone_conversion_report.json.
++
++if __name__ != '__main__':
++    raise RuntimeError('Execute this experiment as a script.')
++
+ 
+ # ============================================================
+ # AHDS — M5-DEF-02A-02B
+@@ -11,11 +21,14 @@
+ import os
+ import torch
+ import pandas as pd
+-from IPython.display import display
+-
+-ROOT = Path(
+-    "/content/adversarially-hardened-dynamic-sensing"
+-)
++def display(*objects):
++    for obj in objects:
++        if hasattr(obj, 'to_string'):
++            print(obj.to_string())
++        else:
++            print(obj)
++
++ROOT = Path(__file__).resolve().parents[2]
+ 
+ os.chdir(ROOT)
+ 
+@@ -440,11 +453,9 @@
+ import json
+ import hashlib
+ 
+-ROOT = Path(
+-    "/content/adversarially-hardened-dynamic-sensing"
+-)
+-
+-OUT = ROOT / "results/module5/exposure_aware_observation"
++ROOT = Path(__file__).resolve().parents[2]
++
++OUT = ROOT / "results/module5/dadrc_reproduction/exposure_aware_observation"
+ OUT.mkdir(parents=True, exist_ok=True)
+ 
+ assert len(checks) == 13

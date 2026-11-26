@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-11-26T12:25:18.825415+00:00",
+  "python_version": "3.13.18 (main, Oct 26 2026, 15:28:15) [GCC 13.3.0]",
+  "python_executable": "/usr/bin/python3",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.0",
+    "pytest": "8.4.2"
+  },
+  "git_checkpoint": "59b4ffb28c7c392d20d31836314ac6dae0985941",
+  "execution_mode": "Independent Python subprocess per experiment"
+}

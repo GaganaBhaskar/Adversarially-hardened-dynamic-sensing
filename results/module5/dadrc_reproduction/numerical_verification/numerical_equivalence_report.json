@@ -1,0 +1,86 @@
+{
+  "task": "M5-DEF-02C-02C-02",
+  "absolute_tolerance": 1e-08,
+  "relative_tolerance": 1e-06,
+  "csv_artifacts_passed": 4,
+  "csv_artifacts_expected": 4,
+  "csv_values_compared": 1472,
+  "csv_values_matched": 1472,
+  "json_artifacts_passed": 4,
+  "json_artifacts_expected": 4,
+  "json_values_compared": 166,
+  "json_values_matched": 166,
+  "csv_field_checks": 49,
+  "csv_field_checks_passed": 49,
+  "scientific_mismatch_count": 0,
+  "normalized_path_metadata_count": 0,
+  "manifest_inspection": {
+    "original_manifest_type": "dict",
+    "reproduced_manifest_type": "dict",
+    "original_entry_count": 4,
+    "reproduced_entry_count": 4,
+    "original_sha256": "63d1aab60569b4b13fe7ab73aeec77049ecd7b4f52ac7383179781aff79cd590",
+    "reproduced_sha256": "fb1b0e69a7fed0ee7259bffb26b143e35e4eeaa8c79c5621f9f691947a7eec18",
+    "byte_identical": false,
+    "original_manifest": {
+      "src/ahds/module5_defense/exposure_aware_observation.py": {
+        "size_bytes": 8280,
+        "sha256": "76a6f871b48191a2ad8a3b299a2ba58768eed350e4ec4db34a1a69f8442f3438"
+      },
+      "results/module5/exposure_aware_observation/physical_reconstruction.csv": {
+        "size_bytes": 709,
+        "sha256": "fd0cc110dc77a4536c9676af607d1232123746d0904bb1af49123b887795fd5c"
+      },
+      "results/module5/exposure_aware_observation/exposure_gain_invariance.csv": {
+        "size_bytes": 418,
+        "sha256": "a67068891a3e3dab41602641723eff0e715c7af6a22241a13a115f0d7efb1f91"
+      },
+      "results/module5/exposure_aware_observation/validation_report.json": {
+        "size_bytes": 1487,
+        "sha256": "270f418cc367bd324fdf6c864b559a67a4386c1c6bf29603d15d9fc1683b15ac"
+      }
+    },
+    "reproduced_manifest": {
+      "src/ahds/module5_defense/exposure_aware_observation.py": {
+        "size_bytes": 8280,
+        "sha256": "76a6f871b48191a2ad8a3b299a2ba58768eed350e4ec4db34a1a69f8442f3438"
+      },
+      "results/module5/dadrc_reproduction/exposure_aware_observation/physical_reconstruction.csv": {
+        "size_bytes": 709,
+        "sha256": "fd0cc110dc77a4536c9676af607d1232123746d0904bb1af49123b887795fd5c"
+      },
+      "results/module5/dadrc_reproduction/exposure_aware_observation/exposure_gain_invariance.csv": {
+        "size_bytes": 418,
+        "sha256": "a67068891a3e3dab41602641723eff0e715c7af6a22241a13a115f0d7efb1f91"
+      },
+      "results/module5/dadrc_reproduction/exposure_aware_observation/validation_report.json": {
+        "size_bytes": 1487,
+        "sha256": "270f418cc367bd324fdf6c864b559a67a4386c1c6bf29603d15d9fc1683b15ac"
+      }
+    }
+  },
+  "manifest_semantic_integrity_verified": false,
+  "figure_verification": {
+    "original_dimensions": [
+      2321,
+      2123
+    ],
+    "reproduced_dimensions": [
+      2321,
+      2123
+    ],
+    "original_format": "PNG",
+    "reproduced_format": "PNG",
+    "original_mode": "RGBA",
+    "reproduced_mode": "RGBA",
+    "byte_identical": true,
+    "pixels_identical": true,
+    "different_pixel_count": 0,
+    "structure_passed": true
+  },
+  "historical_artifacts_unchanged": true,
+  "reproduced_artifacts_unchanged": true,
+  "scientific_equivalence_verified": true,
+  "numerical_and_figure_checks_passed": true,
+  "final_archival_verification_complete": false
+}

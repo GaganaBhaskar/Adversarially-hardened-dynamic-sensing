@@ -1,0 +1,58 @@
+--- original_notebook_source
++++ validate_dadrc_closed_loop.py
+@@ -1,3 +1,13 @@
++# AHDS standalone reproduction experiment
++# Generated during M5-DEF-02C-02B-03
++# Original tasks: M5-DEF-02A-04B
++# Original source cells are preserved in original_notebook_cells/.
++# Historical output directories must not be used.
++# Portability adaptations are documented in standalone_conversion_report.json.
++
++if __name__ != '__main__':
++    raise RuntimeError('Execute this experiment as a script.')
++
+ 
+ # ============================================================
+ # AHDS — M5-DEF-02A-04B
+@@ -14,13 +24,18 @@
+ import torch
+ import numpy as np
+ import pandas as pd
++import matplotlib
++matplotlib.use("Agg")
+ import matplotlib.pyplot as plt
+ 
+-from IPython.display import display
+-
+-ROOT = Path(
+-    "/content/adversarially-hardened-dynamic-sensing"
+-)
++def display(*objects):
++    for obj in objects:
++        if hasattr(obj, 'to_string'):
++            print(obj.to_string())
++        else:
++            print(obj)
++
++ROOT = Path(__file__).resolve().parents[2]
+ 
+ os.chdir(ROOT)
+ 
+@@ -573,7 +588,7 @@
+ # 6. Archive numerical results and configuration
+ # ------------------------------------------------------------
+ 
+-OUT = ROOT / "results/module5/dadrc_smoke_test"
++OUT = ROOT / "results/module5/dadrc_reproduction/dadrc_smoke_test"
+ 
+ FIG = OUT / "figures"
+ 
+@@ -762,7 +777,7 @@
+     bbox_inches="tight"
+ )
+ 
+-plt.show()
++plt.close('all')
+ 
+ # ------------------------------------------------------------
+ # 8. Final verification

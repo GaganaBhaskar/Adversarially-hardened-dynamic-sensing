@@ -1,0 +1,57 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-8.4.2, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /content/adversarially-hardened-dynamic-sensing
+plugins: platformdirs-4.14.3, anyio-4.16.0, typeguard-4.6.0, langsmith-0.14.17
+collecting ... collected 47 items
+
+tests/test_module5_dadrc.py::test_invalid_configuration[changes0] PASSED [  2%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes1] PASSED [  4%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes2] PASSED [  6%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes3] PASSED [  8%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes4] PASSED [ 10%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes5] PASSED [ 12%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes6] PASSED [ 14%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes7] PASSED [ 17%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes8] PASSED [ 19%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes9] PASSED [ 21%]
+tests/test_module5_dadrc.py::test_invalid_configuration[changes10] PASSED [ 23%]
+tests/test_module5_dadrc.py::test_normal_monitoring[CLEAR-HOLD] PASSED   [ 25%]
+tests/test_module5_dadrc.py::test_normal_monitoring[PRESENT-MONITOR_DISTURBANCE] PASSED [ 27%]
+tests/test_module5_dadrc.py::test_normal_monitoring[UNKNOWN-MONITOR_UNKNOWN] PASSED [ 29%]
+tests/test_module5_dadrc.py::test_each_unsafe_signal_triggers_protection[signals0] PASSED [ 31%]
+tests/test_module5_dadrc.py::test_each_unsafe_signal_triggers_protection[signals1] PASSED [ 34%]
+tests/test_module5_dadrc.py::test_each_unsafe_signal_triggers_protection[signals2] PASSED [ 36%]
+tests/test_module5_dadrc.py::test_repeated_protection_preserves_reference PASSED [ 38%]
+tests/test_module5_dadrc.py::test_minimum_exposure_bound PASSED          [ 40%]
+tests/test_module5_dadrc.py::test_persistent_disturbance_holds_exposure PASSED [ 42%]
+tests/test_module5_dadrc.py::test_persistent_probe_timing PASSED         [ 44%]
+tests/test_module5_dadrc.py::test_successful_persistent_probe PASSED     [ 46%]
+tests/test_module5_dadrc.py::test_unsafe_probe_failure PASSED            [ 48%]
+tests/test_module5_dadrc.py::test_unknown_probe_rolls_back PASSED        [ 51%]
+tests/test_module5_dadrc.py::test_failed_probe_cooldown PASSED           [ 53%]
+tests/test_module5_dadrc.py::test_unsafe_observation_overrides_cooldown PASSED [ 55%]
+tests/test_module5_dadrc.py::test_unknown_evidence_holds_protection PASSED [ 57%]
+tests/test_module5_dadrc.py::test_active_tracker_blocks_clear_recovery PASSED [ 59%]
+tests/test_module5_dadrc.py::test_interrupted_clear_confirmation[PRESENT] PASSED [ 61%]
+tests/test_module5_dadrc.py::test_interrupted_clear_confirmation[UNKNOWN] PASSED [ 63%]
+tests/test_module5_dadrc.py::test_clear_confirmation_and_probe PASSED    [ 65%]
+tests/test_module5_dadrc.py::test_successful_clear_probe_enables_recovery PASSED [ 68%]
+tests/test_module5_dadrc.py::test_disturbance_returns_during_recovery PASSED [ 70%]
+tests/test_module5_dadrc.py::test_restoration_requires_observed_reference PASSED [ 72%]
+tests/test_module5_dadrc.py::test_invalid_current_exposure[0.01] PASSED  [ 74%]
+tests/test_module5_dadrc.py::test_invalid_current_exposure[31.0] PASSED  [ 76%]
+tests/test_module5_dadrc.py::test_invalid_current_exposure[nan] PASSED   [ 78%]
+tests/test_module5_dadrc.py::test_invalid_current_exposure[inf] PASSED   [ 80%]
+tests/test_module5_dadrc.py::test_invalid_spatial_saturation[-0.1] PASSED [ 82%]
+tests/test_module5_dadrc.py::test_invalid_spatial_saturation[1.1] PASSED [ 85%]
+tests/test_module5_dadrc.py::test_invalid_spatial_saturation[nan] PASSED [ 87%]
+tests/test_module5_dadrc.py::test_invalid_tracker_state PASSED           [ 89%]
+tests/test_module5_dadrc.py::test_command_mismatch_rejected PASSED       [ 91%]
+tests/test_module5_dadrc.py::test_real_sensor_reference_preservation PASSED [ 93%]
+tests/test_module5_dadrc.py::test_duplicate_reference_rejected PASSED    [ 95%]
+tests/test_module5_dadrc.py::test_unsafe_startup_reference_rejected PASSED [ 97%]
+tests/test_module5_dadrc.py::test_controller_reset PASSED                [100%]
+
+============================== 47 passed in 2.93s ==============================
+

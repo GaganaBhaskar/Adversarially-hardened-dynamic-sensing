@@ -1,0 +1,85 @@
+{
+  "task": "M5-DEF-02A-04B",
+  "checks": {
+    "all_sixty_frames_completed": true,
+    "exposure_commands_within_bounds": true,
+    "one_frame_command_delay": true,
+    "clean_startup_exposure_preserved": true,
+    "unsafe_observation_encountered": true,
+    "unsafe_observations_never_increase_exposure": true,
+    "protective_action_observed": true,
+    "persistent_unsaturated_evidence_observed": true,
+    "unknown_evidence_never_increases_exposure": true,
+    "recovery_does_not_exceed_reference": true,
+    "optical_reference_preserved": true,
+    "optical_reference_mask_preserved": true,
+    "restoration_observed": true,
+    "final_exposure_restored": true,
+    "final_protection_inactive": true
+  },
+  "passed_checks": 15,
+  "total_checks": 15,
+  "all_checks_passed": true,
+  "controller_config": {
+    "min_exposure_ms": 0.1,
+    "max_exposure_ms": 30.0,
+    "saturation_trigger": 0.005,
+    "reduction_factor": 0.5,
+    "persistent_probe_factor": 1.05,
+    "clear_probe_factor": 1.1,
+    "recovery_factor": 1.2,
+    "persistent_probe_interval": 4,
+    "clear_confirmation_frames": 3,
+    "failed_probe_cooldown": 8
+  },
+  "observation_config": {
+    "min_adc_counts": 4
+  },
+  "memory_config": {
+    "absolute_threshold": 0.05,
+    "relative_threshold": 0.2,
+    "minimum_changed_fraction": 0.005,
+    "minimum_common_fraction": 0.5,
+    "minimum_reference_intensity": 0.02,
+    "minimum_global_scale": 0.1,
+    "maximum_global_scale": 10.0,
+    "maximum_censored_fraction": 0.005
+  },
+  "sensor_config": {
+    "exposure_ms": 10.0,
+    "gain": 1.0,
+    "electrons_per_unit_ms": 100.0,
+    "full_well_electrons": 10000.0,
+    "read_noise_electrons": 3.0,
+    "adc_bits": 12
+  },
+  "attack_config": {
+    "attack_type": "laser",
+    "center_x": 0.5,
+    "center_y": 0.5,
+    "radius": 0.12,
+    "intensity": 15.0,
+    "pulse_frequency": 2.0,
+    "pulse_phase": 0.0
+  },
+  "total_frames": 60,
+  "attack_start_frame": 10,
+  "attack_end_frame_exclusive": 30,
+  "random_seed": 42,
+  "noise_enabled": false,
+  "image_size": [
+    256,
+    256
+  ],
+  "command_delay_frames": 1,
+  "reference_policy": "frozen_trusted_startup",
+  "limitations": [
+    "Initial functional smoke test.",
+    "Static scene and fixed gain.",
+    "Noise-free simulation.",
+    "Single disturbance configuration.",
+    "No baseline superiority claim.",
+    "No Module 3 arbitration yet.",
+    "No downstream perception evaluation."
+  ]
+}

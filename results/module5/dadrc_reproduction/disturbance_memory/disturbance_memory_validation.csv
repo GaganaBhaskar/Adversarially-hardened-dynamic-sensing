@@ -1,0 +1,13 @@
+scenario,exposure_ms,gain,expected_status,observed_status,global_scale,common_valid_pct,changed_samples_pct,mean_positive_residual,censored_samples_pct,reason,passed
+uninitialized,10.0,1.0,UNKNOWN,UNKNOWN,,0.0,,,0.0,reference_unavailable,True
+clean_reference,10.0,1.0,CLEAR,CLEAR,1.0,100.0,0.0,0.0,0.0,residual_below_threshold,True
+clean_reduced_exposure,5.0,1.0,CLEAR,CLEAR,1.0,100.0,0.0,0.0003677510831039399,0.0,residual_below_threshold,True
+clean_increased_gain,10.0,2.0,CLEAR,CLEAR,1.0,100.0,0.0,0.0003562185447663069,0.0,residual_below_threshold,True
+uniform_brightening,10.0,1.0,CLEAR,CLEAR,1.300751805305481,100.0,0.0,0.0004270716162864119,0.0,residual_below_threshold,True
+uniform_dimming,10.0,1.0,CLEAR,CLEAR,0.7009345293045044,100.0,0.0,0.00018049585924018174,0.0,residual_below_threshold,True
+disturbance_10ms,10.0,1.0,PRESENT,PRESENT,1.1165413856506348,96.03271484375,35.31290590763092,0.8734263777732849,3.96728515625,positive_optical_residual,True
+persistent_disturbance_5ms,5.0,1.0,PRESENT,PRESENT,1.1452990770339966,100.0,38.59456479549408,1.3122841119766235,0.0,positive_optical_residual,True
+repeated_disturbance_5ms,5.0,1.0,PRESENT,PRESENT,1.1452990770339966,100.0,38.59456479549408,1.3122841119766235,0.0,positive_optical_residual,True
+disturbance_removed_5ms,5.0,1.0,CLEAR,CLEAR,1.0,100.0,0.0,0.0003677510831039399,0.0,residual_below_threshold,True
+extremely_low_signal,0.1,1.0,UNKNOWN,UNKNOWN,,0.45166015625,,,0.0,insufficient_common_coverage,True
+after_reference_reset,10.0,1.0,UNKNOWN,UNKNOWN,,0.0,,,0.0,reference_unavailable,True

@@ -1,0 +1,56 @@
+{
+  "task": "M5-DEF-02A-02B",
+  "validation_checks": 13,
+  "passed_checks": 13,
+  "checks": {
+    "five_scenarios_completed": true,
+    "clean_exposure_invariance": true,
+    "clean_gain_invariance": true,
+    "disturbed_exposure_invariance": true,
+    "all_errors_within_quantization_bounds": true,
+    "clipped_samples_excluded": true,
+    "censored_samples_excluded": true,
+    "low_signal_samples_excluded": true,
+    "invalid_samples_zero_filled": true,
+    "lower_exposure_reduces_censoring": true,
+    "previously_censored_samples_recovered": true,
+    "shorter_exposure_increases_uncertainty": true,
+    "finite_reconstructions": true
+  },
+  "recovered_rgb_samples": 7800,
+  "censored_samples_10ms": 7800,
+  "censored_samples_5ms": 0,
+  "noise_enabled": false,
+  "random_seed": 42,
+  "image_size": [
+    256,
+    256
+  ],
+  "sensor_config": {
+    "exposure_ms": 10.0,
+    "gain": 1.0,
+    "electrons_per_unit_ms": 100.0,
+    "full_well_electrons": 10000.0,
+    "read_noise_electrons": 3.0,
+    "adc_bits": 12
+  },
+  "attack_config": {
+    "attack_type": "laser",
+    "center_x": 0.5,
+    "center_y": 0.5,
+    "radius": 0.12,
+    "intensity": 15.0,
+    "pulse_frequency": 2.0,
+    "pulse_phase": 0.0
+  },
+  "estimator_config": {
+    "min_adc_counts": 4
+  },
+  "numerical_tolerance": 1e-05,
+  "limitations": [
+    "Deterministic noise-free validation.",
+    "Simplified linear RGB sensor model.",
+    "No hardware calibration.",
+    "No disturbance detection validation yet."
+  ]
+}

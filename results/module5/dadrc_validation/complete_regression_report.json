@@ -1,0 +1,45 @@
+{
+  "task": "M5-DEF-02B-03-R01",
+  "timestamp_utc": "2026-11-26T12:15:37.595106+00:00",
+  "parent_git_checkpoint": "59b4ffb28c7c392d20d31836314ac6dae0985941",
+  "test_source_sha256": "b91943cba69d1197ae935cb9214746cdbf192362949ec0d27fe8b1d3283f42e8",
+  "previous_regression_tests": 69,
+  "new_dadrc_tests": 47,
+  "expected_total": 116,
+  "passed": 116,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "xfailed": 0,
+  "xpassed": 0,
+  "deselected": 0,
+  "return_code": 0,
+  "test_file_results": {
+    "test_module1.py": 4,
+    "test_module1_2.py": 5,
+    "test_module2.py": 10,
+    "test_module3.py": 10,
+    "test_module3_roi.py": 6,
+    "test_module4.py": 10,
+    "test_module5.py": 24,
+    "test_module5_dadrc.py": 47
+  },
+  "module_results": {
+    "module1_environment": 9,
+    "module2_sensor": 10,
+    "module3_dynamic_sensing": 16,
+    "module4_anomaly_detection": 10,
+    "module5_baseline_defense": 24,
+    "module5_dadrc": 47
+  },
+  "expected_module_results": {
+    "module1_environment": 9,
+    "module2_sensor": 10,
+    "module3_dynamic_sensing": 16,
+    "module4_anomaly_detection": 10,
+    "module5_baseline_defense": 24,
+    "module5_dadrc": 47
+  },
+  "module_distribution_passed": true,
+  "all_tests_passed": true
+}

@@ -1,0 +1,96 @@
+{
+  "task": "M5-DEF-02C-02B-03",
+  "parent_git_checkpoint": "59b4ffb28c7c392d20d31836314ac6dae0985941",
+  "standalone_scripts": {
+    "experiments/module5/validate_exposure_aware_observation.py": {
+      "original_source_files": [
+        "exposure_aware_observation_validation.py",
+        "exposure_aware_observation_archival.py"
+      ],
+      "original_tasks": [
+        "M5-DEF-02A-02B",
+        "M5-DEF-02A-03A"
+      ],
+      "original_source_sha256": "71b04b13918ace4b701be0d3e65bcf9c3171987cc6b6fb39ef2ec3cc94e9e072",
+      "standalone_sha256": "b0a88096c5ee75ee424a68d9dcc3f04467547d94d3d4e82423b69523bf7b408a",
+      "source_lines": 549,
+      "portability_modifications": {
+        "repository_root_replacements": 2,
+        "output_path_replacements": 1,
+        "ipython_display_replacements": 1,
+        "noninteractive_backend_changes": 0,
+        "interactive_show_replacements": 0
+      },
+      "original_output_directory": "results/module5/exposure_aware_observation",
+      "reproduction_output_directory": "results/module5/dadrc_reproduction/exposure_aware_observation",
+      "conversion_diff": "experiments/module5/conversion_diffs/validate_exposure_aware_observation.diff",
+      "conversion_diff_sha256": "91814de0b28b88aed3b2eed6e3fab146555c3214d4796c84a04c34881e193ee6",
+      "syntax_valid": true,
+      "runtime_verified": false
+    },
+    "experiments/module5/validate_disturbance_memory.py": {
+      "original_source_files": [
+        "disturbance_memory_validation.py"
+      ],
+      "original_tasks": [
+        "M5-DEF-02A-03C"
+      ],
+      "original_source_sha256": "42091983f4de9aef8e9cd1aa2fce367112cae9636cb6ff487da9d9a75f716329",
+      "standalone_sha256": "c9dcb54810b26e71026db1bd93472dd95b8d6fbc9ca2cd82e16e8115c9b2e6db",
+      "source_lines": 456,
+      "portability_modifications": {
+        "repository_root_replacements": 1,
+        "output_path_replacements": 1,
+        "ipython_display_replacements": 1,
+        "noninteractive_backend_changes": 0,
+        "interactive_show_replacements": 0
+      },
+      "original_output_directory": "results/module5/disturbance_memory",
+      "reproduction_output_directory": "results/module5/dadrc_reproduction/disturbance_memory",
+      "conversion_diff": "experiments/module5/conversion_diffs/validate_disturbance_memory.diff",
+      "conversion_diff_sha256": "381b5d3b4f1fc69f49d4e39a02bec1df706ea6d33a880bb5f427b6b9ce3b028b",
+      "syntax_valid": true,
+      "runtime_verified": false
+    },
+    "experiments/module5/validate_dadrc_closed_loop.py": {
+      "original_source_files": [
+        "dadrc_closed_loop_smoke_test.py"
+      ],
+      "original_tasks": [
+        "M5-DEF-02A-04B"
+      ],
+      "original_source_sha256": "5ea6ed364c3140cc483b420dd3908834f5d56ec82c013b5532fb37fca6245005",
+      "standalone_sha256": "aca26a1c130f1b833071defc39f82df69835925ab8fb0eab81c851e5b17659f6",
+      "source_lines": 804,
+      "portability_modifications": {
+        "repository_root_replacements": 1,
+        "output_path_replacements": 1,
+        "ipython_display_replacements": 1,
+        "noninteractive_backend_changes": 1,
+        "interactive_show_replacements": 1
+      },
+      "original_output_directory": "results/module5/dadrc_smoke_test",
+      "reproduction_output_directory": "results/module5/dadrc_reproduction/dadrc_smoke_test",
+      "conversion_diff": "experiments/module5/conversion_diffs/validate_dadrc_closed_loop.diff",
+      "conversion_diff_sha256": "ebcb864874a59ac1ebb41c628d1b8fa198c7b9b38c2cbadd9bbf14f3c60e7e27",
+      "syntax_valid": true,
+      "runtime_verified": false
+    }
+  },
+  "standalone_scripts_created": 3,
+  "original_source_cells_unchanged": true,
+  "protected_artifact_count": 16,
+  "historical_artifacts_unchanged": true,
+  "syntax_verification_passed": true,
+  "output_redirection_verified": true,
+  "runtime_verification_complete": false,
+  "experiments_executed": false,
+  "conversion_scope": [
+    "Repository-relative paths",
+    "Separate reproduction output paths",
+    "Console display",
+    "Non-interactive plotting",
+    "Script execution guard",
+    "Source provenance documentation"
+  ]
+}

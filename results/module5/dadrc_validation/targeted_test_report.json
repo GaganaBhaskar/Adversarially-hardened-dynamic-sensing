@@ -1,0 +1,30 @@
+{
+  "task": "M5-DEF-02B-02-R02",
+  "test_file": "tests/test_module5_dadrc.py",
+  "test_source_sha256": "b91943cba69d1197ae935cb9214746cdbf192362949ec0d27fe8b1d3283f42e8",
+  "expected_tests": 47,
+  "passed": 47,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "xfailed": 0,
+  "xpassed": 0,
+  "deselected": 0,
+  "return_code": 0,
+  "all_tests_passed": true,
+  "test_scope": [
+    "Configuration validation",
+    "Normal monitoring",
+    "Physical protection",
+    "Persistent disturbance probing",
+    "Probe failure and rollback",
+    "Cooldown behavior",
+    "Uncertainty handling",
+    "Conflicting evidence",
+    "Controlled recovery",
+    "Input validation",
+    "Command timing",
+    "Reference integrity",
+    "Reset behavior"
+  ]
+}

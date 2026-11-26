@@ -1,0 +1,9 @@
+artifact,artifact_type,original_rows,reproduced_rows,columns,values_compared,values_matched,maximum_absolute_error,byte_identical,passed
+exposure_aware_observation/physical_reconstruction.csv,CSV,5.0,5.0,10.0,50,50,0.0,True,True
+exposure_aware_observation/exposure_gain_invariance.csv,CSV,3.0,3.0,6.0,18,18,0.0,True,True
+disturbance_memory/disturbance_memory_validation.csv,CSV,12.0,12.0,12.0,144,144,0.0,True,True
+dadrc_smoke_test/closed_loop_timeline.csv,CSV,60.0,60.0,21.0,1260,1260,0.0,True,True
+exposure_aware_observation/validation_report.json,JSON,,,,42,42,0.0,True,True
+disturbance_memory/validation_report.json,JSON,,,,43,43,0.0,True,True
+dadrc_smoke_test/summary.json,JSON,,,,14,14,0.0,True,True
+dadrc_smoke_test/validation_report.json,JSON,,,,67,67,0.0,True,True
