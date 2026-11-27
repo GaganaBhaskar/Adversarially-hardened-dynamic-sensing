@@ -1,0 +1,79 @@
+{
+  "task_id": "M6-DEV-01D-04B-01",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "dataset_split": "validation",
+  "scene_indices": [
+    1,
+    6,
+    11,
+    16,
+    21,
+    26,
+    31,
+    36,
+    41,
+    46,
+    51,
+    56,
+    61,
+    66,
+    71,
+    76,
+    81,
+    86,
+    91,
+    96,
+    101,
+    106,
+    111,
+    116,
+    121,
+    126,
+    131,
+    136,
+    141,
+    146,
+    151,
+    156
+  ],
+  "configurations": {
+    "K1": [
+      10.0,
+      1.0
+    ],
+    "K3": [
+      30.0,
+      3.0
+    ],
+    "K5": [
+      2.0,
+      3.0
+    ]
+  },
+  "noise_conditions": [
+    false,
+    true
+  ],
+  "optical_condition": "clean",
+  "sampling_modes": {
+    "F0": "full_frame",
+    "R0": "existing_rectangular_roi",
+    "G1": "fixed_road_corridor",
+    "G2": "lane_boundary_weighted_corridor"
+  },
+  "candidate_sample_budget": 26214,
+  "background_stride": 4,
+  "mask_hashes": {
+    "F0": "d609275a57129d355e1c27ce2c2e7af3385f3209d05d60b876ea2790d61141dd",
+    "R0": "8e4e973dbfc216d39d1b68e1741381116d7a400e539367b691a5d4b56e710a7b",
+    "G1": "f053c13aa7f35763ec84be233312c5dbed601b1919e62a6619a500b65a8816d1",
+    "G2": "c0d34e52708f9e381f6a332f3aa228b48bdee3fded4fc0e00ff67a340ac3cc4c"
+  },
+  "noise_seed_rule": "scene_seed + 3000000",
+  "expected_evaluations": 768,
+  "primary_metric": "pooled_foreground_miou",
+  "model_training": false,
+  "controller_updates": false,
+  "test_split_used": false
+}

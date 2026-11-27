@@ -1,0 +1,63 @@
+{
+  "additional_geometry_guard": true,
+  "background_stride": 4,
+  "boundary_priority": {
+    "boundary_center": 0.85,
+    "boundary_width": 0.3,
+    "central_weight": 0.15,
+    "central_width": 0.35
+  },
+  "candidate_sample_budget": 26214,
+  "candidate_selected": null,
+  "controller_modified": false,
+  "corridor_geometry": {
+    "additional_half_width": 0.26,
+    "center_x": 0.5,
+    "horizon": 0.4,
+    "minimum_half_width": 0.14
+  },
+  "executed_source_sha256": "6453edb2555c0ca753efdd3ae2555b17b38f8a8763d4198060b31d42b0ec8bef",
+  "ideal_sample_count_reduction": 0.600006103515625,
+  "image_height": 256,
+  "image_width": 256,
+  "mask_hashes": {
+    "F0": "916b144867c340614f515c7b0e5415c74832d899c05264ded2a277a6e81d81ff",
+    "G1": "37bf4e887881f94a3c486ff59a082d57ef2c8991797f2e4ac82975ba8d0f7a04",
+    "G2": "4ce5d8ad31935e51503e2126c71fc93dca29f2ca79cb6e5de38ecae1272c95b1",
+    "R0": "f644c0dfb8bafac8691cc6eb3f22d86dc840dcc5fa1ee6abd505f5b935300bd5"
+  },
+  "model_checkpoint_epoch": 38,
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "model_training_performed": false,
+  "original_assertions": 42,
+  "original_notebook_cell": 248,
+  "original_source_sha256": "9884353f34765a5e132360ff6dc55cbe856aa66013047acc9965b25e8f949d1e",
+  "pairwise_geometry": [
+    {
+      "different_pixels": 5348,
+      "exchanged_samples": 2674,
+      "first": "R0",
+      "jaccard_overlap": 0.8148712268069787,
+      "second": "G1"
+    },
+    {
+      "different_pixels": 10200,
+      "exchanged_samples": 5100,
+      "first": "R0",
+      "jaccard_overlap": 0.6742671009771987,
+      "second": "G2"
+    },
+    {
+      "different_pixels": 7030,
+      "exchanged_samples": 3515,
+      "first": "G1",
+      "jaccard_overlap": 0.7635305593864576,
+      "second": "G2"
+    }
+  ],
+  "previous_archive_commit": "2e0f705ba20482fa1c8095b2039b073ebb4ad907",
+  "removed_assertions": 0,
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "sampling_ratio": 0.399993896484375,
+  "task_id": "M6-DEV-01D-04B-01-R1B"
+}

@@ -1,0 +1,66 @@
+{
+  "task_id": "M6-DEV-01D-04B-01",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "files": {
+    "results/module6/spatial_sampling_refinement/candidate_comparison.csv": {
+      "sha256": "940d8cbfd98723477609d9e830bd14154c26dd82861d27cb511361edb3f7d5c7",
+      "bytes": 305
+    },
+    "results/module6/spatial_sampling_refinement/class_sampling_comparison.csv": {
+      "sha256": "2dd5a3f9c4945f1ba3f687d08ffd1312d984c144cf38216fa91690a7e5141b62",
+      "bytes": 389
+    },
+    "results/module6/spatial_sampling_refinement/figures/M6_F21_sampling_geometries.pdf": {
+      "sha256": "2907bd1044c57f85be24a92ddb556e3f2ef6b437c412c0df44bb5fd03dd8011b",
+      "bytes": 31145
+    },
+    "results/module6/spatial_sampling_refinement/figures/M6_F21_sampling_geometries.png": {
+      "sha256": "0d248df8c3588ab1690c3b0d4cef691263fd8687e23c01501cb5db12c0211609",
+      "bytes": 199508
+    },
+    "results/module6/spatial_sampling_refinement/figures/M6_F22_sampling_performance.pdf": {
+      "sha256": "ed77922db57e9c01822fd0fcd65fa71f187abe2596016666a52e1dffbdee4c79",
+      "bytes": 17379
+    },
+    "results/module6/spatial_sampling_refinement/figures/M6_F22_sampling_performance.png": {
+      "sha256": "54bf8e0f02cf19502edbae53b2aadd266f26900bd7e3fae1c64549f6e8d75781",
+      "bytes": 51124
+    },
+    "results/module6/spatial_sampling_refinement/figures/M6_F23_paired_sampling_effects.pdf": {
+      "sha256": "a540025bf51c4c142f4c668c078e588cd91aabecf2e14c42ca9fbc3ce1c389b3",
+      "bytes": 15855
+    },
+    "results/module6/spatial_sampling_refinement/figures/M6_F23_paired_sampling_effects.png": {
+      "sha256": "871f431ad010a8e00ae582e92f2e7aec73c0f13d2009fd845e6b7992aaf16489",
+      "bytes": 49643
+    },
+    "results/module6/spatial_sampling_refinement/figures/M6_F24_sampling_predictions.pdf": {
+      "sha256": "b5a5d58d1bd8d70cefaa6858be044f2cdc8d5d04cc34efa6f93704d27f261aa0",
+      "bytes": 230347
+    },
+    "results/module6/spatial_sampling_refinement/figures/M6_F24_sampling_predictions.png": {
+      "sha256": "4baa4d860188f09e483ca972e60eab2e51fa1498f599d57e0ed3e0d88dd42e24",
+      "bytes": 320946
+    },
+    "results/module6/spatial_sampling_refinement/paired_sampling_comparison.csv": {
+      "sha256": "c9529a2f33a84b7a87ff45826748a37a954f8bab531cefc6a09dde1811b4313d",
+      "bytes": 25045
+    },
+    "results/module6/spatial_sampling_refinement/sampling_protocol.json": {
+      "sha256": "64489e2aa0f7deeff66b37a4a68ba2baf7401e404c7db86dc1ae7c599d0813a5",
+      "bytes": 1527
+    },
+    "results/module6/spatial_sampling_refinement/sampling_records.csv": {
+      "sha256": "6ead31b76978b91ff0dc048da2e502a618118252e7d48e03ca27127fe031a64b",
+      "bytes": 123579
+    },
+    "results/module6/spatial_sampling_refinement/sampling_report.json": {
+      "sha256": "082c6df7e50753c44130b1f68015a5aff595c68966ebc1cc83de60af1ebcb164",
+      "bytes": 11944
+    },
+    "results/module6/spatial_sampling_refinement/sampling_summary.csv": {
+      "sha256": "e08f146a732bbcf73618fddeb5230febcd27fbf5b77a01d7de4bb5b92f438ed8",
+      "bytes": 3578
+    }
+  }
+}

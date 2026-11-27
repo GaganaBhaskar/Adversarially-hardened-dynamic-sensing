@@ -1,0 +1,16 @@
+{
+  "task_id": "M6-DEV-01D-04B-02",
+  "task_passed": true,
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "source_sampling_report_sha256": "082c6df7e50753c44130b1f68015a5aff595c68966ebc1cc83de60af1ebcb164",
+  "selected_sampling_mode": "R0",
+  "regression_passed": true,
+  "regression_exit_code": 0,
+  "protected_previous_files": 222,
+  "files": {
+    "results/module6/sampling_decision/sampling_decision.json": "58ae87816f0fd30e23d86c250b4af16dbac6327ca90b4179832ddc959054ec7e",
+    "results/module6/sampling_decision/sampling_decision.md": "1c9f8099eefa39cc2e0276de451a9e1fe3c188d83ee8f398c2b73c5dd7c8dc7f",
+    "results/module6/sampling_decision/module6_regression.log": "eddcee75d84dbb02b2d587ce755157f3c6c9585d38a8c9194b77af09cb7dd891"
+  },
+  "manifest_includes_itself": false
+}

@@ -1,0 +1,171 @@
+{
+  "task_id": "M6-DEV-01D-04B-02",
+  "task_passed": true,
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "previous_archive_commit": "2e0f705ba20482fa1c8095b2039b073ebb4ad907",
+  "source_report_sha256": "082c6df7e50753c44130b1f68015a5aff595c68966ebc1cc83de60af1ebcb164",
+  "model_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "model_epoch": 38,
+  "selected_sampling_mode": "R0",
+  "new_candidate_selected": null,
+  "rejected_candidates": [
+    "G1",
+    "G2"
+  ],
+  "candidate_sample_budget": 26214,
+  "full_frame_sample_count": 65536,
+  "sampling_ratio": 0.399993896484375,
+  "ideal_sample_count_reduction": 0.600006103515625,
+  "unique_validation_scenes": 32,
+  "paired_observations_per_candidate": 192,
+  "acquisition_groups": 6,
+  "test_scenes_used": 0,
+  "decision_rule": "Retain the existing baseline because neither candidate improved any paired observation or acquisition group.",
+  "decision_rule_pre_registered": false,
+  "decision_type": "Post-experiment descriptive rejection",
+  "candidate_comparison": [
+    {
+      "candidate": "G1",
+      "mean_paired_improvement_pp": -13.5373447313,
+      "median_paired_improvement_pp": -12.2959907934,
+      "minimum_improvement_pp": -47.9026662518,
+      "maximum_improvement_pp": -1.5703044285,
+      "better": 0,
+      "equal": 0,
+      "worse": 192
+    },
+    {
+      "candidate": "G2",
+      "mean_paired_improvement_pp": -35.6005486076,
+      "median_paired_improvement_pp": -38.7394488857,
+      "minimum_improvement_pp": -75.7048231546,
+      "maximum_improvement_pp": -4.3302245867,
+      "better": 0,
+      "equal": 0,
+      "worse": 192
+    }
+  ],
+  "class_comparison": [
+    {
+      "candidate": "G1",
+      "class_name": "lane_markings",
+      "mean_group_iou_change_pp": -24.2060030227,
+      "worst_group_iou_change_pp": -25.0319034599
+    },
+    {
+      "candidate": "G1",
+      "class_name": "vehicle",
+      "mean_group_iou_change_pp": -3.6288208853,
+      "worst_group_iou_change_pp": -4.2555502989
+    },
+    {
+      "candidate": "G1",
+      "class_name": "pedestrian",
+      "mean_group_iou_change_pp": -6.807403779,
+      "worst_group_iou_change_pp": -12.2607015467
+    },
+    {
+      "candidate": "G2",
+      "class_name": "lane_markings",
+      "mean_group_iou_change_pp": -27.7661858446,
+      "worst_group_iou_change_pp": -30.6965241405
+    },
+    {
+      "candidate": "G2",
+      "class_name": "vehicle",
+      "mean_group_iou_change_pp": -41.1118850348,
+      "worst_group_iou_change_pp": -46.0610841834
+    },
+    {
+      "candidate": "G2",
+      "class_name": "pedestrian",
+      "mean_group_iou_change_pp": -39.0309932602,
+      "worst_group_iou_change_pp": -46.5103081835
+    }
+  ],
+  "configuration_comparison": [
+    {
+      "configuration": "K1",
+      "noise_enabled": false,
+      "full_frame_foreground_miou": 0.9584387507497056,
+      "rectangular_roi_foreground_miou": 0.9089713845053948,
+      "corridor_foreground_miou": 0.7919219420593798,
+      "boundary_foreground_miou": 0.5722392617041737,
+      "g1_minus_r0_pp": -11.704944244601501,
+      "g2_minus_r0_pp": -33.67321228012211
+    },
+    {
+      "configuration": "K1",
+      "noise_enabled": true,
+      "full_frame_foreground_miou": 0.958745786715046,
+      "rectangular_roi_foreground_miou": 0.909824672548134,
+      "corridor_foreground_miou": 0.7980323378988913,
+      "boundary_foreground_miou": 0.5743770955150264,
+      "g1_minus_r0_pp": -11.179233464924277,
+      "g2_minus_r0_pp": -33.544757703310765
+    },
+    {
+      "configuration": "K3",
+      "noise_enabled": false,
+      "full_frame_foreground_miou": 0.918104037116354,
+      "rectangular_roi_foreground_miou": 0.8539040878192994,
+      "corridor_foreground_miou": 0.7498499300312279,
+      "boundary_foreground_miou": 0.4659151142476871,
+      "g1_minus_r0_pp": -10.405415778807148,
+      "g2_minus_r0_pp": -38.79889735716123
+    },
+    {
+      "configuration": "K3",
+      "noise_enabled": true,
+      "full_frame_foreground_miou": 0.9192400193004532,
+      "rectangular_roi_foreground_miou": 0.8556698934980638,
+      "corridor_foreground_miou": 0.7518241975946397,
+      "boundary_foreground_miou": 0.4690438932292648,
+      "g1_minus_r0_pp": -10.384569590342407,
+      "g2_minus_r0_pp": -38.66260002687989
+    },
+    {
+      "configuration": "K5",
+      "noise_enabled": false,
+      "full_frame_foreground_miou": 0.9574297668628964,
+      "rectangular_roi_foreground_miou": 0.9081485732352548,
+      "corridor_foreground_miou": 0.7749517482704164,
+      "boundary_foreground_miou": 0.5489268203107173,
+      "g1_minus_r0_pp": -13.319682496483843,
+      "g2_minus_r0_pp": -35.92217529245375
+    },
+    {
+      "configuration": "K5",
+      "noise_enabled": true,
+      "full_frame_foreground_miou": 0.9541258357984028,
+      "rectangular_roi_foreground_miou": 0.9075178240151311,
+      "corridor_foreground_miou": 0.7846117260279555,
+      "boundary_foreground_miou": 0.5553529678236846,
+      "g1_minus_r0_pp": -12.290609798717567,
+      "g2_minus_r0_pp": -35.216485619144656
+    }
+  ],
+  "scientific_conclusion": "Under the tested synthetic conditions and frozen perception model, the existing rectangular ROI preserves more foreground semantic information than either proposed equal-budget corridor geometry.",
+  "limitations": [
+    "Only 32 unique synthetic validation scenes.",
+    "Repeated observations are not independent scenes.",
+    "Validation scenes participated in model selection.",
+    "Model trained with full-frame and rectangular ROI inputs.",
+    "Distribution shift may contribute to candidate degradation.",
+    "Geometry effects are not isolated from model compatibility.",
+    "No optical disturbance in the sampling experiment.",
+    "No universal sampling superiority is established.",
+    "Post-ADC sampling is not physical sensor windowing.",
+    "No measured hardware bandwidth or energy reduction.",
+    "No real-world validation."
+  ],
+  "independent_candidate_confirmation_required": false,
+  "confirmation_reason": "Neither new candidate is being adopted. The previously evaluated baseline is retained.",
+  "controller_modified": false,
+  "model_modified": false,
+  "model_training_performed": false,
+  "dataset_modified": false,
+  "additional_simulations": 0,
+  "additional_perception_evaluations": 0,
+  "further_geometry_tuning_planned": false
+}
