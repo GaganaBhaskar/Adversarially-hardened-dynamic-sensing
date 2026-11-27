@@ -1,0 +1,46 @@
+{
+  "adjusted_source_sha256": "12d56cbf851079f59dcb176cc7a78e2ed921b6919158c62f791bf0cb924f4f9f",
+  "changes": [
+    {
+      "line": 40,
+      "new": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+      "old": "34d02bfce6ab025c5e84a92a16cb0f7a73ed120783a720981797836410c58c29",
+      "type": "artifact_identity"
+    },
+    {
+      "line": 166,
+      "new": 38,
+      "old": 32,
+      "type": "epoch_assertion"
+    },
+    {
+      "line": 200,
+      "new": "Checkpoint epoch: 38",
+      "old": "Checkpoint epoch: 32",
+      "type": "console_label"
+    },
+    {
+      "line": 312,
+      "new": 38,
+      "old": 32,
+      "type": "epoch_metadata"
+    },
+    {
+      "line": 1572,
+      "new": 38,
+      "old": 32,
+      "type": "epoch_metadata"
+    }
+  ],
+  "methodology_modified": false,
+  "model_checkpoint_epoch": 38,
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "original_assertions": 43,
+  "original_notebook_cell": 245,
+  "original_source_sha256": "60895e5612102a39d68526fcae2c4cd3e24fe9be83704330a211b750836346cc",
+  "preserved_assertions": 43,
+  "recovery_task": "M6-REC-05B-02",
+  "removed_assertions": 0,
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "task_id": "M6-DEV-01D-02"
+}

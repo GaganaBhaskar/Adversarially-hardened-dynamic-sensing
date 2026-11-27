@@ -1,0 +1,34 @@
+{
+  "adjusted_source_sha256": "4b66de7792887639039a30ab3ce7e206c88f67a6a2cc607f6021d076aabec32b",
+  "changes": [
+    {
+      "line": 39,
+      "new": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+      "old": "34d02bfce6ab025c5e84a92a16cb0f7a73ed120783a720981797836410c58c29",
+      "type": "artifact_identity"
+    },
+    {
+      "line": 185,
+      "new": 38,
+      "old": 32,
+      "type": "epoch_assertion"
+    },
+    {
+      "line": 263,
+      "new": "Frozen model: Epoch 38",
+      "old": "Frozen model: Epoch 32",
+      "type": "console_label"
+    }
+  ],
+  "methodology_modified": false,
+  "model_checkpoint_epoch": 38,
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "original_assertions": 42,
+  "original_notebook_cell": 247,
+  "original_source_sha256": "5efbeffbc844b6c3660466b0d76f9ebb2c7db2f16720b589c85a46854a0ce186",
+  "preserved_assertions": 42,
+  "recovery_task": "M6-REC-05B-02",
+  "removed_assertions": 0,
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "task_id": "M6-DEV-01D-04A"
+}

@@ -1,0 +1,124 @@
+{
+  "task_id": "M6-DEV-01D-04A",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "dataset_split": "validation",
+  "scene_indices": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100,
+    105,
+    110,
+    115,
+    120,
+    125,
+    130,
+    135,
+    140,
+    145,
+    150,
+    155
+  ],
+  "scene_seeds": [
+    200000,
+    200005,
+    200010,
+    200015,
+    200020,
+    200025,
+    200030,
+    200035,
+    200040,
+    200045,
+    200050,
+    200055,
+    200060,
+    200065,
+    200070,
+    200075,
+    200080,
+    200085,
+    200090,
+    200095,
+    200100,
+    200105,
+    200110,
+    200115,
+    200120,
+    200125,
+    200130,
+    200135,
+    200140,
+    200145,
+    200150,
+    200155
+  ],
+  "configurations": {
+    "K1": {
+      "exposure_ms": 10.0,
+      "gain": 1.0
+    },
+    "K2": {
+      "exposure_ms": 30.0,
+      "gain": 1.0
+    },
+    "K3": {
+      "exposure_ms": 30.0,
+      "gain": 3.0
+    },
+    "K4": {
+      "exposure_ms": 2.0,
+      "gain": 1.0
+    },
+    "K5": {
+      "exposure_ms": 2.0,
+      "gain": 3.0
+    }
+  },
+  "conditions": [
+    "clean",
+    "disturbed"
+  ],
+  "readout_modes": [
+    "full",
+    "roi"
+  ],
+  "sensor_noise_enabled": false,
+  "optical_disturbance": {
+    "type": "laser",
+    "intensity": 15.0,
+    "radius": 0.12,
+    "center": [
+      0.5,
+      0.5
+    ],
+    "time_step": 0
+  },
+  "background_stride": 4,
+  "expected_evaluations": 640,
+  "primary_metric": "foreground_miou",
+  "experiment_type": "matched_acquisition_diagnostic",
+  "controller_updates": false,
+  "model_training": false,
+  "test_split_used": false,
+  "device": "cpu",
+  "cpu_threads": 2
+}

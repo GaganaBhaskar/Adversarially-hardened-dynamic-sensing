@@ -1,0 +1,182 @@
+{
+  "complete_inventory_before_report": 198,
+  "completed_cells": [
+    244,
+    245,
+    246,
+    247
+  ],
+  "controller_modified": false,
+  "execution_log": [
+    {
+      "adjusted_source_sha256": "4fbe47cb9e9c8b3dd82b89c877560047eefdda7177833224097f5b25ed10fa3d",
+      "assertions_preserved": 9,
+      "cell": 244,
+      "changes": [
+        {
+          "line": 117,
+          "new": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+          "old": "34d02bfce6ab025c5e84a92a16cb0f7a73ed120783a720981797836410c58c29",
+          "type": "artifact_identity"
+        }
+      ],
+      "execution_seconds": 0.1289833290011302,
+      "existing_evidence_reused": false,
+      "model_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+      "new_artifacts": 0,
+      "original_source_sha256": "28c49ec6ad107332f74f88702d77da801a060b9cd066900f426f19f99fa4f0db",
+      "provenance_files": {
+        "docs/module6/recovery/experiment_cell_244_rebinding.json": "529ba12ecf97539bc18d62e77b63c591f2f0549803169fd58acc93d5318d58f4",
+        "docs/module6/recovery/original_experiment_cell_244.txt": "28c49ec6ad107332f74f88702d77da801a060b9cd066900f426f19f99fa4f0db",
+        "docs/module6/recovery/recovery_experiment_cell_244.py": "4fbe47cb9e9c8b3dd82b89c877560047eefdda7177833224097f5b25ed10fa3d"
+      },
+      "selected_epoch": 38,
+      "task_id": "M6-DEV-01D-01",
+      "task_passed": true
+    },
+    {
+      "adjusted_source_sha256": "12d56cbf851079f59dcb176cc7a78e2ed921b6919158c62f791bf0cb924f4f9f",
+      "assertions_preserved": 43,
+      "cell": 245,
+      "changes": [
+        {
+          "line": 40,
+          "new": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+          "old": "34d02bfce6ab025c5e84a92a16cb0f7a73ed120783a720981797836410c58c29",
+          "type": "artifact_identity"
+        },
+        {
+          "line": 166,
+          "new": 38,
+          "old": 32,
+          "type": "epoch_assertion"
+        },
+        {
+          "line": 200,
+          "new": "Checkpoint epoch: 38",
+          "old": "Checkpoint epoch: 32",
+          "type": "console_label"
+        },
+        {
+          "line": 312,
+          "new": 38,
+          "old": 32,
+          "type": "epoch_metadata"
+        },
+        {
+          "line": 1572,
+          "new": 38,
+          "old": 32,
+          "type": "epoch_metadata"
+        }
+      ],
+      "execution_seconds": 242.08082173000003,
+      "existing_evidence_reused": false,
+      "model_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+      "new_artifacts": 15,
+      "original_source_sha256": "60895e5612102a39d68526fcae2c4cd3e24fe9be83704330a211b750836346cc",
+      "provenance_files": {
+        "docs/module6/recovery/experiment_cell_245_rebinding.json": "72bdcb673ce8d32a32d689154006b7ae9b10c871f43a50772328041819192468",
+        "docs/module6/recovery/original_experiment_cell_245.txt": "60895e5612102a39d68526fcae2c4cd3e24fe9be83704330a211b750836346cc",
+        "docs/module6/recovery/recovery_experiment_cell_245.py": "12d56cbf851079f59dcb176cc7a78e2ed921b6919158c62f791bf0cb924f4f9f"
+      },
+      "selected_epoch": 38,
+      "task_id": "M6-DEV-01D-02",
+      "task_passed": true
+    },
+    {
+      "adjusted_source_sha256": "e51bae8da58a8ea0befc4798929090fedefe8916d3b3f64617cf6bacd6e4804a",
+      "assertions_preserved": 31,
+      "cell": 246,
+      "changes": [
+        {
+          "line": 96,
+          "new": "8596189a6cfb737118a0f75319a53e022490bef066c5c211f8ebd0f7973f88c8",
+          "old": "53344bc6f403ee7c3cdd753cb0e1e1fba73d000762a5ea0180584dbe7676332d",
+          "type": "artifact_identity"
+        }
+      ],
+      "execution_seconds": 2.8798081839995575,
+      "existing_evidence_reused": false,
+      "model_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+      "new_artifacts": 16,
+      "original_source_sha256": "e9fb4660bfe052533cfc0e416c51ea9b1d190269891ab5740f211440cc1179ca",
+      "provenance_files": {
+        "docs/module6/recovery/experiment_cell_246_rebinding.json": "5651410b8e5faf48fdec4c10045b8e4958114532513862db40efe4a5f7ea679a",
+        "docs/module6/recovery/original_experiment_cell_246.txt": "e9fb4660bfe052533cfc0e416c51ea9b1d190269891ab5740f211440cc1179ca",
+        "docs/module6/recovery/recovery_experiment_cell_246.py": "e51bae8da58a8ea0befc4798929090fedefe8916d3b3f64617cf6bacd6e4804a"
+      },
+      "selected_epoch": 38,
+      "task_id": "M6-DEV-01D-03",
+      "task_passed": true
+    },
+    {
+      "adjusted_source_sha256": "4b66de7792887639039a30ab3ce7e206c88f67a6a2cc607f6021d076aabec32b",
+      "assertions_preserved": 42,
+      "cell": 247,
+      "changes": [
+        {
+          "line": 39,
+          "new": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+          "old": "34d02bfce6ab025c5e84a92a16cb0f7a73ed120783a720981797836410c58c29",
+          "type": "artifact_identity"
+        },
+        {
+          "line": 185,
+          "new": 38,
+          "old": 32,
+          "type": "epoch_assertion"
+        },
+        {
+          "line": 263,
+          "new": "Frozen model: Epoch 38",
+          "old": "Frozen model: Epoch 32",
+          "type": "console_label"
+        }
+      ],
+      "execution_seconds": 33.204211254000256,
+      "existing_evidence_reused": false,
+      "model_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+      "new_artifacts": 14,
+      "original_source_sha256": "5efbeffbc844b6c3660466b0d76f9ebb2c7db2f16720b589c85a46854a0ce186",
+      "provenance_files": {
+        "docs/module6/recovery/experiment_cell_247_rebinding.json": "ec59b3a96b72da8f52c82bdd8b667bb7f4e1cff6804f8f92e095d671b64171e0",
+        "docs/module6/recovery/original_experiment_cell_247.txt": "5efbeffbc844b6c3660466b0d76f9ebb2c7db2f16720b589c85a46854a0ce186",
+        "docs/module6/recovery/recovery_experiment_cell_247.py": "4b66de7792887639039a30ab3ce7e206c88f67a6a2cc607f6021d076aabec32b"
+      },
+      "selected_epoch": 38,
+      "task_id": "M6-DEV-01D-04A",
+      "task_passed": true
+    }
+  ],
+  "execution_seconds": 774.0357787280009,
+  "experiment_inventory": 180,
+  "experiment_reports": {
+    "ablation": {
+      "path": "results/module6/acquisition_ablation/ablation_report.json",
+      "sha256": "094749f78cd334f9308eab21f0a8ef916ca6ddc6866e3db5640a12408a407f87"
+    },
+    "closed_loop": {
+      "path": "results/module6/closed_loop_perception/experiment_report.json",
+      "sha256": "8c378743e2ec4eb7f9cb5bdba0079f9228c801a2abf37fd9eeab8731a68c91ab"
+    },
+    "recovery": {
+      "path": "results/module6/recovery_analysis/analysis_report.json",
+      "sha256": "f92aadd6f5a7ea57c6db226dfb92e6fa3c82f2e2c95ef7d2722c2be0a226c635"
+    }
+  },
+  "historical_modifications": false,
+  "identity_and_label_replacements": 10,
+  "model_modified": false,
+  "model_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "model_training_performed": false,
+  "new_evidence_remote_archived": false,
+  "new_experimental_artifacts": 45,
+  "new_source_provenance_files": 12,
+  "preserved_assertions": 125,
+  "previous_remote_backup": "799d1c8182d2d09dde6b00e4f995879bc46a5a6d",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "selected_epoch": 38,
+  "task_id": "M6-REC-05B-02",
+  "task_passed": true
+}

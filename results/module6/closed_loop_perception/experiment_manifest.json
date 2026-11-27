@@ -1,0 +1,63 @@
+{
+  "task_id": "M6-DEV-01D-02",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "files": {
+    "results/module6/closed_loop_perception/experiment_protocol.json": {
+      "sha256": "184927067c317eb71b47bc7f28864467ad74cac39dc1a1f167a189adf051729a",
+      "bytes": 2228
+    },
+    "results/module6/closed_loop_perception/experiment_report.json": {
+      "sha256": "8c378743e2ec4eb7f9cb5bdba0079f9228c801a2abf37fd9eeab8731a68c91ab",
+      "bytes": 46638
+    },
+    "results/module6/closed_loop_perception/figures/M6_F10_scenario_perception.pdf": {
+      "sha256": "cb94cc8ed4d8b48ab1e5b2beb6d20184d5662d47f72221d22bc0fc86376f7001",
+      "bytes": 18510
+    },
+    "results/module6/closed_loop_perception/figures/M6_F10_scenario_perception.png": {
+      "sha256": "7919e1e481521104cb475faee5834049935df71bb09f434b1b8ce94d3ccb6f8a",
+      "bytes": 56242
+    },
+    "results/module6/closed_loop_perception/figures/M6_F11_continuous_disturbance.pdf": {
+      "sha256": "a488f36ff0f2957be7524e283cdb0fa25b10b0fd5d6161b0f739d407314cfffa",
+      "bytes": 22552
+    },
+    "results/module6/closed_loop_perception/figures/M6_F11_continuous_disturbance.png": {
+      "sha256": "95ea0f052ef1142f476857ce6f7df898200ca2427adfa1a3dac47b344ab47c13",
+      "bytes": 199920
+    },
+    "results/module6/closed_loop_perception/figures/M6_F12_perception_efficiency.pdf": {
+      "sha256": "c83e9bd93f9d0bfa5915445eda6dc5c0d1981b019332ff0a3913aa2e23d2b2ca",
+      "bytes": 19341
+    },
+    "results/module6/closed_loop_perception/figures/M6_F12_perception_efficiency.png": {
+      "sha256": "90406fbc781b1346deb261c5d48f58861ddcbf41324f91907221fd427edc95a6",
+      "bytes": 72061
+    },
+    "results/module6/closed_loop_perception/figures/M6_F13_closed_loop_predictions.pdf": {
+      "sha256": "69c86f9c21beeb88b59ac2199256f004c5ab20ff42651675490536b0a92866d7",
+      "bytes": 252528
+    },
+    "results/module6/closed_loop_perception/figures/M6_F13_closed_loop_predictions.png": {
+      "sha256": "a893b1e971b2a29a6c33afe058e60a31714b4227328037d61411a52f3a77b26b",
+      "bytes": 529069
+    },
+    "results/module6/closed_loop_perception/frame_records.csv": {
+      "sha256": "f91d9196effb4a7964a7c498ec4d6c3dcd7fd6baf343dea500758e2d2494b94c",
+      "bytes": 1407392
+    },
+    "results/module6/closed_loop_perception/pooled_confusion_matrices.json": {
+      "sha256": "06ae56e5ff9027e449d0d8c071ae3d1a4e1714d90cbaa5fd8855d4cc88a7f3c9",
+      "bytes": 16960
+    },
+    "results/module6/closed_loop_perception/scenario_phase_summary.csv": {
+      "sha256": "bd2ea4971a30f49564fad85e06b8d95c67c0effa8bddd4a6d2aa86d133b50883",
+      "bytes": 14502
+    },
+    "results/module6/closed_loop_perception/system_comparisons.csv": {
+      "sha256": "59059c9b695f639bfa400b2a02332671cd961161e4dbb8e4de25570b54d0fa88",
+      "bytes": 576
+    }
+  }
+}

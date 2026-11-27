@@ -1,0 +1,66 @@
+{
+  "task_id": "M6-DEV-01D-03",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "files": {
+    "results/module6/recovery_analysis/analysis_protocol.json": {
+      "sha256": "de928e09a4d659c37247e29de4e1dfe877e026a48bbf225eafe0f4939994b564",
+      "bytes": 1393
+    },
+    "results/module6/recovery_analysis/analysis_report.json": {
+      "sha256": "f92aadd6f5a7ea57c6db226dfb92e6fa3c82f2e2c95ef7d2722c2be0a226c635",
+      "bytes": 11392
+    },
+    "results/module6/recovery_analysis/episode_recovery.csv": {
+      "sha256": "0743beef455249e76fac8fddf42488fa033a35cf03abb208c42a0d7198e401ad",
+      "bytes": 17795
+    },
+    "results/module6/recovery_analysis/figures/M6_F14_recovery_outcomes.pdf": {
+      "sha256": "2f6f952f8a777f40c50da391c449d940203e9ebb67aa3fe835d3d21637a9444b",
+      "bytes": 17764
+    },
+    "results/module6/recovery_analysis/figures/M6_F14_recovery_outcomes.png": {
+      "sha256": "c261f1679bf5a5e8db0a000f6528d6ae83f700966d88ece3c3dd1145f6342c55",
+      "bytes": 61667
+    },
+    "results/module6/recovery_analysis/figures/M6_F15_paired_scene_improvements.pdf": {
+      "sha256": "39fa8a8c0a1be94ad8963648acf181826eb0655d031892055ad045c2d5feb61a",
+      "bytes": 19106
+    },
+    "results/module6/recovery_analysis/figures/M6_F15_paired_scene_improvements.png": {
+      "sha256": "97decd0804d97b7e5e7a6c841015952549a74c8aad8b38b223e33903da24e793",
+      "bytes": 86249
+    },
+    "results/module6/recovery_analysis/figures/M6_F16_roi_resumption.pdf": {
+      "sha256": "f4d1c9f67f43574afab1b4e5681c715ba55431782b6a5209e57f446176a89e56",
+      "bytes": 18483
+    },
+    "results/module6/recovery_analysis/figures/M6_F16_roi_resumption.png": {
+      "sha256": "09f39f4fb8e40bc28ff123a674caeeb2a18e48afa8114f0519e6dabe21f476cd",
+      "bytes": 72741
+    },
+    "results/module6/recovery_analysis/figures/M6_F17_physical_semantic_disagreement.pdf": {
+      "sha256": "3d3673bb05aea87ef449ab8a995157532fe336bc9ccc4e24f39def4576b1e81b",
+      "bytes": 15707
+    },
+    "results/module6/recovery_analysis/figures/M6_F17_physical_semantic_disagreement.png": {
+      "sha256": "b0746e4c8cc3505c6d15fb33aa29368da836e8c3761ef827c09c6b4f14fd9bf8",
+      "bytes": 54201
+    },
+    "results/module6/recovery_analysis/paired_scene_comparison.csv": {
+      "sha256": "5dd7353a865d860d1199126a6c8da6584f8909ca724ebcb2a145714df5ed84e7",
+      "bytes": 4950
+    },
+    "results/module6/recovery_analysis/physical_semantic_disagreement.csv": {
+      "sha256": "f84d573ca04ed2e4e534725955e9a011621bda8cb30d59dc10e9de39367fa9cc",
+      "bytes": 867
+    },
+    "results/module6/recovery_analysis/recovery_summary.csv": {
+      "sha256": "ac42a7502b9105956ec1956396c0065b5de59e2927c148c177c61f5c39f20b63",
+      "bytes": 829
+    },
+    "results/module6/recovery_analysis/roi_transition_analysis.csv": {
+      "sha256": "5f6a2dfa2bdda45bbc65b9bcc309d29860f94294b0ab05d57d1ff4297bd55fce",
+      "bytes": 8109
+    }
+  }
+}

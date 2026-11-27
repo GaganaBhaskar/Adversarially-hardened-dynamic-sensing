@@ -1,0 +1,1750 @@
+
+# =====================================================================
+# AHDS — M6-DEV-01D-02
+# Closed-loop Perception Robustness Experiment
+# =====================================================================
+
+from pathlib import Path
+from dataclasses import replace
+from collections import defaultdict
+import hashlib
+import subprocess
+import json
+import csv
+import time
+import sys
+
+import numpy as np
+import torch
+import matplotlib.pyplot as plt
+
+START_TIME = time.perf_counter()
+
+ROOT = Path(
+    "/content/adversarially-hardened-dynamic-sensing"
+).resolve()
+
+STATE = AHDS_M6_HELDOUT_STATE
+
+CHECKPOINT = "a9258ba4a307d6a6ad4ff23788a392c16260ed48"
+
+PROTECTED = dict(STATE["protected_files"])
+
+OUTPUT = ROOT / "results/module6/closed_loop_perception"
+
+MODEL_PATH = (
+    ROOT / "results/module6/model_training/best_model.pt"
+)
+
+MODEL_HASH = (
+    "34d02bfce6ab025c5e84a92a16cb0f7a73"
+    "ed120783a720981797836410c58c29"
+)
+
+SYSTEMS = ("A", "B", "C")
+
+SCENE_INDICES = (0, 40, 80, 120)
+
+CLASS_NAMES = (
+    "background",
+    "lane_markings",
+    "vehicle",
+    "pedestrian",
+)
+
+DEVICE = torch.device("cpu")
+
+print("=" * 70)
+print("AHDS — M6-DEV-01D-02")
+print("Closed-loop Perception Robustness Experiment")
+print("=" * 70)
+
+
+# =====================================================================
+# 1. RESEARCH INTEGRITY
+# =====================================================================
+
+def sha256(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def git(*args):
+    return subprocess.check_output(
+        ["git", "-C", str(ROOT), *args],
+        text=True,
+    ).strip()
+
+
+def verify_protected():
+    assert git("rev-parse", "HEAD") == CHECKPOINT
+    assert not git("diff", "HEAD", "--name-status")
+    assert not git("diff", "--cached", "--name-status")
+
+    for name, digest in PROTECTED.items():
+        assert sha256(ROOT / name) == digest, name
+
+
+assert STATE["task_passed"]
+assert STATE["frozen_model_state_verified"]
+assert len(PROTECTED) == 135
+
+verify_protected()
+
+assert sha256(MODEL_PATH) == MODEL_HASH
+
+assert not OUTPUT.exists(), (
+    f"Output already exists: {OUTPUT}"
+)
+
+print("\n[PREREQUISITES]")
+print("Research checkpoint: VERIFIED")
+print("Protected inventory: 135/135")
+print("Frozen model checkpoint: VERIFIED")
+print("Output overwrite protection: PASS")
+
+
+# =====================================================================
+# 2. IMPORT VALIDATED MODULES
+# =====================================================================
+
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+from ahds.module1_environment.optical_environment import (
+    AttackConfig,
+    apply_optical_attack,
+)
+
+from ahds.module2_sensor.sensor_simulator import (
+    SensorConfig,
+    simulate_sensor,
+)
+
+from ahds.integration.joint_closed_loop_controller import (
+    JointClosedLoopController,
+)
+
+from ahds.integration.roi_closed_loop import (
+    ROIReadoutController,
+)
+
+from ahds.module6_perception.procedural_dataset import (
+    ProceduralPerceptionDataset,
+)
+
+from ahds.module6_perception.lightweight_segmentation import (
+    LightweightSegmentationNet,
+)
+
+from ahds.module6_perception.segmentation_metrics import (
+    SegmentationMetrics,
+)
+
+
+# =====================================================================
+# 3. FROZEN MODEL
+# =====================================================================
+
+MODEL = LightweightSegmentationNet(
+    num_classes=4
+).to(DEVICE)
+
+checkpoint_data = torch.load(
+    MODEL_PATH,
+    map_location="cpu",
+    weights_only=True,
+)
+
+MODEL.load_state_dict(
+    checkpoint_data["model_state_dict"],
+    strict=True,
+)
+
+MODEL.eval()
+MODEL.requires_grad_(False)
+
+assert checkpoint_data["epoch"] == 32
+
+assert sum(
+    p.numel() for p in MODEL.parameters()
+) == 10700
+
+
+def tensor_hash(tensor):
+
+    array = (
+        tensor.detach()
+        .cpu()
+        .contiguous()
+        .numpy()
+    )
+
+    digest = hashlib.sha256()
+    digest.update(str(array.dtype).encode())
+    digest.update(str(array.shape).encode())
+    digest.update(array.tobytes(order="C"))
+
+    return digest.hexdigest()
+
+
+def model_hashes():
+    return {
+        name: tensor_hash(value)
+        for name, value in MODEL.state_dict().items()
+    }
+
+
+INITIAL_MODEL_HASHES = model_hashes()
+
+print("\n[FROZEN MODEL]")
+print("Checkpoint epoch: 32")
+print("Parameters: 10700")
+print("Training mode: DISABLED")
+print("Gradient updates: DISABLED")
+
+
+# =====================================================================
+# 4. EXPERIMENTAL PROTOCOL
+# =====================================================================
+
+SCENARIOS = [
+    {
+        "id": "P01",
+        "name": "Clean environment",
+        "kind": "clean",
+        "frames": 30,
+        "windows": [],
+    },
+    {
+        "id": "P02",
+        "name": "Continuous optical disturbance",
+        "kind": "laser",
+        "frames": 60,
+        "windows": [(10, 30)],
+    },
+    {
+        "id": "P03",
+        "name": "Repeated optical disturbance",
+        "kind": "laser",
+        "frames": 90,
+        "windows": [(10, 25), (45, 60)],
+    },
+    {
+        "id": "P04",
+        "name": "Benign global brightening",
+        "kind": "brightening",
+        "frames": 60,
+        "windows": [(10, 30)],
+    },
+    {
+        "id": "P05",
+        "name": "Benign global dimming",
+        "kind": "dimming",
+        "frames": 60,
+        "windows": [(10, 30)],
+    },
+    {
+        "id": "P06",
+        "name": "Localized benign illumination",
+        "kind": "benign_local",
+        "frames": 60,
+        "windows": [(10, 30)],
+    },
+]
+
+INITIAL_CONFIG = SensorConfig(
+    exposure_ms=10.0,
+    gain=1.0,
+)
+
+ATTACK = AttackConfig(
+    attack_type="laser",
+    center_x=0.5,
+    center_y=0.5,
+    radius=0.12,
+    intensity=15.0,
+)
+
+TEST_DATASET = ProceduralPerceptionDataset("test")
+
+with (
+    ROOT / "datasets/ahds_procedural_v1/test_index.csv"
+).open() as file:
+
+    TEST_INDEX = list(csv.DictReader(file))
+
+SCENES = {}
+
+for index in SCENE_INDICES:
+
+    scene, target, metadata = (
+        TEST_DATASET.optical_sample(index)
+    )
+
+    row = TEST_INDEX[index]
+
+    assert tensor_hash(scene) == (
+        row["optical_scene_sha256"]
+    )
+
+    assert tensor_hash(target) == (
+        row["semantic_target_sha256"]
+    )
+
+    SCENES[index] = {
+        "scene": scene,
+        "target": target,
+        "seed": TEST_DATASET.scene_seed(index),
+    }
+
+EXPECTED_FRAMES = (
+    sum(s["frames"] for s in SCENARIOS)
+    * len(SCENE_INDICES)
+    * len(SYSTEMS)
+)
+
+assert EXPECTED_FRAMES == 4320
+
+PROTOCOL = {
+    "task_id": "M6-DEV-01D-02",
+    "research_checkpoint": CHECKPOINT,
+    "model_checkpoint_sha256": MODEL_HASH,
+    "model_checkpoint_epoch": 32,
+    "systems": list(SYSTEMS),
+    "scene_indices": list(SCENE_INDICES),
+    "scene_seeds": [
+        SCENES[i]["seed"]
+        for i in SCENE_INDICES
+    ],
+    "scenarios": SCENARIOS,
+    "initial_exposure_ms": 10.0,
+    "initial_gain": 1.0,
+    "sensor_noise_enabled": False,
+    "laser_intensity": 15.0,
+    "laser_radius": 0.12,
+    "laser_center": [0.5, 0.5],
+    "brightening_scale": 1.5,
+    "dimming_scale": 0.45,
+    "localized_benign_intensity": 2.0,
+    "localized_benign_radius": 0.12,
+    "localized_benign_center": [0.5, 0.5],
+    "one_frame_command_delay": True,
+    "primary_metric": "foreground_miou",
+    "aggregation": "pooled_confusion_matrix",
+    "expected_system_frames": EXPECTED_FRAMES,
+    "model_training": False,
+    "controller_tuning": False,
+    "device": str(DEVICE),
+    "pytorch_version": str(torch.__version__),
+    "cpu_threads": torch.get_num_threads(),
+}
+
+OUTPUT.mkdir(parents=True, exist_ok=False)
+
+(OUTPUT / "experiment_protocol.json").write_text(
+    json.dumps(PROTOCOL, indent=2) + "\n"
+)
+
+print("\n[EXPERIMENT PROTOCOL]")
+print("Systems:", SYSTEMS)
+print("Scene seeds:", PROTOCOL["scene_seeds"])
+print("Scenarios:", len(SCENARIOS))
+print("System-frame evaluations:", EXPECTED_FRAMES)
+print("Sensor noise: DISABLED")
+print("Controller parameters: UNCHANGED")
+
+
+# =====================================================================
+# 5. OPTICAL ENVIRONMENT AND SENSOR ACQUISITION
+# =====================================================================
+
+def event_active(scenario, frame):
+
+    return any(
+        start <= frame < end
+        for start, end in scenario["windows"]
+    )
+
+
+def frame_phase(scenario, frame):
+
+    if not scenario["windows"]:
+        return "clean"
+
+    if event_active(scenario, frame):
+        return "event"
+
+    if frame < scenario["windows"][0][0]:
+        return "pre_event"
+
+    return "recovery"
+
+
+def optical_frame(clean, scenario, frame):
+
+    if not event_active(scenario, frame):
+        return clean
+
+    kind = scenario["kind"]
+
+    if kind == "laser":
+
+        attacked, attack_map = apply_optical_attack(
+            clean,
+            ATTACK,
+            time_step=frame,
+        )
+
+        return attacked
+
+    if kind == "brightening":
+        return clean * 1.5
+
+    if kind == "dimming":
+        return clean * 0.45
+
+    if kind == "benign_local":
+
+        height, width = clean.shape[-2:]
+
+        y = torch.linspace(
+            0, 1, height,
+            dtype=clean.dtype,
+            device=clean.device,
+        )
+
+        x = torch.linspace(
+            0, 1, width,
+            dtype=clean.dtype,
+            device=clean.device,
+        )
+
+        yy, xx = torch.meshgrid(
+            y, x,
+            indexing="ij",
+        )
+
+        illumination = 2.0 * torch.exp(
+            -(
+                (xx - 0.5) ** 2
+                + (yy - 0.5) ** 2
+            ) / (2 * 0.12 ** 2)
+        )
+
+        return clean + illumination.unsqueeze(0)
+
+    raise ValueError(kind)
+
+
+def capture(scene, config):
+
+    return simulate_sensor(
+        scene,
+        config=config,
+        add_noise=False,
+        seed=42,
+    )
+
+
+# =====================================================================
+# 6. PERCEPTION AND METRIC UTILITIES
+# =====================================================================
+
+def confusion_matrix(prediction, target):
+
+    encoded = (
+        target.reshape(-1).long() * 4
+        + prediction.reshape(-1).long()
+    )
+
+    return torch.bincount(
+        encoded,
+        minlength=16,
+    ).reshape(4, 4).cpu().numpy()
+
+
+def summarize_confusion(matrix):
+
+    matrix = np.asarray(
+        matrix,
+        dtype=np.float64,
+    )
+
+    tp = np.diag(matrix)
+
+    actual = matrix.sum(axis=1)
+
+    predicted = matrix.sum(axis=0)
+
+    union = actual + predicted - tp
+
+    denominator = actual + predicted
+
+    iou = [
+        float(tp[i] / union[i])
+        if union[i] > 0 else None
+        for i in range(4)
+    ]
+
+    dice = [
+        float(2 * tp[i] / denominator[i])
+        if denominator[i] > 0 else None
+        for i in range(4)
+    ]
+
+    foreground = [
+        value for value in iou[1:]
+        if value is not None
+    ]
+
+    foreground_dice = [
+        value for value in dice[1:]
+        if value is not None
+    ]
+
+    return {
+        "pixel_accuracy": float(
+            tp.sum() / matrix.sum()
+        ),
+        "foreground_miou": (
+            float(np.mean(foreground))
+            if foreground else None
+        ),
+        "foreground_mean_dice": (
+            float(np.mean(foreground_dice))
+            if foreground_dice else None
+        ),
+        "class_iou": dict(zip(CLASS_NAMES, iou)),
+        "confusion_matrix": (
+            matrix.astype(np.int64).tolist()
+        ),
+    }
+
+
+# Cross-check against validated Module 6 metrics.
+
+diagnostic_target = torch.tensor([
+    [0, 0, 1, 1, 2],
+    [3, 3, 2, 1, 0],
+])
+
+diagnostic_prediction = torch.tensor([
+    [0, 1, 1, 1, 2],
+    [2, 3, 2, 0, 0],
+])
+
+diagnostic = SegmentationMetrics(
+    num_classes=4
+)
+
+diagnostic.update(
+    diagnostic_prediction,
+    diagnostic_target,
+)
+
+reference_metrics = diagnostic.compute()
+
+local_metrics = summarize_confusion(
+    confusion_matrix(
+        diagnostic_prediction,
+        diagnostic_target,
+    )
+)
+
+for key in [
+    "pixel_accuracy",
+    "foreground_miou",
+    "foreground_mean_dice",
+]:
+
+    assert abs(
+        reference_metrics[key] - local_metrics[key]
+    ) < 1e-7, key
+
+assert np.array_equal(
+    np.asarray(reference_metrics["confusion_matrix"]),
+    np.asarray(local_metrics["confusion_matrix"]),
+)
+
+print("\nMetric implementation equivalence: PASS")
+
+
+def build_model_input(readout):
+
+    rgb = readout["readout"]
+
+    mask = readout["sampling_mask"]
+
+    assert rgb.shape == (3, 256, 256)
+
+    assert mask.shape == (256, 256)
+
+    assert (rgb[:, ~mask.bool()] == 0).all()
+
+    return torch.cat(
+        [
+            rgb,
+            mask.float().unsqueeze(0),
+        ],
+        dim=0,
+    )
+
+
+def predict_batch(inputs):
+
+    batch = torch.stack(inputs).to(DEVICE)
+
+    logits = MODEL(batch)
+
+    assert logits.shape == (
+        len(inputs), 4, 256, 256
+    )
+
+    assert torch.isfinite(logits).all()
+
+    return logits.argmax(dim=1).cpu()
+
+
+# =====================================================================
+# 7. CLOSED-LOOP EXPERIMENT EXECUTION
+# =====================================================================
+
+RECORDS = []
+
+POOLED = defaultdict(
+    lambda: np.zeros((4, 4), dtype=np.int64)
+)
+
+EXAMPLES = {}
+
+COMMAND_CHECKS = 0
+
+SAMPLING_CHECKS = 0
+
+FRAME_COUNT = 0
+
+CLEAN_EQUIVALENCE_CHECKS = 0
+
+# Cache identical perception inputs.
+# This is an execution optimization only.
+# Controllers and sensors still execute every frame.
+
+from collections import OrderedDict
+
+PREDICTION_CACHE = OrderedDict()
+
+CACHE_LIMIT = 128
+
+ACTUAL_MODEL_INFERENCES = 0
+
+CACHE_HITS = 0
+
+
+def cached_predictions(inputs):
+
+    global ACTUAL_MODEL_INFERENCES
+    global CACHE_HITS
+
+    results = [None] * len(inputs)
+
+    missing = {}
+
+    for i, value in enumerate(inputs):
+
+        key = tensor_hash(value)
+
+        if key in PREDICTION_CACHE:
+
+            results[i] = PREDICTION_CACHE[key]
+
+            PREDICTION_CACHE.move_to_end(key)
+
+            CACHE_HITS += 1
+
+        else:
+
+            if key not in missing:
+                missing[key] = {
+                    "input": value,
+                    "indices": [],
+                }
+
+            else:
+                CACHE_HITS += 1
+
+            missing[key]["indices"].append(i)
+
+    if missing:
+
+        keys = list(missing)
+
+        predictions = predict_batch([
+            missing[key]["input"]
+            for key in keys
+        ])
+
+        ACTUAL_MODEL_INFERENCES += len(keys)
+
+        for key, prediction in zip(
+            keys, predictions
+        ):
+
+            PREDICTION_CACHE[key] = prediction
+
+            for index in missing[key]["indices"]:
+                results[index] = prediction
+
+        while len(PREDICTION_CACHE) > CACHE_LIMIT:
+            PREDICTION_CACHE.popitem(last=False)
+
+    assert all(value is not None for value in results)
+
+    return results
+
+
+print("\n[CLOSED-LOOP EXECUTION]")
+
+with torch.inference_mode():
+
+    for scenario in SCENARIOS:
+
+        scenario_start = time.perf_counter()
+
+        sid = scenario["id"]
+
+        print(
+            f"\n{sid} — {scenario['name']}",
+            flush=True,
+        )
+
+        for scene_index in SCENE_INDICES:
+
+            clean = SCENES[scene_index]["scene"]
+
+            target = SCENES[scene_index]["target"]
+
+            seed = SCENES[scene_index]["seed"]
+
+            controllers = {
+                system: JointClosedLoopController(
+                    system=system,
+                    initial_sensor_config=replace(
+                        INITIAL_CONFIG
+                    ),
+                )
+                for system in SYSTEMS
+            }
+
+            roi_controllers = {
+                system: ROIReadoutController(
+                    system=system
+                )
+                for system in SYSTEMS
+            }
+
+            applied_configs = {
+                system: replace(INITIAL_CONFIG)
+                for system in SYSTEMS
+            }
+
+            # Only AHDS receives the trusted startup
+            # reference, consistent with Module 5.
+
+            controllers["C"].initialize_reference(
+                capture(clean, INITIAL_CONFIG),
+                replace(INITIAL_CONFIG),
+            )
+
+            previous_commands = {}
+
+            for frame in range(scenario["frames"]):
+
+                observed_scene = optical_frame(
+                    clean,
+                    scenario,
+                    frame,
+                )
+
+                phase = frame_phase(
+                    scenario,
+                    frame,
+                )
+
+                active = event_active(
+                    scenario,
+                    frame,
+                )
+
+                frame_data = {}
+
+                model_inputs = []
+
+                for system in SYSTEMS:
+
+                    applied = applied_configs[system]
+
+                    if frame > 0:
+
+                        expected = previous_commands[
+                            system
+                        ]
+
+                        assert (
+                            applied.exposure_ms
+                            == expected.exposure_ms
+                        )
+
+                        assert (
+                            applied.gain
+                            == expected.gain
+                        )
+
+                        COMMAND_CHECKS += 2
+
+                    sensor = capture(
+                        observed_scene,
+                        applied,
+                    )
+
+                    readout = roi_controllers[
+                        system
+                    ].readout(sensor)
+
+                    mask = readout["sampling_mask"]
+
+                    ratio = float(
+                        readout["sampling_ratio"]
+                    )
+
+                    assert 0 < ratio <= 1
+
+                    assert abs(
+                        ratio
+                        - float(mask.float().mean())
+                    ) < 1e-7
+
+                    if system == "A":
+                        assert ratio == 1.0
+
+                    assert torch.equal(
+                        readout["readout"][:, mask],
+                        sensor["normalized_output"][:, mask],
+                    )
+
+                    SAMPLING_CHECKS += 3
+
+                    model_input = build_model_input(
+                        readout
+                    )
+
+                    model_inputs.append(model_input)
+
+                    next_config, control = (
+                        controllers[system].update(
+                            sensor,
+                            applied,
+                        )
+                    )
+
+                    roi_command = roi_controllers[
+                        system
+                    ].update(control)
+
+                    censoring = (
+                        sensor["saturated"].bool()
+                        | sensor["adc_clipped"].bool()
+                    )
+
+                    record = {
+                        "scenario": sid,
+                        "scenario_name": scenario["name"],
+                        "scene_index": scene_index,
+                        "scene_seed": seed,
+                        "system": system,
+                        "frame": frame,
+                        "phase": phase,
+                        "event_active": active,
+                        "exposure_ms": float(
+                            applied.exposure_ms
+                        ),
+                        "gain": float(applied.gain),
+                        "next_exposure_ms": float(
+                            next_config.exposure_ms
+                        ),
+                        "next_gain": float(
+                            next_config.gain
+                        ),
+                        "authority": str(
+                            control["authority"]
+                        ),
+                        "evidence_status": str(
+                            control["evidence_status"]
+                        ),
+                        "tracker_state": str(
+                            control["tracker_state"]
+                        ),
+                        "protection_active": bool(
+                            control["protection_active"]
+                        ),
+                        "readout_mode": str(
+                            readout["readout_mode"]
+                        ),
+                        "next_readout_mode": str(
+                            roi_command["next_readout_mode"]
+                        ),
+                        "sampling_ratio": ratio,
+                        "ideal_sample_reduction": 1 - ratio,
+                        "saturation_ratio": float(
+                            sensor["saturated"]
+                            .float().mean()
+                        ),
+                        "adc_clipping_ratio": float(
+                            sensor["adc_clipped"]
+                            .float().mean()
+                        ),
+                        "censored_ratio": float(
+                            censoring.float().mean()
+                        ),
+                        "selected_censored_ratio": float(
+                            censoring[:, mask]
+                            .float().mean()
+                        ),
+                        "mean_sensor_output": float(
+                            sensor["normalized_output"]
+                            .mean()
+                        ),
+                    }
+
+                    frame_data[system] = {
+                        "record": record,
+                        "input": model_input,
+                        "next_config": next_config,
+                    }
+
+                predictions = cached_predictions(
+                    model_inputs
+                )
+
+                for system, prediction in zip(
+                    SYSTEMS,
+                    predictions,
+                ):
+
+                    data = frame_data[system]
+
+                    record = data["record"]
+
+                    matrix = confusion_matrix(
+                        prediction,
+                        target,
+                    )
+
+                    metrics = summarize_confusion(
+                        matrix
+                    )
+
+                    record["foreground_miou"] = (
+                        metrics["foreground_miou"]
+                    )
+
+                    record["pixel_accuracy"] = (
+                        metrics["pixel_accuracy"]
+                    )
+
+                    record["foreground_dice"] = (
+                        metrics["foreground_mean_dice"]
+                    )
+
+                    for name in CLASS_NAMES:
+
+                        record[f"iou_{name}"] = (
+                            metrics["class_iou"][name]
+                        )
+
+                    for group_phase in (
+                        "all", phase
+                    ):
+
+                        POOLED[
+                            (sid, system, group_phase)
+                        ] += matrix
+
+                    RECORDS.append(record)
+
+                    FRAME_COUNT += 1
+
+                    if (
+                        sid == "P02"
+                        and scene_index == SCENE_INDICES[0]
+                        and frame in (9, 10, 15, 29, 45, 59)
+                    ):
+
+                        EXAMPLES[(frame, system)] = {
+                            "input": data["input"].clone(),
+                            "prediction": prediction.clone(),
+                            "target": target.clone(),
+                        }
+
+                    next_config = data["next_config"]
+
+                    previous_commands[system] = (
+                        replace(next_config)
+                    )
+
+                    applied_configs[system] = (
+                        replace(next_config)
+                    )
+
+                if sid == "P01":
+
+                    b = frame_data["B"]["record"]
+                    c = frame_data["C"]["record"]
+
+                    # Record equivalence rather than
+                    # forcing it as an expected outcome.
+
+                    if (
+                        b["exposure_ms"] == c["exposure_ms"]
+                        and b["gain"] == c["gain"]
+                        and torch.equal(
+                            frame_data["B"]["input"],
+                            frame_data["C"]["input"],
+                        )
+                    ):
+
+                        CLEAN_EQUIVALENCE_CHECKS += 1
+
+            print(
+                f"  Scene {seed}: complete"
+                f" | cumulative frames "
+                f"{FRAME_COUNT}/{EXPECTED_FRAMES}",
+                flush=True,
+            )
+
+        print(
+            f"  Scenario duration: "
+            f"{time.perf_counter() - scenario_start:.2f}s",
+            flush=True,
+        )
+
+
+# =====================================================================
+# 8. EXECUTION INTEGRITY
+# =====================================================================
+
+assert FRAME_COUNT == EXPECTED_FRAMES
+
+assert len(RECORDS) == EXPECTED_FRAMES
+
+assert COMMAND_CHECKS == (
+    EXPECTED_FRAMES
+    - len(SCENARIOS)
+    * len(SCENE_INDICES)
+    * len(SYSTEMS)
+) * 2
+
+assert SAMPLING_CHECKS == EXPECTED_FRAMES * 3
+
+assert (
+    ACTUAL_MODEL_INFERENCES + CACHE_HITS
+    == EXPECTED_FRAMES
+)
+
+assert model_hashes() == INITIAL_MODEL_HASHES
+
+assert sha256(MODEL_PATH) == MODEL_HASH
+
+assert not MODEL.training
+
+verify_protected()
+
+print("\n[EXECUTION INTEGRITY]")
+print("System-frame evaluations:", FRAME_COUNT)
+print("Command-delay checks:", COMMAND_CHECKS)
+print("Sampling checks:", SAMPLING_CHECKS)
+print("Actual model inference samples:", ACTUAL_MODEL_INFERENCES)
+print("Identical-input prediction reuse:", CACHE_HITS)
+print("Frozen model state: UNCHANGED")
+print("Clean B/C equivalent frames:", CLEAN_EQUIVALENCE_CHECKS, "/120")
+
+
+# =====================================================================
+# 9. AGGREGATE RESULTS
+# =====================================================================
+
+GROUPED = defaultdict(list)
+
+for record in RECORDS:
+
+    key = (
+        record["scenario"],
+        record["system"],
+    )
+
+    GROUPED[(*key, "all")].append(record)
+
+    GROUPED[
+        (*key, record["phase"])
+    ].append(record)
+
+SUMMARY_ROWS = []
+
+SUMMARY_LOOKUP = {}
+
+for key, records in sorted(GROUPED.items()):
+
+    sid, system, phase = key
+
+    matrix = POOLED[key]
+
+    assert matrix.sum() == (
+        len(records) * 256 * 256
+    )
+
+    metrics = summarize_confusion(matrix)
+
+    summary = {
+        "scenario": sid,
+        "system": system,
+        "phase": phase,
+        "frame_count": len(records),
+        "foreground_miou": metrics["foreground_miou"],
+        "foreground_dice": metrics["foreground_mean_dice"],
+        "pixel_accuracy": metrics["pixel_accuracy"],
+        "mean_censored_ratio": float(np.mean([
+            r["censored_ratio"] for r in records
+        ])),
+        "mean_sampling_ratio": float(np.mean([
+            r["sampling_ratio"] for r in records
+        ])),
+        "mean_ideal_sample_reduction": float(np.mean([
+            r["ideal_sample_reduction"] for r in records
+        ])),
+        "mean_exposure_ms": float(np.mean([
+            r["exposure_ms"] for r in records
+        ])),
+        "mean_gain": float(np.mean([
+            r["gain"] for r in records
+        ])),
+        "protection_frames": sum(
+            r["protection_active"] for r in records
+        ),
+    }
+
+    for name in CLASS_NAMES:
+
+        summary[f"iou_{name}"] = (
+            metrics["class_iou"][name]
+        )
+
+    SUMMARY_ROWS.append(summary)
+
+    SUMMARY_LOOKUP[key] = summary
+
+
+COMPARISONS = []
+
+print("\n[SCENARIO PERFORMANCE]")
+
+for scenario in SCENARIOS:
+
+    sid = scenario["id"]
+
+    phase = (
+        "clean" if sid == "P01"
+        else "event"
+    )
+
+    print(f"\n{sid} — {scenario['name']}")
+
+    for system in SYSTEMS:
+
+        result = SUMMARY_LOOKUP[
+            (sid, system, phase)
+        ]
+
+        print(
+            f"  {system}"
+            f" | FG mIoU "
+            f"{100 * result['foreground_miou']:.4f}%"
+            f" | Censoring "
+            f"{100 * result['mean_censored_ratio']:.4f}%"
+            f" | Sample reduction "
+            f"{100 * result['mean_ideal_sample_reduction']:.4f}%"
+        )
+
+    a = SUMMARY_LOOKUP[(sid, "A", phase)]
+    b = SUMMARY_LOOKUP[(sid, "B", phase)]
+    c = SUMMARY_LOOKUP[(sid, "C", phase)]
+
+    comparison = {
+        "scenario": sid,
+        "phase": phase,
+        "ahds_minus_static_miou_pp": 100 * (
+            c["foreground_miou"]
+            - a["foreground_miou"]
+        ),
+        "ahds_minus_dynamic_miou_pp": 100 * (
+            c["foreground_miou"]
+            - b["foreground_miou"]
+        ),
+        "ahds_minus_dynamic_censoring_pp": 100 * (
+            c["mean_censored_ratio"]
+            - b["mean_censored_ratio"]
+        ),
+        "ahds_minus_dynamic_sample_reduction_pp": 100 * (
+            c["mean_ideal_sample_reduction"]
+            - b["mean_ideal_sample_reduction"]
+        ),
+    }
+
+    COMPARISONS.append(comparison)
+
+    print(
+        "  AHDS minus unprotected dynamic:",
+        f"{comparison['ahds_minus_dynamic_miou_pp']:+.4f} pp"
+    )
+
+
+# =====================================================================
+# 10. SAVE NUMERICAL EVIDENCE
+# =====================================================================
+
+def save_csv(path, rows):
+
+    assert rows
+
+    with path.open("w", newline="") as file:
+
+        writer = csv.DictWriter(
+            file,
+            fieldnames=list(rows[0]),
+        )
+
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+save_csv(
+    OUTPUT / "frame_records.csv",
+    RECORDS,
+)
+
+save_csv(
+    OUTPUT / "scenario_phase_summary.csv",
+    SUMMARY_ROWS,
+)
+
+save_csv(
+    OUTPUT / "system_comparisons.csv",
+    COMPARISONS,
+)
+
+(OUTPUT / "pooled_confusion_matrices.json").write_text(
+    json.dumps(
+        {
+            "|".join(key): value.tolist()
+            for key, value in POOLED.items()
+        },
+        indent=2,
+        allow_nan=False,
+    ) + "\n"
+)
+
+
+# =====================================================================
+# 11. RESEARCH FIGURES
+# =====================================================================
+
+FIGURES = OUTPUT / "figures"
+
+FIGURES.mkdir(exist_ok=False)
+
+COLORS = {
+    "A": "#64748b",
+    "B": "#d97706",
+    "C": "#2563eb",
+}
+
+LABELS = {
+    "A": "A — Static",
+    "B": "B — Dynamic",
+    "C": "C — AHDS",
+}
+
+
+def save_figure(fig, name):
+
+    fig.tight_layout()
+
+    fig.savefig(
+        FIGURES / f"{name}.png",
+        dpi=180,
+        bbox_inches="tight",
+    )
+
+    fig.savefig(
+        FIGURES / f"{name}.pdf",
+        bbox_inches="tight",
+    )
+
+    plt.show()
+    plt.close(fig)
+
+
+# M6-F10 — Scenario-wise perception performance
+
+fig, ax = plt.subplots(figsize=(10, 5))
+
+positions = np.arange(len(SCENARIOS))
+
+for i, system in enumerate(SYSTEMS):
+
+    values = []
+
+    for scenario in SCENARIOS:
+
+        sid = scenario["id"]
+
+        phase = (
+            "clean" if sid == "P01"
+            else "event"
+        )
+
+        values.append(
+            100 * SUMMARY_LOOKUP[
+                (sid, system, phase)
+            ]["foreground_miou"]
+        )
+
+    ax.bar(
+        positions + (i - 1) * 0.25,
+        values,
+        width=0.25,
+        color=COLORS[system],
+        label=LABELS[system],
+    )
+
+ax.set_xticks(
+    positions,
+    [s["id"] for s in SCENARIOS],
+)
+
+ax.set_ylim(0, 105)
+ax.set_ylabel("Foreground mIoU (%)")
+
+ax.set_title(
+    "M6-F10 — Closed-loop perception by scenario\n"
+    "Event phase, or clean phase for P01"
+)
+
+ax.legend()
+ax.grid(axis="y", alpha=0.2)
+
+save_figure(
+    fig,
+    "M6_F10_scenario_perception",
+)
+
+
+# M6-F11 — Continuous disturbance timeline
+
+TIMELINE = defaultdict(list)
+
+for record in RECORDS:
+
+    if record["scenario"] == "P02":
+
+        TIMELINE[
+            (record["system"], record["frame"])
+        ].append(record)
+
+fig, axes = plt.subplots(
+    4, 1,
+    figsize=(10, 11),
+    sharex=True,
+)
+
+timeline_metrics = [
+    ("foreground_miou", "Mean scene FG mIoU (%)", 100),
+    ("censored_ratio", "Censoring (%)", 100),
+    ("exposure_ms", "Exposure (ms)", 1),
+    ("sampling_ratio", "Spatial samples (%)", 100),
+]
+
+for ax, (metric, label, scale) in zip(
+    axes,
+    timeline_metrics,
+):
+
+    for system in SYSTEMS:
+
+        values = [
+            scale * np.mean([
+                row[metric]
+                for row in TIMELINE[(system, frame)]
+            ])
+            for frame in range(60)
+        ]
+
+        ax.plot(
+            range(60),
+            values,
+            color=COLORS[system],
+            label=LABELS[system],
+        )
+
+    ax.axvspan(
+        10, 30,
+        color="red",
+        alpha=0.08,
+    )
+
+    ax.set_ylabel(label)
+    ax.grid(alpha=0.2)
+
+axes[0].legend()
+axes[-1].set_xlabel("Frame")
+
+fig.suptitle(
+    "M6-F11 — Continuous disturbance response"
+)
+
+save_figure(
+    fig,
+    "M6_F11_continuous_disturbance",
+)
+
+
+# M6-F12 — Perception-efficiency trade-off
+
+fig, ax = plt.subplots(figsize=(9, 6))
+
+for scenario in SCENARIOS:
+
+    sid = scenario["id"]
+
+    for system in SYSTEMS:
+
+        result = SUMMARY_LOOKUP[
+            (sid, system, "all")
+        ]
+
+        x = 100 * result[
+            "mean_ideal_sample_reduction"
+        ]
+
+        y = 100 * result["foreground_miou"]
+
+        ax.scatter(
+            x, y,
+            color=COLORS[system],
+            s=45,
+        )
+
+        ax.annotate(
+            f"{sid}-{system}",
+            (x, y),
+            xytext=(4, 4),
+            textcoords="offset points",
+            fontsize=8,
+        )
+
+ax.set_xlabel("Ideal sample-count reduction (%)")
+ax.set_ylabel("Foreground mIoU (%)")
+
+ax.set_title(
+    "M6-F12 — Perception-efficiency trade-off"
+)
+
+ax.grid(alpha=0.2)
+
+save_figure(
+    fig,
+    "M6_F12_perception_efficiency",
+)
+
+
+# M6-F13 — Representative predictions
+
+PALETTE = np.array([
+    [60, 60, 60],
+    [255, 205, 0],
+    [37, 99, 235],
+    [239, 68, 68],
+], dtype=np.uint8)
+
+example_frames = [9, 10, 15, 29, 45, 59]
+
+fig, axes = plt.subplots(
+    len(example_frames),
+    7,
+    figsize=(15, 12),
+)
+
+for row, frame in enumerate(example_frames):
+
+    target = EXAMPLES[
+        (frame, "A")
+    ]["target"]
+
+    axes[row, 0].imshow(
+        PALETTE[target.numpy()]
+    )
+
+    axes[row, 0].set_title(
+        f"Frame {frame}: GT",
+        fontsize=9,
+    )
+
+    axes[row, 0].axis("off")
+
+    # Shared display scale across the three systems.
+
+    scale = max(
+        max(
+            float(
+                EXAMPLES[(frame, s)]["input"][:3].max()
+            )
+            for s in SYSTEMS
+        ),
+        1e-8,
+    )
+
+    for i, system in enumerate(SYSTEMS):
+
+        example = EXAMPLES[(frame, system)]
+
+        rgb = (
+            example["input"][:3]
+            .permute(1, 2, 0)
+            .numpy()
+        )
+
+        prediction = example["prediction"]
+
+        axes[row, 1 + 2*i].imshow(
+            np.clip(rgb / scale, 0, 1)
+        )
+
+        axes[row, 2 + 2*i].imshow(
+            PALETTE[prediction.numpy()]
+        )
+
+        axes[row, 1 + 2*i].set_title(
+            f"{system}: sensor",
+            fontsize=9,
+        )
+
+        axes[row, 2 + 2*i].set_title(
+            f"{system}: prediction",
+            fontsize=9,
+        )
+
+        axes[row, 1 + 2*i].axis("off")
+        axes[row, 2 + 2*i].axis("off")
+
+fig.suptitle(
+    "M6-F13 — Perception during optical disturbance"
+)
+
+save_figure(
+    fig,
+    "M6_F13_closed_loop_predictions",
+)
+
+
+# =====================================================================
+# 12. RESEARCH REPORT AND MANIFEST
+# =====================================================================
+
+assert model_hashes() == INITIAL_MODEL_HASHES
+
+assert sha256(MODEL_PATH) == MODEL_HASH
+
+verify_protected()
+
+REPORT = {
+    "task_id": "M6-DEV-01D-02",
+    "task_passed": True,
+    "research_checkpoint": CHECKPOINT,
+    "model_checkpoint_sha256": MODEL_HASH,
+    "model_checkpoint_epoch": 32,
+    "unique_scenes": len(SCENE_INDICES),
+    "scenarios": len(SCENARIOS),
+    "systems": list(SYSTEMS),
+    "system_frame_evaluations": FRAME_COUNT,
+    "command_delay_checks": COMMAND_CHECKS,
+    "sampling_checks": SAMPLING_CHECKS,
+    "actual_model_inference_samples": (
+        ACTUAL_MODEL_INFERENCES
+    ),
+    "identical_input_prediction_reuse": CACHE_HITS,
+    "clean_bc_equivalent_frames": (
+        CLEAN_EQUIVALENCE_CHECKS
+    ),
+    "clean_bc_total_frames": 120,
+    "scenario_phase_results": SUMMARY_ROWS,
+    "system_comparisons": COMPARISONS,
+    "model_state_unchanged": True,
+    "model_training_performed": False,
+    "controller_modified": False,
+    "dataset_modified": False,
+    "historical_modifications": False,
+    "limitations": [
+        "Four selected procedural held-out scenes.",
+        "Synthetic optical environment.",
+        "Sensor noise disabled.",
+        "Static scene geometry within each sequence.",
+        "Temporal frames are not independent trials.",
+        "Localized benign illumination is an additive Gaussian.",
+        "Physical disturbance intent is not inferred.",
+        "Post-ADC spatial sample selection.",
+        "Sample-count reduction is not measured hardware bandwidth.",
+        "Prediction caching is an execution optimization.",
+        "Execution duration is not deployment inference latency.",
+        "No statistical population-level superiority claim.",
+        "No real-world or physical hardware validation yet.",
+    ],
+    "execution_seconds": (
+        time.perf_counter() - START_TIME
+    ),
+}
+
+REPORT_PATH = OUTPUT / "experiment_report.json"
+
+REPORT_PATH.write_text(
+    json.dumps(
+        REPORT,
+        indent=2,
+        allow_nan=False,
+    ) + "\n"
+)
+
+INVENTORY = {
+    str(path.relative_to(ROOT)): {
+        "sha256": sha256(path),
+        "bytes": path.stat().st_size,
+    }
+    for path in sorted(OUTPUT.rglob("*"))
+    if path.is_file()
+}
+
+MANIFEST_PATH = OUTPUT / "experiment_manifest.json"
+
+MANIFEST_PATH.write_text(
+    json.dumps(
+        {
+            "task_id": "M6-DEV-01D-02",
+            "research_checkpoint": CHECKPOINT,
+            "model_checkpoint_sha256": MODEL_HASH,
+            "files": INVENTORY,
+        },
+        indent=2,
+    ) + "\n"
+)
+
+for name, metadata in INVENTORY.items():
+
+    assert sha256(ROOT / name) == metadata["sha256"]
+
+    assert (
+        (ROOT / name).stat().st_size
+        == metadata["bytes"]
+    )
+
+NEW_PROTECTED = {
+    name: metadata["sha256"]
+    for name, metadata in INVENTORY.items()
+}
+
+NEW_PROTECTED[
+    str(MANIFEST_PATH.relative_to(ROOT))
+] = sha256(MANIFEST_PATH)
+
+assert len(NEW_PROTECTED) == 15
+
+verify_protected()
+
+AHDS_M6_CLOSED_LOOP_STATE = {
+    **REPORT,
+    "report_path": str(
+        REPORT_PATH.relative_to(ROOT)
+    ),
+    "manifest_path": str(
+        MANIFEST_PATH.relative_to(ROOT)
+    ),
+    "manifest_sha256": sha256(MANIFEST_PATH),
+    "protected_files": {
+        **PROTECTED,
+        **NEW_PROTECTED,
+    },
+    "next_task": (
+        "M6-DEV-01D-03 — "
+        "Closed-loop Perception Findings and Recovery Analysis"
+    ),
+}
+
+
+# =====================================================================
+# 13. FINAL SUMMARY
+# =====================================================================
+
+print("\n" + "=" * 70)
+print("CLOSED-LOOP PERCEPTION ROBUSTNESS SUMMARY")
+print("=" * 70)
+
+print("Unique scenes: 4")
+print("Scenarios: 6")
+print("Systems: 3")
+print("System-frame evaluations:", FRAME_COUNT)
+print("Command-delay checks:", COMMAND_CHECKS)
+print("Sampling checks:", SAMPLING_CHECKS)
+print("Actual model inference samples:", ACTUAL_MODEL_INFERENCES)
+print("Prediction cache hits:", CACHE_HITS)
+
+print("\n[AHDS COMPARATIVE PERFORMANCE]")
+
+for result in COMPARISONS:
+
+    print(
+        f"{result['scenario']}"
+        f" | C-A mIoU: "
+        f"{result['ahds_minus_static_miou_pp']:+.4f} pp"
+        f" | C-B mIoU: "
+        f"{result['ahds_minus_dynamic_miou_pp']:+.4f} pp"
+    )
+
+print("\n[ARTIFACT INTEGRITY]")
+print("Frozen model state: VERIFIED")
+print("Historical files: 135/135")
+print("New artifacts:", len(NEW_PROTECTED))
+print("Artifact verification: PASS")
+print("Controller modifications: NONE")
+print("Model modifications: NONE")
+print("Dataset modifications: NONE")
+print("Git staging: NONE")
+
+print(
+    "Protected inventory:",
+    len(AHDS_M6_CLOSED_LOOP_STATE["protected_files"]),
+)
+
+print("\n[ARTIFACT IDENTITIES]")
+
+for name, digest in NEW_PROTECTED.items():
+
+    print(name)
+    print("SHA256:", digest)
+
+print(
+    "\nExecution time:",
+    f"{(time.perf_counter() - START_TIME) / 60:.2f} minutes",
+)
+
+print("\nM6-DEV-01D-02: EXPERIMENT EXECUTION PASSED")
+
+print(
+    "Next: M6-DEV-01D-03 — "
+    "Closed-loop Perception Findings and Recovery Analysis"
+)

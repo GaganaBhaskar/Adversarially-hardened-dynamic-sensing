@@ -1,0 +1,7 @@
+category,system,episodes,semantic_recovered_count,semantic_sustained_count,semantic_mean_delay_frames,semantic_median_delay_frames,physical_recovered_count,physical_sustained_count,physical_mean_delay_frames,physical_median_delay_frames,joint_recovered_count,joint_sustained_count,joint_mean_delay_frames,joint_median_delay_frames
+optical_disturbance,A,12,12,12,0.0,0.0,12,12,0.0,0.0,12,12,0.0,0.0
+optical_disturbance,B,12,12,12,0.0,0.0,12,12,0.0,0.0,12,12,0.0,0.0
+optical_disturbance,C,12,12,12,0.0,0.0,12,12,0.0,0.0,12,12,0.0,0.0
+benign_illumination,A,12,12,12,0.0,0.0,12,12,0.0,0.0,12,12,0.0,0.0
+benign_illumination,B,12,12,12,0.08333333333333333,0.0,12,12,0.08333333333333333,0.0,12,12,0.08333333333333333,0.0
+benign_illumination,C,12,12,12,0.08333333333333333,0.0,12,11,0.08333333333333333,0.0,12,11,0.08333333333333333,0.0

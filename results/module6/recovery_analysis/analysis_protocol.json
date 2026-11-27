@@ -1,0 +1,23 @@
+{
+  "task_id": "M6-DEV-01D-03",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "source_experiment_manifest_sha256": "8596189a6cfb737118a0f75319a53e022490bef066c5c211f8ebd0f7973f88c8",
+  "analysis_type": "post_experiment_descriptive",
+  "semantic_recovery_fraction": 0.95,
+  "consecutive_recovery_frames": 3,
+  "physical_censoring_threshold": 0.005,
+  "clean_baseline_window_frames": 5,
+  "baseline_definition": "Mean frame foreground mIoU over the five frames preceding the first event, separately for each scenario, scene and system.",
+  "repeated_event_baseline": "The original pre-first-event baseline is retained for every episode.",
+  "recovery_search_window": "Event end inclusive to next event onset exclusive, or sequence end.",
+  "recovery_delay_definition": "First qualifying frame minus event end.",
+  "confirmation_definition": "Third consecutive qualifying frame.",
+  "sustained_recovery_definition": "All frames from first qualifying frame through the recovery window end qualify.",
+  "roi_comparison_window": 3,
+  "roi_transition_definition": "FULL_FRAME to ROI_PRIORITY transition.",
+  "aggregation": "Scene-level and episode-level descriptive statistics, not pooled confusion matrices.",
+  "model_inference_performed": false,
+  "sensor_simulation_performed": false,
+  "controller_tuning_performed": false,
+  "statistical_significance_testing": false
+}

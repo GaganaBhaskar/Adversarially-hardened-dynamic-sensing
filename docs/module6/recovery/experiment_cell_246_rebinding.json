@@ -1,0 +1,22 @@
+{
+  "adjusted_source_sha256": "e51bae8da58a8ea0befc4798929090fedefe8916d3b3f64617cf6bacd6e4804a",
+  "changes": [
+    {
+      "line": 96,
+      "new": "8596189a6cfb737118a0f75319a53e022490bef066c5c211f8ebd0f7973f88c8",
+      "old": "53344bc6f403ee7c3cdd753cb0e1e1fba73d000762a5ea0180584dbe7676332d",
+      "type": "artifact_identity"
+    }
+  ],
+  "methodology_modified": false,
+  "model_checkpoint_epoch": 38,
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "original_assertions": 31,
+  "original_notebook_cell": 246,
+  "original_source_sha256": "e9fb4660bfe052533cfc0e416c51ea9b1d190269891ab5740f211440cc1179ca",
+  "preserved_assertions": 31,
+  "recovery_task": "M6-REC-05B-02",
+  "removed_assertions": 0,
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "task_id": "M6-DEV-01D-03"
+}

@@ -1,0 +1,122 @@
+{
+  "task_id": "M6-DEV-01D-02",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "model_checkpoint_epoch": 38,
+  "systems": [
+    "A",
+    "B",
+    "C"
+  ],
+  "scene_indices": [
+    0,
+    40,
+    80,
+    120
+  ],
+  "scene_seeds": [
+    300000,
+    300040,
+    300080,
+    300120
+  ],
+  "scenarios": [
+    {
+      "id": "P01",
+      "name": "Clean environment",
+      "kind": "clean",
+      "frames": 30,
+      "windows": []
+    },
+    {
+      "id": "P02",
+      "name": "Continuous optical disturbance",
+      "kind": "laser",
+      "frames": 60,
+      "windows": [
+        [
+          10,
+          30
+        ]
+      ]
+    },
+    {
+      "id": "P03",
+      "name": "Repeated optical disturbance",
+      "kind": "laser",
+      "frames": 90,
+      "windows": [
+        [
+          10,
+          25
+        ],
+        [
+          45,
+          60
+        ]
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "Benign global brightening",
+      "kind": "brightening",
+      "frames": 60,
+      "windows": [
+        [
+          10,
+          30
+        ]
+      ]
+    },
+    {
+      "id": "P05",
+      "name": "Benign global dimming",
+      "kind": "dimming",
+      "frames": 60,
+      "windows": [
+        [
+          10,
+          30
+        ]
+      ]
+    },
+    {
+      "id": "P06",
+      "name": "Localized benign illumination",
+      "kind": "benign_local",
+      "frames": 60,
+      "windows": [
+        [
+          10,
+          30
+        ]
+      ]
+    }
+  ],
+  "initial_exposure_ms": 10.0,
+  "initial_gain": 1.0,
+  "sensor_noise_enabled": false,
+  "laser_intensity": 15.0,
+  "laser_radius": 0.12,
+  "laser_center": [
+    0.5,
+    0.5
+  ],
+  "brightening_scale": 1.5,
+  "dimming_scale": 0.45,
+  "localized_benign_intensity": 2.0,
+  "localized_benign_radius": 0.12,
+  "localized_benign_center": [
+    0.5,
+    0.5
+  ],
+  "one_frame_command_delay": true,
+  "primary_metric": "foreground_miou",
+  "aggregation": "pooled_confusion_matrix",
+  "expected_system_frames": 4320,
+  "model_training": false,
+  "controller_tuning": false,
+  "device": "cpu",
+  "pytorch_version": "2.14.1+cpu",
+  "cpu_threads": 2
+}

@@ -1,0 +1,58 @@
+{
+  "task_id": "M6-DEV-01D-04A",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "files": {
+    "results/module6/acquisition_ablation/ablation_protocol.json": {
+      "sha256": "743f3ba20206400359c404ca2f1169257389adbb947a6d84ca48546acf0ea2a5",
+      "bytes": 1843
+    },
+    "results/module6/acquisition_ablation/ablation_records.csv": {
+      "sha256": "d43cead8df855aae9d24221dabe35de20da3097f50b08794a3e20882e97d9a5d",
+      "bytes": 117926
+    },
+    "results/module6/acquisition_ablation/ablation_report.json": {
+      "sha256": "094749f78cd334f9308eab21f0a8ef916ca6ddc6866e3db5640a12408a407f87",
+      "bytes": 16191
+    },
+    "results/module6/acquisition_ablation/acquisition_factor_contrasts.csv": {
+      "sha256": "03bbab2fd5be6d0dcda76deb9fba387776ea483a141f0158b735fd5c3196a571",
+      "bytes": 1189
+    },
+    "results/module6/acquisition_ablation/configuration_summary.csv": {
+      "sha256": "1a1e6fccead6cf7865b0c580936539e9701def059c1ce2504ea85c380ebd72de",
+      "bytes": 3649
+    },
+    "results/module6/acquisition_ablation/figures/M6_F18_acquisition_ablation.pdf": {
+      "sha256": "c702fec0560f57a6bc729453f2c8692b93563fe0b5c7f38f56730374fd55ba55",
+      "bytes": 16895
+    },
+    "results/module6/acquisition_ablation/figures/M6_F18_acquisition_ablation.png": {
+      "sha256": "004dc50a4f2c1fcbb97a2a594e32838ff73ec9ccc2f4209984a62e867403c47e",
+      "bytes": 47154
+    },
+    "results/module6/acquisition_ablation/figures/M6_F19_matched_roi_effect.pdf": {
+      "sha256": "c313fd82802822c53a6c246e7b5539b0b6441517d5521a96c89743ac76819324",
+      "bytes": 19463
+    },
+    "results/module6/acquisition_ablation/figures/M6_F19_matched_roi_effect.png": {
+      "sha256": "ba7242dd9804d78f9516c027ebe2e1e0a5949d9aa64e8ecbcbd02e9932a9f005",
+      "bytes": 67788
+    },
+    "results/module6/acquisition_ablation/figures/M6_F20_physical_semantic_tradeoff.pdf": {
+      "sha256": "8f637f721f4e35351a44011b539328859daa80b93680cf83ef4921a4f02d8cc5",
+      "bytes": 16732
+    },
+    "results/module6/acquisition_ablation/figures/M6_F20_physical_semantic_tradeoff.png": {
+      "sha256": "6a59899b445609f5bcf525fa022b167967999f8932bf93acddf8b41536ed9983",
+      "bytes": 63312
+    },
+    "results/module6/acquisition_ablation/paired_roi_effect.csv": {
+      "sha256": "ced1d8abd369f5f35f1f9743fe5c4a23ce337dd76e4ad3dcf79e340d9b1349af",
+      "bytes": 24300
+    },
+    "results/module6/acquisition_ablation/residual_interference.csv": {
+      "sha256": "7b91014a1ae9cda19ffe69f30df91a107a6a51404143d1ff0e8cd23253419ab7",
+      "bytes": 866
+    }
+  }
+}
