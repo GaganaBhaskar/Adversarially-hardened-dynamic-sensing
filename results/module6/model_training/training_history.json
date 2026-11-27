@@ -1,0 +1,4002 @@
+[
+  {
+    "epoch": 1,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.47227375030517577,
+      "mean_iou": 0.1414854615379154,
+      "foreground_miou": 0.03468237719745521,
+      "foreground_mean_dice": 0.06568720020532147,
+      "class_iou": {
+        "background": 0.46189471455929604,
+        "lane_markings": 0.06941886073655221,
+        "vehicle": 0.032196260602278766,
+        "pedestrian": 0.0024320102535346656
+      },
+      "class_dice": {
+        "background": 0.6319124215433519,
+        "lane_markings": 0.1298253907523954,
+        "vehicle": 0.062383990004948264,
+        "pedestrian": 0.004852219858620761
+      },
+      "confusion_matrix": [
+        [
+          23347115,
+          11639521,
+          14926400,
+          326578
+        ],
+        [
+          92518,
+          896666,
+          89658,
+          3506
+        ],
+        [
+          150727,
+          146573,
+          515447,
+          2794
+        ],
+        [
+          63541,
+          48307,
+          177931,
+          1518
+        ]
+      ],
+      "loss": 1.0739632481336594,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.7357359886169433,
+      "mean_iou": 0.26113511822281177,
+      "foreground_miou": 0.10434950728158245,
+      "foreground_mean_dice": 0.168267881726881,
+      "class_iou": {
+        "background": 0.7314919510464997,
+        "lane_markings": 0.2748027844942463,
+        "vehicle": 0.03824573735050108,
+        "pedestrian": 0.0
+      },
+      "class_dice": {
+        "background": 0.8449267703547705,
+        "lane_markings": 0.43112987802779085,
+        "vehicle": 0.0736737671528522,
+        "pedestrian": 0.0
+      },
+      "confusion_matrix": [
+        [
+          7437105,
+          445985,
+          2160771,
+          0
+        ],
+        [
+          28526,
+          187867,
+          991,
+          0
+        ],
+        [
+          62367,
+          13704,
+          89779,
+          0
+        ],
+        [
+          32282,
+          6570,
+          19813,
+          0
+        ]
+      ],
+      "loss": 0.9175695568323136,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 100,
+    "execution_seconds": 106.32872840399978
+  },
+  {
+    "epoch": 2,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9383093070983887,
+      "mean_iou": 0.34068044167543177,
+      "foreground_miou": 0.14128341542632158,
+      "foreground_mean_dice": 0.20719448349356487,
+      "class_iou": {
+        "background": 0.9388715204227625,
+        "lane_markings": 0.3959342826366635,
+        "vehicle": 0.027915963642301204,
+        "pedestrian": 0.0
+      },
+      "class_dice": {
+        "background": 0.9684721349850408,
+        "lane_markings": 0.5672677970037621,
+        "vehicle": 0.05431565347693253,
+        "pedestrian": 0.0
+      },
+      "confusion_matrix": [
+        [
+          48210232,
+          1213441,
+          815941,
+          0
+        ],
+        [
+          144195,
+          938038,
+          115,
+          0
+        ],
+        [
+          720152,
+          49228,
+          46161,
+          0
+        ],
+        [
+          245165,
+          24159,
+          21973,
+          0
+        ]
+      ],
+      "loss": 0.828952174782753,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.964592170715332,
+      "mean_iou": 0.38290885247068757,
+      "foreground_miou": 0.1889382316745595,
+      "foreground_mean_dice": 0.24355196984449648,
+      "class_iou": {
+        "background": 0.9648207148590717,
+        "lane_markings": 0.5607198275730665,
+        "vehicle": 0.006094867450612003,
+        "pedestrian": 0.0
+      },
+      "class_dice": {
+        "background": 0.9820954223075505,
+        "lane_markings": 0.7185400193768166,
+        "vehicle": 0.01211589015667291,
+        "pedestrian": 0.0
+      },
+      "confusion_matrix": [
+        [
+          9929463,
+          103683,
+          10715,
+          0
+        ],
+        [
+          33454,
+          183929,
+          1,
+          0
+        ],
+        [
+          160728,
+          4032,
+          1090,
+          0
+        ],
+        [
+          53468,
+          2924,
+          2273,
+          0
+        ]
+      ],
+      "loss": 0.7507802993059158,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 200,
+    "execution_seconds": 92.84261755500029
+  },
+  {
+    "epoch": 3,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9546585273742676,
+      "mean_iou": 0.43844001310848923,
+      "foreground_miou": 0.2654764558807548,
+      "foreground_mean_dice": 0.38594878935954924,
+      "class_iou": {
+        "background": 0.9573306847916925,
+        "lane_markings": 0.5363189275472674,
+        "vehicle": 0.145837851626027,
+        "pedestrian": 0.11427258846897
+      },
+      "class_dice": {
+        "background": 0.978200252241563,
+        "lane_markings": 0.6981869687741208,
+        "vehicle": 0.25455233725971355,
+        "pedestrian": 0.20510706204481352
+      },
+      "confusion_matrix": [
+        [
+          48839905,
+          606535,
+          741757,
+          51417
+        ],
+        [
+          154122,
+          921279,
+          6825,
+          122
+        ],
+        [
+          521610,
+          18591,
+          248131,
+          27209
+        ],
+        [
+          101409,
+          10308,
+          137294,
+          42286
+        ]
+      ],
+      "loss": 0.6773883962631225,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9697066307067871,
+      "mean_iou": 0.5067722286726982,
+      "foreground_miou": 0.35203335832539734,
+      "foreground_mean_dice": 0.4752756325123004,
+      "class_iou": {
+        "background": 0.9709888397146007,
+        "lane_markings": 0.649368485039512,
+        "vehicle": 0.0761354384668022,
+        "pedestrian": 0.3305961514698779
+      },
+      "class_dice": {
+        "background": 0.9852809109311851,
+        "lane_markings": 0.7874146874146875,
+        "vehicle": 0.14149787423648888,
+        "pedestrian": 0.4969143358857249
+      },
+      "confusion_matrix": [
+        [
+          9950380,
+          48339,
+          25134,
+          20008
+        ],
+        [
+          44172,
+          173058,
+          54,
+          100
+        ],
+        [
+          139847,
+          512,
+          15243,
+          10248
+        ],
+        [
+          19797,
+          267,
+          9171,
+          29430
+        ]
+      ],
+      "loss": 0.6200062721967697,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 300,
+    "execution_seconds": 92.32514799299997
+  },
+  {
+    "epoch": 4,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9637747573852539,
+      "mean_iou": 0.549170810952211,
+      "foreground_miou": 0.410178761171711,
+      "foreground_mean_dice": 0.5611846984953549,
+      "class_iou": {
+        "background": 0.966146960293711,
+        "lane_markings": 0.6317974662001031,
+        "vehicle": 0.21711013036882681,
+        "pedestrian": 0.3816286869462031
+      },
+      "class_dice": {
+        "background": 0.9827820400051724,
+        "lane_markings": 0.7743576997595698,
+        "vehicle": 0.356763328069638,
+        "pedestrian": 0.552433067656857
+      },
+      "confusion_matrix": [
+        [
+          49062759,
+          366128,
+          667970,
+          142757
+        ],
+        [
+          160187,
+          920642,
+          640,
+          879
+        ],
+        [
+          349440,
+          6780,
+          331322,
+          127999
+        ],
+        [
+          32639,
+          1923,
+          41904,
+          214831
+        ]
+      ],
+      "loss": 0.5402338197827339,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9738329887390137,
+      "mean_iou": 0.6169850790442027,
+      "foreground_miou": 0.4975469847488967,
+      "foreground_mean_dice": 0.6455388911805497,
+      "class_iou": {
+        "background": 0.9752993619301212,
+        "lane_markings": 0.7153178033178338,
+        "vehicle": 0.2824578549732551,
+        "pedestrian": 0.4948652959556012
+      },
+      "class_dice": {
+        "background": 0.9874952432294906,
+        "lane_markings": 0.8340353046347896,
+        "vehicle": 0.44049456109284085,
+        "pedestrian": 0.6620868078140187
+      },
+      "confusion_matrix": [
+        [
+          9908904,
+          43983,
+          72438,
+          18536
+        ],
+        [
+          29485,
+          187527,
+          146,
+          226
+        ],
+        [
+          81517,
+          575,
+          69651,
+          14107
+        ],
+        [
+          4996,
+          217,
+          8155,
+          45297
+        ]
+      ],
+      "loss": 0.45964792370796204,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 400,
+    "execution_seconds": 93.20144725099999
+  },
+  {
+    "epoch": 5,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9688382720947266,
+      "mean_iou": 0.6197737754744174,
+      "foreground_miou": 0.5030267947462242,
+      "foreground_mean_dice": 0.6541621407757088,
+      "class_iou": {
+        "background": 0.9700147176589965,
+        "lane_markings": 0.7088853863587407,
+        "vehicle": 0.3165224618143688,
+        "pedestrian": 0.4836725360655632
+      },
+      "class_dice": {
+        "background": 0.9847791582102313,
+        "lane_markings": 0.8296464959176925,
+        "vehicle": 0.48084627645190736,
+        "pedestrian": 0.6519936499575265
+      },
+      "confusion_matrix": [
+        [
+          49114147,
+          230958,
+          788140,
+          106369
+        ],
+        [
+          144534,
+          934603,
+          2195,
+          1016
+        ],
+        [
+          223199,
+          4267,
+          521008,
+          67067
+        ],
+        [
+          25026,
+          839,
+          40162,
+          225270
+        ]
+      ],
+      "loss": 0.4171983706951141,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9799374580383301,
+      "mean_iou": 0.6548386279236545,
+      "foreground_miou": 0.5461978381563218,
+      "foreground_mean_dice": 0.6898585229862674,
+      "class_iou": {
+        "background": 0.9807609972256527,
+        "lane_markings": 0.7489016961667043,
+        "vehicle": 0.3274818371628422,
+        "pedestrian": 0.5622099811394187
+      },
+      "class_dice": {
+        "background": 0.9902870650213255,
+        "lane_markings": 0.8564251470602032,
+        "vehicle": 0.4933880494557305,
+        "pedestrian": 0.7197623724428688
+      },
+      "confusion_matrix": [
+        [
+          9989854,
+          25472,
+          22472,
+          6063
+        ],
+        [
+          34762,
+          182571,
+          17,
+          34
+        ],
+        [
+          97634,
+          767,
+          65405,
+          2044
+        ],
+        [
+          9562,
+          162,
+          11382,
+          37559
+        ]
+      ],
+      "loss": 0.4101256236433983,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 500,
+    "execution_seconds": 92.9163810709997
+  },
+  {
+    "epoch": 6,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9770791435241699,
+      "mean_iou": 0.6828841118577226,
+      "foreground_miou": 0.5846066059447699,
+      "foreground_mean_dice": 0.7289817041310341,
+      "class_iou": {
+        "background": 0.9777166295965808,
+        "lane_markings": 0.7455674238685748,
+        "vehicle": 0.422038680252021,
+        "pedestrian": 0.5862137137137137
+      },
+      "class_dice": {
+        "background": 0.9887327789684589,
+        "lane_markings": 0.8542407628302637,
+        "vehicle": 0.5935684958685162,
+        "pedestrian": 0.7391358536943224
+      },
+      "confusion_matrix": [
+        [
+          49478712,
+          170642,
+          520228,
+          70032
+        ],
+        [
+          144828,
+          936716,
+          545,
+          259
+        ],
+        [
+          197384,
+          2737,
+          577408,
+          38012
+        ],
+        [
+          24567,
+          653,
+          31826,
+          234251
+        ]
+      ],
+      "loss": 0.3217733693122864,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9791739463806153,
+      "mean_iou": 0.6306678566344821,
+      "foreground_miou": 0.5141868341938856,
+      "foreground_mean_dice": 0.6666039984863295,
+      "class_iou": {
+        "background": 0.9801109239562714,
+        "lane_markings": 0.7147935729609036,
+        "vehicle": 0.3558190547337067,
+        "pedestrian": 0.4719478748870464
+      },
+      "class_dice": {
+        "background": 0.9899555748099252,
+        "lane_markings": 0.8336788570144712,
+        "vehicle": 0.5248769052056025,
+        "pedestrian": 0.6412562332389148
+      },
+      "confusion_matrix": [
+        [
+          9999567,
+          10863,
+          29647,
+          3784
+        ],
+        [
+          54035,
+          163266,
+          45,
+          38
+        ],
+        [
+          90348,
+          130,
+          74780,
+          592
+        ],
+        [
+          14241,
+          33,
+          14621,
+          29770
+        ]
+      ],
+      "loss": 0.4503057673573494,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 600,
+    "execution_seconds": 92.77887967800007
+  },
+  {
+    "epoch": 7,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9831567001342774,
+      "mean_iou": 0.742251735407086,
+      "foreground_miou": 0.6618656292000589,
+      "foreground_mean_dice": 0.7935369281467265,
+      "class_iou": {
+        "background": 0.9834100540281672,
+        "lane_markings": 0.7558140284073154,
+        "vehicle": 0.5553682170031284,
+        "pedestrian": 0.6744146421897329
+      },
+      "class_dice": {
+        "background": 0.9916356449146057,
+        "lane_markings": 0.8609272009210545,
+        "vehicle": 0.7141308545872278,
+        "pedestrian": 0.8055527289318973
+      },
+      "confusion_matrix": [
+        [
+          49730420,
+          157215,
+          300029,
+          51950
+        ],
+        [
+          143462,
+          938458,
+          306,
+          122
+        ],
+        [
+          161925,
+          1663,
+          631442,
+          20511
+        ],
+        [
+          24362,
+          426,
+          21103,
+          245406
+        ]
+      ],
+      "loss": 0.24801555037498474,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9701807022094726,
+      "mean_iou": 0.6995330606807153,
+      "foreground_miou": 0.6093585944948964,
+      "foreground_mean_dice": 0.7414236462862344,
+      "class_iou": {
+        "background": 0.9700564592381717,
+        "lane_markings": 0.7864346562235052,
+        "vehicle": 0.3702928816256105,
+        "pedestrian": 0.6713482456355735
+      },
+      "class_dice": {
+        "background": 0.9848006687212367,
+        "lane_markings": 0.8804516341907693,
+        "vehicle": 0.5404580095115482,
+        "pedestrian": 0.8033612951563854
+      },
+      "confusion_matrix": [
+        [
+          9780246,
+          29936,
+          219639,
+          14040
+        ],
+        [
+          22487,
+          194792,
+          47,
+          58
+        ],
+        [
+          13526,
+          273,
+          143360,
+          8691
+        ],
+        [
+          2267,
+          97,
+          1617,
+          54684
+        ]
+      ],
+      "loss": 0.24794888570904733,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 700,
+    "execution_seconds": 94.07217081199997
+  },
+  {
+    "epoch": 8,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9868367385864257,
+      "mean_iou": 0.7874884515591982,
+      "foreground_miou": 0.7210182541155871,
+      "foreground_mean_dice": 0.8368798383310296,
+      "class_iou": {
+        "background": 0.9868990438900317,
+        "lane_markings": 0.778883144937215,
+        "vehicle": 0.6553749688861684,
+        "pedestrian": 0.7287966485233778
+      },
+      "class_dice": {
+        "background": 0.9934063302560564,
+        "lane_markings": 0.8756990555045204,
+        "vehicle": 0.7918145208238137,
+        "pedestrian": 0.843125938664755
+      },
+      "confusion_matrix": [
+        [
+          49863842,
+          129077,
+          203694,
+          43001
+        ],
+        [
+          137350,
+          944684,
+          185,
+          129
+        ],
+        [
+          124349,
+          1158,
+          676674,
+          13360
+        ],
+        [
+          24465,
+          287,
+          13079,
+          253466
+        ]
+      ],
+      "loss": 0.19806517109274865,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9881573677062988,
+      "mean_iou": 0.7983633090019344,
+      "foreground_miou": 0.734959345070839,
+      "foreground_mean_dice": 0.8465395961378134,
+      "class_iou": {
+        "background": 0.9885752007952203,
+        "lane_markings": 0.7945793910478555,
+        "vehicle": 0.6952963582264476,
+        "pedestrian": 0.7150022859382144
+      },
+      "class_dice": {
+        "background": 0.9942547814132395,
+        "lane_markings": 0.8855327270685978,
+        "vehicle": 0.8202652649520693,
+        "pedestrian": 0.8338207963927734
+      },
+      "confusion_matrix": [
+        [
+          9972022,
+          30265,
+          31405,
+          10169
+        ],
+        [
+          20161,
+          197186,
+          11,
+          26
+        ],
+        [
+          20098,
+          421,
+          137636,
+          7695
+        ],
+        [
+          3147,
+          94,
+          687,
+          54737
+        ]
+      ],
+      "loss": 0.17686995342373849,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 800,
+    "execution_seconds": 93.84679687399966
+  },
+  {
+    "epoch": 9,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9878025054931641,
+      "mean_iou": 0.8010003557430094,
+      "foreground_miou": 0.7387345850408846,
+      "foreground_mean_dice": 0.8490434202594579,
+      "class_iou": {
+        "background": 0.9877976678493835,
+        "lane_markings": 0.7841627607622816,
+        "vehicle": 0.6819117544087785,
+        "pedestrian": 0.7501292399515938
+      },
+      "class_dice": {
+        "background": 0.9938613811918703,
+        "lane_markings": 0.8790260373187578,
+        "vehicle": 0.8108769709484341,
+        "pedestrian": 0.8572272525111818
+      },
+      "confusion_matrix": [
+        [
+          49909786,
+          118080,
+          172853,
+          38895
+        ],
+        [
+          139555,
+          942417,
+          261,
+          115
+        ],
+        [
+          122562,
+          1120,
+          681714,
+          10145
+        ],
+        [
+          24594,
+          265,
+          11055,
+          255383
+        ]
+      ],
+      "loss": 0.1860484131425619,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9896926879882812,
+      "mean_iou": 0.8113554269247841,
+      "foreground_miou": 0.7518357437137619,
+      "foreground_mean_dice": 0.8575933272027046,
+      "class_iou": {
+        "background": 0.9899144765578509,
+        "lane_markings": 0.81526725253306,
+        "vehicle": 0.7134750170784316,
+        "pedestrian": 0.7267649615297943
+      },
+      "class_dice": {
+        "background": 0.99493167994858,
+        "lane_markings": 0.898233856635071,
+        "vehicle": 0.8327813478073879,
+        "pedestrian": 0.8417647771656552
+      },
+      "confusion_matrix": [
+        [
+          10005813,
+          20408,
+          14643,
+          2997
+        ],
+        [
+          23278,
+          194076,
+          19,
+          11
+        ],
+        [
+          32571,
+          186,
+          132640,
+          453
+        ],
+        [
+          8045,
+          74,
+          5395,
+          45151
+        ]
+      ],
+      "loss": 0.1889040380716324,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 900,
+    "execution_seconds": 92.09050800099976
+  },
+  {
+    "epoch": 10,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9895317268371582,
+      "mean_iou": 0.8246992023968163,
+      "foreground_miou": 0.7697536611858894,
+      "foreground_mean_dice": 0.8695769284683603,
+      "class_iou": {
+        "background": 0.9895358260295966,
+        "lane_markings": 0.804182931380559,
+        "vehicle": 0.7314240047578336,
+        "pedestrian": 0.7736540474192755
+      },
+      "class_dice": {
+        "background": 0.9947403943002694,
+        "lane_markings": 0.8914649588943833,
+        "vehicle": 0.8448814418050472,
+        "pedestrian": 0.8723843847056503
+      },
+      "confusion_matrix": [
+        [
+          49953896,
+          106196,
+          143381,
+          36141
+        ],
+        [
+          125338,
+          956730,
+          203,
+          77
+        ],
+        [
+          96492,
+          885,
+          708390,
+          9774
+        ],
+        [
+          20706,
+          263,
+          9383,
+          260945
+        ]
+      ],
+      "loss": 0.1555855483561754,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9901483535766602,
+      "mean_iou": 0.8244431618462853,
+      "foreground_miou": 0.7692178649095146,
+      "foreground_mean_dice": 0.8688011142337784,
+      "class_iou": {
+        "background": 0.9901190526565977,
+        "lane_markings": 0.8254756714979201,
+        "vehicle": 0.713451199052054,
+        "pedestrian": 0.7687267241785698
+      },
+      "class_dice": {
+        "background": 0.9950349968610107,
+        "lane_markings": 0.9043951495892183,
+        "vehicle": 0.8327651227496438,
+        "pedestrian": 0.8692430703624734
+      },
+      "confusion_matrix": [
+        [
+          10014575,
+          12749,
+          12502,
+          4035
+        ],
+        [
+          27246,
+          190112,
+          10,
+          16
+        ],
+        [
+          35946,
+          131,
+          128850,
+          923
+        ],
+        [
+          7463,
+          42,
+          2239,
+          48921
+        ]
+      ],
+      "loss": 0.18085013926029206,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 1000,
+    "execution_seconds": 92.93891764399996
+  },
+  {
+    "epoch": 11,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9908977699279785,
+      "mean_iou": 0.8458185857572609,
+      "foreground_miou": 0.7974662491233323,
+      "foreground_mean_dice": 0.8872482762001401,
+      "class_iou": {
+        "background": 0.9908755956590465,
+        "lane_markings": 0.8138584438760185,
+        "vehicle": 0.7782432482811144,
+        "pedestrian": 0.8002970552128643
+      },
+      "class_dice": {
+        "background": 0.9954168887494284,
+        "lane_markings": 0.8973781241020015,
+        "vehicle": 0.8752944784504368,
+        "pedestrian": 0.8890722260479823
+      },
+      "confusion_matrix": [
+        [
+          49995082,
+          98383,
+          115164,
+          30985
+        ],
+        [
+          120220,
+          961835,
+          211,
+          82
+        ],
+        [
+          76535,
+          823,
+          730642,
+          7541
+        ],
+        [
+          19089,
+          267,
+          7919,
+          264022
+        ]
+      ],
+      "loss": 0.13625049866735936,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9885424613952637,
+      "mean_iou": 0.7974093851168498,
+      "foreground_miou": 0.7336080515049028,
+      "foreground_mean_dice": 0.8451861122815666,
+      "class_iou": {
+        "background": 0.9888133859526911,
+        "lane_markings": 0.8118388157753679,
+        "vehicle": 0.6961128799276257,
+        "pedestrian": 0.6928724588117146
+      },
+      "class_dice": {
+        "background": 0.9943752319215459,
+        "lane_markings": 0.8961490489185102,
+        "vehicle": 0.8208331982684187,
+        "pedestrian": 0.818576089657771
+      },
+      "confusion_matrix": [
+        [
+          9985972,
+          15495,
+          32908,
+          9486
+        ],
+        [
+          28023,
+          189320,
+          20,
+          21
+        ],
+        [
+          20818,
+          246,
+          139272,
+          5514
+        ],
+        [
+          6243,
+          74,
+          1293,
+          51055
+        ]
+      ],
+      "loss": 0.18039400018751622,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 1100,
+    "execution_seconds": 95.0638203189992
+  },
+  {
+    "epoch": 12,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.991786003112793,
+      "mean_iou": 0.8610301670144114,
+      "foreground_miou": 0.8174606939625012,
+      "foreground_mean_dice": 0.8995158667031239,
+      "class_iou": {
+        "background": 0.9917385861701421,
+        "lane_markings": 0.8263937673809634,
+        "vehicle": 0.800591341714266,
+        "pedestrian": 0.8253969727922741
+      },
+      "class_dice": {
+        "background": 0.9958521595719328,
+        "lane_markings": 0.9049458907933162,
+        "vehicle": 0.8892537947584012,
+        "pedestrian": 0.9043479145576543
+      },
+      "confusion_matrix": [
+        [
+          50021528,
+          86893,
+          105517,
+          25676
+        ],
+        [
+          115033,
+          966965,
+          254,
+          96
+        ],
+        [
+          65845,
+          699,
+          742996,
+          6001
+        ],
+        [
+          17727,
+          162,
+          6747,
+          266661
+        ]
+      ],
+      "loss": 0.12142984136939049,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9933322906494141,
+      "mean_iou": 0.8817741859405586,
+      "foreground_miou": 0.8445772944474484,
+      "foreground_mean_dice": 0.9157090938062318,
+      "class_iou": {
+        "background": 0.9933648604198887,
+        "lane_markings": 0.8585574735715241,
+        "vehicle": 0.8392972547315828,
+        "pedestrian": 0.8358771550392388
+      },
+      "class_dice": {
+        "background": 0.9966713873050247,
+        "lane_markings": 0.9238966088271294,
+        "vehicle": 0.9126281818477083,
+        "pedestrian": 0.9106024907438572
+      },
+      "confusion_matrix": [
+        [
+          10008296,
+          14097,
+          16534,
+          4934
+        ],
+        [
+          18451,
+          198896,
+          16,
+          21
+        ],
+        [
+          10055,
+          139,
+          154544,
+          1112
+        ],
+        [
+          2779,
+          43,
+          1735,
+          54108
+        ]
+      ],
+      "loss": 0.0954734195023775,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 1200,
+    "execution_seconds": 98.59063927099942
+  },
+  {
+    "epoch": 13,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9914404869079589,
+      "mean_iou": 0.8525252291398646,
+      "foreground_miou": 0.8062265998987419,
+      "foreground_mean_dice": 0.8926906862140328,
+      "class_iou": {
+        "background": 0.9914211168632332,
+        "lane_markings": 0.8187313644814032,
+        "vehicle": 0.796952308569257,
+        "pedestrian": 0.8029961266455652
+      },
+      "class_dice": {
+        "background": 0.9956920798598944,
+        "lane_markings": 0.9003323750507354,
+        "vehicle": 0.887004407149564,
+        "pedestrian": 0.8907352764417991
+      },
+      "confusion_matrix": [
+        [
+          50020240,
+          92537,
+          98155,
+          28682
+        ],
+        [
+          119242,
+          962702,
+          293,
+          111
+        ],
+        [
+          73169,
+          826,
+          734013,
+          7533
+        ],
+        [
+          21046,
+          135,
+          7036,
+          263080
+        ]
+      ],
+      "loss": 0.13170890733599663,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9881575584411622,
+      "mean_iou": 0.7788205667389417,
+      "foreground_miou": 0.7091171340141994,
+      "foreground_mean_dice": 0.8268256494595398,
+      "class_iou": {
+        "background": 0.9879308649131686,
+        "lane_markings": 0.8156003489930471,
+        "vehicle": 0.6046000318300511,
+        "pedestrian": 0.7071510212195
+      },
+      "class_dice": {
+        "background": 0.9939287953621272,
+        "lane_markings": 0.8984359905475767,
+        "vehicle": 0.7535834723130386,
+        "pedestrian": 0.8284574855180042
+      },
+      "confusion_matrix": [
+        [
+          10034970,
+          4893,
+          2547,
+          1451
+        ],
+        [
+          36021,
+          181352,
+          1,
+          10
+        ],
+        [
+          62970,
+          66,
+          102571,
+          243
+        ],
+        [
+          14711,
+          11,
+          1253,
+          42690
+        ]
+      ],
+      "loss": 0.2640388660132885,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 1300,
+    "execution_seconds": 95.24043972299933
+  },
+  {
+    "epoch": 14,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9923806190490723,
+      "mean_iou": 0.8698248630791178,
+      "foreground_miou": 0.8289899238487753,
+      "foreground_mean_dice": 0.906494870673599,
+      "class_iou": {
+        "background": 0.9923296807701449,
+        "lane_markings": 0.8323724588862639,
+        "vehicle": 0.8232827248948027,
+        "pedestrian": 0.8313145877652595
+      },
+      "class_dice": {
+        "background": 0.9961500753093785,
+        "lane_markings": 0.9085188492651641,
+        "vehicle": 0.9030774148779404,
+        "pedestrian": 0.9078883478776925
+      },
+      "confusion_matrix": [
+        [
+          50034104,
+          85959,
+          93082,
+          26469
+        ],
+        [
+          108837,
+          973105,
+          293,
+          113
+        ],
+        [
+          56031,
+          639,
+          752869,
+          6002
+        ],
+        [
+          16366,
+          128,
+          5556,
+          269247
+        ]
+      ],
+      "loss": 0.11069494999945163,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9941932678222656,
+      "mean_iou": 0.8947485238199896,
+      "foreground_miou": 0.8616092016867478,
+      "foreground_mean_dice": 0.925638272882555,
+      "class_iou": {
+        "background": 0.9941664902197149,
+        "lane_markings": 0.8736080500456377,
+        "vehicle": 0.8547817833576775,
+        "pedestrian": 0.8564377716569281
+      },
+      "class_dice": {
+        "background": 0.9970747127640068,
+        "lane_markings": 0.9325408801743333,
+        "vehicle": 0.9217060368258326,
+        "pedestrian": 0.9226679016474988
+      },
+      "confusion_matrix": [
+        [
+          10024474,
+          7101,
+          9102,
+          3184
+        ],
+        [
+          21132,
+          196208,
+          22,
+          22
+        ],
+        [
+          14426,
+          88,
+          150398,
+          938
+        ],
+        [
+          3876,
+          22,
+          975,
+          53792
+        ]
+      ],
+      "loss": 0.09425816107541322,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 1400,
+    "execution_seconds": 96.24749705600061
+  },
+  {
+    "epoch": 15,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9932209396362305,
+      "mean_iou": 0.8839657627302371,
+      "foreground_miou": 0.8475645499576899,
+      "foreground_mean_dice": 0.917485552382291,
+      "class_iou": {
+        "background": 0.9931694010478783,
+        "lane_markings": 0.8409198789196144,
+        "vehicle": 0.8484220169137444,
+        "pedestrian": 0.8533517540397111
+      },
+      "class_dice": {
+        "background": 0.9965729962799296,
+        "lane_markings": 0.9135866134631859,
+        "vehicle": 0.9179960086499397,
+        "pedestrian": 0.9208740350337474
+      },
+      "confusion_matrix": [
+        [
+          50068942,
+          73706,
+          74521,
+          22445
+        ],
+        [
+          109343,
+          972597,
+          314,
+          94
+        ],
+        [
+          50286,
+          437,
+          759448,
+          5370
+        ],
+        [
+          14052,
+          96,
+          4754,
+          272395
+        ]
+      ],
+      "loss": 0.0991709603741765,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9929629325866699,
+      "mean_iou": 0.8765462172881489,
+      "foreground_miou": 0.8377058213842546,
+      "foreground_mean_dice": 0.9116736218155844,
+      "class_iou": {
+        "background": 0.9930674049998313,
+        "lane_markings": 0.8463736638132958,
+        "vehicle": 0.8353309015112037,
+        "pedestrian": 0.8314128988282644
+      },
+      "class_dice": {
+        "background": 0.9965216454883675,
+        "lane_markings": 0.9167956415336745,
+        "vehicle": 0.9102782509937536,
+        "pedestrian": 0.9079469729193251
+      },
+      "confusion_matrix": [
+        [
+          10003307,
+          17276,
+          20641,
+          2637
+        ],
+        [
+          18593,
+          198737,
+          41,
+          13
+        ],
+        [
+          6726,
+          124,
+          158697,
+          303
+        ],
+        [
+          3960,
+          26,
+          3449,
+          51230
+        ]
+      ],
+      "loss": 0.09928148817270994,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 1500,
+    "execution_seconds": 95.04883756899926
+  },
+  {
+    "epoch": 16,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9926122856140137,
+      "mean_iou": 0.872241278652139,
+      "foreground_miou": 0.8321239799509939,
+      "foreground_mean_dice": 0.9083707945948754,
+      "class_iou": {
+        "background": 0.9925931747555745,
+        "lane_markings": 0.8322342133182689,
+        "vehicle": 0.83238940880323,
+        "pedestrian": 0.8317483177314826
+      },
+      "class_dice": {
+        "background": 0.9962828211306435,
+        "lane_markings": 0.9084364949293798,
+        "vehicle": 0.9085289456534025,
+        "pedestrian": 0.9081469432018435
+      },
+      "confusion_matrix": [
+        [
+          50051489,
+          77992,
+          85858,
+          24275
+        ],
+        [
+          115325,
+          966417,
+          402,
+          204
+        ],
+        [
+          52990,
+          554,
+          755589,
+          6408
+        ],
+        [
+          17049,
+          338,
+          5934,
+          267976
+        ]
+      ],
+      "loss": 0.11269440066069364,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9934466361999512,
+      "mean_iou": 0.8887945555239194,
+      "foreground_miou": 0.8539044627829074,
+      "foreground_mean_dice": 0.9211822021258236,
+      "class_iou": {
+        "background": 0.9934648337469554,
+        "lane_markings": 0.8447662634014508,
+        "vehicle": 0.8598903928402999,
+        "pedestrian": 0.8570567321069718
+      },
+      "class_dice": {
+        "background": 0.9967217047713046,
+        "lane_markings": 0.9158518129487454,
+        "vehicle": 0.924667814996488,
+        "pedestrian": 0.9230269784322376
+      },
+      "confusion_matrix": [
+        [
+          10004172,
+          17768,
+          17050,
+          4871
+        ],
+        [
+          18541,
+          198798,
+          21,
+          24
+        ],
+        [
+          5942,
+          148,
+          158630,
+          1130
+        ],
+        [
+          1637,
+          29,
+          1556,
+          55443
+        ]
+      ],
+      "loss": 0.08541821371763944,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 2,
+    "optimizer_steps": 1600,
+    "execution_seconds": 94.46501092699964
+  },
+  {
+    "epoch": 17,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9936590385437012,
+      "mean_iou": 0.8910479993275846,
+      "foreground_miou": 0.8568666556814512,
+      "foreground_mean_dice": 0.9229116821869775,
+      "class_iou": {
+        "background": 0.9935920302659842,
+        "lane_markings": 0.8511965139313459,
+        "vehicle": 0.859364595841638,
+        "pedestrian": 0.86003885727137
+      },
+      "class_dice": {
+        "background": 0.9967857166176769,
+        "lane_markings": 0.9196176716254487,
+        "vehicle": 0.924363729161626,
+        "pedestrian": 0.9247536457738579
+      },
+      "confusion_matrix": [
+        [
+          50072127,
+          69583,
+          73818,
+          24086
+        ],
+        [
+          100938,
+          980981,
+          328,
+          101
+        ],
+        [
+          42545,
+          429,
+          767905,
+          4662
+        ],
+        [
+          11960,
+          113,
+          3886,
+          275338
+        ]
+      ],
+      "loss": 0.08917187310755254,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9949421882629395,
+      "mean_iou": 0.9067605102309205,
+      "foreground_miou": 0.8773538223408779,
+      "foreground_mean_dice": 0.9346581275832574,
+      "class_iou": {
+        "background": 0.9949805739010484,
+        "lane_markings": 0.880738985003212,
+        "vehicle": 0.8829923786602487,
+        "pedestrian": 0.8683301033591732
+      },
+      "class_dice": {
+        "background": 0.9974839724433324,
+        "lane_markings": 0.9365882156174987,
+        "vehicle": 0.9378608099184117,
+        "pedestrian": 0.9295253572138615
+      },
+      "confusion_matrix": [
+        [
+          10026071,
+          8158,
+          7043,
+          2589
+        ],
+        [
+          18553,
+          198796,
+          12,
+          23
+        ],
+        [
+          10980,
+          136,
+          154091,
+          643
+        ],
+        [
+          3256,
+          37,
+          1605,
+          53767
+        ]
+      ],
+      "loss": 0.08056959882378578,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 1700,
+    "execution_seconds": 96.62381987599929
+  },
+  {
+    "epoch": 18,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9937875938415527,
+      "mean_iou": 0.8909392154247582,
+      "foreground_miou": 0.8566738376641485,
+      "foreground_mean_dice": 0.9227732535650479,
+      "class_iou": {
+        "background": 0.9937353487065869,
+        "lane_markings": 0.8493294858624549,
+        "vehicle": 0.8709258189152135,
+        "pedestrian": 0.8497662082147771
+      },
+      "class_dice": {
+        "background": 0.996857832060069,
+        "lane_markings": 0.9185269497461789,
+        "vehicle": 0.9310105297709637,
+        "pedestrian": 0.9187822811780011
+      },
+      "confusion_matrix": [
+        [
+          50083401,
+          68714,
+          62564,
+          24935
+        ],
+        [
+          103648,
+          978070,
+          448,
+          182
+        ],
+        [
+          41685,
+          391,
+          768653,
+          4812
+        ],
+        [
+          14187,
+          126,
+          4017,
+          272967
+        ]
+      ],
+      "loss": 0.09193246383219958,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9943179130554199,
+      "mean_iou": 0.8962546067649488,
+      "foreground_miou": 0.8635730656685751,
+      "foreground_mean_dice": 0.9267687735901693,
+      "class_iou": {
+        "background": 0.9942992300540706,
+        "lane_markings": 0.8750907508533963,
+        "vehicle": 0.8536480440518527,
+        "pedestrian": 0.861980402100476
+      },
+      "class_dice": {
+        "background": 0.9971414671078347,
+        "lane_markings": 0.9333849579868309,
+        "vehicle": 0.921046524221373,
+        "pedestrian": 0.925874838562304
+      },
+      "confusion_matrix": [
+        [
+          10030601,
+          4299,
+          7029,
+          1932
+        ],
+        [
+          23285,
+          194061,
+          21,
+          17
+        ],
+        [
+          16443,
+          67,
+          148825,
+          515
+        ],
+        [
+          4522,
+          11,
+          1440,
+          52692
+        ]
+      ],
+      "loss": 0.10049509536474943,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 1800,
+    "execution_seconds": 92.88483634300064
+  },
+  {
+    "epoch": 19,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9940326499938965,
+      "mean_iou": 0.8985961851970861,
+      "foreground_miou": 0.8668008267396741,
+      "foreground_mean_dice": 0.9286289095394916,
+      "class_iou": {
+        "background": 0.9939822605693222,
+        "lane_markings": 0.8570339053880871,
+        "vehicle": 0.8668172161723624,
+        "pedestrian": 0.8765513586585726
+      },
+      "class_dice": {
+        "background": 0.9969820496652966,
+        "lane_markings": 0.9230137402461505,
+        "vehicle": 0.9286578339465341,
+        "pedestrian": 0.9342151544257904
+      },
+      "confusion_matrix": [
+        [
+          50078030,
+          65748,
+          76725,
+          19111
+        ],
+        [
+          97497,
+          984396,
+          325,
+          130
+        ],
+        [
+          33259,
+          405,
+          777288,
+          4589
+        ],
+        [
+          10841,
+          107,
+          4124,
+          276225
+        ]
+      ],
+      "loss": 0.07906050808727741,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9952432632446289,
+      "mean_iou": 0.9162547705372059,
+      "foreground_miou": 0.8899249564460577,
+      "foreground_mean_dice": 0.9417443407955642,
+      "class_iou": {
+        "background": 0.995244212810651,
+        "lane_markings": 0.8817145957677699,
+        "vehicle": 0.8976525768662691,
+        "pedestrian": 0.8904076967041341
+      },
+      "class_dice": {
+        "background": 0.9976164385498206,
+        "lane_markings": 0.9371395617070357,
+        "vehicle": 0.9460663008701283,
+        "pedestrian": 0.9420271598095286
+      },
+      "confusion_matrix": [
+        [
+          10020691,
+          9189,
+          10620,
+          3361
+        ],
+        [
+          17455,
+          199875,
+          25,
+          29
+        ],
+        [
+          5593,
+          93,
+          159231,
+          933
+        ],
+        [
+          1666,
+          23,
+          891,
+          56085
+        ]
+      ],
+      "loss": 0.06552879810333252,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 1900,
+    "execution_seconds": 92.7848693220003
+  },
+  {
+    "epoch": 20,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9945478248596191,
+      "mean_iou": 0.9061839300763121,
+      "foreground_miou": 0.8767419775095849,
+      "foreground_mean_dice": 0.9342822580912253,
+      "class_iou": {
+        "background": 0.9945097877764935,
+        "lane_markings": 0.860734174476786,
+        "vehicle": 0.8880799110073674,
+        "pedestrian": 0.8814118470446014
+      },
+      "class_dice": {
+        "background": 0.9972473375376979,
+        "lane_markings": 0.9251554427099327,
+        "vehicle": 0.9407228007987656,
+        "pedestrian": 0.9369685307649775
+      },
+      "confusion_matrix": [
+        [
+          50099981,
+          63581,
+          57725,
+          18327
+        ],
+        [
+          95059,
+          986725,
+          338,
+          226
+        ],
+        [
+          31509,
+          362,
+          779180,
+          4490
+        ],
+        [
+          10377,
+          85,
+          3772,
+          277063
+        ]
+      ],
+      "loss": 0.07587509598582982,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9952383041381836,
+      "mean_iou": 0.9156685427521987,
+      "foreground_miou": 0.8891417636808733,
+      "foreground_mean_dice": 0.9412808935556627,
+      "class_iou": {
+        "background": 0.9952488799661751,
+        "lane_markings": 0.8765951705287348,
+        "vehicle": 0.903834750519571,
+        "pedestrian": 0.886995369994314
+      },
+      "class_dice": {
+        "background": 0.9976187832598079,
+        "lane_markings": 0.9342400367381871,
+        "vehicle": 0.9494886573248099,
+        "pedestrian": 0.9401139866039913
+      },
+      "confusion_matrix": [
+        [
+          10022831,
+          12190,
+          6714,
+          2126
+        ],
+        [
+          15951,
+          201403,
+          8,
+          22
+        ],
+        [
+          7958,
+          153,
+          156997,
+          742
+        ],
+        [
+          2908,
+          29,
+          1129,
+          54599
+        ]
+      ],
+      "loss": 0.06821860149502754,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 2000,
+    "execution_seconds": 93.85692023800038
+  },
+  {
+    "epoch": 21,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9948124313354492,
+      "mean_iou": 0.9110375326051412,
+      "foreground_miou": 0.8831275315862018,
+      "foreground_mean_dice": 0.9378639171706995,
+      "class_iou": {
+        "background": 0.9947675356619589,
+        "lane_markings": 0.8625825956456489,
+        "vehicle": 0.9003779393688757,
+        "pedestrian": 0.8864220597440811
+      },
+      "class_dice": {
+        "background": 0.997376905205997,
+        "lane_markings": 0.9262221151021136,
+        "vehicle": 0.9475777641029609,
+        "pedestrian": 0.9397918723070238
+      },
+      "confusion_matrix": [
+        [
+          50102595,
+          66503,
+          51307,
+          19209
+        ],
+        [
+          90353,
+          991474,
+          401,
+          120
+        ],
+        [
+          27200,
+          470,
+          783788,
+          4083
+        ],
+        [
+          8967,
+          104,
+          3261,
+          278965
+        ]
+      ],
+      "loss": 0.07010391481220722,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9953997611999512,
+      "mean_iou": 0.9190889145858757,
+      "foreground_miou": 0.8936496543749901,
+      "foreground_mean_dice": 0.9438257375870527,
+      "class_iou": {
+        "background": 0.9954066952185326,
+        "lane_markings": 0.885153054738494,
+        "vehicle": 0.9011263091368725,
+        "pedestrian": 0.8946695992496038
+      },
+      "class_dice": {
+        "background": 0.9976980608552262,
+        "lane_markings": 0.9390781852047353,
+        "vehicle": 0.9479920453533585,
+        "pedestrian": 0.9444069822030643
+      },
+      "confusion_matrix": [
+        [
+          10020586,
+          10631,
+          10275,
+          2369
+        ],
+        [
+          15379,
+          201922,
+          50,
+          33
+        ],
+        [
+          5300,
+          89,
+          159694,
+          767
+        ],
+        [
+          2286,
+          17,
+          1041,
+          55321
+        ]
+      ],
+      "loss": 0.0621165519580245,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 2100,
+    "execution_seconds": 97.4326856560001
+  },
+  {
+    "epoch": 22,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9951728439331055,
+      "mean_iou": 0.9174308260012933,
+      "foreground_miou": 0.8915314451127129,
+      "foreground_mean_dice": 0.9425834880017817,
+      "class_iou": {
+        "background": 0.9951289686670353,
+        "lane_markings": 0.8700587530659973,
+        "vehicle": 0.906629638083644,
+        "pedestrian": 0.8979059441884971
+      },
+      "class_dice": {
+        "background": 0.9975585381148473,
+        "lane_markings": 0.9305148853099072,
+        "vehicle": 0.9510285794097889,
+        "pedestrian": 0.946206999285649
+      },
+      "confusion_matrix": [
+        [
+          50118344,
+          56653,
+          48648,
+          15969
+        ],
+        [
+          90413,
+          991445,
+          365,
+          125
+        ],
+        [
+          24802,
+          423,
+          786445,
+          3871
+        ],
+        [
+          8838,
+          91,
+          2884,
+          279484
+        ]
+      ],
+      "loss": 0.06552504256367683,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9957705497741699,
+      "mean_iou": 0.9243686928200239,
+      "foreground_miou": 0.9005724786723514,
+      "foreground_mean_dice": 0.9476775180572109,
+      "class_iou": {
+        "background": 0.9957573352630418,
+        "lane_markings": 0.8937355420245154,
+        "vehicle": 0.9064298750526464,
+        "pedestrian": 0.9015520189398921
+      },
+      "class_dice": {
+        "background": 0.997874158014106,
+        "lane_markings": 0.9438863264604087,
+        "vehicle": 0.9509186641628926,
+        "pedestrian": 0.9482275635483313
+      },
+      "confusion_matrix": [
+        [
+          10029944,
+          8138,
+          4212,
+          1567
+        ],
+        [
+          15674,
+          201675,
+          16,
+          19
+        ],
+        [
+          10211,
+          110,
+          154956,
+          573
+        ],
+        [
+          2933,
+          22,
+          874,
+          54836
+        ]
+      ],
+      "loss": 0.06418114099651576,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 2200,
+    "execution_seconds": 98.20858417599993
+  },
+  {
+    "epoch": 23,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9943185043334961,
+      "mean_iou": 0.902841979849798,
+      "foreground_miou": 0.8723641371565899,
+      "foreground_mean_dice": 0.9317429531196203,
+      "class_iou": {
+        "background": 0.9942755079294218,
+        "lane_markings": 0.8504772844298333,
+        "vehicle": 0.8920749294399544,
+        "pedestrian": 0.8745401975999822
+      },
+      "class_dice": {
+        "background": 0.9971295379962212,
+        "lane_markings": 0.9191977568013014,
+        "vehicle": 0.942959409862277,
+        "pedestrian": 0.9330716926952823
+      },
+      "confusion_matrix": [
+        [
+          50089184,
+          78271,
+          52964,
+          19195
+        ],
+        [
+          94064,
+          987712,
+          427,
+          145
+        ],
+        [
+          31968,
+          650,
+          778479,
+          4444
+        ],
+        [
+          11924,
+          93,
+          3729,
+          275551
+        ]
+      ],
+      "loss": 0.07986977836117148,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9897548675537109,
+      "mean_iou": 0.7991371089429387,
+      "foreground_miou": 0.7355714039025845,
+      "foreground_mean_dice": 0.8461469558963203,
+      "class_iou": {
+        "background": 0.9898342240640013,
+        "lane_markings": 0.7993550254268822,
+        "vehicle": 0.7556928841090429,
+        "pedestrian": 0.6516663021718285
+      },
+      "class_dice": {
+        "background": 0.9948911442907861,
+        "lane_markings": 0.8884906137267067,
+        "vehicle": 0.8608486039316979,
+        "pedestrian": 0.7891016500305561
+      },
+      "confusion_matrix": [
+        [
+          10013943,
+          24307,
+          4904,
+          707
+        ],
+        [
+          24021,
+          193340,
+          18,
+          5
+        ],
+        [
+          33312,
+          160,
+          132312,
+          66
+        ],
+        [
+          15594,
+          19,
+          4315,
+          38737
+        ]
+      ],
+      "loss": 0.22434260211884977,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 2300,
+    "execution_seconds": 99.49912374999985
+  },
+  {
+    "epoch": 24,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9929328536987305,
+      "mean_iou": 0.8772393432215577,
+      "foreground_miou": 0.8386784281941754,
+      "foreground_mean_dice": 0.9122608759855996,
+      "class_iou": {
+        "background": 0.9929220883037045,
+        "lane_markings": 0.8374491341312663,
+        "vehicle": 0.8415549329597759,
+        "pedestrian": 0.8370312174914838
+      },
+      "class_dice": {
+        "background": 0.9964484754633234,
+        "lane_markings": 0.9115344948334656,
+        "vehicle": 0.9139612594745851,
+        "pedestrian": 0.911286873648748
+      },
+      "confusion_matrix": [
+        [
+          50056916,
+          80938,
+          77545,
+          24215
+        ],
+        [
+          106391,
+          974867,
+          739,
+          351
+        ],
+        [
+          51748,
+          680,
+          756945,
+          6168
+        ],
+        [
+          15987,
+          125,
+          5635,
+          269550
+        ]
+      ],
+      "loss": 0.1028900644555688,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9939162254333496,
+      "mean_iou": 0.8970075795128533,
+      "foreground_miou": 0.8647169339673075,
+      "foreground_mean_dice": 0.9274241665810535,
+      "class_iou": {
+        "background": 0.9938795161494903,
+        "lane_markings": 0.8593688766208318,
+        "vehicle": 0.8568926624120068,
+        "pedestrian": 0.8778892628690839
+      },
+      "class_dice": {
+        "background": 0.9969303642467178,
+        "lane_markings": 0.9243662055725341,
+        "vehicle": 0.9229318201935786,
+        "pedestrian": 0.9349744739770478
+      },
+      "confusion_matrix": [
+        [
+          10014006,
+          17283,
+          9203,
+          3369
+        ],
+        [
+          15574,
+          201742,
+          42,
+          26
+        ],
+        [
+          13957,
+          79,
+          151185,
+          629
+        ],
+        [
+          2282,
+          10,
+          1339,
+          55034
+        ]
+      ],
+      "loss": 0.08652574177831411,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 2,
+    "optimizer_steps": 2400,
+    "execution_seconds": 94.57982544400056
+  },
+  {
+    "epoch": 25,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9943196105957032,
+      "mean_iou": 0.9020367160482896,
+      "foreground_miou": 0.871288663802798,
+      "foreground_mean_dice": 0.9311975289264215,
+      "class_iou": {
+        "background": 0.9942808727847643,
+        "lane_markings": 0.8600854418838894,
+        "vehicle": 0.8791905259885249,
+        "pedestrian": 0.8745900235359796
+      },
+      "class_dice": {
+        "background": 0.9971322358383502,
+        "lane_markings": 0.924780574609301,
+        "vehicle": 0.9357119608998004,
+        "pedestrian": 0.9331000512701633
+      },
+      "confusion_matrix": [
+        [
+          50087067,
+          68573,
+          64264,
+          19710
+        ],
+        [
+          91179,
+          990526,
+          519,
+          124
+        ],
+        [
+          33149,
+          595,
+          777666,
+          4131
+        ],
+        [
+          11227,
+          144,
+          4201,
+          275725
+        ]
+      ],
+      "loss": 0.07808106560260057,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9955555915832519,
+      "mean_iou": 0.9202382361667474,
+      "foreground_miou": 0.8951332017793986,
+      "foreground_mean_dice": 0.9446586279294106,
+      "class_iou": {
+        "background": 0.9955533393287936,
+        "lane_markings": 0.8895324892720968,
+        "vehicle": 0.9011088744865783,
+        "pedestrian": 0.8947582415795209
+      },
+      "class_dice": {
+        "background": 0.9977717154517644,
+        "lane_markings": 0.941537120237367,
+        "vehicle": 0.9479823976203737,
+        "pedestrian": 0.9444563659304911
+      },
+      "confusion_matrix": [
+        [
+          10028385,
+          8309,
+          5219,
+          1948
+        ],
+        [
+          16482,
+          200868,
+          18,
+          16
+        ],
+        [
+          9993,
+          111,
+          154888,
+          858
+        ],
+        [
+          2841,
+          9,
+          799,
+          55016
+        ]
+      ],
+      "loss": 0.06825819443911314,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 3,
+    "optimizer_steps": 2500,
+    "execution_seconds": 95.99500317999991
+  },
+  {
+    "epoch": 26,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9947894477844238,
+      "mean_iou": 0.9115512551040206,
+      "foreground_miou": 0.8838227021407951,
+      "foreground_mean_dice": 0.9382486611549291,
+      "class_iou": {
+        "background": 0.9947369139936972,
+        "lane_markings": 0.8612247129294344,
+        "vehicle": 0.8993178135433907,
+        "pedestrian": 0.8909255799495599
+      },
+      "class_dice": {
+        "background": 0.9973615137067046,
+        "lane_markings": 0.9254387253153633,
+        "vehicle": 0.9469903426700477,
+        "pedestrian": 0.9423169154793761
+      },
+      "confusion_matrix": [
+        [
+          50105344,
+          69311,
+          48423,
+          16536
+        ],
+        [
+          89404,
+          992490,
+          341,
+          113
+        ],
+        [
+          31030,
+          637,
+          779767,
+          4107
+        ],
+        [
+          10400,
+          121,
+          2760,
+          278016
+        ]
+      ],
+      "loss": 0.07134519152343273,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.995892333984375,
+      "mean_iou": 0.9260228947166744,
+      "foreground_miou": 0.9027215982224979,
+      "foreground_mean_dice": 0.9488412448191327,
+      "class_iou": {
+        "background": 0.9959267841992037,
+        "lane_markings": 0.8904267640572096,
+        "vehicle": 0.9163799176724715,
+        "pedestrian": 0.9013581129378128
+      },
+      "class_dice": {
+        "background": 0.9979592358632381,
+        "lane_markings": 0.942037830808306,
+        "vehicle": 0.9563656028972122,
+        "pedestrian": 0.9481203007518797
+      },
+      "confusion_matrix": [
+        [
+          10029158,
+          7775,
+          4738,
+          2190
+        ],
+        [
+          16692,
+          200655,
+          12,
+          25
+        ],
+        [
+          7635,
+          148,
+          157391,
+          676
+        ],
+        [
+          1988,
+          40,
+          1153,
+          55484
+        ]
+      ],
+      "loss": 0.06096453908830881,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 2600,
+    "execution_seconds": 93.60946504299955
+  },
+  {
+    "epoch": 27,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.995130672454834,
+      "mean_iou": 0.9155129789662458,
+      "foreground_miou": 0.8889791258172624,
+      "foreground_mean_dice": 0.9411756815347929,
+      "class_iou": {
+        "background": 0.9951145384131962,
+        "lane_markings": 0.8714908997845677,
+        "vehicle": 0.9031672210893659,
+        "pedestrian": 0.8922792565778533
+      },
+      "class_dice": {
+        "background": 0.9975512876615649,
+        "lane_markings": 0.9313333021121154,
+        "vehicle": 0.9491201940441117,
+        "pedestrian": 0.9430735484481517
+      },
+      "confusion_matrix": [
+        [
+          50114407,
+          58131,
+          50762,
+          16314
+        ],
+        [
+          86464,
+          994338,
+          439,
+          1107
+        ],
+        [
+          25428,
+          383,
+          785732,
+          3998
+        ],
+        [
+          8935,
+          100,
+          3232,
+          279030
+        ]
+      ],
+      "loss": 0.06585121117532253,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9961502075195312,
+      "mean_iou": 0.9336126215757502,
+      "foreground_miou": 0.9127646016806059,
+      "foreground_mean_dice": 0.9543358552115522,
+      "class_iou": {
+        "background": 0.9961566812611832,
+        "lane_markings": 0.8931260005380304,
+        "vehicle": 0.9256609391047463,
+        "pedestrian": 0.9195068653990411
+      },
+      "class_dice": {
+        "background": 0.9980746407459415,
+        "lane_markings": 0.943546283009374,
+        "vehicle": 0.9613955606692555,
+        "pedestrian": 0.9580657219560268
+      },
+      "confusion_matrix": [
+        [
+          10026057,
+          9253,
+          6661,
+          1890
+        ],
+        [
+          14806,
+          202519,
+          33,
+          26
+        ],
+        [
+          4577,
+          102,
+          160430,
+          741
+        ],
+        [
+          1495,
+          14,
+          770,
+          56386
+        ]
+      ],
+      "loss": 0.051069716550409795,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 2700,
+    "execution_seconds": 92.2599216460003
+  },
+  {
+    "epoch": 28,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9954249572753906,
+      "mean_iou": 0.922427077692376,
+      "foreground_miou": 0.898107173681216,
+      "foreground_mean_dice": 0.9462349967254076,
+      "class_iou": {
+        "background": 0.9953867897258565,
+        "lane_markings": 0.874501908403623,
+        "vehicle": 0.9129114135213441,
+        "pedestrian": 0.9069081991186805
+      },
+      "class_dice": {
+        "background": 0.9976880621351727,
+        "lane_markings": 0.9330498992645707,
+        "vehicle": 0.9544732778198335,
+        "pedestrian": 0.9511818130918185
+      },
+      "confusion_matrix": [
+        [
+          50120716,
+          60467,
+          44459,
+          13972
+        ],
+        [
+          81920,
+          999874,
+          434,
+          120
+        ],
+        [
+          23366,
+          445,
+          788037,
+          3693
+        ],
+        [
+          8105,
+          104,
+          2779,
+          280309
+        ]
+      ],
+      "loss": 0.060762142017483714,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9950497627258301,
+      "mean_iou": 0.913330408641044,
+      "foreground_miou": 0.886060284495889,
+      "foreground_mean_dice": 0.9395519963112418,
+      "class_iou": {
+        "background": 0.9951407810765093,
+        "lane_markings": 0.8708967422783028,
+        "vehicle": 0.8969129539986667,
+        "pedestrian": 0.8903711572106974
+      },
+      "class_dice": {
+        "background": 0.9975644731591978,
+        "lane_markings": 0.9309939160167223,
+        "vehicle": 0.9456553629495611,
+        "pedestrian": 0.9420067099674417
+      },
+      "confusion_matrix": [
+        [
+          10019156,
+          15521,
+          6120,
+          3064
+        ],
+        [
+          14336,
+          202986,
+          29,
+          33
+        ],
+        [
+          8722,
+          161,
+          154713,
+          2254
+        ],
+        [
+          1160,
+          11,
+          496,
+          56998
+        ]
+      ],
+      "loss": 0.0663156995549798,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 2800,
+    "execution_seconds": 92.84271567500036
+  },
+  {
+    "epoch": 29,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9952643013000488,
+      "mean_iou": 0.9199221175881082,
+      "foreground_miou": 0.8948216781718975,
+      "foreground_mean_dice": 0.9443712854280726,
+      "class_iou": {
+        "background": 0.9952234358367404,
+        "lane_markings": 0.8673841535353606,
+        "vehicle": 0.9153683691460311,
+        "pedestrian": 0.9017125118343005
+      },
+      "class_dice": {
+        "background": 0.9976060003719551,
+        "lane_markings": 0.9289830931607891,
+        "vehicle": 0.9558144364200282,
+        "pedestrian": 0.9483163267034005
+      },
+      "confusion_matrix": [
+        [
+          50114291,
+          68878,
+          41300,
+          15145
+        ],
+        [
+          82685,
+          999132,
+          379,
+          152
+        ],
+        [
+          23942,
+          581,
+          787074,
+          3944
+        ],
+        [
+          8573,
+          84,
+          2624,
+          280016
+        ]
+      ],
+      "loss": 0.06264642637223006,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9962284088134765,
+      "mean_iou": 0.9304866312945701,
+      "foreground_miou": 0.9085570390007337,
+      "foreground_mean_dice": 0.9520751129106352,
+      "class_iou": {
+        "background": 0.9962754081760796,
+        "lane_markings": 0.90480593986515,
+        "vehicle": 0.9179368745188606,
+        "pedestrian": 0.90292830261819
+      },
+      "class_dice": {
+        "background": 0.9981342294712114,
+        "lane_markings": 0.9500242737894921,
+        "vehicle": 0.9572128120735329,
+        "pedestrian": 0.9489882528688803
+      },
+      "confusion_matrix": [
+        [
+          10027775,
+          5277,
+          8281,
+          2528
+        ],
+        [
+          15749,
+          201560,
+          41,
+          34
+        ],
+        [
+          4094,
+          96,
+          160974,
+          686
+        ],
+        [
+          1560,
+          9,
+          1193,
+          55903
+        ]
+      ],
+      "loss": 0.053806867264211175,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 2,
+    "optimizer_steps": 2900,
+    "execution_seconds": 94.02796227399995
+  },
+  {
+    "epoch": 30,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9948861122131347,
+      "mean_iou": 0.9122643993475229,
+      "foreground_miou": 0.8847353494674824,
+      "foreground_mean_dice": 0.9388060280321656,
+      "class_iou": {
+        "background": 0.9948515489876445,
+        "lane_markings": 0.8693018026048157,
+        "vehicle": 0.895027246870538,
+        "pedestrian": 0.8898769989270935
+      },
+      "class_dice": {
+        "background": 0.997419130754382,
+        "lane_markings": 0.9300818106455253,
+        "vehicle": 0.9446062037879325,
+        "pedestrian": 0.9417300696630391
+      },
+      "confusion_matrix": [
+        [
+          50096281,
+          66891,
+          59159,
+          17283
+        ],
+        [
+          80852,
+          999651,
+          869,
+          976
+        ],
+        [
+          25327,
+          530,
+          786072,
+          3612
+        ],
+        [
+          9741,
+          178,
+          2697,
+          278681
+        ]
+      ],
+      "loss": 0.06677217246964574,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.995571231842041,
+      "mean_iou": 0.922842119399863,
+      "foreground_miou": 0.8985930570382065,
+      "foreground_mean_dice": 0.9465787303487162,
+      "class_iou": {
+        "background": 0.9955893064848331,
+        "lane_markings": 0.8934852764974943,
+        "vehicle": 0.8956674853407944,
+        "pedestrian": 0.9066264092763305
+      },
+      "class_dice": {
+        "background": 0.9977897789385652,
+        "lane_markings": 0.9437467379204907,
+        "vehicle": 0.9449626501134776,
+        "pedestrian": 0.9510268030121801
+      },
+      "confusion_matrix": [
+        [
+          10021367,
+          11167,
+          8867,
+          2460
+        ],
+        [
+          13001,
+          204324,
+          33,
+          26
+        ],
+        [
+          7436,
+          121,
+          157178,
+          1115
+        ],
+        [
+          1466,
+          10,
+          737,
+          56452
+        ]
+      ],
+      "loss": 0.05959370713680982,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 3,
+    "optimizer_steps": 3000,
+    "execution_seconds": 96.56864785800008
+  },
+  {
+    "epoch": 31,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9956725120544434,
+      "mean_iou": 0.9278183795957319,
+      "foreground_miou": 0.9052181332325892,
+      "foreground_mean_dice": 0.9501346814635308,
+      "class_iou": {
+        "background": 0.99561911868516,
+        "lane_markings": 0.8772019117805985,
+        "vehicle": 0.9227963716784303,
+        "pedestrian": 0.9156561162387389
+      },
+      "class_dice": {
+        "background": 0.9978047507794341,
+        "lane_markings": 0.9345845071599556,
+        "vehicle": 0.9598482556662109,
+        "pedestrian": 0.9559712815644258
+      },
+      "confusion_matrix": [
+        [
+          50120247,
+          64573,
+          41395,
+          13399
+        ],
+        [
+          75292,
+          1006512,
+          384,
+          160
+        ],
+        [
+          18882,
+          388,
+          793209,
+          3062
+        ],
+        [
+          6996,
+          103,
+          2251,
+          281947
+        ]
+      ],
+      "loss": 0.053815471306443215,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9964629173278808,
+      "mean_iou": 0.9354031889630817,
+      "foreground_miou": 0.9150203868554607,
+      "foreground_mean_dice": 0.9556094234640741,
+      "class_iou": {
+        "background": 0.9965515952859446,
+        "lane_markings": 0.9064143895768949,
+        "vehicle": 0.924316812284279,
+        "pedestrian": 0.9143299587052085
+      },
+      "class_dice": {
+        "background": 0.9982728196345151,
+        "lane_markings": 0.9509101426558811,
+        "vehicle": 0.9606701000414373,
+        "pedestrian": 0.9552480276949038
+      },
+      "confusion_matrix": [
+        [
+          10027635,
+          7398,
+          7708,
+          1120
+        ],
+        [
+          13480,
+          203839,
+          50,
+          15
+        ],
+        [
+          3217,
+          91,
+          162286,
+          256
+        ],
+        [
+          1776,
+          12,
+          1966,
+          54911
+        ]
+      ],
+      "loss": 0.05025213174521923,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 3100,
+    "execution_seconds": 93.14021962900006
+  },
+  {
+    "epoch": 32,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9955914497375489,
+      "mean_iou": 0.9261814117754911,
+      "foreground_miou": 0.9030580079207794,
+      "foreground_mean_dice": 0.9489414963788941,
+      "class_iou": {
+        "background": 0.9955516233396263,
+        "lane_markings": 0.8751728685887172,
+        "vehicle": 0.9219963345850426,
+        "pedestrian": 0.9120048205885783
+      },
+      "class_dice": {
+        "background": 0.9977708536284673,
+        "lane_markings": 0.9334316672866383,
+        "vehicle": 0.95941528919107,
+        "pedestrian": 0.9539775326589742
+      },
+      "confusion_matrix": [
+        [
+          50113544,
+          72658,
+          39649,
+          13763
+        ],
+        [
+          70490,
+          1011264,
+          453,
+          141
+        ],
+        [
+          20295,
+          428,
+          791343,
+          3475
+        ],
+        [
+          7065,
+          68,
+          2650,
+          281514
+        ]
+      ],
+      "loss": 0.05477812323719263,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9966095924377442,
+      "mean_iou": 0.9377615036402858,
+      "foreground_miou": 0.9181239046382738,
+      "foreground_mean_dice": 0.9572922616585365,
+      "class_iou": {
+        "background": 0.9966743006463216,
+        "lane_markings": 0.9084758106935572,
+        "vehicle": 0.9298779783226642,
+        "pedestrian": 0.9160179248986
+      },
+      "class_dice": {
+        "background": 0.9983343806485605,
+        "lane_markings": 0.9520433066043514,
+        "vehicle": 0.9636650490523334,
+        "pedestrian": 0.9561684293189249
+      },
+      "confusion_matrix": [
+        [
+          10031178,
+          4939,
+          5859,
+          1885
+        ],
+        [
+          15260,
+          202075,
+          23,
+          26
+        ],
+        [
+          4234,
+          101,
+          160947,
+          568
+        ],
+        [
+          1295,
+          9,
+          1352,
+          56009
+        ]
+      ],
+      "loss": 0.04842666108161211,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 3200,
+    "execution_seconds": 93.31091765899964
+  },
+  {
+    "epoch": 33,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9958011245727539,
+      "mean_iou": 0.930795358149976,
+      "foreground_miou": 0.9091441438291007,
+      "foreground_mean_dice": 0.952261768997278,
+      "class_iou": {
+        "background": 0.995749001112602,
+        "lane_markings": 0.8773344777577174,
+        "vehicle": 0.9281006422428628,
+        "pedestrian": 0.9219973114867218
+      },
+      "class_dice": {
+        "background": 0.9978699731854916,
+        "lane_markings": 0.9346597403416391,
+        "vehicle": 0.9627097485567454,
+        "pedestrian": 0.9594158180934494
+      },
+      "confusion_matrix": [
+        [
+          50124767,
+          65945,
+          36036,
+          12866
+        ],
+        [
+          73981,
+          1007845,
+          393,
+          129
+        ],
+        [
+          19430,
+          392,
+          792778,
+          2941
+        ],
+        [
+          5732,
+          73,
+          2224,
+          283268
+        ]
+      ],
+      "loss": 0.05175878332927823,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9963570594787597,
+      "mean_iou": 0.9341630692459924,
+      "foreground_miou": 0.9134069061854843,
+      "foreground_mean_dice": 0.9547261256065798,
+      "class_iou": {
+        "background": 0.9964315584275165,
+        "lane_markings": 0.9035887066377548,
+        "vehicle": 0.9229772339379213,
+        "pedestrian": 0.9136547779807769
+      },
+      "class_dice": {
+        "background": 0.9982125900798252,
+        "lane_markings": 0.9493528759515845,
+        "vehicle": 0.9599460853187796,
+        "pedestrian": 0.9548794155493753
+      },
+      "confusion_matrix": [
+        [
+          10026748,
+          7980,
+          6725,
+          2408
+        ],
+        [
+          13568,
+          203771,
+          18,
+          27
+        ],
+        [
+          4340,
+          133,
+          159532,
+          1845
+        ],
+        [
+          887,
+          16,
+          252,
+          57510
+        ]
+      ],
+      "loss": 0.047616742365062234,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 3300,
+    "execution_seconds": 93.77540689200032
+  },
+  {
+    "epoch": 34,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9956014442443848,
+      "mean_iou": 0.9260194188771325,
+      "foreground_miou": 0.9028438100274517,
+      "foreground_mean_dice": 0.9488441103011476,
+      "class_iou": {
+        "background": 0.9955462454261751,
+        "lane_markings": 0.8775549578283673,
+        "vehicle": 0.9200933834388707,
+        "pedestrian": 0.9108830888151169
+      },
+      "class_dice": {
+        "background": 0.9977681526629448,
+        "lane_markings": 0.9347848425628744,
+        "vehicle": 0.9583839946273773,
+        "pedestrian": 0.9533634937131911
+      },
+      "confusion_matrix": [
+        [
+          50117138,
+          67666,
+          40901,
+          13909
+        ],
+        [
+          72017,
+          1009763,
+          434,
+          134
+        ],
+        [
+          21570,
+          561,
+          790593,
+          2817
+        ],
+        [
+          8145,
+          80,
+          2377,
+          280695
+        ]
+      ],
+      "loss": 0.05648460280150175,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9938919067382812,
+      "mean_iou": 0.8869195462140793,
+      "foreground_miou": 0.8512823925989877,
+      "foreground_mean_dice": 0.9195602766717822,
+      "class_iou": {
+        "background": 0.9938310070593539,
+        "lane_markings": 0.8525238935579124,
+        "vehicle": 0.8732418194652681,
+        "pedestrian": 0.8280814647737826
+      },
+      "class_dice": {
+        "background": 0.9969059599741381,
+        "lane_markings": 0.9203917925404738,
+        "vehicle": 0.9323321851895683,
+        "pedestrian": 0.9059568522853048
+      },
+      "confusion_matrix": [
+        [
+          10026927,
+          11498,
+          4299,
+          1137
+        ],
+        [
+          22164,
+          195170,
+          32,
+          18
+        ],
+        [
+          15643,
+          46,
+          149685,
+          476
+        ],
+        [
+          7499,
+          4,
+          1232,
+          49930
+        ]
+      ],
+      "loss": 0.11711300406605005,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 2,
+    "optimizer_steps": 3400,
+    "execution_seconds": 96.09223183999984
+  },
+  {
+    "epoch": 35,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.99494140625,
+      "mean_iou": 0.9148363665418351,
+      "foreground_miou": 0.8881542655559563,
+      "foreground_mean_dice": 0.9406867158416987,
+      "class_iou": {
+        "background": 0.9948826694994715,
+        "lane_markings": 0.8655802142637661,
+        "vehicle": 0.9023411786909469,
+        "pedestrian": 0.8965414037131557
+      },
+      "class_dice": {
+        "background": 0.9974347711879152,
+        "lane_markings": 0.9279474638997062,
+        "vehicle": 0.948663876699418,
+        "pedestrian": 0.9454488069259721
+      },
+      "confusion_matrix": [
+        [
+          50098060,
+          75607,
+          49979,
+          15968
+        ],
+        [
+          79000,
+          1002837,
+          411,
+          100
+        ],
+        [
+          27576,
+          495,
+          784102,
+          3368
+        ],
+        [
+          9557,
+          122,
+          3033,
+          278585
+        ]
+      ],
+      "loss": 0.06519679130986333,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9871463775634766,
+      "mean_iou": 0.8354185628321911,
+      "foreground_miou": 0.7849375875091799,
+      "foreground_mean_dice": 0.8749058154456968,
+      "class_iou": {
+        "background": 0.9868614888012244,
+        "lane_markings": 0.8676184241797554,
+        "vehicle": 0.627072047513543,
+        "pedestrian": 0.8601222908342414
+      },
+      "class_dice": {
+        "background": 0.9933873039097946,
+        "lane_markings": 0.9291174395656406,
+        "vehicle": 0.770798132107083,
+        "pedestrian": 0.9248018746643667
+      },
+      "confusion_matrix": [
+        [
+          9923889,
+          22287,
+          91652,
+          6033
+        ],
+        [
+          9175,
+          208087,
+          85,
+          37
+        ],
+        [
+          2215,
+          124,
+          162174,
+          1337
+        ],
+        [
+          759,
+          42,
+          1034,
+          56830
+        ]
+      ],
+      "loss": 0.10807139985263348,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 3,
+    "optimizer_steps": 3500,
+    "execution_seconds": 103.3527518840001
+  },
+  {
+    "epoch": 36,
+    "learning_rate": 0.001,
+    "training": {
+      "pixel_accuracy": 0.9937356758117676,
+      "mean_iou": 0.895506116969556,
+      "foreground_miou": 0.8627801352531712,
+      "foreground_mean_dice": 0.9262310946495581,
+      "class_iou": {
+        "background": 0.9936840621187096,
+        "lane_markings": 0.837635364984888,
+        "vehicle": 0.8809790825754721,
+        "pedestrian": 0.8697259581991539
+      },
+      "class_dice": {
+        "background": 0.9968320266980625,
+        "lane_markings": 0.9116448028216702,
+        "vehicle": 0.9367239548131698,
+        "pedestrian": 0.9303245263138343
+      },
+      "confusion_matrix": [
+        [
+          50055203,
+          102624,
+          61695,
+          20092
+        ],
+        [
+          87333,
+          993557,
+          592,
+          866
+        ],
+        [
+          34119,
+          805,
+          776132,
+          4485
+        ],
+        [
+          12292,
+          368,
+          3160,
+          275477
+        ]
+      ],
+      "loss": 0.08238404959440232,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9902904510498047,
+      "mean_iou": 0.8520358735643629,
+      "foreground_miou": 0.8059767724717816,
+      "foreground_mean_dice": 0.8920675738028688,
+      "class_iou": {
+        "background": 0.9902131768421072,
+        "lane_markings": 0.7555386762554395,
+        "vehicle": 0.8478573244465077,
+        "pedestrian": 0.8145343167133975
+      },
+      "class_dice": {
+        "background": 0.9950825251928933,
+        "lane_markings": 0.8607485400059679,
+        "vehicle": 0.917665355684826,
+        "pedestrian": 0.8977888257178128
+      },
+      "confusion_matrix": [
+        [
+          9975159,
+          49581,
+          13862,
+          5259
+        ],
+        [
+          15387,
+          201923,
+          27,
+          47
+        ],
+        [
+          10568,
+          216,
+          153413,
+          1653
+        ],
+        [
+          3933,
+          76,
+          1203,
+          53453
+        ]
+      ],
+      "loss": 0.11766298934817314,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 4,
+    "optimizer_steps": 3600,
+    "execution_seconds": 93.86383947400009
+  },
+  {
+    "epoch": 37,
+    "learning_rate": 0.0005,
+    "training": {
+      "pixel_accuracy": 0.9948362350463867,
+      "mean_iou": 0.914325425822965,
+      "foreground_miou": 0.8875089710185939,
+      "foreground_mean_dice": 0.9403013766995757,
+      "class_iou": {
+        "background": 0.9947747902360783,
+        "lane_markings": 0.8615467208208196,
+        "vehicle": 0.9010992930240049,
+        "pedestrian": 0.8998808992109573
+      },
+      "class_dice": {
+        "background": 0.9973805515341893,
+        "lane_markings": 0.9256246015044245,
+        "vehicle": 0.9479770954947453,
+        "pedestrian": 0.9473024330995573
+      },
+      "confusion_matrix": [
+        [
+          50092182,
+          83117,
+          50347,
+          13968
+        ],
+        [
+          76707,
+          1004610,
+          462,
+          569
+        ],
+        [
+          28699,
+          463,
+          783231,
+          3148
+        ],
+        [
+          10279,
+          126,
+          2845,
+          278047
+        ]
+      ],
+      "loss": 0.06721743829548359,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9963956832885742,
+      "mean_iou": 0.9384847794963931,
+      "foreground_miou": 0.919180649572414,
+      "foreground_mean_dice": 0.9578465979560323,
+      "class_iou": {
+        "background": 0.99639716926833,
+        "lane_markings": 0.9020173786230783,
+        "vehicle": 0.9286833582895149,
+        "pedestrian": 0.9268412118046487
+      },
+      "class_dice": {
+        "background": 0.9981953336805269,
+        "lane_markings": 0.9484848968899254,
+        "vehicle": 0.9630231466435561,
+        "pedestrian": 0.9620317503346153
+      },
+      "confusion_matrix": [
+        [
+          10023347,
+          12910,
+          5685,
+          1919
+        ],
+        [
+          9526,
+          207823,
+          20,
+          15
+        ],
+        [
+          5081,
+          90,
+          160014,
+          665
+        ],
+        [
+          1122,
+          14,
+          747,
+          56782
+        ]
+      ],
+      "loss": 0.04610302709043026,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 3700,
+    "execution_seconds": 94.8139681699995
+  },
+  {
+    "epoch": 38,
+    "learning_rate": 0.0005,
+    "training": {
+      "pixel_accuracy": 0.9960530853271484,
+      "mean_iou": 0.9357369318286439,
+      "foreground_miou": 0.9156481583193421,
+      "foreground_mean_dice": 0.9557973543285593,
+      "class_iou": {
+        "background": 0.9960032523565495,
+        "lane_markings": 0.8815708261800905,
+        "vehicle": 0.9366432020560214,
+        "pedestrian": 0.9287304467219144
+      },
+      "class_dice": {
+        "background": 0.9979976246838618,
+        "lane_markings": 0.9370583492409155,
+        "vehicle": 0.9672852501293391,
+        "pedestrian": 0.9630484636154233
+      },
+      "confusion_matrix": [
+        [
+          50120543,
+          73994,
+          33550,
+          11527
+        ],
+        [
+          62077,
+          1019817,
+          320,
+          134
+        ],
+        [
+          14817,
+          373,
+          797414,
+          2937
+        ],
+        [
+          5158,
+          103,
+          1942,
+          284094
+        ]
+      ],
+      "loss": 0.045914265848696234,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9965557098388672,
+      "mean_iou": 0.9409681910597609,
+      "foreground_miou": 0.9224395054783353,
+      "foreground_mean_dice": 0.9596213542465137,
+      "class_iou": {
+        "background": 0.9965542478040377,
+        "lane_markings": 0.9070684143499467,
+        "vehicle": 0.9316423493332094,
+        "pedestrian": 0.9286077527518496
+      },
+      "class_dice": {
+        "background": 0.9982741504771272,
+        "lane_markings": 0.95126992563519,
+        "vehicle": 0.9646116421653381,
+        "pedestrian": 0.962982494939013
+      },
+      "confusion_matrix": [
+        [
+          10023234,
+          13363,
+          5556,
+          1708
+        ],
+        [
+          7933,
+          209404,
+          25,
+          22
+        ],
+        [
+          4794,
+          93,
+          160399,
+          564
+        ],
+        [
+          1303,
+          18,
+          737,
+          56607
+        ]
+      ],
+      "loss": 0.043706415314227344,
+      "samples": 160
+    },
+    "best_checkpoint_updated": true,
+    "epochs_without_improvement": 0,
+    "optimizer_steps": 3800,
+    "execution_seconds": 97.47895954100022
+  },
+  {
+    "epoch": 39,
+    "learning_rate": 0.0005,
+    "training": {
+      "pixel_accuracy": 0.9958696365356445,
+      "mean_iou": 0.9314407858481374,
+      "foreground_miou": 0.9099771407692651,
+      "foreground_mean_dice": 0.9527382065456887,
+      "class_iou": {
+        "background": 0.9958317210847543,
+        "lane_markings": 0.8804413211938558,
+        "vehicle": 0.9285087832434803,
+        "pedestrian": 0.9209813178704592
+      },
+      "class_dice": {
+        "background": 0.9979115078334458,
+        "lane_markings": 0.9364198832164362,
+        "vehicle": 0.9629292760407958,
+        "pedestrian": 0.9588654603798342
+      },
+      "confusion_matrix": [
+        [
+          50121052,
+          72442,
+          34338,
+          11782
+        ],
+        [
+          63931,
+          1017217,
+          757,
+          443
+        ],
+        [
+          20471,
+          409,
+          791901,
+          2760
+        ],
+        [
+          6829,
+          150,
+          2238,
+          282080
+        ]
+      ],
+      "loss": 0.050781366564333436,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9963504791259765,
+      "mean_iou": 0.9361124172525779,
+      "foreground_miou": 0.916025247581319,
+      "foreground_mean_dice": 0.9561268622716343,
+      "class_iou": {
+        "background": 0.9963739262663548,
+        "lane_markings": 0.900097766024799,
+        "vehicle": 0.9310519453305083,
+        "pedestrian": 0.9169260313886498
+      },
+      "class_dice": {
+        "background": 0.998183670060034,
+        "lane_markings": 0.9474225822683815,
+        "vehicle": 0.9642950802870862,
+        "pedestrian": 0.9566629242594352
+      },
+      "confusion_matrix": [
+        [
+          10023164,
+          14688,
+          4737,
+          1272
+        ],
+        [
+          8353,
+          208991,
+          20,
+          20
+        ],
+        [
+          5350,
+          102,
+          159951,
+          447
+        ],
+        [
+          2077,
+          13,
+          1189,
+          55386
+        ]
+      ],
+      "loss": 0.04893679628148675,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 1,
+    "optimizer_steps": 3900,
+    "execution_seconds": 95.2411613610002
+  },
+  {
+    "epoch": 40,
+    "learning_rate": 0.0005,
+    "training": {
+      "pixel_accuracy": 0.9960327529907227,
+      "mean_iou": 0.9347470950687877,
+      "foreground_miou": 0.914334905789311,
+      "foreground_mean_dice": 0.955103233897304,
+      "class_iou": {
+        "background": 0.9959836629072177,
+        "lane_markings": 0.882657689072245,
+        "vehicle": 0.9343576715498207,
+        "pedestrian": 0.9259893567458677
+      },
+      "class_dice": {
+        "background": 0.9979877905979789,
+        "lane_markings": 0.9376719880577015,
+        "vehicle": 0.9660650512489832,
+        "pedestrian": 0.9615726623852273
+      },
+      "confusion_matrix": [
+        [
+          50124573,
+          71428,
+          32961,
+          10652
+        ],
+        [
+          63058,
+          1018835,
+          357,
+          98
+        ],
+        [
+          17261,
+          375,
+          795158,
+          2747
+        ],
+        [
+          6769,
+          130,
+          2162,
+          282236
+        ]
+      ],
+      "loss": 0.049491808526217936,
+      "samples": 800
+    },
+    "validation": {
+      "pixel_accuracy": 0.9934188842773437,
+      "mean_iou": 0.8821799714758003,
+      "foreground_miou": 0.8451212431282954,
+      "foreground_mean_dice": 0.91604329339788,
+      "class_iou": {
+        "background": 0.9933561565183153,
+        "lane_markings": 0.8419674616093499,
+        "vehicle": 0.8552578000979623,
+        "pedestrian": 0.8381384676775738
+      },
+      "class_dice": {
+        "background": 0.9966670063149733,
+        "lane_markings": 0.9142044896642337,
+        "vehicle": 0.9219827024069673,
+        "pedestrian": 0.9119426881224391
+      },
+      "confusion_matrix": [
+        [
+          10025897,
+          14766,
+          2300,
+          898
+        ],
+        [
+          21835,
+          195520,
+          18,
+          11
+        ],
+        [
+          20293,
+          61,
+          144926,
+          570
+        ],
+        [
+          6964,
+          7,
+          1285,
+          50409
+        ]
+      ],
+      "loss": 0.12727919612079858,
+      "samples": 160
+    },
+    "best_checkpoint_updated": false,
+    "epochs_without_improvement": 2,
+    "optimizer_steps": 4000,
+    "execution_seconds": 94.58292808100032
+  }
+]

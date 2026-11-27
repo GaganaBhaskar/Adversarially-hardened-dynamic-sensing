@@ -1,0 +1,43 @@
+{
+  "task_id": "M6-DEV-01B-02",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "dataset_version": "ahds_procedural_v1",
+  "dataset_manifest_sha256": "68f82a8a72a582440abf7874c950396cbcb822fb76399559c6adc6ed9c541df1",
+  "random_seed": 42,
+  "training_scenes": 800,
+  "validation_scenes": 160,
+  "test_scenes_used": 0,
+  "maximum_epochs": 40,
+  "batch_size": 8,
+  "optimizer": "AdamW",
+  "initial_learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "scheduler": {
+    "name": "ReduceLROnPlateau",
+    "mode": "max",
+    "factor": 0.5,
+    "patience": 3,
+    "minimum_lr": 1e-05
+  },
+  "early_stopping_patience": 8,
+  "checkpoint_metric": "validation_foreground_miou",
+  "checkpoint_tie_policy": "retain_earliest",
+  "class_weights": [
+    0.13891541957855225,
+    0.9464336037635803,
+    1.0903117656707764,
+    1.8243392705917358
+  ],
+  "cross_entropy_weight": 0.5,
+  "foreground_dice_weight": 0.5,
+  "model_parameters": 10700,
+  "optical_disturbance_augmentation": false,
+  "mixed_precision": false,
+  "deterministic_algorithms": true,
+  "device": "cpu",
+  "pytorch_version": "2.14.1+cpu",
+  "numpy_version": "2.4.6",
+  "cpu_threads": 2,
+  "cache_hash_checks": 1920,
+  "gpu_name": null
+}

@@ -1,0 +1,59 @@
+{
+  "task_id": "M6-DEV-01B-02",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "best_epoch": 38,
+  "files": {
+    "results/module6/model_training/best_model.pt": {
+      "sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+      "bytes": 83597
+    },
+    "results/module6/model_training/figures/M6_F01_loss_convergence.pdf": {
+      "sha256": "cae12964c078afe013598fcfdf061c88f2ccfd8dcd20085469ddfaff638fcda0",
+      "bytes": 15800
+    },
+    "results/module6/model_training/figures/M6_F01_loss_convergence.png": {
+      "sha256": "645a0a2c5120ce149fd89d706711ec45a85e31ddc5d4c274df24ef14010ff995",
+      "bytes": 82814
+    },
+    "results/module6/model_training/figures/M6_F02_foreground_miou.pdf": {
+      "sha256": "6e40a0bee3bb04fc15aeede3f5fdd5f84808c5a26d7e0cd23eb8e51a6757f922",
+      "bytes": 17110
+    },
+    "results/module6/model_training/figures/M6_F02_foreground_miou.png": {
+      "sha256": "86b44f99cda065ed6f93f27fe881299038f0e2b8e46cf6cb6433ed8496d0e318",
+      "bytes": 88338
+    },
+    "results/module6/model_training/figures/M6_F03_class_iou.pdf": {
+      "sha256": "de8c98b88196abd5574ee1ea8a7e441559cc51b1ff5c4f4286fbcb5241d9f5f4",
+      "bytes": 17226
+    },
+    "results/module6/model_training/figures/M6_F03_class_iou.png": {
+      "sha256": "d71a424006932297b06483c40c5d91e2b85540010e751fb081f514319ffe17a7",
+      "bytes": 114856
+    },
+    "results/module6/model_training/figures/M6_F04_validation_predictions.pdf": {
+      "sha256": "f7c79354ef01337211f4b6b4877ed3a1a2a1b4cd4951f15a50f9deff505f78af",
+      "bytes": 183132
+    },
+    "results/module6/model_training/figures/M6_F04_validation_predictions.png": {
+      "sha256": "6c20a6c53672ec378f00e51a04260501cbbcebcdc79bda9936bdac7e3b5a203f",
+      "bytes": 719693
+    },
+    "results/module6/model_training/training_history.csv": {
+      "sha256": "cafc2db1f83aa7b95a225ea45737da3eaa6f50cfce9007df4c3da17d9001b9e1",
+      "bytes": 10228
+    },
+    "results/module6/model_training/training_history.json": {
+      "sha256": "6021b4dbdcbe774520fe1c284ca35e4f42e45116fe9ae2d2492faee19b579f6c",
+      "bytes": 90568
+    },
+    "results/module6/model_training/training_protocol.json": {
+      "sha256": "0d3079a4f0d3828259e48c25c3f6cb0d23f88fa79838d9889c5e38a2243c08f5",
+      "bytes": 1211
+    },
+    "results/module6/model_training/training_report.json": {
+      "sha256": "7a6c206cb3546b2e8b20f25cd7d7d85df88ce5450684edc2f6aa9e9715654c49",
+      "bytes": 17581
+    }
+  }
+}
