@@ -1,0 +1,67 @@
+{
+  "task_id": "M6-DEV-01C",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "files": {
+    "results/module6/heldout_evaluation/evaluation_metrics.json": {
+      "sha256": "0c2d5fdb7ff327555694258104f20cac247c88f28af86ddde1485904fe3f3b40",
+      "bytes": 17102
+    },
+    "results/module6/heldout_evaluation/evaluation_protocol.json": {
+      "sha256": "61aa9b0c771da530e980796b794e0bdd87871c23b4326c58cb03f8f0416b5be8",
+      "bytes": 1074
+    },
+    "results/module6/heldout_evaluation/evaluation_report.json": {
+      "sha256": "85f19134d93ce7b047995fb2f36f97ab78debf8ec675ebce832f53e10c3724a1",
+      "bytes": 18773
+    },
+    "results/module6/heldout_evaluation/figures/M6_F05_validation_vs_test.pdf": {
+      "sha256": "3b4c15e03adecbf0b1d48ff2ed287ad8ed2aa541d982b05b4c00dc52675e9130",
+      "bytes": 15818
+    },
+    "results/module6/heldout_evaluation/figures/M6_F05_validation_vs_test.png": {
+      "sha256": "cb06ebaeb8b99f4c8c0c8f2fa69389f7e1e1a18761d50ab539246c4fbe6cec00",
+      "bytes": 63340
+    },
+    "results/module6/heldout_evaluation/figures/M6_F06_test_confusion_matrix.pdf": {
+      "sha256": "3a8dc7f458e8b173ee220a481b422b0e25ed96e4acaea72ab5fc5d9d789c9137",
+      "bytes": 20594
+    },
+    "results/module6/heldout_evaluation/figures/M6_F06_test_confusion_matrix.png": {
+      "sha256": "14aabb4e653309a16ae35c1f6ffe3c872a36a5a5f904ed3facfe5135c332a2bd",
+      "bytes": 119816
+    },
+    "results/module6/heldout_evaluation/figures/M6_F07_paired_class_iou.pdf": {
+      "sha256": "dd34c91aa3cd08453fc846c43b7000f294c77b0beca9c34720f2ad4a1dc21bc1",
+      "bytes": 16277
+    },
+    "results/module6/heldout_evaluation/figures/M6_F07_paired_class_iou.png": {
+      "sha256": "7b6e6671e1cd20aa4976d939fc6908c0d9711b79a8d5fc2c447acd5e359ea2ea",
+      "bytes": 43479
+    },
+    "results/module6/heldout_evaluation/figures/M6_F08_paired_scene_differences.pdf": {
+      "sha256": "2474dfb0467eea1b97f9823657b6ecfa53ce5b9cde5653e9edd1dd8bc9351279",
+      "bytes": 16604
+    },
+    "results/module6/heldout_evaluation/figures/M6_F08_paired_scene_differences.png": {
+      "sha256": "0950e054fb0a885f11ba8a776304ecfa999f516b3831ab7e61fa5ceda5b39232",
+      "bytes": 55972
+    },
+    "results/module6/heldout_evaluation/figures/M6_F09_heldout_predictions.pdf": {
+      "sha256": "2aaadbb30c52a05ca18369b518095b49cd271546f6a72a3ad7f108e7f3cfaa69",
+      "bytes": 340842
+    },
+    "results/module6/heldout_evaluation/figures/M6_F09_heldout_predictions.png": {
+      "sha256": "99ddbe70d1565ee26db2252b03a5fe71594f813f85410e7f1287356d3c3bda7f",
+      "bytes": 1246390
+    },
+    "results/module6/heldout_evaluation/group_evaluation.csv": {
+      "sha256": "d32a35b58c38b3cf188ab63830112d1ba68f5568a27c8190bf0326f9a7b87d99",
+      "bytes": 2212
+    },
+    "results/module6/heldout_evaluation/per_scene_evaluation.csv": {
+      "sha256": "4f34bbe445e3d82715dbecfc9dbc5e37847dcc104743b155a295b313203c5e01",
+      "bytes": 69598
+    }
+  }
+}

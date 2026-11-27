@@ -1,0 +1,38 @@
+{
+  "task_id": "M6-DEV-01C",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "dataset_version": "ahds_procedural_v1",
+  "dataset_manifest_sha256": "68f82a8a72a582440abf7874c950396cbcb822fb76399559c6adc6ed9c541df1",
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "model_checkpoint_epoch": 38,
+  "test_scenes": 160,
+  "test_seed_range": [
+    300000,
+    300159
+  ],
+  "primary_metric": "foreground_miou",
+  "aggregation": "pooled_pixel_confusion_matrix",
+  "registered_observation_evaluation": true,
+  "paired_sampling_evaluation": true,
+  "paired_sampling_controls": [
+    "scene",
+    "semantic_ground_truth",
+    "exposure",
+    "gain",
+    "sensor_noise_realization"
+  ],
+  "paired_sampling_variable": "spatial_sampling_mask",
+  "optical_disturbances": false,
+  "model_training": false,
+  "checkpoint_reselection": false,
+  "device": "cpu",
+  "pytorch_version": "2.14.1+cpu",
+  "numpy_version": "2.4.6",
+  "cpu_threads": 2,
+  "fixed_visualization_indices": [
+    0,
+    40,
+    80,
+    120
+  ]
+}

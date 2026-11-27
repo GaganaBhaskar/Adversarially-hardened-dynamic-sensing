@@ -1,0 +1,48 @@
+{
+  "adjusted_source_sha256": "275fa6e7b61ead32820dcf0de5a398bec65676b16b9ac2a2252a3cffd627f984",
+  "artifact_hash_rebindings": {
+    "34d02bfce6ab025c5e84a92a16cb0f7a73ed120783a720981797836410c58c29": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+    "4762c8465215f7ffaec89a5cc4a80471d744e1f9d6c6def2e8c0b6040988c1b1": "68f82a8a72a582440abf7874c950396cbcb822fb76399559c6adc6ed9c541df1"
+  },
+  "ast_equivalence_verified": true,
+  "checkpoint_reselection_performed": false,
+  "epoch_rebindings": [
+    {
+      "dependency": "STATE['best_epoch']",
+      "new_epoch": 38,
+      "old_epoch": 32,
+      "type": "assertion"
+    },
+    {
+      "dependency": "CHECKPOINT_DATA['epoch']",
+      "new_epoch": 38,
+      "old_epoch": 32,
+      "type": "assertion"
+    },
+    {
+      "dependency": "PROTOCOL['model_checkpoint_epoch']",
+      "new_epoch": 38,
+      "old_epoch": 32,
+      "type": "metadata"
+    },
+    {
+      "dependency": "REPORT['model_checkpoint_epoch']",
+      "new_epoch": 38,
+      "old_epoch": 32,
+      "type": "metadata"
+    }
+  ],
+  "evaluation_methodology_modified": false,
+  "model_backup_commit": "a8b868810859088dd3b5cabfad84dca15d20b69d",
+  "model_checkpoint_epoch": 38,
+  "model_checkpoint_sha256": "5a4d3736aef265bce70dc540cad07a83e4c4555244c2185806478507cdce257f",
+  "model_training_performed": false,
+  "original_assertions": 53,
+  "original_notebook_cell": 243,
+  "original_source_sha256": "bc10644e1b4e7bcede96a4d9ea1afcd8816ef981517e49a0cb68b18f6ccf86ae",
+  "preserved_assertions": 53,
+  "removed_assertions": 0,
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "task_id": "M6-REC-05A-R1",
+  "validation_foreground_miou": 0.9224395054783353
+}
