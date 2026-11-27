@@ -1,0 +1,106 @@
+{
+  "task_id": "M6-DEV-01A-02",
+  "task_passed": true,
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "dataset_protocol_frozen": true,
+  "total_scenes": 1120,
+  "unique_rendered_scenes": 1120,
+  "scene_seed_overlap": false,
+  "split_statistics": {
+    "train": {
+      "scene_count": 800,
+      "class_pixel_counts": {
+        "background": 50239614,
+        "lane_markings": 1082348,
+        "vehicle": 815541,
+        "pedestrian": 291297
+      },
+      "class_pixel_fractions": {
+        "background": 0.9582445907592774,
+        "lane_markings": 0.020644149780273437,
+        "vehicle": 0.01555521011352539,
+        "pedestrian": 0.005556049346923828
+      },
+      "class_scene_presence": {
+        "background": 800,
+        "lane_markings": 800,
+        "vehicle": 691,
+        "pedestrian": 666
+      },
+      "illumination_min": 0.22012623525440478,
+      "illumination_max": 1.2495833294347838
+    },
+    "validation": {
+      "scene_count": 160,
+      "class_pixel_counts": {
+        "background": 10043861,
+        "lane_markings": 217384,
+        "vehicle": 165850,
+        "pedestrian": 58665
+      },
+      "class_pixel_fractions": {
+        "background": 0.9578572273254394,
+        "lane_markings": 0.020731353759765626,
+        "vehicle": 0.015816688537597656,
+        "pedestrian": 0.005594730377197266
+      },
+      "class_scene_presence": {
+        "background": 160,
+        "lane_markings": 160,
+        "vehicle": 139,
+        "pedestrian": 134
+      },
+      "illumination_min": 0.22480921079178157,
+      "illumination_max": 1.248165702509968
+    },
+    "test": {
+      "scene_count": 160,
+      "class_pixel_counts": {
+        "background": 10036278,
+        "lane_markings": 218207,
+        "vehicle": 171151,
+        "pedestrian": 60124
+      },
+      "class_pixel_fractions": {
+        "background": 0.9571340560913086,
+        "lane_markings": 0.02080984115600586,
+        "vehicle": 0.016322231292724608,
+        "pedestrian": 0.005733871459960937
+      },
+      "class_scene_presence": {
+        "background": 160,
+        "lane_markings": 160,
+        "vehicle": 139,
+        "pedestrian": 137
+      },
+      "illumination_min": 0.2215380193439354,
+      "illumination_max": 1.2484294284302182
+    }
+  },
+  "optical_validation_base_checks": 15680,
+  "sensor_input_checks": 720,
+  "sensor_observations_validated": 72,
+  "observation_counts": {
+    "full_frame": 33,
+    "roi_priority": 39,
+    "noisy": 37,
+    "noise_free": 35
+  },
+  "module6_unit_tests_passed": 13,
+  "ground_truth_preservation": true,
+  "reproducibility_passed": true,
+  "protected_files_verified": 83,
+  "historical_modifications": false,
+  "existing_controller_modifications": false,
+  "historical_simulations_rerun": false,
+  "model_training_performed": false,
+  "perception_accuracy_measured": false,
+  "limitations": [
+    "Synthetic road geometry",
+    "Uncalibrated optical radiance",
+    "Fixed scene-prior ROI",
+    "No real-world driving performance claim",
+    "No actual hardware bandwidth claim"
+  ],
+  "execution_seconds": 55.07065654500002
+}

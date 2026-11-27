@@ -1,0 +1,60 @@
+{
+  "task_id": "M6-DEV-01A-02",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "resolution": [
+    256,
+    256
+  ],
+  "classes": [
+    "background",
+    "lane_markings",
+    "vehicle",
+    "pedestrian"
+  ],
+  "splits": {
+    "train": {
+      "start_seed": 100000,
+      "end_seed_inclusive": 100799,
+      "scene_count": 800
+    },
+    "validation": {
+      "start_seed": 200000,
+      "end_seed_inclusive": 200159,
+      "scene_count": 160
+    },
+    "test": {
+      "start_seed": 300000,
+      "end_seed_inclusive": 300159,
+      "scene_count": 160
+    }
+  },
+  "input_channels": [
+    "red",
+    "green",
+    "blue",
+    "sampling_mask"
+  ],
+  "target": "visible_surface_semantic_segmentation",
+  "training_exposure_range_ms": [
+    1.0,
+    30.0
+  ],
+  "training_gain_range": [
+    1.0,
+    3.0
+  ],
+  "noise_probability": 0.5,
+  "roi_probability": 0.5,
+  "attack_augmentation": false,
+  "test_set_used_for_training": false,
+  "same_model_for_all_systems": true,
+  "ground_truth_available_to_controller": false,
+  "ground_truth_available_to_model_input": false,
+  "limitations": [
+    "Synthetic road geometry",
+    "Uncalibrated optical radiance",
+    "Fixed scene-prior ROI",
+    "No real-world driving performance claim",
+    "No actual hardware bandwidth claim"
+  ]
+}

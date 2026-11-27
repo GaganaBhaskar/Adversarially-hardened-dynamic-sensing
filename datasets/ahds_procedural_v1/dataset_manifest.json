@@ -1,0 +1,99 @@
+{
+  "task_id": "M6-DEV-01A-03",
+  "dataset_version": "ahds_procedural_v1",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "total_scenes": 1120,
+  "unique_scene_seeds": 1120,
+  "unique_optical_scenes": 1120,
+  "split_summaries": {
+    "train": {
+      "scene_count": 800,
+      "seed_start": 100000,
+      "seed_end": 100799,
+      "full_frame_observations": 411,
+      "roi_priority_observations": 389,
+      "noisy_observations": 411,
+      "noise_free_observations": 389,
+      "class_pixel_counts": {
+        "background": 50239614,
+        "lane_markings": 1082348,
+        "vehicle": 815541,
+        "pedestrian": 291297
+      },
+      "class_distribution_matches_validation": true
+    },
+    "validation": {
+      "scene_count": 160,
+      "seed_start": 200000,
+      "seed_end": 200159,
+      "full_frame_observations": 82,
+      "roi_priority_observations": 78,
+      "noisy_observations": 75,
+      "noise_free_observations": 85,
+      "class_pixel_counts": {
+        "background": 10043861,
+        "lane_markings": 217384,
+        "vehicle": 165850,
+        "pedestrian": 58665
+      },
+      "class_distribution_matches_validation": true
+    },
+    "test": {
+      "scene_count": 160,
+      "seed_start": 300000,
+      "seed_end": 300159,
+      "full_frame_observations": 88,
+      "roi_priority_observations": 72,
+      "noisy_observations": 74,
+      "noise_free_observations": 86,
+      "class_pixel_counts": {
+        "background": 10036278,
+        "lane_markings": 218207,
+        "vehicle": 171151,
+        "pedestrian": 60124
+      },
+      "class_distribution_matches_validation": true
+    }
+  },
+  "regenerated_samples": 9,
+  "regeneration_hash_checks": 36,
+  "class_distribution_verified": true,
+  "raw_images_stored": false,
+  "generator_modified": false,
+  "dataset_splits_modified": false,
+  "model_training_performed": false,
+  "files": {
+    "README.md": {
+      "sha256": "b96891452ae27a905f017dc2a78fa0ee7ceec96ea602f8fbb4aa7f16e9a9b679",
+      "bytes": 2314
+    },
+    "class_distribution.csv": {
+      "sha256": "47c1256a5288e0e89f935660812cc18fdde66587b77884bb91a49ce7fec24246",
+      "bytes": 773
+    },
+    "dataset_card.md": {
+      "sha256": "ef944c6764dd3f88f868f250a36d5f71dd45e46eebe3fdc86c169723ff17bd25",
+      "bytes": 2393
+    },
+    "generation_config.json": {
+      "sha256": "7d7344c130a84afb0d6ac06d35dea2a8bbbfb82cc01abc8516526cdec7a219f8",
+      "bytes": 4296
+    },
+    "sample_visualization.png": {
+      "sha256": "53bd76962c0c5e928c6e6d9d32fe306c756f0c5dbf7287c0b788090fda2c77c7",
+      "bytes": 420504
+    },
+    "test_index.csv": {
+      "sha256": "b6852be6859dff145028edbc8ead91c60730c26f7af3c61df677859d9cd74e48",
+      "bytes": 81682
+    },
+    "train_index.csv": {
+      "sha256": "e2d8b00671b0942dfe9afd1d7ae2e6ed8fdceb55a726aa90722c59d6fc857a4e",
+      "bytes": 409006
+    },
+    "validation_index.csv": {
+      "sha256": "d0144dfcaedd63ce3c71782032c5771b0b553d5ab4c1e8f41d0f4cd4fc0025b1",
+      "bytes": 83646
+    }
+  }
+}

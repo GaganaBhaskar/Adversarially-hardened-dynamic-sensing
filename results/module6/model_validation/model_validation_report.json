@@ -1,0 +1,192 @@
+{
+  "task_id": "M6-DEV-01B-01",
+  "task_passed": true,
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "architecture": "lightweight_mask_aware_encoder_decoder",
+  "input_channels": 4,
+  "num_classes": 4,
+  "encoder_channels": [
+    8,
+    16,
+    24
+  ],
+  "bottleneck_channels": 32,
+  "trainable_parameters": 10700,
+  "parameter_bytes_fp32": 42800,
+  "buffer_bytes": 2640,
+  "convolution_macs_per_frame": 116973568,
+  "class_names": [
+    "background",
+    "lane_markings",
+    "vehicle",
+    "pedestrian"
+  ],
+  "class_weights": [
+    0.13891540467739105,
+    0.9464336037635803,
+    1.0903117656707764,
+    1.8243393898010254
+  ],
+  "class_weight_source": "training_pixel_counts_only",
+  "class_weight_method": "normalized_inverse_square_root_frequency",
+  "cross_entropy_weight": 0.5,
+  "foreground_dice_weight": 0.5,
+  "primary_metric": "foreground_miou",
+  "forward_validation_passed": true,
+  "backward_validation_passed": true,
+  "metric_validation_passed": true,
+  "finite_gradient_tensors": 70,
+  "diagnostic_gradient_norm": 1.1831965016090857,
+  "diagnostic_loss": 1.2669155597686768,
+  "diagnostic_loss_components": {
+    "cross_entropy": 1.562635064125061,
+    "foreground_dice_loss": 0.9711960554122925,
+    "total_loss": 1.2669155597686768
+  },
+  "background_only_diagnostic": {
+    "pixel_accuracy": 0.956451416015625,
+    "mean_iou": 0.23911285400390625,
+    "foreground_miou": 0.0,
+    "foreground_mean_dice": 0.0,
+    "class_iou": [
+      0.956451416015625,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "class_dice": [
+      0.9777410348001061,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "class_precision": [
+      0.956451416015625,
+      null,
+      null,
+      null
+    ],
+    "class_recall": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "class_support": [
+      125364,
+      2975,
+      2331,
+      402
+    ],
+    "confusion_matrix": [
+      [
+        125364,
+        0,
+        0,
+        0
+      ],
+      [
+        2975,
+        0,
+        0,
+        0
+      ],
+      [
+        2331,
+        0,
+        0,
+        0
+      ],
+      [
+        402,
+        0,
+        0,
+        0
+      ]
+    ],
+    "evaluated_pixels": 131072
+  },
+  "known_confusion_matrix_diagnostic": {
+    "pixel_accuracy": 0.6,
+    "mean_iou": 0.375,
+    "foreground_miou": 0.3333333333333333,
+    "foreground_mean_dice": 0.4444444444444444,
+    "class_iou": [
+      0.5,
+      0.5,
+      0.5,
+      0.0
+    ],
+    "class_dice": [
+      0.6666666666666666,
+      0.6666666666666666,
+      0.6666666666666666,
+      0.0
+    ],
+    "class_precision": [
+      1.0,
+      0.5,
+      0.5,
+      null
+    ],
+    "class_recall": [
+      0.5,
+      1.0,
+      1.0,
+      0.0
+    ],
+    "class_support": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "confusion_matrix": [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "evaluated_pixels": 5
+  },
+  "diagnostic_forward_seconds": 0.4694043109998347,
+  "diagnostic_backward_seconds": 0.31123231700030374,
+  "module6_segmentation_tests_passed": 16,
+  "protected_files_verified": 89,
+  "optimizer_steps": 0,
+  "model_training_performed": false,
+  "trained_weights_saved": false,
+  "test_split_used": false,
+  "validation_split_used": false,
+  "attack_augmentation": false,
+  "historical_modifications": false,
+  "existing_controller_modifications": false,
+  "limitations": [
+    "Untrained model",
+    "Parameter storage excludes activation memory",
+    "MAC estimate covers convolution operations only",
+    "Diagnostic timings are not edge latency benchmarks",
+    "Synthetic perception benchmark"
+  ],
+  "execution_seconds": 6.1952816240000175
+}

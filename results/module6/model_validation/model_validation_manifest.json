@@ -1,0 +1,26 @@
+{
+  "task_id": "M6-DEV-01B-01",
+  "research_checkpoint": "a9258ba4a307d6a6ad4ff23788a392c16260ed48",
+  "files": {
+    "src/ahds/module6_perception/lightweight_segmentation.py": {
+      "sha256": "ea240096c1fb687ccc041bb125ebc0e1e21f5d857d8b572ad54f39d2b1914a55",
+      "bytes": 3975
+    },
+    "src/ahds/module6_perception/segmentation_loss.py": {
+      "sha256": "62ac3e9df3acb7dc831f623f1e43da5b01beb7241441855efca410cb0e04f55c",
+      "bytes": 3892
+    },
+    "src/ahds/module6_perception/segmentation_metrics.py": {
+      "sha256": "b3152497dca251d402887616cd7de9193e40aeec5cff79495168cdac5e6248d9",
+      "bytes": 3593
+    },
+    "tests/test_module6_segmentation.py": {
+      "sha256": "e629027e6980063e1e22cb0d2e7d8cb6527369cc21738ceb6762ed25fe44b0d3",
+      "bytes": 4917
+    },
+    "results/module6/model_validation/model_validation_report.json": {
+      "sha256": "95514e72f91c8510d2e23d951dc79d33be9be657e39c666bc08219cb5a10f802",
+      "bytes": 3817
+    }
+  }
+}
